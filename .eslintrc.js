@@ -5,7 +5,10 @@ module.exports = {
     },
     "extends": [
         "standard-with-typescript",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "next", 
+        "next/core-web-vitals", 
+        "eslint:recommended"
     ],
     "overrides": [
         {

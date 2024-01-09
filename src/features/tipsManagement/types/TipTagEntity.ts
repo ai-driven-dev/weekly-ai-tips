@@ -1,6 +1,6 @@
-type TipTagEntity = {
-  tipID: string;
-  tagID: string;
-};
+interface TipTagEntity {
+  tipID: string
+  tagID: string
+}
 
-export default TipTagEntity;
+export default TipTagEntity

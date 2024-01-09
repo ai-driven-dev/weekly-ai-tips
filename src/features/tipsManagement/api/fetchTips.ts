@@ -1,19 +1,19 @@
-import { firestore } from 'firebase-admin';
-import TipEntity from '../types/TipEntity';
+import { firestore } from 'firebase-admin'
+import type TipEntity from '../types/TipEntity'
 
-export async function fetchTips(): Promise<Partial<TipEntity>[]> {
-  const db = firestore();
-  const tipsCollection = db.collection('tips');
-  const snapshot = await tipsCollection.get();
-  const tips: Partial<TipEntity>[] = [];
+export async function fetchTips (): Promise<Array<Partial<TipEntity>>> {
+  const db = firestore()
+  const tipsCollection = db.collection('tips')
+  const snapshot = await tipsCollection.get()
+  const tips: Array<Partial<TipEntity>> = []
 
-  snapshot.forEach(doc => {
-    const tip = doc.data();
+  snapshot.forEach((doc) => {
+    const tip = doc.data()
     tips.push({
       id: tip.id,
-      name: tip.name,
-    });
-  });
+      name: tip.name
+    })
+  })
 
-  return tips;
+  return tips
 }

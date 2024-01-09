@@ -1,7 +1,7 @@
-type UserVoteEntity = {
-  userID: string;
-  tipID: string;
-  vote: 'upvote' | 'downvote';
-};
+interface UserVoteEntity {
+  userID: string
+  tipID: string
+  vote: 'upvote' | 'downvote'
+}
 
-export default UserVoteEntity;
+export default UserVoteEntity

@@ -8,8 +8,8 @@
     "start": "next start",
     "lint": "next lint && eslint 'src/**/*.{js,jsx,ts,tsx}' --fix",
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,md}'",
-    "precommit": "npm run lint && npm run format",
-    "prepush": "npm run build"
+    "pre-commit": "npm run lint",
+    "pre-push": "npm run build"
   },
   "dependencies": {
     "firebase": "^10.7.1",
@@ -39,8 +39,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run precommit",
-      "pre-push": "npm run prepush"
+      "pre-commit": "npm run pre-commit",
+      "pre-push": "npm run pre-push"
     }
   }
 }

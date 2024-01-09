@@ -1,8 +1,8 @@
-type TagEntity = {
-  tagID: string;
-  name: string;
-  slug: string;
-  description: string;
-};
+interface TagEntity {
+  tagID: string
+  name: string
+  slug: string
+  description: string
+}
 
-export default TagEntity;
+export default TagEntity
