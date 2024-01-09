@@ -1,9 +1,7 @@
-import { admin } from "@/firebase";
+import { fetchTips } from "@/src/features/tipsManagement/api/fetchTips";
 
 async function getData() {
-  const db = await admin.firestore();
-  const tipsSnapshot = await db.collection('tips').get();
-  const tips = tipsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+  const tips = fetchTips();
 
   return tips;
 }

@@ -1,5 +1,5 @@
 type TipEntity = {
-  tipID: string;
+  id: string;
   name: string;
   shortDescription: string;
   htmlContent: string;
