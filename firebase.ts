@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import * as admin from 'firebase-admin'
-import { initializeApp } from 'firebasne/app'
+import { initializeApp } from 'firebase/app'
 
 // Now you can use `db` to interact with Firestore, or use other Firebase services.
 
