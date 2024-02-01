@@ -11,8 +11,8 @@ export async function fetchTips (): Promise<Array<Partial<TipEntity>>> {
     const tip = doc.data()
     tips.push({
       id: tip.id,
-      name: tip.name
-    })
+      name: tip.name,
+    });
   })
 
   return tips

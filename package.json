@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "test": "",
-    "lint": "next lint && eslint 'src/**/*.{js,jsx,ts,tsx}' --fix",
-    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,md}'",
+    "lint": "next lint && eslint --fix",
     "pre-commit": "npm run lint",
     "pre-push": "npm run build",
     "release": "standard-version",
@@ -16,8 +15,7 @@
   },
   "lint-staged": {
     "*.ts": [
-      "eslint --fix",
-      "prettier --write"
+      "eslint --fix"
     ],
     "*.{js,jsx,ts,tsx}": "npm test --bail --findRelatedTests"
   },
@@ -34,18 +32,17 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "@typescript-eslint/eslint-plugin": "^6.18.1",
+    "@typescript-eslint/eslint-plugin": "^6.20.0",
     "autoprefixer": "^10.0.1",
     "eslint": "^8.56.0",
     "eslint-config-next": "14.0.4",
-    "eslint-config-standard-with-typescript": "^43.0.0",
+    "eslint-config-standard-with-typescript": "^43.0.1",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-n": "^16.6.2",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.33.2",
     "husky": "^8.0.0",
     "postcss": "^8",
-    "prettier": "3.1.1",
     "standard-version": "^9.5.0",
     "tailwindcss": "^3.3.0",
     "typescript": "^5.3.3"
