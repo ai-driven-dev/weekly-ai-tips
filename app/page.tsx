@@ -13,9 +13,9 @@ export default async function Page(): Promise<React.ReactElement> {
 
   return (
     <main>
-      <pre style={{ height: '200px', overflow: 'auto' }}>
+      <pre style={{ height: "200px", overflow: "auto" }}>
         <code>{JSON.stringify(data, null, 2)}</code>
       </pre>
     </main>
-  )
+  );
 }

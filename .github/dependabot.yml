@@ -1,8 +1,6 @@
-# https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuring-dependabot-version-updates#enabling-github-dependabot-version-updates
-
 version: 2
 updates:
-  - package-ecosystem: "npm"
-  directory: "/"
-  schedule:
-    interval: "weekly"
+  - package-ecosystem: "npm" # Assurez-vous que cette valeur est une chaîne de caractères valide.
+    directory: "/" # Ceci spécifie le répertoire racine, assurez-vous qu'il correspond à l'emplacement de votre fichier package.json.
+    schedule:
+      interval: "weekly" # Cette valeur est correcte ; vérifiez simplement l'indentation.
