@@ -20,7 +20,7 @@
     "*.{js,jsx,ts,tsx}": "npm test --bail --findRelatedTests"
   },
   "dependencies": {
-    "firebase": "^10.7.1",
+    "firebase": "^10.8.0",
     "firebase-admin": "^12.0.0",
     "next": "14.0.4",
     "react": "^18",
