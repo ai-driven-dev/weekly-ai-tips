@@ -1,6 +1,5 @@
 import { firestore } from 'firebase-admin'
-import type TipEntity from '../types/TipEntity'
-import { collectGenerateParams } from 'next/dist/build/utils'
+import type TipEntity from "../types/TipEntity";
 
 export async function fetchTips(): Promise<Array<Partial<TipEntity>>> {
   const db = firestore()
