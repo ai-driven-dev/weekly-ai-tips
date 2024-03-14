@@ -1,17 +1,13 @@
-import { getAuth } from "firebase-admin/auth";
+import { adminAuth } from "@/firebaseAdmin";
 import { getFirestore, Timestamp } from "firebase-admin/firestore";
 import { NextRequest, NextResponse } from "next/server";
-
-export const config = {
-  runtime: "edge",
-};
 
 const db = getFirestore();
 
 export async function POST(req: NextRequest) {
   try {
     const { token } = await req.json();
-    const decodedToken = await getAuth().verifyIdToken(token);
+    const decodedToken = await adminAuth.verifyIdToken(token);
     const uid = decodedToken.uid;
 
     // Implement logic to check/create user and update lastLoginDate here
