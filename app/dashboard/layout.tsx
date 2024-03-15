@@ -31,7 +31,7 @@ const Layout = ({ children }: LayoutProps) => {
     <div>
       <header>
         <div className="flex justify-between p-4 mb-8">
-          <p>Weekly AI Tips</p>
+          <Link href="/">Weekly AI Tips</Link>
           <nav>
             <ul className="flex gap-3">
               <li className="inline">
