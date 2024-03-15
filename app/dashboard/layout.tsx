@@ -2,6 +2,7 @@
 
 import GoogleSignInButton from "@/src/features/userManagement/components/GoogleSignInButton";
 import { useFirebaseAuth } from "@/src/features/userManagement/hooks/useFirebaseAuth";
+import Link from "next/link";
 import { ReactNode } from "react";
 
 type LayoutProps = {
@@ -28,9 +29,33 @@ const Layout = ({ children }: LayoutProps) => {
   // Render children if the user is authenticated
   return (
     <div>
-      <p>Welcome you, {user.displayName}</p>
-      <button onClick={logout}>Sign out</button>
-      {children}
+      <header>
+        <div className="flex justify-between p-4 mb-8">
+          <p>Weekly AI Tips</p>
+          <nav>
+            <ul className="flex gap-3">
+              <li className="inline">
+                <Link href="/dashboard">Dashboard</Link>
+              </li>
+              <li className="inline">
+                <Link href="/dashboard/users">Users</Link>
+              </li>
+              <li className="inline">
+                <Link href="/dashboard/tags">Tags</Link>
+              </li>
+              <li className="inline">
+                <Link href="/dashboard/tips">Tips</Link>
+              </li>
+            </ul>
+          </nav>
+          <div>
+            <p>Welcome you, {user.displayName}</p>
+            <button onClick={logout}>Sign out</button>
+          </div>
+        </div>
+      </header>
+
+      <div className="p-4">{children}</div>
     </div>
   );
 };
