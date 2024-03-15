@@ -25,14 +25,16 @@ export async function POST(req: NextRequest) {
         email: decodedToken.email!,
         picture: decodedToken.picture,
         roles: [],
+        createdAt: Timestamp.now().toDate(),
+        updatedAt: Timestamp.now().toDate(),
       };
 
       // Create a new user if not exists
-      await userRef.set({ ..._user, lastLoginDate: Timestamp.now() });
+      await userRef.set(_user);
     } else {
       // Update lastLoginDate for existing user
       await userRef.update({
-        lastLoginDate: Timestamp.now(),
+        updatedAt: Timestamp.now().toDate(),
       });
     }
 

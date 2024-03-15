@@ -4,6 +4,8 @@ interface UserEntity {
   picture?: string;
   email: string;
   roles: string[];
+  createdAt: Date;
+  updatedAt: Date;
 }
 
 export default UserEntity
