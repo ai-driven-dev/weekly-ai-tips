@@ -1,4 +1,5 @@
 import { fetchUsers } from "@/src/features/userManagement/api/fetchUsers";
+import ActionButtons from "@/src/features/userManagement/components/ActionButtons";
 
 export default async function Page(): Promise<React.ReactElement> {
   const users = await fetchUsers();
@@ -14,6 +15,7 @@ export default async function Page(): Promise<React.ReactElement> {
           <th>Roles</th>
           <th>Created At</th>
           <th>Updated At</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody>
@@ -26,6 +28,9 @@ export default async function Page(): Promise<React.ReactElement> {
             <td>{user.roles.join(", ")}</td>
             <td>{user.createdAt.toLocaleString()}</td>
             <td>{user.updatedAt.toLocaleString()}</td>
+            <td>
+              <ActionButtons userId={user.id} />
+            </td>
           </tr>
         ))}
       </tbody>
