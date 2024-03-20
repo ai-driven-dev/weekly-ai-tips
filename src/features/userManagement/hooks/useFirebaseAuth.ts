@@ -1,30 +1,53 @@
 import { auth } from "@/firebaseClient";
-import { User, onAuthStateChanged, signOut } from "firebase/auth";
-import { useCallback, useEffect, useState } from "react";
+import { User, getAuth, onIdTokenChanged, signOut } from "firebase/auth";
+import { useEffect, useState } from "react";
+import { useGoogleSignIn } from "./useGoogleSignIn";
 
 export const useFirebaseAuth = () => {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
+  const { signInWithGoogle } = useGoogleSignIn();
+
+  const handleIdTokenChanged = async (firebaseUser: User | null) => {
+    if (firebaseUser) {
+      const idTokenResult = await firebaseUser.getIdTokenResult();
+
+      // Sets authenticated user cookies
+      await fetch("/api/login", {
+        headers: {
+          Authorization: `Bearer ${idTokenResult.token}`,
+        },
+      });
+
+      setLoading(false);
+      setUser(firebaseUser);
+      return;
+    }
+
+    // Removes authenticated user cookies
+    await fetch("/api/logout");
+
+    setUser(null);
+    setLoading(false);
+  };
+
+  const login = async (): Promise<void> => {
+    await signInWithGoogle();
+    setLoading(false);
+  };
+
+  const logout = async (): Promise<void> => {
+    await signOut(auth);
+  };
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setUser(user);
-      setLoading(false);
-    });
-    return () => unsubscribe();
+    return onIdTokenChanged(getAuth(), handleIdTokenChanged);
   }, []);
 
-  const logout = useCallback(async () => {
-    try {
-      await signOut(auth);
-      setUser(null);
-      // Optionally, redirect the user to the login page or home page after logout
-      // router.push('/login'); // Uncomment if you want to redirect after logging out
-    } catch (error) {
-      console.error("Logout error: ", error);
-      // Handle errors here, such as displaying a notification
-    }
-  }, []);
-
-  return { user, loading, logout };
+  return {
+    user,
+    loading,
+    login,
+    logout,
+  };
 };
