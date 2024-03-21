@@ -3,7 +3,7 @@
 
 npm run build
 
-npm outdated | grep -v Package | awk '{print $1}' | xargs -I {} npm install {}@latest
+npm outdated | grep -v Package | awk '{print $1}' | xargs -I {} npm install {}@latest --legacy-peer-deps
 git add package.json package-lock.json
-git commit -m "Upgrade dependencies"
+git commit -m "build(deps): upgrade dependencies"
 
