@@ -2,3 +2,12 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 npm run build
+
+npm outdated | grep -v Package | awk '{print $1}' | xargs -I {} npm install {}@latest --legacy-peer-deps
+
+
+# Check if package.json or package-lock.json has changed
+if git diff --name-only | grep -qE '^(package.json|package-lock.json)$'; then
+  git add package.json package-lock.json
+  git commit -m "build(deps): upgrade dependencies"
+fi

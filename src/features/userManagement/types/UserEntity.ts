@@ -1,9 +1,11 @@
 interface UserEntity {
-  userID: string
-  firstName: string
-  lastName: string
-  email: string
-  roles: string[]
+  id: string;
+  name: string;
+  picture?: string;
+  email: string;
+  roles: string[];
+  createdAt: Date;
+  updatedAt: Date;
 }
 
 export default UserEntity
