@@ -16,6 +16,7 @@ const fontSans = FontSans({
 });
 
 import { Button } from "@/components/ui/button";
+import { Toaster } from "@/components/ui/toaster";
 import { cn } from "@/lib/utils";
 
 const Layout = ({ children }: LayoutProps) => {
@@ -77,6 +78,8 @@ const Layout = ({ children }: LayoutProps) => {
       </header>
 
       <div className="p-4">{children}</div>
+
+      <Toaster />
     </div>
   );
 };

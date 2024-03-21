@@ -4,7 +4,7 @@ import { admin } from "@/firebaseAdmin";
 
 export default async function createTip(
   data: Partial<TipEntity>
-): Promise<TipEntity | undefined> {
+): Promise<TipEntity> {
   const tipsCollection = admin.firestore().collection("tips");
   const docRef = await tipsCollection.add(data);
 

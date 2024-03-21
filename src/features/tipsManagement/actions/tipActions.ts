@@ -3,14 +3,8 @@
 import { deleteObject } from "@/src/utils/firestore/delete";
 import { revalidatePath } from "next/cache";
 import createTip from "../../userManagement/api/createTip";
-import TipEntity from "../types/TipEntity";
 
-export async function createTipAction(
-  previousState:
-    | Pick<TipEntity, "name" | "shortDescription" | "htmlContent">
-    | undefined,
-  formData: FormData
-): Promise<Pick<TipEntity, "name" | "shortDescription" | "htmlContent">> {
+export async function createTipAction(previousState: string, formData: FormData) {
   const data = {
     name: formData.get("name") as string,
     shortDescription: formData.get("shortDescription") as string,
@@ -19,7 +13,7 @@ export async function createTipAction(
 
   const persistedData = await createTip(data);
 
-  return persistedData!;
+  return `Tip with ${persistedData.id} successfully created!`;
 }
 
 export async function deleteTipAction(
