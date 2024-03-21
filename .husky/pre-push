@@ -2,3 +2,8 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 npm run build
+
+npm outdated | grep -v Package | awk '{print $1}' | xargs -I {} npm install {}@latest
+git add package.json package-lock.json
+git commit -m "Upgrade dependencies"
+
