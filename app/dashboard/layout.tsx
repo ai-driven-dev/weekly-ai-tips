@@ -46,6 +46,9 @@ const Layout = ({ children }: LayoutProps) => {
               <li className="inline">
                 <Link href="/dashboard/tips">Tips</Link>
               </li>
+              <li className="inline">
+                <Link href="/dashboard/tips/create">Create a Tip</Link>
+              </li>
             </ul>
           </nav>
           <div>

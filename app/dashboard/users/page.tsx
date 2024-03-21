@@ -1,5 +1,6 @@
 import { fetchUsers } from "@/src/features/userManagement/api/fetchUsers";
 import ActionButtons from "@/src/features/userManagement/components/ActionButtons";
+import Image from "next/image";
 
 export default async function Page(): Promise<React.ReactElement> {
   const users = await fetchUsers();
@@ -23,7 +24,16 @@ export default async function Page(): Promise<React.ReactElement> {
           <tr key={user.id}>
             <td>{user.id}</td>
             <td>{user.name}</td>
-            <td>{user.picture}</td>
+            <td>
+              {user.picture && (
+                <Image
+                  src={user.picture}
+                  alt={user.name}
+                  width={50}
+                  height={50}
+                />
+              )}
+            </td>
             <td>{user.email}</td>
             <td>{user.roles.join(", ")}</td>
             <td>{user.createdAt.toLocaleString()}</td>

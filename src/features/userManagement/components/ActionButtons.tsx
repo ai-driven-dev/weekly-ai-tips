@@ -16,6 +16,10 @@ const ActionButtons: React.FC<DeleteUserButtonProps> = ({ userId }) => {
       if (!response.ok) {
         throw new Error("Error deleting user");
       }
+
+      if (response.ok) {
+        window.location.reload();
+      }
     } catch (error) {
       console.error("Failed to delete user:", error);
     }

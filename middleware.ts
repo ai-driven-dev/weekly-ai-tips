@@ -29,7 +29,7 @@ export async function middleware(request: NextRequest) {
     apiKey: NEXT_PUBLIC_FIREBASE_API_KEY!,
     cookieName: "AuthToken",
     cookieSignatureKeys: ["secret1", "secret2"],
-    debug: true,
+    debug: NODE_ENV !== "production",
     cookieSerializeOptions: {
       path: "/",
       httpOnly: true,
