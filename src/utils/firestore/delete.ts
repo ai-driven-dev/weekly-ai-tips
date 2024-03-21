@@ -2,7 +2,7 @@ import "@/firebaseAdmin";
 import { firestore } from "firebase-admin";
 
 export async function deleteObject(
-  collectionName: "users",
+  collectionName: "users" | "tips",
   objectId: string
 ): Promise<void> {
   const db = firestore();

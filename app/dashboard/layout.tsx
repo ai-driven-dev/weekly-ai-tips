@@ -2,12 +2,21 @@
 
 import GoogleSignInButton from "@/src/features/userManagement/components/GoogleSignInButton";
 import { useFirebaseAuth } from "@/src/features/userManagement/hooks/useFirebaseAuth";
+import { Inter as FontSans } from "next/font/google";
 import Link from "next/link";
 import { ReactNode } from "react";
 
 type LayoutProps = {
   children: ReactNode;
 };
+
+const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
+
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const Layout = ({ children }: LayoutProps) => {
   const { user, loading, logout } = useFirebaseAuth();
@@ -28,7 +37,12 @@ const Layout = ({ children }: LayoutProps) => {
 
   // Render children if the user is authenticated
   return (
-    <div>
+    <div
+      className={cn(
+        "min-h-screen bg-background font-sans antialiased",
+        fontSans.variable
+      )}
+    >
       <header>
         <div className="flex justify-between p-4 mb-8">
           <Link href="/">Weekly AI Tips</Link>
@@ -51,9 +65,13 @@ const Layout = ({ children }: LayoutProps) => {
               </li>
             </ul>
           </nav>
-          <div>
-            <p>Welcome you, {user.displayName}</p>
-            <button onClick={logout}>Sign out</button>
+          <div className="flex gap-2 items-center">
+            <p>
+              Welcome you, <strong>{user.displayName}</strong>
+            </p>
+            <Button variant="ghost" onClick={logout}>
+              Sign out
+            </Button>
           </div>
         </div>
       </header>
