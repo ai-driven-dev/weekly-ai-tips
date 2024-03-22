@@ -7,12 +7,7 @@ export default async function createTip(
 ): Promise<TipEntity> {
   const tipsCollection = admin.firestore().collection("tips");
   const docRef = await tipsCollection.add(data);
-
-  console.log("docRef", docRef);
-
   const doc = await docRef.get();
-
-  console.log("doc", doc);
 
   return {
     id: doc.id,

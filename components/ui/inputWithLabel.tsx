@@ -2,12 +2,17 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useFormStatus } from "react-dom";
 
-export interface InputWithLabelProps {
+export interface InputWithLabelProps
+  extends React.InputHTMLAttributes<HTMLInputElement> {
   name: string;
   label: string;
 }
 
-export default function InputWithLabel({ name, label }: InputWithLabelProps) {
+export default function InputWithLabel({
+  name,
+  label,
+  ...props
+}: InputWithLabelProps) {
   const { pending } = useFormStatus();
   return (
     <div className="grid w-full max-w-sm items-center gap-1.5">
@@ -19,6 +24,7 @@ export default function InputWithLabel({ name, label }: InputWithLabelProps) {
         placeholder={label}
         required
         readOnly={pending}
+        {...props}
       />
     </div>
   );

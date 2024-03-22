@@ -9,4 +9,11 @@ interface TipEntity {
   ownerID: string
 }
 
+export type EntityTipForm = Pick<
+  TipEntity,
+  "name" | "shortDescription" | "htmlContent"
+> & {
+  id: string | null;
+};
+
 export default TipEntity
