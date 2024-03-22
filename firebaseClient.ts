@@ -20,7 +20,6 @@ isSupported()
   .then((supported) => {
     if (supported) {
       analytics = getAnalytics(app);
-      console.log("Firebase Analytics initialized.");
     } else {
       console.warn("Firebase Analytics is not supported in this environment.");
     }

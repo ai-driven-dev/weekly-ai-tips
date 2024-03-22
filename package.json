@@ -2,6 +2,7 @@
   "name": "weekly-ai-tips",
   "version": "0.1.0",
   "private": true,
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "source .env.local && next dev",
     "build": "next build",
@@ -10,8 +11,7 @@
     "lint": "next lint && eslint --fix",
     "pre-commit": "npm run lint",
     "pre-push": "npm run build",
-    "release": "standard-version",
-    "prepare": "husky install"
+    "release": "standard-version"
   },
   "lint-staged": {
     "*.ts": [
@@ -20,12 +20,21 @@
     "*.{js,jsx,ts,tsx}": "npm test --bail --findRelatedTests"
   },
   "dependencies": {
+    "@radix-ui/react-icons": "^1.3.0",
+    "@radix-ui/react-label": "^2.0.2",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-toast": "^1.1.5",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
     "firebase": "^10.9.0",
     "firebase-admin": "^12.0.0",
+    "lucide-react": "^0.361.0",
     "next": "^14.1.4",
     "next-firebase-auth-edge": "^1.4.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^2.2.2",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.2.1",
@@ -33,7 +42,7 @@
     "@types/node": "^20.11.30",
     "@types/react": "^18.2.67",
     "@types/react-dom": "^18.2.22",
-    "@typescript-eslint/eslint-plugin": "^7.3.1",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
     "autoprefixer": "^10.4.19",
     "eslint": "^8.57.0",
     "eslint-config-next": "^14.1.4",
