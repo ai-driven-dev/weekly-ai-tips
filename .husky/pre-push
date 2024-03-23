@@ -3,8 +3,7 @@
 
 npm run build
 
-npm outdated | grep -v Package | awk '{print $1}' | xargs -I {} npm install {}@latest --legacy-peer-deps
-
+npm outdated | grep -v Package | awk '{print $1}' | grep -v "@typescript-eslint/eslint-plugin" | xargs -I {} npm install {}@latest --legacy-peer-deps
 
 # Check if package.json or package-lock.json has changed
 if git diff --name-only | grep -qE '^(package.json|package-lock.json)$'; then

@@ -9,8 +9,6 @@ export async function deleteTipAction(
 ): Promise<boolean | null> {
   const id = formData.get("id") as string | undefined;
 
-  if (!id) throw new Error("ID is required");
-
   const isDeleted = await deleteFirestoreObject("tips", id);
 
   revalidatePath("/dashboard/tips");

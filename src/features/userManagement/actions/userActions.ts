@@ -4,16 +4,13 @@ import { deleteFirestoreObject } from "@/src/utils/firestore/deleteFirestoreObje
 import { revalidatePath } from "next/cache";
 
 export async function deleteUserAction(
-  previousState: string[],
   formData: FormData
-): Promise<string[]> {
+): Promise<boolean | null> {
   const id = formData.get("id") as string | undefined;
 
-  if (!id) throw new Error("ID is required");
+  const isDeleted = await deleteFirestoreObject("users", id);
 
-  await deleteFirestoreObject("users", id);
+  if (isDeleted) revalidatePath("/dashboard/users");
 
-  revalidatePath("/dashboard/users");
-
-  return previousState.filter((_id) => _id !== id);
+  return isDeleted;
 }
