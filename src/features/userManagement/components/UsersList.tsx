@@ -12,7 +12,6 @@ import {
 } from "@/components/ui/table";
 import Image from "next/image";
 import React from "react";
-import { useFormState } from "react-dom";
 import { deleteUserAction } from "../actions/userActions";
 import UserEntity from "../types/UserEntity";
 
@@ -21,11 +20,6 @@ type Props = {
 };
 
 export default function UserList({ users }: Props): React.ReactElement {
-  const [state, formAction] = useFormState<string[], FormData>(
-    deleteUserAction,
-    users.map((user) => user.id)
-  );
-
   return (
     <>
       <Table>
@@ -63,7 +57,7 @@ export default function UserList({ users }: Props): React.ReactElement {
               <TableCell>{user.createdAt.toLocaleString()}</TableCell>
               <TableCell>{user.updatedAt.toLocaleString()}</TableCell>
               <TableCell>
-                <form action={formAction}>
+                <form action={deleteUserAction}>
                   <input type="hidden" name="id" value={user.id} />
                   <Button type="submit">Delete</Button>
                 </form>

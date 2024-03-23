@@ -3,8 +3,10 @@ import { firestore } from "firebase-admin";
 
 export async function deleteFirestoreObject(
   collectionName: "users" | "tips",
-  objectId: string
+  objectId: string | undefined | null
 ): Promise<boolean> {
+  if (!objectId) throw new Error("ID is required");
+
   const db = firestore();
   const objectRef = db.collection(collectionName).doc(objectId);
 
