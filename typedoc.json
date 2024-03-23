@@ -1,0 +1,10 @@
+{
+  "entryPoints": ["firebase*.ts", "middleware.ts", "*/**/*.ts", "*/**/*.tsx"],
+  "out": "docs",
+  "name": "Weekly AI Tips",
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "excludeExternals": true,
+  "includes": "src",
+  "exclude": ["components/**", "**/*.{test,spec}.{ts,tsx}", "**/node_modules/**"]
+}

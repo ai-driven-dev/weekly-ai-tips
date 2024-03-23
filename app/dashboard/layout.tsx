@@ -6,7 +6,7 @@ import { Inter as FontSans } from "next/font/google";
 import Link from "next/link";
 import { ReactNode } from "react";
 
-type LayoutProps = {
+export type LayoutProps = {
   children: ReactNode;
 };
 
@@ -15,9 +15,9 @@ const fontSans = FontSans({
   variable: "--font-sans",
 });
 
+import { cn } from "@/components/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Toaster } from "@/components/ui/toaster";
-import { cn } from "@/lib/utils";
 import { ReloadIcon } from "@radix-ui/react-icons";
 import { usePathname } from "next/navigation";
 

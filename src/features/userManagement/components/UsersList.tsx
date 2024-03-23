@@ -15,7 +15,7 @@ import React from "react";
 import { deleteUserAction } from "../actions/userActions";
 import UserEntity from "../types/UserEntity";
 
-type Props = {
+export type Props = {
   users: UserEntity[];
 };
 

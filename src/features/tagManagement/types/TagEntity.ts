@@ -1,8 +1,12 @@
-interface TagEntity {
-  tagID: string
-  name: string
-  slug: string
-  description: string
+/**
+ * TagEntity is an interface that defines the structure of a tag entity.
+ */
+export default interface TagEntity {
+  id: string;
+  name: string;
+  description: string;
+  slug: string;
+  createdAt: Date;
+  updatedAt: Date;
 }
 
-export default TagEntity

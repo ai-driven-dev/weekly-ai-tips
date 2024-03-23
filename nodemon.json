@@ -1,0 +1,10 @@
+{
+  "watch": [
+    "src/"
+  ],
+  "ext": "ts,tsx",
+  "ignore": [
+    "src/**/*.spec.ts"
+  ],
+  "exec": "typedoc --options typedoc.json --commentStyle block"
+}

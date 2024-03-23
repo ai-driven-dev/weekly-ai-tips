@@ -4,6 +4,8 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
+    "doc": "npx typedoc --options typedoc.json --commentStyle block",
+    "doc:watch": "nodemon",
     "dev": "source .env.local && next dev",
     "build": "next build",
     "start": "next start",
@@ -52,9 +54,11 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.34.1",
     "husky": "^9.0.11",
+    "nodemon": "^3.1.0",
     "postcss": "^8.4.38",
     "standard-version": "^9.5.0",
     "tailwindcss": "^3.3.0",
+    "typedoc": "^0.25.12",
     "typescript": "^5.4.3"
   },
   "husky": {
