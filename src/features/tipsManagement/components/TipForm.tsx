@@ -10,7 +10,7 @@ import { createTipAction } from "../actions/createTipAction";
 import { editTipAction } from "../actions/editTipAction";
 import { EntityTipForm } from "../types/TipEntity";
 
-type Props = {
+export type Props = {
   tip: EntityTipForm;
 };
 
@@ -27,8 +27,8 @@ export default function TipDetail({ tip }: Props) {
   useEffect(() => {
     if (initialState.current !== state) {
       toast({
-        title: "Success",
-        description: "Tip created successfully",
+        title: "Success ✅",
+        description: tip.id ? "Tip edited!" : "Tip created successfully",
       });
 
       push("/dashboard/tips");
@@ -37,7 +37,7 @@ export default function TipDetail({ tip }: Props) {
         initialState.current = state;
       };
     }
-  }, [push, state, toast]);
+  }, [push, state, tip.id, toast]);
 
   return (
     <form action={formAction} className="flex flex-col gap-4">

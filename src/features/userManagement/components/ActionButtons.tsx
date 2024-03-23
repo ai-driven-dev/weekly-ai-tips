@@ -2,11 +2,11 @@
 
 import React from "react";
 
-interface DeleteUserButtonProps {
+export interface Props {
   userId: string;
 }
 
-const ActionButtons: React.FC<DeleteUserButtonProps> = ({ userId }) => {
+const ActionButtons: React.FC<Props> = ({ userId }) => {
   const deleteUser = async () => {
     try {
       const response = await fetch(`/api/entities/users/${userId}`, {

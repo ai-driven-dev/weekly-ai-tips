@@ -2,7 +2,7 @@ import { fetchTip } from "@/src/features/tipsManagement/api/fetchTip";
 import TipDetail from "@/src/features/tipsManagement/components/TipForm";
 import Link from "next/link";
 
-type Props = {
+export type Props = {
   params: {
     id: string;
   };

@@ -17,7 +17,7 @@ import { useFormState } from "react-dom";
 import { deleteTipAction } from "../actions/deleteTipAction";
 import { EntityTipForm } from "../types/TipEntity";
 
-type Props = {
+export type Props = {
   tips: Array<EntityTipForm>;
 };
 

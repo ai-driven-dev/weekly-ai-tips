@@ -3,3 +3,7 @@
 
 npm test
 npx lint-staged
+
+# Generation documentation and push it.
+npm run doc
+git add --force docs
