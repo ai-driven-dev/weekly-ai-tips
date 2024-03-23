@@ -25,8 +25,6 @@ export default function TipDetail({ tip }: Props) {
   const initialState = useRef(state);
 
   useEffect(() => {
-    console.log("initialRender", initialState.current, state);
-
     if (initialState.current !== state) {
       toast({
         title: "Success",
