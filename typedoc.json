@@ -6,5 +6,5 @@
   "excludeProtected": true,
   "excludeExternals": true,
   "includes": "src",
-  "exclude": ["components/**", "**/*.{test,spec}.{ts,tsx}", "**/node_modules/**"]
+  "exclude": ["**/node_modules/**"]
 }
