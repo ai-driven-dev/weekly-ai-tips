@@ -1,29 +1,22 @@
-import { adminAuth } from "@/firebaseAdmin";
+import { db } from "@/firebaseAdmin";
 import UserEntity from "@/src/features/userManagement/types/UserEntity";
-import { getFirestore, Timestamp } from "firebase-admin/firestore";
+import { Timestamp } from "firebase-admin/firestore";
+import { User } from "firebase/auth";
 import { NextRequest, NextResponse } from "next/server";
-
-const db = getFirestore();
 
 export async function POST(req: NextRequest) {
   try {
-    const { token } = await req.json();
-    const decodedToken = await adminAuth.verifyIdToken(token);
+    const { user } = (await req.json()) as { user: User };
 
-    if (!decodedToken.email) {
-      throw new Error("Email is required");
-    }
-
-    const uid = decodedToken.uid;
-    const userRef = db.collection("users").doc(uid);
+    const userRef = db.collection("users").doc(user.uid);
     const userSnap = await userRef.get();
 
     if (!userSnap.exists) {
       const _user: UserEntity = {
-        id: uid,
-        name: decodedToken.name,
-        email: decodedToken.email!,
-        picture: decodedToken.picture,
+        id: user.uid,
+        name: user.displayName!,
+        email: user.email!,
+        picture: user.photoURL!,
         roles: [],
         createdAt: Timestamp.now().toDate(),
         updatedAt: Timestamp.now().toDate(),
