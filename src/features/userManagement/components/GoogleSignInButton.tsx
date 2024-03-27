@@ -1,9 +1,9 @@
 "use client";
 
-import { useFirebaseAuth } from "../hooks/useFirebaseAuth";
+import { useUserAuthentication } from "../hooks/useUserAuthentication";
 
 const GoogleSignInButton = () => {
-  const { login } = useFirebaseAuth();
+  const { login } = useUserAuthentication();
 
   return <button onClick={login}>Sign in with Google</button>;
 };

@@ -1,9 +1,8 @@
 "use client";
 
 import GoogleSignInButton from "@/src/features/userManagement/components/GoogleSignInButton";
-import { useFirebaseAuth } from "@/src/features/userManagement/hooks/useFirebaseAuth";
+import { useUserAuthentication } from "@/src/features/userManagement/hooks/useUserAuthentication";
 import { Inter as FontSans } from "next/font/google";
-import Link from "next/link";
 import { ReactNode } from "react";
 
 export type LayoutProps = {
@@ -16,14 +15,12 @@ const fontSans = FontSans({
 });
 
 import { cn } from "@/components/lib/utils";
-import { Button } from "@/components/ui/button";
 import { Toaster } from "@/components/ui/toaster";
+import Header from "@/src/components/dashboard/Header";
 import { ReloadIcon } from "@radix-ui/react-icons";
-import { usePathname } from "next/navigation";
 
 const Layout = ({ children }: LayoutProps) => {
-  const { user, loading, logout } = useFirebaseAuth();
-  const pathname = usePathname();
+  const { user, loading } = useUserAuthentication();
 
   if (!loading && !user) {
     // Redirect unauthenticated users to the login page
@@ -52,56 +49,7 @@ const Layout = ({ children }: LayoutProps) => {
         fontSans.variable
       )}
     >
-      <header className="flex justify-between items-center p-4 mb-8">
-        <Link href="/">Weekly AI Tips</Link>
-        <nav>
-          <ul className="flex gap-3">
-            <li className="inline">
-              {pathname === "/dashboard" ? (
-                <strong>Dashboard</strong>
-              ) : (
-                <Link href="/dashboard">Dashboard</Link>
-              )}
-            </li>
-            <li className="inline">
-              {pathname === "/dashboard/users" ? (
-                <strong>Users</strong>
-              ) : (
-                <Link href="/dashboard/users">Users</Link>
-              )}
-            </li>
-            <li className="inline">
-              {pathname === "/dashboard/tags" ? (
-                <strong>Tags</strong>
-              ) : (
-                <Link href="/dashboard/tags">Tags</Link>
-              )}
-            </li>
-            <li className="inline">
-              {pathname === "/dashboard/tips" ? (
-                <strong>Tips</strong>
-              ) : (
-                <Link href="/dashboard/tips">Tips</Link>
-              )}
-            </li>
-            <li className="inline">
-              {pathname === "/dashboard/tips/create" ? (
-                <strong>New tip 🔥</strong>
-              ) : (
-                <Link href="/dashboard/tips/create">New tip 🔥</Link>
-              )}
-            </li>
-          </ul>
-        </nav>
-        <div className="flex gap-2 items-center">
-          <p>
-            Welcome you, <strong>{user.displayName}</strong>
-          </p>
-          <Button variant="ghost" onClick={logout}>
-            Sign out
-          </Button>
-        </div>
-      </header>
+      <Header />
 
       <div className="p-4">{children}</div>
 

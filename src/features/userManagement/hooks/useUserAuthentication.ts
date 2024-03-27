@@ -1,12 +1,17 @@
 import { auth } from "@/firebaseClient";
-import { User, getAuth, onIdTokenChanged, signOut } from "firebase/auth";
+import {
+  GoogleAuthProvider,
+  User,
+  getAuth,
+  onIdTokenChanged,
+  signInWithPopup,
+  signOut,
+} from "firebase/auth";
 import { useEffect, useState } from "react";
-import { useGoogleSignIn } from "./useGoogleSignIn";
 
-export const useFirebaseAuth = () => {
+export const useUserAuthentication = () => {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
-  const { signInWithGoogle } = useGoogleSignIn();
 
   const handleIdTokenChanged = async (firebaseUser: User | null) => {
     if (firebaseUser) {
@@ -32,7 +37,10 @@ export const useFirebaseAuth = () => {
   };
 
   const login = async (): Promise<void> => {
-    await signInWithGoogle();
+    const provider = new GoogleAuthProvider();
+
+    await signInWithPopup(auth, provider);
+
     setLoading(false);
   };
 
@@ -40,8 +48,27 @@ export const useFirebaseAuth = () => {
     await signOut(auth);
   };
 
+  /**
+   * Sync user data with the server.
+   */
   useEffect(() => {
-    return onIdTokenChanged(getAuth(), handleIdTokenChanged);
+    if (!user) {
+      return;
+    }
+
+    fetch("/api/entities/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ user }),
+    });
+  }, [user]);
+
+  useEffect(() => {
+    const subscription = onIdTokenChanged(getAuth(), handleIdTokenChanged);
+
+    return () => subscription();
   }, []);
 
   return {
