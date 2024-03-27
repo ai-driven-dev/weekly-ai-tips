@@ -1,7 +1,14 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 import TagEntity from "@/src/features/tagManagement/types/TagEntity";
-import { useEffect, useState } from "react";
 
 /**
  * This page is a React Component listing all tags from API.
@@ -14,35 +21,37 @@ import { useEffect, useState } from "react";
  *
  * @packageDocumentation
  */
-export default function ListTags() {
-  const [tags, setTags] = useState<TagEntity[]>([]);
-
-  useEffect(() => {
-    fetch("/api/entities/tags")
-      .then((res) => res.json())
-      .then(setTags);
-  }, []);
-
-  const handleDeleteTag = (tagId: string) => {
-    fetch(`/api/entities/tags/${tagId}`, { method: "DELETE" }).then(() => {
-      setTags((prevTags) => prevTags.filter((tag) => tag.id !== tagId));
-    });
-  };
-
+export default function ListTags({
+  tags,
+  handleDeleteTag,
+}: {
+  tags: TagEntity[];
+  handleDeleteTag: (id: string) => void;
+}) {
   return (
-    <div>
-      <h1>Tags</h1>
-      <ul>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableCell>#</TableCell>
+          <TableCell>Name</TableCell>
+          <TableCell>Description</TableCell>
+          <TableCell>Action</TableCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
         {tags.map((tag) => (
-          <li key={tag.id}>
-            <h2>{tag.name}</h2>
-            <p>{tag.description}</p>
-            {/* <button onClick={() => tag.id && handleDeleteTag(tag.id)}>
-              Delete
-            </button> */}
-          </li>
+          <TableRow key={tag.id}>
+            <TableCell>{tag.id}</TableCell>
+            <TableCell>{tag.name}</TableCell>
+            <TableCell>{tag.description}</TableCell>
+            <TableCell>
+              <Button onClick={() => tag.id && handleDeleteTag(tag.id)}>
+                Delete
+              </Button>
+            </TableCell>
+          </TableRow>
         ))}
-      </ul>
-    </div>
+      </TableBody>
+    </Table>
   );
 }

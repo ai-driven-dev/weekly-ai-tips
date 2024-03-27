@@ -12,9 +12,10 @@ import TagEntity from "../types/TagEntity";
 
 export type Props = {
   tag: TagEntity;
+  callback: () => void;
 };
 
-export default function TagForm({ tag }: Props) {
+export default function TagForm({ tag, callback }: Props) {
   const { toast } = useToast();
   const { push } = useRouter();
   const [state, formAction] = useFormState(
@@ -31,13 +32,13 @@ export default function TagForm({ tag }: Props) {
         description: tag.id ? "Tag edited!" : "Tag created successfully",
       });
 
-      push("/dashboard/tags");
+      callback();
 
       return () => {
         initialState.current = state;
       };
     }
-  }, [push, state, tag.id, toast]);
+  }, [callback, push, state, tag.id, toast]);
 
   return (
     <form action={formAction} className="flex flex-col gap-4">

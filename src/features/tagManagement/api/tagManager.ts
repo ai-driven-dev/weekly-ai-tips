@@ -39,8 +39,16 @@ export async function createTag(tagData: TagEntity): Promise<TagEntity> {
  * @param tagId - The ID of the tag to be deleted.
  * @returns A Promise that resolves when the tag is deleted.
  */
-export async function deleteTag(tagId: string): Promise<void> {
+export async function deleteTag(tagId: string): Promise<boolean> {
   await db.collection("tags").doc(tagId).delete();
+
+  // check if the tag has been deleted
+  const tagSnapshot = await db.collection("tags").doc(tagId).get();
+  if (tagSnapshot.exists) {
+    throw new Error(`Tag ${tagId} was not deleted`);
+  }
+
+  return true;
 }
 
 /**
@@ -68,7 +76,10 @@ export async function getTags(): Promise<TagEntity[]> {
   const tagsSnapshot = await db.collection("tags").get();
   const tags: TagEntity[] = [];
   tagsSnapshot.forEach((doc) => {
-    tags.push(doc.data() as TagEntity);
+    const tagData = doc.data() as TagEntity;
+    const tagId = doc.id;
+    const tagWithId = { ...tagData, id: tagId };
+    tags.push(tagWithId);
   });
   return tags;
 }
