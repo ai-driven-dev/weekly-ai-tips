@@ -1,3 +1,4 @@
+import Title from "@/components/ui/title";
 import { fetchTip } from "@/src/features/tipsManagement/api/fetchTip";
 import TipDetail from "@/src/features/tipsManagement/components/TipForm";
 import Link from "next/link";
@@ -14,7 +15,7 @@ export default async function TipEdit({ params: { id } }: Props) {
   if (!tip) {
     return (
       <div>
-        <h1>Tip not found</h1>
+        <Title>Tip not found</Title>
 
         <Link href="/dashboard/tips">Back to list</Link>
       </div>
@@ -23,7 +24,7 @@ export default async function TipEdit({ params: { id } }: Props) {
 
   return (
     <>
-      <h1>Editing Tips {id}</h1>
+      <Title>Editing Tips {id}</Title>
 
       <TipDetail tip={tip} />
     </>

@@ -4,8 +4,8 @@ import { usePathname } from "next/navigation";
 export default function Navigation() {
   const pathname = usePathname();
   return (
-    <nav>
-      <ul className="flex gap-3">
+    <nav className="bg-gray-100 h-full py-8 px-16">
+      <ul className="flex flex-col gap-5">
         <li className="inline">
           {pathname === "/dashboard" ? (
             <strong>Dashboard</strong>

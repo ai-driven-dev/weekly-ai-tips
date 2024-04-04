@@ -1,9 +1,10 @@
+import Title from "@/components/ui/title";
 import TipDetail from "@/src/features/tipsManagement/components/TipForm";
 
 export default function Page(): React.ReactElement {
   return (
     <>
-      <h1>Create Tips</h1>
+      <Title>Create Tips</Title>
 
       <TipDetail
         tip={{

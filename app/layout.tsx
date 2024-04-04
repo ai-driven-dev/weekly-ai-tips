@@ -1,10 +1,20 @@
 import "@/firebaseAdmin";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Noto_Sans, Rokkitt } from "next/font/google";
 import React from "react";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const sans = Noto_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-noto",
+});
+
+const serif = Rokkitt({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-rokkitt",
+});
 
 export const metadata: Metadata = {
   title: "Weekly AI Tips",
@@ -18,7 +28,9 @@ export default function RootLayout({
 }): React.JSX.Element {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${sans.variable} ${serif.variable} ${sans.className}`}>
+        {children}
+      </body>
     </html>
   );
 }

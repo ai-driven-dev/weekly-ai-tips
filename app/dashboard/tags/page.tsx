@@ -1,5 +1,6 @@
 "use client";
 
+import Title from "@/components/ui/title";
 import { toast } from "@/components/ui/use-toast";
 import ListTags from "@/src/features/tagManagement/components/ListTags";
 import TagForm from "@/src/features/tagManagement/components/TagForm";
@@ -33,7 +34,7 @@ export default function Page(): React.ReactElement {
   };
   return (
     <>
-      <h1>Tags</h1>
+      <Title>Tags</Title>
 
       <div className="flex gap-4">
         <div className="w-1/2">
