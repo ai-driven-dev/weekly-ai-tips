@@ -10,9 +10,9 @@ export async function editTipAction(
 ): Promise<EntityTipForm> {
   const data = {
     id: formData.get("id") as string,
-    name: formData.get("name") as string,
-    shortDescription: formData.get("shortDescription") as string,
-    htmlContent: formData.get("htmlContent") as string,
+    title: formData.get("title") as string,
+    description: formData.get("description") as string,
+    content: formData.get("content") as string,
   };
 
   if (!data.id) throw new Error("ID is required");

@@ -11,9 +11,9 @@ export async function fetchTips(): Promise<Array<EntityTipForm>> {
     const tip = doc.data();
     tips.push({
       id: doc.id,
-      name: tip.name,
-      htmlContent: tip.htmlContent,
-      shortDescription: tip.shortDescription,
+      title: tip.title,
+      description: tip.description,
+      content: tip.content,
     });
   });
 

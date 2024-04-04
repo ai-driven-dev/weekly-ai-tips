@@ -43,16 +43,16 @@ export default function TipDetail({ tip }: Props) {
     <form action={formAction} className="flex flex-col gap-4">
       {tip.id && <input type="hidden" name="id" value={tip.id} />}
 
-      <InputWithLabel label="Name" name="name" defaultValue={state.name} />
+      <InputWithLabel label="Title" name="title" defaultValue={state.title} />
       <InputWithLabel
         label="Description"
-        name="shortDescription"
-        defaultValue={state.shortDescription}
+        name="description"
+        defaultValue={state.description}
       />
       <InputWithLabel
         label="Content"
-        name="htmlContent"
-        defaultValue={state.htmlContent}
+        name="content"
+        defaultValue={state.content}
       />
 
       <Button type="submit">Save</Button>

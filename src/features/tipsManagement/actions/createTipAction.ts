@@ -9,9 +9,9 @@ export async function createTipAction(
   formData: FormData
 ): Promise<EntityTipForm> {
   const data = {
-    name: formData.get("name") as string,
-    shortDescription: formData.get("shortDescription") as string,
-    htmlContent: formData.get("htmlContent") as string,
+    title: formData.get("title") as string,
+    description: formData.get("description") as string,
+    content: formData.get("content") as string,
   };
 
   const persistedData = await createTip(data);

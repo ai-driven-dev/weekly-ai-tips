@@ -14,8 +14,8 @@ export async function fetchTip(id: string): Promise<EntityTipForm | null> {
 
   return {
     id: doc.id,
-    name: tip?.name,
-    htmlContent: tip?.htmlContent,
-    shortDescription: tip?.shortDescription,
+    title: tip?.title,
+    content: tip?.content,
+    description: tip?.description,
   };
 }

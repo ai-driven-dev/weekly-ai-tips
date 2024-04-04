@@ -56,7 +56,7 @@ export default function TipList({ tips }: Props): React.ReactElement {
           <TableRow key={tip.id}>
             <TableCell>{tip.id}</TableCell>
             <TableCell>{tip.name}</TableCell>
-            <TableCell>{tip.shortDescription}</TableCell>
+            <TableCell>{tip.description}</TableCell>
             <TableCell>
               <div className="flex gap-2">
                 <Button asChild>

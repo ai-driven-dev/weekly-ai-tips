@@ -1,17 +1,17 @@
 interface TipEntity {
-  id: string
-  name: string
-  shortDescription: string
-  htmlContent: string
-  mediaURL: string
-  creationDate: Date
-  updatedDate: Date
-  ownerID: string
+  id: string;
+  title: string;
+  description: string;
+  content: string;
+  mediaURL: string;
+  creationDate: Date;
+  updatedDate: Date;
+  ownerID: string;
 }
 
 export type EntityTipForm = Pick<
   TipEntity,
-  "name" | "shortDescription" | "htmlContent"
+  "title" | "description" | "content"
 > & {
   id: string | null;
 };

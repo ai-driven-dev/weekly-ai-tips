@@ -9,9 +9,9 @@ export default function Page(): React.ReactElement {
       <TipDetail
         tip={{
           id: null,
-          name: "Tip 1",
-          shortDescription: "Short description",
-          htmlContent: "<p>Content</p>",
+          title: "Tip 1",
+          description: "Short description",
+          content: "<p>Content</p>",
         }}
       />
     </>
