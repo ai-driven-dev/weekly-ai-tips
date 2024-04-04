@@ -2,7 +2,7 @@ import "@/firebaseAdmin";
 import { firestore } from "firebase-admin";
 
 export async function deleteFirestoreObject(
-  collectionName: "users" | "tips",
+  collectionName: "users" | "tips" | "tags",
   objectId: string | undefined | null
 ): Promise<boolean> {
   if (!objectId) throw new Error("ID is required");

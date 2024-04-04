@@ -72,7 +72,7 @@ export async function updateTag(
  *
  * @returns A Promise that resolves to an array of tags.
  */
-export async function getTags(): Promise<TagEntity[]> {
+export async function fetchTags(): Promise<TagEntity[]> {
   const tagsSnapshot = await db.collection("tags").get();
   const tags: TagEntity[] = [];
   tagsSnapshot.forEach((doc) => {

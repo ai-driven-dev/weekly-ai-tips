@@ -1,9 +1,9 @@
-import { getTags } from "@/src/features/tagManagement/api/tagManager";
+import { fetchTags } from "@/src/features/tagManagement/api/tagManager";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(req: NextRequest) {
   try {
-    const tags = await getTags();
+    const tags = await fetchTags();
 
     return new NextResponse(JSON.stringify(tags), {
       status: 200,

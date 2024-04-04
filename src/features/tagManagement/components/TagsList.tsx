@@ -9,6 +9,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import TagEntity from "@/src/features/tagManagement/types/TagEntity";
+import { deleteTagAction } from "../actions/deleteTagAction";
 
 /**
  * This page is a React Component listing all tags from API.
@@ -21,13 +22,7 @@ import TagEntity from "@/src/features/tagManagement/types/TagEntity";
  *
  * @packageDocumentation
  */
-export default function ListTags({
-  tags,
-  handleDeleteTag,
-}: {
-  tags: TagEntity[];
-  handleDeleteTag: (id: string) => void;
-}) {
+export default function TagsList({ tags }: { tags: TagEntity[] }) {
   return (
     <Table>
       <TableHeader>
@@ -45,9 +40,10 @@ export default function ListTags({
             <TableCell>{tag.name}</TableCell>
             <TableCell>{tag.description}</TableCell>
             <TableCell>
-              <Button onClick={() => tag.id && handleDeleteTag(tag.id)}>
-                Delete
-              </Button>
+              <form action={deleteTagAction}>
+                <input type="hidden" name="id" value={tag.id} />
+                <Button type="submit">Delete</Button>
+              </form>
             </TableCell>
           </TableRow>
         ))}

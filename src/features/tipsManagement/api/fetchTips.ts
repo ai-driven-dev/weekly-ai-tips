@@ -1,8 +1,7 @@
-import { firestore } from "firebase-admin";
+import { db } from "@/firebaseAdmin";
 import { EntityTipForm } from "../types/TipEntity";
 
 export async function fetchTips(): Promise<Array<EntityTipForm>> {
-  const db = firestore();
   const tipsCollection = db.collection("tips");
   const snapshot = await tipsCollection.get();
   const tips: Array<EntityTipForm> = [];
