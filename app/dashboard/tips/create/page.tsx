@@ -1,17 +1,16 @@
 import Title from "@/components/ui/title";
 import TipDetail from "@/src/features/tipsManagement/components/TipForm";
 
-export default function Page(): React.ReactElement {
+export default async function Page() {
   return (
     <>
       <Title>Create Tips</Title>
 
       <TipDetail
         tip={{
-          id: null,
-          title: "Tip 1",
-          description: "Short description",
-          content: "<p>Content</p>",
+          title: "",
+          description: "",
+          content: "",
         }}
       />
     </>

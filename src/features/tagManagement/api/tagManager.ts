@@ -1,5 +1,5 @@
 import { db } from "@/firebaseAdmin";
-import TagEntity from "../types/TagEntity";
+import { TagEntity, TagFormType } from "../types/TagEntity";
 
 /**
  * Manage all the tags from Firebase.
@@ -25,7 +25,7 @@ import TagEntity from "../types/TagEntity";
  * @param tagData - The data of the tag to be created.
  * @returns A Promise that resolves to the created tag.
  */
-export async function createTag(tagData: TagEntity): Promise<TagEntity> {
+export async function createTag(tagData: TagFormType): Promise<TagEntity> {
   const tagRef = db.collection("tags").doc();
   const tagId = tagRef.id;
   const newTag = { ...tagData, id: tagId };
@@ -75,11 +75,16 @@ export async function updateTag(
 export async function fetchTags(): Promise<TagEntity[]> {
   const tagsSnapshot = await db.collection("tags").get();
   const tags: TagEntity[] = [];
-  tagsSnapshot.forEach((doc) => {
+  
+  for (const doc of tagsSnapshot.docs) {
     const tagData = doc.data() as TagEntity;
     const tagId = doc.id;
-    const tagWithId = { ...tagData, id: tagId };
+    const tagWithId: TagEntity = {
+      ...tagData,
+      id: tagId,
+    };
     tags.push(tagWithId);
-  });
+  }
+
   return tags;
 }

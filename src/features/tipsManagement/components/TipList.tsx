@@ -15,10 +15,10 @@ import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { useFormState } from "react-dom";
 import { deleteTipAction } from "../actions/deleteTipAction";
-import { EntityTipForm } from "../types/TipEntity";
+import TipEntity from "../types/TipEntity";
 
 export type Props = {
-  tips: Array<EntityTipForm>;
+  tips: Array<TipEntity>;
 };
 
 export default function TipList({ tips }: Props): React.ReactElement {
@@ -45,16 +45,14 @@ export default function TipList({ tips }: Props): React.ReactElement {
 
       <TableHeader>
         <TableRow>
-          <TableHead>ID</TableHead>
           <TableHead>Title</TableHead>
-          <TableHead>Short Description</TableHead>
+          <TableHead>Description</TableHead>
           <TableHead>Actions</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
         {tips.map((tip) => (
           <TableRow key={tip.id}>
-            <TableCell>{tip.id}</TableCell>
             <TableCell>{tip.title}</TableCell>
             <TableCell>{tip.description}</TableCell>
             <TableCell>

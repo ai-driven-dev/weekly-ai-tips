@@ -2,12 +2,12 @@
 
 import { revalidatePath } from "next/cache";
 import { createTag } from "../api/tagManager";
-import TagEntity from "../types/TagEntity";
+import { TagFormType } from "../types/TagEntity";
 
 export async function createTagAction(
-  _: TagEntity | null,
+  _: TagFormType | null,
   formData: FormData
-): Promise<TagEntity> {
+): Promise<TagFormType> {
   const data = {
     name: formData.get("name") as string,
     description: formData.get("description") as string,

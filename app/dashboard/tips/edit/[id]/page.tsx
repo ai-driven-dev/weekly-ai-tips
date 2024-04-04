@@ -1,6 +1,7 @@
 import Title from "@/components/ui/title";
 import { fetchTip } from "@/src/features/tipsManagement/api/fetchTip";
 import TipDetail from "@/src/features/tipsManagement/components/TipForm";
+import { convertTipEntityToForm } from "@/src/features/tipsManagement/utils/tipUtils";
 import Link from "next/link";
 
 export type Props = {
@@ -26,7 +27,7 @@ export default async function TipEdit({ params: { id } }: Props) {
     <>
       <Title>Editing Tips {id}</Title>
 
-      <TipDetail tip={tip} />
+      <TipDetail tip={convertTipEntityToForm(tip)} />
     </>
   );
 }

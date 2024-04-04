@@ -8,10 +8,10 @@ import { useEffect, useRef } from "react";
 import { useFormState } from "react-dom";
 import { createTagAction } from "../actions/createTagAction";
 import { editTagAction } from "../actions/editTagAction";
-import TagEntity from "../types/TagEntity";
+import { TagFormType } from "../types/TagEntity";
 
 export type Props = {
-  tag: TagEntity;
+  tag: TagFormType;
 };
 
 export default function TagForm({ tag }: Props) {
@@ -47,6 +47,8 @@ export default function TagForm({ tag }: Props) {
         name="description"
         defaultValue={state.description}
       />
+
+      {/* @TODO Create readonly input for slug on the fly - only if state.id is missing (no slug edition allowed) */}
       <InputWithLabel label="Slug" name="slug" defaultValue={state.slug} />
 
       <Button type="submit">Save</Button>

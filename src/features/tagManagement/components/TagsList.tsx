@@ -8,7 +8,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import TagEntity from "@/src/features/tagManagement/types/TagEntity";
+import { TagEntity } from "@/src/features/tagManagement/types/TagEntity";
 import { deleteTagAction } from "../actions/deleteTagAction";
 
 /**
@@ -27,7 +27,6 @@ export default function TagsList({ tags }: { tags: TagEntity[] }) {
     <Table>
       <TableHeader>
         <TableRow>
-          <TableCell>#</TableCell>
           <TableCell>Name</TableCell>
           <TableCell>Description</TableCell>
           <TableCell>Action</TableCell>
@@ -36,10 +35,10 @@ export default function TagsList({ tags }: { tags: TagEntity[] }) {
       <TableBody>
         {tags.map((tag) => (
           <TableRow key={tag.id}>
-            <TableCell>{tag.id}</TableCell>
             <TableCell>{tag.name}</TableCell>
             <TableCell>{tag.description}</TableCell>
             <TableCell>
+              {/* @TODO Add a form to edit a tag */}
               <form action={deleteTagAction}>
                 <input type="hidden" name="id" value={tag.id} />
                 <Button type="submit">Delete</Button>

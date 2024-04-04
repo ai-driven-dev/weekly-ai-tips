@@ -1,10 +1,10 @@
 import { db } from "@/firebaseAdmin";
-import { EntityTipForm } from "../types/TipEntity";
+import TipEntity from "../types/TipEntity";
 
-export async function fetchTips(): Promise<Array<EntityTipForm>> {
+export async function fetchTips(): Promise<Array<TipEntity>> {
   const tipsCollection = db.collection("tips");
   const snapshot = await tipsCollection.get();
-  const tips: Array<EntityTipForm> = [];
+  const tips: Array<TipEntity> = [];
 
   snapshot.forEach((doc) => {
     const tip = doc.data();
@@ -13,6 +13,10 @@ export async function fetchTips(): Promise<Array<EntityTipForm>> {
       title: tip.title,
       description: tip.description,
       content: tip.content,
+      mediaURL: tip.mediaURL,
+      creationDate: tip.creationDate?.toDate(),
+      updatedDate: tip.updatedDate?.toDate(),
+      ownerID: tip?.ownerID,
     });
   });
 

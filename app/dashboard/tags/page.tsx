@@ -19,7 +19,11 @@ export default async function Page() {
 
         <div className="w-1/2">
           <TagForm
-            tag={{ name: "Tag 1", description: "Mon tag ", slug: "tag-1" }}
+            tag={{
+              name: "",
+              description: "",
+              slug: "",
+            }}
           />
         </div>
       </div>

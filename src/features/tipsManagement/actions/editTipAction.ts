@@ -2,12 +2,13 @@
 
 import { revalidatePath } from "next/cache";
 import editTip from "../../userManagement/api/editTip";
-import { EntityTipForm } from "../types/TipEntity";
+import { TipFormType } from "../types/TipEntity";
+import { convertTipEntityToForm } from "../utils/tipUtils";
 
 export async function editTipAction(
-  _: EntityTipForm | null,
+  _: TipFormType | null,
   formData: FormData
-): Promise<EntityTipForm> {
+): Promise<TipFormType> {
   const data = {
     id: formData.get("id") as string,
     title: formData.get("title") as string,
@@ -20,7 +21,6 @@ export async function editTipAction(
   const persistedData = await editTip(data);
 
   revalidatePath("/dashboard/tips");
-  revalidatePath(`/dashboard/tips/edit/${data.id}`);
 
-  return persistedData!;
+  return convertTipEntityToForm(persistedData);
 }
