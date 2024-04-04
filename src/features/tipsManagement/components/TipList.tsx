@@ -55,7 +55,7 @@ export default function TipList({ tips }: Props): React.ReactElement {
         {tips.map((tip) => (
           <TableRow key={tip.id}>
             <TableCell>{tip.id}</TableCell>
-            <TableCell>{tip.name}</TableCell>
+            <TableCell>{tip.title}</TableCell>
             <TableCell>{tip.description}</TableCell>
             <TableCell>
               <div className="flex gap-2">
