@@ -10,35 +10,17 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { toast } from "@/components/ui/use-toast";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
-import { useFormState } from "react-dom";
-import { deleteTipAction } from "../actions/deleteTipAction";
 import TipEntity from "../types/TipEntity";
+import TipDeleteButton from "./TipDeleteButton";
+import TipUpVoteButton from "./TipUpVoteButton";
+import TipDownVoteButton from "./TipDownVoteButton";
 
 export type Props = {
   tips: Array<TipEntity>;
 };
 
 export default function TipList({ tips }: Props): React.ReactElement {
-  const [state, formAction] = useFormState<boolean | null, FormData>(
-    deleteTipAction,
-    null
-  );
-  const initialState = useRef(state);
-
-  useEffect(() => {
-    if (initialState.current !== state) {
-      toast({
-        title: "Success",
-        description: state ? "Tip deleted!" : "Error deleting tip",
-      });
-
-      initialState.current = state;
-    }
-  }, [state]);
-
   return (
     <Table>
       <TableCaption>Tips list.</TableCaption>
@@ -47,6 +29,7 @@ export default function TipList({ tips }: Props): React.ReactElement {
         <TableRow>
           <TableHead>Title</TableHead>
           <TableHead>Description</TableHead>
+          <TableHead>Votes</TableHead>
           <TableHead>Actions</TableHead>
           {/* Add status column */}
           {/* Add tags column */}
@@ -57,20 +40,21 @@ export default function TipList({ tips }: Props): React.ReactElement {
           <TableRow key={tip.id}>
             <TableCell>{tip.title}</TableCell>
             <TableCell>{tip.description}</TableCell>
+            <TableCell>
+              <div className="flex gap-2">
+                <span>{tip.upVotes}</span>/<span>{tip.downVotes}</span>
+              </div>
+            </TableCell>
             {/* Add status column */}
             {/* Add tags column */}
             <TableCell>
               <div className="flex gap-2">
+                <TipUpVoteButton tipId={tip.id} />
+                <TipDownVoteButton tipId={tip.id} />
                 <Button asChild>
                   <Link href={`/dashboard/tips/edit/${tip.id}`}>Edit</Link>
                 </Button>
-
-                <form action={formAction}>
-                  <input type="hidden" name="id" value={tip.id as string} />
-                  <Button variant="destructive" type="submit">
-                    Delete
-                  </Button>
-                </form>
+                <TipDeleteButton tipId={tip.id} />
               </div>
             </TableCell>
           </TableRow>

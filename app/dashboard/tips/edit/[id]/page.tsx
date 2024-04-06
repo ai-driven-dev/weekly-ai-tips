@@ -1,7 +1,7 @@
 import Title from "@/components/ui/title";
-import { fetchTip } from "@/src/features/tipsManagement/api/fetchTip";
-import TipDetail from "@/src/features/tipsManagement/components/TipForm";
-import { convertTipEntityToForm } from "@/src/features/tipsManagement/utils/tipUtils";
+import { fetchTip } from "@/src/features/tipManagement/api/fetchTip";
+import TipDetail from "@/src/features/tipManagement/components/TipForm";
+import { convertTipEntityToForm } from "@/src/features/tipManagement/utils/tipUtils";
 import Link from "next/link";
 
 export type Props = {

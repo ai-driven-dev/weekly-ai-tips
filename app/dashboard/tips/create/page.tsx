@@ -1,5 +1,5 @@
 import Title from "@/components/ui/title";
-import TipDetail from "@/src/features/tipsManagement/components/TipForm";
+import TipDetail from "@/src/features/tipManagement/components/TipForm";
 
 export default async function Page() {
   return (

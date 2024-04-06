@@ -1,6 +1,6 @@
 import Title from "@/components/ui/title";
-import { fetchTips } from "@/src/features/tipsManagement/api/fetchTips";
-import TipList from "@/src/features/tipsManagement/components/TipList";
+import { fetchTips } from "@/src/features/tipManagement/api/fetchTips";
+import TipList from "@/src/features/tipManagement/components/TipList";
 
 export default async function Page() {
   const tips = await fetchTips();

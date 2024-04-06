@@ -1,5 +1,5 @@
 import { admin } from "@/firebaseAdmin";
-import TipEntity, { TipFormType } from "../../tipsManagement/types/TipEntity";
+import TipEntity, { TipFormType } from "../../tipManagement/types/TipEntity";
 
 export default async function editTip(data: TipFormType): Promise<TipEntity> {
   const tipsCollection = admin.firestore().collection("tips");

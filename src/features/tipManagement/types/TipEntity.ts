@@ -10,6 +10,8 @@ interface TipEntity {
   creationDate: Date;
   updatedDate: Date;
   ownerID: string;
+  upVotes: number;
+  downVotes: number;
   /**
    * @TODO Add tagIds property to TipEntity
    */
@@ -28,4 +30,4 @@ export type TipFormType = Pick<
   id?: string;
 };
 
-export default TipEntity
+export default TipEntity;

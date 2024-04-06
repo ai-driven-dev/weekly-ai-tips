@@ -1,4 +1,4 @@
-import TipEntity from "../../tipsManagement/types/TipEntity";
+import TipEntity from "../../tipManagement/types/TipEntity";
 
 import { admin } from "@/firebaseAdmin";
 
