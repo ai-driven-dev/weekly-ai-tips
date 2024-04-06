@@ -58,6 +58,8 @@ export default function TipDetail({ tip }: Props) {
         defaultValue={state.content}
       />
 
+      {/* @TODO Add status select */}
+
       {/* @TODO Add a toggle group to select tags */}
 
       {/* @TODO Add image upload */}

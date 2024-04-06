@@ -1,8 +1,16 @@
 import { db } from "@/firebaseAdmin";
 import TipEntity from "../types/TipEntity";
 
+/**
+ * @TODO Add status filter to fetchTips function
+ */
 export async function fetchTips(): Promise<Array<TipEntity>> {
-  const tipsCollection = db.collection("tips");
+  let tipsCollection = db.collection("tips");
+
+  if (!tipsCollection) {
+    throw new Error("Failed to fetch tips collection from database");
+  }
+
   const snapshot = await tipsCollection.get();
   const tips: Array<TipEntity> = [];
 
@@ -17,6 +25,7 @@ export async function fetchTips(): Promise<Array<TipEntity>> {
       creationDate: tip.creationDate?.toDate(),
       updatedDate: tip.updatedDate?.toDate(),
       ownerID: tip?.ownerID,
+      // @TODO get tags, status, scheduledDate, publishedDate
     });
   });
 

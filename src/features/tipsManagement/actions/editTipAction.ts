@@ -9,7 +9,10 @@ export async function editTipAction(
   _: TipFormType | null,
   formData: FormData
 ): Promise<TipFormType> {
-  const data = {
+  /**
+   * @TODO Add status, image, tags...
+   */
+  const data: Omit<TipFormType, "scheduledDate"> = {
     id: formData.get("id") as string,
     title: formData.get("title") as string,
     description: formData.get("description") as string,
@@ -18,7 +21,12 @@ export async function editTipAction(
 
   if (!data.id) throw new Error("ID is required");
 
-  const persistedData = await editTip(data);
+  const persistedData = await editTip({
+    ...data,
+    /**
+     * @TODO Add all properties :)
+     */
+  });
 
   revalidatePath("/dashboard/tips");
 

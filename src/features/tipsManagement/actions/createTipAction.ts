@@ -17,7 +17,14 @@ export async function createTipAction(
     ownerID: formData.get("ownerID") as string,
   };
 
-  const persistedData = await createTip(data);
+  const persistedData = await createTip({
+    ...data,
+    creationDate: new Date(),
+    updatedDate: new Date(),
+    /**
+     * @TODO Add all properties :)
+     */
+  });
 
   revalidatePath("/dashboard/tips");
 

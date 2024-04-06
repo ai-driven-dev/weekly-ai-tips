@@ -20,5 +20,8 @@ export async function fetchTip(id: string): Promise<TipEntity | null> {
     creationDate: tip?.creationDate,
     updatedDate: tip?.updatedDate,
     ownerID: tip?.ownerID,
+    /**
+     * @TODO Add tags, status, scheduledDate, publishedDate
+     */
   };
 }

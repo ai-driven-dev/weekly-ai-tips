@@ -1,5 +1,8 @@
 import TipEntity, { TipFormType } from "../types/TipEntity";
 
+/**
+ * @TODO Add properties...
+ */
 export function convertTipEntityToForm(tip: TipEntity): TipFormType {
   return {
     id: tip.id,

@@ -1,9 +1,7 @@
 import { admin } from "@/firebaseAdmin";
-import TipEntity from "../../tipsManagement/types/TipEntity";
+import TipEntity, { TipFormType } from "../../tipsManagement/types/TipEntity";
 
-export default async function editTip(
-  data: Partial<TipEntity>
-): Promise<TipEntity> {
+export default async function editTip(data: TipFormType): Promise<TipEntity> {
   const tipsCollection = admin.firestore().collection("tips");
 
   if (!data.id || typeof data.id !== "string") {
@@ -16,6 +14,9 @@ export default async function editTip(
 
   const doc = await docRef.get();
 
+  /**
+   * @TODO return properties, do not cast to TipEntity
+   */
   return {
     id: doc.id,
     ...doc.data(),
