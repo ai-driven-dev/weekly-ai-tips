@@ -1,7 +1,7 @@
 "use server";
 
-import upVote from "@/src/features/votingSystem/api/upVote";
 import { revalidatePath } from "next/cache";
+import { upVote } from "../../votingSystem/api/vote";
 
 /**
  * Upvote a tip from a user.

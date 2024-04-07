@@ -1,7 +1,7 @@
 "use server";
 
-import downVote from "@/src/features/votingSystem/api/downVote";
 import { revalidatePath } from "next/cache";
+import { downVote } from "../../votingSystem/api/vote";
 
 /**
  * Downvote a tip from a user.
