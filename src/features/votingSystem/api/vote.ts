@@ -1,13 +1,14 @@
 import { db } from "@/firebaseAdmin";
+import UserVoteEntity from "../types/UserVoteEntity";
 
-export function upVote(tipID: string, fromUserId: string) {
+export async function upVote(tipID: string, fromUserId: string) {
   return vote(tipID, fromUserId, "upvote");
 }
-export function downVote(tipID: string, fromUserId: string) {
+export async function downVote(tipID: string, fromUserId: string) {
   return vote(tipID, fromUserId, "downvote");
 }
 
-async function vote(
+export async function vote(
   tipID: string,
   fromUserId: string,
   voteType: "upvote" | "downvote"
@@ -35,18 +36,16 @@ async function vote(
     throw new Error(`User has already ${voteType}d the tip`);
   }
 
-  // Add or update the user vote entity
-  if (userVote.docs.length === 0) {
-    await db.collection("votes").add({
-      userID: fromUserId,
-      tipID: tipID,
-      vote: voteType,
-    });
-  } else {
-    await db.collection("votes").doc(userVote.docs[0].id).update({
-      vote: voteType,
-    });
-  }
+  // Add the user vote entity
+  const vote: UserVoteEntity = {
+    userID: fromUserId,
+    tipID: tipID,
+    vote: voteType,
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  };
+
+  await db.collection("votes").add(vote);
 
   return true;
 }

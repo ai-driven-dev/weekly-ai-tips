@@ -1,5 +1,5 @@
 interface UserVoteEntity {
-  id: string;
+  id?: string;
   userID: string;
   tipID: string;
   vote: "upvote" | "downvote";
@@ -7,4 +7,4 @@ interface UserVoteEntity {
   updatedAt: Date;
 }
 
-export default UserVoteEntity
+export default UserVoteEntity;
