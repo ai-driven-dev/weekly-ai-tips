@@ -17,16 +17,14 @@ export async function editTipAction(
     title: formData.get("title") as string,
     description: formData.get("description") as string,
     content: formData.get("content") as string,
+    status: formData.get("status") === "on" ? "waiting-for-approval" : "draft",
   };
+
+  console.log("data", formData);
 
   if (!data.id) throw new Error("ID is required");
 
-  const persistedData = await editTip({
-    ...data,
-    /**
-     * @TODO Add all properties :)
-     */
-  });
+  const persistedData = await editTip(data);
 
   revalidatePath("/dashboard/tips");
 

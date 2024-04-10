@@ -15,18 +15,16 @@ export async function createTipAction(
     description: formData.get("description") as string,
     content: formData.get("content") as string,
     ownerID: formData.get("ownerID") as string,
+    status: formData.get("status") === "on" ? "waiting-for-approval" : "draft",
   };
 
   const persistedData = await createTip({
     ...data,
-    status: "draft",
+    status: data.status,
     downVotes: 0,
     upVotes: 0,
     creationDate: new Date(),
     updatedDate: new Date(),
-    /**
-     * @TODO Add all properties :)
-     */
   });
 
   revalidatePath("/dashboard/tips");

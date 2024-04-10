@@ -50,14 +50,22 @@ export default function TipList({ tips }: Props): React.ReactElement {
             <TableCell>{tip.status}</TableCell>
             {/* Add tags column */}
             <TableCell>
-              <div className="flex gap-2">
-                <TipUpVoteButton tipId={tip.id} />
-                <TipDownVoteButton tipId={tip.id} />
-                <Button asChild>
-                  <Link href={`/dashboard/tips/edit/${tip.id}`}>Edit</Link>
-                </Button>
-                <TipDeleteButton tipId={tip.id} />
-              </div>
+              {tip.id && (
+                <div className="flex gap-2">
+                  <TipUpVoteButton
+                    disabled={tip.status !== "waiting-for-approval"}
+                    tipId={tip.id}
+                  />
+                  <TipDownVoteButton
+                    tipId={tip.id}
+                    disabled={tip.status !== "waiting-for-approval"}
+                  />
+                  <Button asChild>
+                    <Link href={`/dashboard/tips/edit/${tip.id}`}>Edit</Link>
+                  </Button>
+                  <TipDeleteButton tipId={tip.id} />
+                </div>
+              )}
             </TableCell>
           </TableRow>
         ))}

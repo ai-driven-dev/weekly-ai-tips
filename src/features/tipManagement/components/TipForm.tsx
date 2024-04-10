@@ -2,6 +2,7 @@
 
 
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import InputWithLabel from "@/components/ui/inputWithLabel";
 import { useToast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
@@ -59,6 +60,19 @@ export default function TipDetail({ tip }: Props) {
       />
 
       {/* @TODO Add status select */}
+      <div className="flex items-center space-x-2">
+        <Checkbox
+          id="status"
+          name="status"
+          defaultChecked={state.status === "waiting-for-approval"}
+        />
+        <label
+          htmlFor="status"
+          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        >
+          Is your tip ready for approval?
+        </label>
+      </div>
 
       {/* @TODO Add a toggle group to select tags */}
 

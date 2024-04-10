@@ -7,9 +7,9 @@ import { upVoteTipAction } from "../actions/upVoteTipAction";
 
 type Props = {
   tipId: string;
-};
+} & React.ComponentProps<typeof Button>;
 
-export default function TipUpVoteButton({ tipId }: Props) {
+export default function TipUpVoteButton({ tipId, ...buttonProps }: Props) {
   const { user } = useUserAuthentication();
 
   const [state, action] = useFormState<boolean | string | null, FormData>(
@@ -41,7 +41,7 @@ export default function TipUpVoteButton({ tipId }: Props) {
     <form action={action}>
       <input type="hidden" name="tipId" value={tipId} />
       <input type="hidden" name="userId" value={user?.uid} />
-      <Button type="submit" variant={"outline"} size={"icon"}>
+      <Button {...buttonProps} type="submit" variant={"outline"} size={"icon"}>
         ☝️
       </Button>
     </form>

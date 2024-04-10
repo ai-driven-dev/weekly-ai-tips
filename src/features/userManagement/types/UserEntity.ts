@@ -3,7 +3,7 @@ interface UserEntity {
   name: string;
   picture?: string;
   email: string;
-  roles: string[];
+  roles: Array<"ADMIN" | "COMMUNITY" | "MEMBER" | "ANON">;
   createdAt: Date;
   updatedAt: Date;
 }

@@ -23,8 +23,11 @@ export async function fetchTip(id: string): Promise<TipEntity | null> {
     upVotes: tip?.upVotes,
     downVotes: tip?.downVotes,
     status: tip?.status,
+    scheduledDate: tip?.scheduledDate,
+    publishedDate: tip?.publishedDate,
+
     /**
-     * @TODO Add tags, status, scheduledDate, publishedDate
+     * @TODO Add tags
      */
   };
 }

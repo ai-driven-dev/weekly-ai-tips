@@ -1,5 +1,5 @@
 interface TipEntity {
-  id: string;
+  id?: string;
   title: string;
   description: string;
   /**
@@ -15,9 +15,8 @@ interface TipEntity {
   /**
    * @TODO Add tagIds property to TipEntity
    */
-  /**
-   * @TODO Add scheduledDate, status, publishedDate properties to TipEntity
-   */
+  scheduledDate?: Date | undefined;
+  publishedDate?: Date | undefined;
   status:
     | "draft"
     | "waiting-for-approval"
@@ -31,7 +30,7 @@ interface TipEntity {
 
 export type TipFormType = Pick<
   TipEntity,
-  "title" | "description" | "content"
+  "title" | "description" | "content" | "status" | "scheduledDate"
 > & {
   id?: string;
 };

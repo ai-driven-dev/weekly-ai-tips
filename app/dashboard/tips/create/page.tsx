@@ -8,9 +8,10 @@ export default async function Page() {
 
       <TipDetail
         tip={{
-          title: "",
-          description: "",
-          content: "",
+          title: "My title",
+          description: "My description",
+          content: "...",
+          status: "draft",
         }}
       />
     </>

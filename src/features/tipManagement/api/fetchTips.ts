@@ -1,12 +1,10 @@
 import { db } from "@/firebaseAdmin";
 import TipEntity from "../types/TipEntity";
-import { getStatus } from "../utils/tipUtils";
 
 export async function fetchTips(
   status?: TipEntity["status"]
 ): Promise<Array<TipEntity>> {
   let tipsCollection = db.collection("tips");
-  let votesCollection = db.collection("votes");
 
   if (!tipsCollection) {
     throw new Error("Failed to fetch tips collection from database");
@@ -24,20 +22,6 @@ export async function fetchTips(
 
   for (let doc of snapshot.docs) {
     const tip = doc.data();
-    const votesSnapshot = await votesCollection
-      .where("tipID", "==", doc.id)
-      .get();
-    let upVotes = 0;
-    let downVotes = 0;
-
-    votesSnapshot.forEach((voteDoc) => {
-      const vote = voteDoc.data();
-      if (vote.vote === "upvote") {
-        upVotes += 1;
-      } else if (vote.vote === "downvote") {
-        downVotes += 1;
-      }
-    });
 
     tips.push({
       id: doc.id,
@@ -48,10 +32,14 @@ export async function fetchTips(
       creationDate: tip.creationDate?.toDate(),
       updatedDate: tip.updatedDate?.toDate(),
       ownerID: tip?.ownerID,
-      upVotes,
-      downVotes,
-      status: getStatus({ upVotes, downVotes }),
-      // @TODO get tags, scheduledDate, publishedDate
+      upVotes: tip.upVotes,
+      downVotes: tip.downVotes,
+      status: tip.status,
+      scheduledDate: tip.scheduledDate?.toDate(),
+      publishedDate: tip.publishedDate?.toDate(),
+      /**
+       * TODO: add Tags
+       */
     });
   }
 
