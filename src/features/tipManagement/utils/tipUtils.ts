@@ -1,8 +1,5 @@
 import TipEntity, { TipFormType } from "../types/TipEntity";
 
-/**
- * @TODO Add properties...
- */
 export function convertTipEntityToForm(tip: TipEntity): TipFormType {
   return {
     id: tip.id,
@@ -25,12 +22,4 @@ export function getStatus(
   } else {
     return "draft";
   }
-}
-
-export function canVote(tip: Pick<TipEntity, "status">): boolean {
-  return (
-    tip.status !== "draft" &&
-    tip.status !== "scheduled" &&
-    tip.status !== "rejected"
-  );
 }

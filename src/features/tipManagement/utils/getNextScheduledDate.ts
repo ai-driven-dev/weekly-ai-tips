@@ -10,7 +10,7 @@ import { db } from "@/firebaseAdmin";
  * @returns {Date} - The next scheduled date for the tip which is a Monday at 9:00 AM.
  *
  */
-export async function getNextScheduledDate(): Promise<Date | null> {
+export async function getNextScheduledDate(): Promise<Date> {
   const now = new Date();
   const tipsRef = db.collection("tips");
   const snapshot = await tipsRef
@@ -28,8 +28,6 @@ export async function getNextScheduledDate(): Promise<Date | null> {
     const nextTip = snapshot.docs[0].data();
 
     if (nextTip?.scheduledDate) {
-      console.log("nextTip.scheduledDate", nextTip.scheduledDate);
-
       nextTipScheduledDate = getNextMondaysDateFromDate(
         nextTip.scheduledDate.toDate()
       );
@@ -60,7 +58,7 @@ export function getNextMondaysDateFromDate(
   return new Date(
     latestDate.getFullYear(),
     latestDate.getMonth(),
-    latestDate.getDate() + ((1 + 7 - latestDate.getDay()) % 7) + 1,
+    latestDate.getDate() + ((7 - latestDate.getDay() + 1) % 7),
     9,
     0,
     0,
