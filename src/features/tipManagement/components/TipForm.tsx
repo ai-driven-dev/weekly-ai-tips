@@ -64,7 +64,7 @@ export default function TipDetail({ tip }: Props) {
         <Checkbox
           id="status"
           name="status"
-          defaultChecked={state.status === "waiting-for-approval"}
+          defaultChecked={state.status === "ready"}
         />
         <label
           htmlFor="status"

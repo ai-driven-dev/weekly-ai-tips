@@ -10,11 +10,11 @@ export default async function editTip(
     throw new Error("Invalid document ID");
   }
 
-  console.log("data", data);
-
   const docRef = tipsCollection.doc(data.id);
 
-  await docRef.update({ ...data });
+  await docRef.update({
+    ...data,
+  });
 
   const doc = await docRef.get();
 

@@ -15,14 +15,9 @@ interface TipEntity {
   /**
    * @TODO Add tagIds property to TipEntity
    */
-  scheduledDate?: Date | undefined;
-  publishedDate?: Date | undefined;
-  status:
-    | "draft"
-    | "waiting-for-approval"
-    | "published"
-    | "rejected"
-    | "scheduled";
+  scheduledDate?: Date | null;
+  publishedDate?: Date | null;
+  status: "draft" | "ready" | "published" | "rejected" | "scheduled";
   /**
    * @TODO Add tagIDs property to TipEntity
    */

@@ -34,13 +34,6 @@ export default function Navigation() {
             <Link href="/dashboard/tips">Tips</Link>
           )}
         </li>
-        <li className="inline">
-          {pathname === "/dashboard/tips/create" ? (
-            <strong>New tip 🔥</strong>
-          ) : (
-            <Link href="/dashboard/tips/create">New tip 🔥</Link>
-          )}
-        </li>
       </ul>
     </nav>
   );

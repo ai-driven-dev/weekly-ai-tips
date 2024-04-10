@@ -15,11 +15,14 @@ export async function createTipAction(
     description: formData.get("description") as string,
     content: formData.get("content") as string,
     ownerID: formData.get("ownerID") as string,
-    status: formData.get("status") === "on" ? "waiting-for-approval" : "draft",
+    status: formData.get("status") === "on" ? "ready" : "draft",
   };
 
   const persistedData = await createTip({
-    ...data,
+    title: data.title,
+    description: data.description,
+    content: data.content,
+    ownerID: data.ownerID,
     status: data.status,
     downVotes: 0,
     upVotes: 0,

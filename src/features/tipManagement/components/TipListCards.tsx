@@ -40,6 +40,11 @@ const TipListCards: React.FC<Props> = ({ tips }) => {
           </CardContent>
           <CardFooter>
             <Badge>{tip.status}</Badge>
+            {tip.scheduledDate && (
+              <Badge variant={"secondary"}>
+                {new Date(tip.scheduledDate).toLocaleString("fr-FR")}
+              </Badge>
+            )}
           </CardFooter>
         </Card>
       ))}

@@ -1,5 +1,6 @@
 import { db } from "@/firebaseAdmin";
 import TipEntity from "../../tipManagement/types/TipEntity";
+import { getNextScheduledDate } from "../../tipManagement/utils/getNextScheduledDate";
 import { getStatus } from "../../tipManagement/utils/tipUtils";
 import editTip from "../../userManagement/api/editTip";
 import { fetchUser } from "../../userManagement/api/fetchUser";
@@ -27,7 +28,7 @@ export async function vote(
     throw new Error("Tip data not found");
   }
 
-  if (tipData.status !== "waiting-for-approval") {
+  if (tipData.status !== "ready") {
     throw new Error("Tip is not votable!");
   }
 
@@ -88,12 +89,23 @@ export async function vote(
     }
   });
 
+  const status = getStatus(tipData as TipEntity);
+  const scheduledDate =
+    status === "scheduled" ? await getNextScheduledDate() : null;
+
   const tipToUpdate: TipEntity = {
-    ...(tipData as TipEntity),
     id: tipID,
-    upVotes: upVotes,
-    downVotes: downVotes,
-    status: getStatus(tipData as TipEntity),
+    title: tipData.title,
+    description: tipData.description,
+    content: tipData.content,
+    creationDate: tipData.creationDate,
+    updatedDate: new Date(),
+    ownerID: tipData.ownerID,
+    mediaURL: tipData.mediaURL || null,
+    upVotes,
+    downVotes,
+    status,
+    scheduledDate,
   };
 
   await editTip(tipToUpdate);

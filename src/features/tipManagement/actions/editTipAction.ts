@@ -17,10 +17,8 @@ export async function editTipAction(
     title: formData.get("title") as string,
     description: formData.get("description") as string,
     content: formData.get("content") as string,
-    status: formData.get("status") === "on" ? "waiting-for-approval" : "draft",
+    status: formData.get("status") === "on" ? "ready" : "draft",
   };
-
-  console.log("data", formData);
 
   if (!data.id) throw new Error("ID is required");
 

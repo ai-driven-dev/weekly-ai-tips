@@ -20,8 +20,8 @@ export function getStatus(
     return "scheduled";
   } else if (tip.downVotes >= 3) {
     return "rejected";
-  } else if (tip.status === "waiting-for-approval") {
-    return "waiting-for-approval";
+  } else if (tip.status === "ready") {
+    return "ready";
   } else {
     return "draft";
   }

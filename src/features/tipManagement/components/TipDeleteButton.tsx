@@ -6,9 +6,9 @@ import { deleteTipAction } from "../actions/deleteTipAction";
 
 type Props = {
   tipId: string;
-};
+} & React.ComponentProps<typeof Button>;
 
-export default function TipDeleteButton({ tipId }: Props) {
+export default function TipDeleteButton({ tipId, ...buttonProps }: Props) {
   const [state, formActionDelete] = useFormState<boolean | null, FormData>(
     deleteTipAction,
     null
@@ -30,7 +30,7 @@ export default function TipDeleteButton({ tipId }: Props) {
   return (
     <form action={formActionDelete}>
       <input type="hidden" name="id" value={tipId} />
-      <Button variant="destructive" type="submit">
+      <Button {...buttonProps} variant="destructive" type="submit">
         Delete
       </Button>
     </form>

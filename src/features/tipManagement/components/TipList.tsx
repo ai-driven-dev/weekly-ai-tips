@@ -1,5 +1,6 @@
 "use client";
 
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   Table,
@@ -32,7 +33,6 @@ export default function TipList({ tips }: Props): React.ReactElement {
           <TableHead>Votes</TableHead>
           <TableHead>Status</TableHead>
           <TableHead>Actions</TableHead>
-          {/* Add status column */}
           {/* Add tags column */}
         </TableRow>
       </TableHeader>
@@ -46,24 +46,37 @@ export default function TipList({ tips }: Props): React.ReactElement {
                 <span>{tip.upVotes}</span>/<span>{tip.downVotes}</span>
               </div>
             </TableCell>
-            {/* Add status column */}
-            <TableCell>{tip.status}</TableCell>
+            <TableCell>
+              <div className="flex gap-2">
+                <Badge>{tip.status}</Badge>
+                {tip.scheduledDate && (
+                  <Badge variant={"secondary"}>
+                    {new Date(tip.scheduledDate).toLocaleString("fr-FR")}
+                  </Badge>
+                )}
+              </div>
+            </TableCell>
             {/* Add tags column */}
             <TableCell>
               {tip.id && (
                 <div className="flex gap-2">
                   <TipUpVoteButton
-                    disabled={tip.status !== "waiting-for-approval"}
+                    disabled={tip.status !== "ready"}
                     tipId={tip.id}
                   />
                   <TipDownVoteButton
                     tipId={tip.id}
-                    disabled={tip.status !== "waiting-for-approval"}
+                    disabled={tip.status !== "ready"}
                   />
                   <Button asChild>
-                    <Link href={`/dashboard/tips/edit/${tip.id}`}>Edit</Link>
+                    <Link href={`/dashboard/tips/edit/${tip.id}`}>
+                      {tip.status !== "draft" ? "View" : "Edit"}
+                    </Link>
                   </Button>
-                  <TipDeleteButton tipId={tip.id} />
+                  <TipDeleteButton
+                    tipId={tip.id}
+                    disabled={tip.status !== "draft"}
+                  />
                 </div>
               )}
             </TableCell>

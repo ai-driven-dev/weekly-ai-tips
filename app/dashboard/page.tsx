@@ -4,7 +4,7 @@ import TipListCards from "@/src/features/tipManagement/components/TipListCards";
 
 export default async function Page() {
   const tipsDraft = await fetchTips("draft");
-  const tipsWaitingApproval = await fetchTips("waiting-for-approval");
+  const tipsWaitingApproval = await fetchTips("ready");
   const tipsScheduled = await fetchTips("scheduled");
   const tipsRejected = await fetchTips("rejected");
 
