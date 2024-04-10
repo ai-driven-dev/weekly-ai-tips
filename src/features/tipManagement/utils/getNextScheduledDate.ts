@@ -1,5 +1,4 @@
 import { db } from "@/firebaseAdmin";
-import TipEntity from "@/src/features/tipManagement/types/TipEntity";
 
 /**
  * This function is used to get the next scheduled date for the tip.
@@ -26,10 +25,15 @@ export async function getNextScheduledDate(): Promise<Date | null> {
     /**
      * The latest tip scheduled after the current date.
      */
-    const nextTip = snapshot.docs[0].data() as TipEntity;
+    const nextTip = snapshot.docs[0].data();
 
-    if (nextTip?.scheduledDate)
-      nextTipScheduledDate = getNextMondaysDateFromDate(nextTip.scheduledDate);
+    if (nextTip?.scheduledDate) {
+      console.log("nextTip.scheduledDate", nextTip.scheduledDate);
+
+      nextTipScheduledDate = getNextMondaysDateFromDate(
+        nextTip.scheduledDate.toDate()
+      );
+    }
   }
 
   /**

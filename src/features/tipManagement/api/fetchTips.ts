@@ -4,7 +4,7 @@ import TipEntity from "../types/TipEntity";
 export async function fetchTips(
   status?: TipEntity["status"]
 ): Promise<Array<TipEntity>> {
-  let tipsCollection = db.collection("tips");
+let tipsCollection = db.collection("tips").orderBy("createdAt", "desc");
 
   if (!tipsCollection) {
     throw new Error("Failed to fetch tips collection from database");
