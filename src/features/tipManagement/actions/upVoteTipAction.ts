@@ -9,7 +9,7 @@ import { upVote } from "../../votingSystem/api/vote";
  * @param _: boolean | null
  * @param formData: FormData
  * @returns A boolean indicating success.
- * @throws {Error} If the user has alwaiting-for-approval upvoted the tip.
+ * @throws {Error} If the user has already upvoted the tip.
  */
 export async function upVoteTipAction(
   _: boolean | string | null,
