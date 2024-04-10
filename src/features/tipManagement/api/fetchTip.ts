@@ -22,6 +22,7 @@ export async function fetchTip(id: string): Promise<TipEntity | null> {
     ownerID: tip?.ownerID,
     upVotes: tip?.upVotes,
     downVotes: tip?.downVotes,
+    status: tip?.status,
     /**
      * @TODO Add tags, status, scheduledDate, publishedDate
      */

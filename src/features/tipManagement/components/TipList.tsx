@@ -13,8 +13,8 @@ import {
 import Link from "next/link";
 import TipEntity from "../types/TipEntity";
 import TipDeleteButton from "./TipDeleteButton";
-import TipUpVoteButton from "./TipUpVoteButton";
 import TipDownVoteButton from "./TipDownVoteButton";
+import TipUpVoteButton from "./TipUpVoteButton";
 
 export type Props = {
   tips: Array<TipEntity>;
@@ -30,6 +30,7 @@ export default function TipList({ tips }: Props): React.ReactElement {
           <TableHead>Title</TableHead>
           <TableHead>Description</TableHead>
           <TableHead>Votes</TableHead>
+          <TableHead>Status</TableHead>
           <TableHead>Actions</TableHead>
           {/* Add status column */}
           {/* Add tags column */}
@@ -46,6 +47,7 @@ export default function TipList({ tips }: Props): React.ReactElement {
               </div>
             </TableCell>
             {/* Add status column */}
+            <TableCell>{tip.status}</TableCell>
             {/* Add tags column */}
             <TableCell>
               <div className="flex gap-2">

@@ -1,7 +1,10 @@
 import { db } from "@/firebaseAdmin";
 import TipEntity from "../types/TipEntity";
+import { getStatus } from "../utils/tipUtils";
 
-export async function fetchTips(): Promise<Array<TipEntity>> {
+export async function fetchTips(
+  status?: TipEntity["status"]
+): Promise<Array<TipEntity>> {
   let tipsCollection = db.collection("tips");
   let votesCollection = db.collection("votes");
 
@@ -9,7 +12,14 @@ export async function fetchTips(): Promise<Array<TipEntity>> {
     throw new Error("Failed to fetch tips collection from database");
   }
 
-  const snapshot = await tipsCollection.get();
+  let snapshot = null;
+
+  if (status) {
+    snapshot = await tipsCollection.where("status", "==", status).get();
+  } else {
+    snapshot = await tipsCollection.get();
+  }
+
   const tips: Array<TipEntity> = [];
 
   for (let doc of snapshot.docs) {
@@ -40,7 +50,8 @@ export async function fetchTips(): Promise<Array<TipEntity>> {
       ownerID: tip?.ownerID,
       upVotes,
       downVotes,
-      // @TODO get tags, status, scheduledDate, publishedDate
+      status: getStatus({ upVotes, downVotes }),
+      // @TODO get tags, scheduledDate, publishedDate
     });
   }
 

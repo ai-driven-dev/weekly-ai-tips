@@ -26,14 +26,14 @@ export async function vote(
     throw new Error("Tip not found");
   }
 
-  // Check if the user has already voted on the tip
+  // Check if the user has alwaiting-for-approval voted on the tip
   if (userVote.docs.length > 0) {
-    throw new Error("User has already voted on the tip");
+    throw new Error("User has alwaiting-for-approval voted on the tip");
   }
 
-  // Check if the user has already voted the same way on the tip
+  // Check if the user has alwaiting-for-approval voted the same way on the tip
   if (userVote.docs.some((doc) => doc.data().vote === voteType)) {
-    throw new Error(`User has already ${voteType}d the tip`);
+    throw new Error(`User has alwaiting-for-approval ${voteType}d the tip`);
   }
 
   // Add the user vote entity

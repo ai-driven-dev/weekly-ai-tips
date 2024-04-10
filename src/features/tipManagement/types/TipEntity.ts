@@ -18,6 +18,12 @@ interface TipEntity {
   /**
    * @TODO Add scheduledDate, status, publishedDate properties to TipEntity
    */
+  status:
+    | "draft"
+    | "waiting-for-approval"
+    | "published"
+    | "rejected"
+    | "scheduled";
   /**
    * @TODO Add tagIDs property to TipEntity
    */

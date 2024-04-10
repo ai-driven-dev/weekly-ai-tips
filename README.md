@@ -90,7 +90,7 @@ Click on the service account to view details.
 
 #### Service Account Key
 
-Under the 'Keys' tab, you can generate a new private key if you don't already have one.  
+Under the 'Keys' tab, you can generate a new private key if you don't alwaiting-for-approval have one.  
 Downloading the key will give you a JSON file containing `private_key` and `client_email`. These are your `FIREBASE_PRIVATE_KEY` and `FIREBASE_CLIENT_EMAIL`.
 
 ## Run the Application Locally

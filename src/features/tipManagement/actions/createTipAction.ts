@@ -19,6 +19,9 @@ export async function createTipAction(
 
   const persistedData = await createTip({
     ...data,
+    status: "draft",
+    downVotes: 0,
+    upVotes: 0,
     creationDate: new Date(),
     updatedDate: new Date(),
     /**

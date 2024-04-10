@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { toast } from "@/components/ui/use-toast";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useFormState } from "react-dom";
 import { useUserAuthentication } from "../../userManagement/hooks/useUserAuthentication";
 import { upVoteTipAction } from "../actions/upVoteTipAction";
@@ -17,25 +17,33 @@ export default function TipUpVoteButton({ tipId }: Props) {
     null
   );
 
-  useEffect(() => {
-    if (state === true) {
-      toast({
-        title: "Success",
-        description: "🍄 Up-voted successfully",
-      });
-    }
+  const initialState = useRef(state);
 
-    toast({
-      title: "Error",
-      description: state as string,
-    });
+  useEffect(() => {
+    if (initialState.current !== state) {
+      if (state === true) {
+        toast({
+          title: "Success",
+          description: "🍄 Up-voted successfully",
+        });
+      } else {
+        toast({
+          title: "Error",
+          description: state as string,
+        });
+      }
+
+      initialState.current = state;
+    }
   }, [state]);
 
   return (
     <form action={action}>
       <input type="hidden" name="tipId" value={tipId} />
       <input type="hidden" name="userId" value={user?.uid} />
-      <Button type="submit">☝️</Button>
+      <Button type="submit" variant={"outline"} size={"icon"}>
+        ☝️
+      </Button>
     </form>
   );
 }
