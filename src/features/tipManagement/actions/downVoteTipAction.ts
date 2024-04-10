@@ -9,7 +9,7 @@ import { downVote } from "../../votingSystem/api/vote";
  * @param _: boolean | string | null
  * @param formData: FormData
  * @returns A boolean indicating success.
- * @throws {Error} If the user has alwaiting-for-approval down-voted the tip.
+ * @throws {Error} If the user has already down-voted the tip.
  */
 export async function downVoteTipAction(
   _: boolean | string | null,
