@@ -6,9 +6,9 @@ interface TipEntity {
    * @TODO Add slug property based on title
    */
   content: string;
-  mediaURL: string;
-  creationDate: Date;
-  updatedDate: Date;
+  mediaURL?: string;
+  createdAt: Date;
+  updatedAt: Date;
   ownerID: string;
   upVotes: number;
   downVotes: number;

@@ -1,7 +1,9 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { upVote } from "../../votingSystem/api/vote";
+import { fetchUser } from "../../userManagement/api/fetchUser";
+import { vote } from "../../votingSystem/api/vote";
+import { fetchTip } from "../api/fetchTip";
 
 /**
  * Upvote a tip from a user.
@@ -21,7 +23,11 @@ export async function upVoteTipAction(
   };
 
   try {
-    const isUpvoted = await upVote(data.tipId, data.fromUserId);
+    const isUpvoted = await vote(
+      await fetchTip(data.tipId),
+      await fetchUser(data.fromUserId),
+      "upvote"
+    );
     revalidatePath("/dashboard/tips");
     return isUpvoted;
   } catch (error: unknown) {

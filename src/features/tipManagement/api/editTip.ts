@@ -1,5 +1,5 @@
 import { admin } from "@/firebaseAdmin";
-import TipEntity, { TipFormType } from "../../tipManagement/types/TipEntity";
+import TipEntity, { TipFormType } from "../types/TipEntity";
 
 export default async function editTip(
   data: TipFormType | TipEntity
@@ -21,14 +21,14 @@ export default async function editTip(
   return {
     id: doc.id,
     content: doc.data()?.content,
-    creationDate: doc.data()?.creationDate,
+    createdAt: doc.data()?.createdAt,
     description: doc.data()?.description,
     downVotes: doc.data()?.downVotes,
     mediaURL: doc.data()?.mediaURL,
     ownerID: doc.data()?.ownerID,
     status: doc.data()?.status,
     title: doc.data()?.title,
-    updatedDate: doc.data()?.updatedDate,
+    updatedAt: doc.data()?.updatedAt,
     upVotes: doc.data()?.upVotes,
   };
 }

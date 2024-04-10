@@ -1,17 +1,21 @@
 import { db } from "@/firebaseAdmin";
 import UserVoteEntity from "../types/UserVoteEntity";
 
-export async function fetchVotes(tipId: string): Promise<UserVoteEntity[]> {
-  const votesSnapshot = await db
+export async function getUserVotes(
+  userId: string,
+  tipId: string
+): Promise<UserVoteEntity[]> {
+  const userVotesSnapshot = await db
     .collection("votes")
+    .where("userID", "==", userId)
     .where("tipID", "==", tipId)
     .get();
 
-  if (votesSnapshot.empty) {
+  if (userVotesSnapshot.empty) {
     return [];
   }
 
-  const votes: UserVoteEntity[] = votesSnapshot.docs.map((doc) => {
+  const userVotes: UserVoteEntity[] = userVotesSnapshot.docs.map((doc) => {
     const vote = doc.data();
 
     return {
@@ -24,5 +28,5 @@ export async function fetchVotes(tipId: string): Promise<UserVoteEntity[]> {
     };
   });
 
-  return votes;
+  return userVotes;
 }

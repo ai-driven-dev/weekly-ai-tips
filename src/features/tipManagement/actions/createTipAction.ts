@@ -2,7 +2,7 @@
 
 import "firebase/storage";
 import { revalidatePath } from "next/cache";
-import createTip from "../../userManagement/api/createTip";
+import createTip from "../api/createTip";
 import TipEntity, { TipFormType } from "../types/TipEntity";
 import { convertTipEntityToForm } from "../utils/tipUtils";
 
@@ -26,8 +26,8 @@ export async function createTipAction(
     status: data.status,
     downVotes: 0,
     upVotes: 0,
-    creationDate: new Date(),
-    updatedDate: new Date(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
   });
 
   revalidatePath("/dashboard/tips");

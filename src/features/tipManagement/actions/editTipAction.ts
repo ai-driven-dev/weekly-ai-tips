@@ -1,7 +1,7 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import editTip from "../../userManagement/api/editTip";
+import editTip from "../api/editTip";
 import { TipFormType } from "../types/TipEntity";
 import { convertTipEntityToForm } from "../utils/tipUtils";
 
