@@ -8,12 +8,9 @@ import TipEntity from "@/src/features/tipManagement/types/TipEntity";
  *
  * Only one tip can be scheduled per week.
  * *
- * @returns {Date} - The next scheduled date for the tip.
- *
- * TODO: Need to be tested
+ * @returns {Date} - The next scheduled date for the tip which is a Monday at 9:00 AM.
  *
  */
-
 export async function getNextScheduledDate(): Promise<Date | null> {
   const now = new Date();
   const tipsRef = db.collection("tips");
@@ -23,29 +20,46 @@ export async function getNextScheduledDate(): Promise<Date | null> {
     .limit(1)
     .get();
 
-  let nextTipScheduledDate = now;
+  let nextTipScheduledDate = null;
 
   if (snapshot.docs.length > 0) {
+    /**
+     * The latest tip scheduled after the current date.
+     */
     const nextTip = snapshot.docs[0].data() as TipEntity;
 
-    if (nextTip.scheduledDate) nextTipScheduledDate = nextTip.scheduledDate;
+    if (nextTip?.scheduledDate)
+      nextTipScheduledDate = getNextMondaysDateFromDate(nextTip.scheduledDate);
   }
 
-  // Get the current day of the week (0-6, Sunday is 0)
-  const currentDay = now.getDay();
+  /**
+   * If there is no tip scheduled after the current date,
+   * then the next tip will be scheduled on the next Monday.
+   */
+  if (!nextTipScheduledDate) {
+    nextTipScheduledDate = getNextMondaysDateFromDate(now);
+  }
 
-  // Calculate the number of days until next Monday
-  const daysUntilNextMonday = (currentDay === 0 ? 7 : currentDay) - 1;
+  return nextTipScheduledDate;
+}
 
-  // Create a new date object for next Monday at 9:00 AM
-  const nextMonday = new Date(
-    now.getFullYear(),
-    now.getMonth(),
-    now.getDate() + daysUntilNextMonday
+/**
+ * This function is used to get the next Monday's date from the given date.
+ *
+ * @param {Date} latestDate - The latest date from which the next Monday's date is to be calculated.
+ *
+ * @returns {Date} - The next Monday's date from the given date.
+ */
+export function getNextMondaysDateFromDate(
+  latestDate: Date = new Date()
+): Date {
+  return new Date(
+    latestDate.getFullYear(),
+    latestDate.getMonth(),
+    latestDate.getDate() + ((1 + 7 - latestDate.getDay()) % 7) + 1,
+    9,
+    0,
+    0,
+    0
   );
-  nextMonday.setHours(9, 0, 0, 0);
-
-  // If the next tip is scheduled after next Monday, return next Monday's date
-  // Otherwise, return the scheduled date of the next tip
-  return nextTipScheduledDate > nextMonday ? nextMonday : nextTipScheduledDate;
 }
