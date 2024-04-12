@@ -28,6 +28,7 @@ export async function createTipAction(
     upVotes: 0,
     createdAt: new Date(),
     updatedAt: new Date(),
+    mediaURL: null, // TODO: create it
   });
 
   revalidatePath("/dashboard/tips");

@@ -1,16 +1,25 @@
 import TipEntity from "../types/TipEntity";
 
-import { admin } from "@/firebaseAdmin";
+import { db } from "@/firebaseAdmin";
 
 export default async function createTip(
   data: Partial<TipEntity>
 ): Promise<TipEntity> {
-  const tipsCollection = admin.firestore().collection("tips");
+  const tipsCollection = db.collection("tips");
   const docRef = await tipsCollection.add(data);
   const doc = await docRef.get();
 
   return {
     id: doc.id,
-    ...doc.data(),
-  } as TipEntity;
+    title: doc.data()?.title,
+    content: doc.data()?.content,
+    description: doc.data()?.description,
+    ownerID: doc.data()?.ownerID,
+    status: doc.data()?.status,
+    createdAt: doc.data()?.createdAt,
+    downVotes: doc.data()?.downVotes,
+    upVotes: doc.data()?.upVotes,
+    mediaURL: doc.data()?.mediaURL,
+    updatedAt: doc.data()?.updatedAt,
+  };
 }

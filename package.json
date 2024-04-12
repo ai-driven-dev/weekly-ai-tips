@@ -15,7 +15,8 @@
     "test": "",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "lint": "next lint && eslint --fix",
+    "lint": "next lint && eslint --fix && tsc --noEmit",
+    "typecheck": "tsc --noEmit",
     "pre-commit": "npm run lint",
     "pre-push": "npm run build",
     "release": "standard-version"

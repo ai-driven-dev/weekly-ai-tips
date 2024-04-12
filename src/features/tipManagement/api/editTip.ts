@@ -1,10 +1,10 @@
-import { admin } from "@/firebaseAdmin";
+import { db } from "@/firebaseAdmin";
 import TipEntity, { TipFormType } from "../types/TipEntity";
 
 export default async function editTip(
   data: TipFormType | TipEntity
 ): Promise<TipEntity> {
-  const tipsCollection = admin.firestore().collection("tips");
+  const tipsCollection = db.collection("tips");
 
   if (!data.id || typeof data.id !== "string") {
     throw new Error("Invalid document ID");

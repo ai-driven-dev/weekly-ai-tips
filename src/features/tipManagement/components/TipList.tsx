@@ -15,6 +15,7 @@ import Link from "next/link";
 import TipEntity from "../types/TipEntity";
 import TipDeleteButton from "./TipDeleteButton";
 import TipDownVoteButton from "./TipDownVoteButton";
+import TipPublishButton from "./TipPublishButton";
 import TipUpVoteButton from "./TipUpVoteButton";
 
 export type Props = {
@@ -49,6 +50,12 @@ export default function TipList({ tips }: Props): React.ReactElement {
             <TableCell>
               <div className="flex gap-2">
                 <Badge>{tip.status}</Badge>
+                {tip.publishedDate && (
+                  <Badge variant={"destructive"}>
+                    {new Date(tip.publishedDate).toLocaleString("fr-FR")}
+                  </Badge>
+                )}
+
                 {tip.scheduledDate && (
                   <Badge variant={"secondary"}>
                     {new Date(tip.scheduledDate).toLocaleString("fr-FR")}
@@ -60,6 +67,10 @@ export default function TipList({ tips }: Props): React.ReactElement {
             <TableCell>
               {tip.id && (
                 <div className="flex gap-2">
+                  <TipPublishButton
+                    disabled={tip.status === "published"}
+                    tipId={tip.id}
+                  />
                   <TipUpVoteButton
                     disabled={tip.status !== "ready"}
                     tipId={tip.id}

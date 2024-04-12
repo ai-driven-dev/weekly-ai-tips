@@ -12,6 +12,7 @@ export default async function Page() {
           description: "My description",
           content: "...",
           status: "draft",
+          
         }}
       />
     </>

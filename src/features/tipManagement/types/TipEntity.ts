@@ -6,15 +6,12 @@ interface TipEntity {
    * @TODO Add slug property based on title
    */
   content: string;
-  mediaURL?: string;
   createdAt: Date;
   updatedAt: Date;
   ownerID: string;
   upVotes: number;
   downVotes: number;
-  /**
-   * @TODO Add tagIds property to TipEntity
-   */
+  mediaURL?: string | null;
   scheduledDate?: Date | null;
   publishedDate?: Date | null;
   status: "draft" | "ready" | "published" | "rejected" | "scheduled";
