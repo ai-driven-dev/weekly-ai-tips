@@ -27,7 +27,6 @@ export default function UserList({ users }: Props): React.ReactElement {
 
         <TableHeader>
           <TableRow>
-            <TableHead>ID</TableHead>
             <TableHead>Name</TableHead>
             <TableHead>Picture</TableHead>
             <TableHead>Email</TableHead>
@@ -40,7 +39,6 @@ export default function UserList({ users }: Props): React.ReactElement {
         <TableBody>
           {users.map((user) => (
             <TableRow key={user.id}>
-              <TableCell>{user.id}</TableCell>
               <TableCell>{user.name}</TableCell>
               <TableCell>
                 {user.picture && (
@@ -52,7 +50,11 @@ export default function UserList({ users }: Props): React.ReactElement {
                   />
                 )}
               </TableCell>
-              <TableCell>{user.email}</TableCell>
+              <TableCell>
+                <a className="text-primary" href={`mailto:${user.email}`}>
+                  {user.email}
+                </a>
+              </TableCell>
               <TableCell>{user.roles.join(", ")}</TableCell>
               <TableCell>{user.createdAt.toLocaleString()}</TableCell>
               <TableCell>{user.updatedAt.toLocaleString()}</TableCell>
