@@ -13,7 +13,7 @@
     "build": "next build",
     "start": "next start",
     "test": "",
-    "test:watch": "jest --watch",
+    "test:watch": "jest --watch --watchAll",
     "test:coverage": "jest --coverage",
     "lint": "next lint && eslint --fix && tsc --noEmit",
     "typecheck": "tsc --noEmit",
