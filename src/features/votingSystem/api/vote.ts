@@ -22,6 +22,10 @@ export async function vote(
     throw new Error("Tip is not votable!");
   }
 
+  if (fromUser.id === tipData.ownerID) {
+    throw new Error("User cannot vote on their own tip");
+  }
+
   // Only if the user is not an admin
   if (!fromUser.roles.includes("ADMIN")) {
     const userVotes = await getUserVotes(fromUser.id, tipData.id);
@@ -29,11 +33,6 @@ export async function vote(
     if (userVotes.length > 0) {
       // Check if the user has already voted on the tip
       throw new Error("User has already voted on the tip");
-    }
-
-    // Check if the user has already voted the same way on the tip
-    if (userVotes.some((doc) => doc.vote === voteType)) {
-      throw new Error(`User has already ${voteType}d the tip`);
     }
   }
 
