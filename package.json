@@ -12,7 +12,7 @@
     "dev": "source .env.local && next dev",
     "build": "next build",
     "start": "next start",
-    "test": "",
+    "test": "jest --passWithNoTests --coverage --runInBand --detectOpenHandles",
     "test:watch": "jest --watch --watchAll",
     "test:coverage": "jest --coverage",
     "lint": "next lint && eslint --fix && tsc --noEmit",

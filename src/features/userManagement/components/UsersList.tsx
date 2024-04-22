@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import {
   Table,
   TableBody,
@@ -12,8 +11,8 @@ import {
 } from "@/components/ui/table";
 import Image from "next/image";
 import React from "react";
-import { deleteUserAction } from "../actions/userActions";
 import UserEntity from "../types/UserEntity";
+import UserDeleteButton from "./UserDeleteButton";
 
 export type Props = {
   users: UserEntity[];
@@ -59,10 +58,7 @@ export default function UserList({ users }: Props): React.ReactElement {
               <TableCell>{user.createdAt.toLocaleString()}</TableCell>
               <TableCell>{user.updatedAt.toLocaleString()}</TableCell>
               <TableCell>
-                <form action={deleteUserAction}>
-                  <input type="hidden" name="id" value={user.id} />
-                  <Button type="submit">Delete</Button>
-                </form>
+                <UserDeleteButton userId={user.id} />
               </TableCell>
             </TableRow>
           ))}
