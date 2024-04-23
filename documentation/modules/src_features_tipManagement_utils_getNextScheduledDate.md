@@ -31,7 +31,7 @@ This function is used to get the next Monday's date from the given date.
 
 #### Defined in
 
-[src/features/tipManagement/utils/getNextScheduledDate.ts:55](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/src/features/tipManagement/utils/getNextScheduledDate.ts#L55)
+[src/features/tipManagement/utils/getNextScheduledDate.ts:55](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/src/features/tipManagement/utils/getNextScheduledDate.ts#L55)
 
 ___
 
@@ -54,4 +54,4 @@ Only one tip can be scheduled per week.
 
 #### Defined in
 
-[src/features/tipManagement/utils/getNextScheduledDate.ts:13](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/src/features/tipManagement/utils/getNextScheduledDate.ts#L13)
+[src/features/tipManagement/utils/getNextScheduledDate.ts:13](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/src/features/tipManagement/utils/getNextScheduledDate.ts#L13)

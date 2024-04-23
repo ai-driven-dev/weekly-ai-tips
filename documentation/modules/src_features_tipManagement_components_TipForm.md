@@ -26,7 +26,7 @@
 
 #### Defined in
 
-[src/features/tipManagement/components/TipForm.tsx:16](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/src/features/tipManagement/components/TipForm.tsx#L16)
+[src/features/tipManagement/components/TipForm.tsx:16](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/src/features/tipManagement/components/TipForm.tsx#L16)
 
 ## Functions
 
@@ -46,4 +46,4 @@
 
 #### Defined in
 
-[src/features/tipManagement/components/TipForm.tsx:20](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/src/features/tipManagement/components/TipForm.tsx#L20)
+[src/features/tipManagement/components/TipForm.tsx:20](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/src/features/tipManagement/components/TipForm.tsx#L20)

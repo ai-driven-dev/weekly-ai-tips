@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[src/features/userManagement/types/UserEntity.ts:7](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/src/features/userManagement/types/UserEntity.ts#L7)
+[src/features/userManagement/types/UserEntity.ts:7](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/src/features/userManagement/types/UserEntity.ts#L7)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[src/features/userManagement/types/UserEntity.ts:5](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/src/features/userManagement/types/UserEntity.ts#L5)
+[src/features/userManagement/types/UserEntity.ts:5](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/src/features/userManagement/types/UserEntity.ts#L5)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[src/features/userManagement/types/UserEntity.ts:2](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/src/features/userManagement/types/UserEntity.ts#L2)
+[src/features/userManagement/types/UserEntity.ts:2](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/src/features/userManagement/types/UserEntity.ts#L2)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[src/features/userManagement/types/UserEntity.ts:3](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/src/features/userManagement/types/UserEntity.ts#L3)
+[src/features/userManagement/types/UserEntity.ts:3](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/src/features/userManagement/types/UserEntity.ts#L3)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[src/features/userManagement/types/UserEntity.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/src/features/userManagement/types/UserEntity.ts#L4)
+[src/features/userManagement/types/UserEntity.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/src/features/userManagement/types/UserEntity.ts#L4)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[src/features/userManagement/types/UserEntity.ts:6](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/src/features/userManagement/types/UserEntity.ts#L6)
+[src/features/userManagement/types/UserEntity.ts:6](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/src/features/userManagement/types/UserEntity.ts#L6)
 
 ___
 
@@ -84,4 +84,4 @@ ___
 
 #### Defined in
 
-[src/features/userManagement/types/UserEntity.ts:8](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/src/features/userManagement/types/UserEntity.ts#L8)
+[src/features/userManagement/types/UserEntity.ts:8](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/src/features/userManagement/types/UserEntity.ts#L8)

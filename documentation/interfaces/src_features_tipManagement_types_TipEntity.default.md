@@ -34,7 +34,7 @@ Add slug property based on title
 
 #### Defined in
 
-[src/features/tipManagement/types/TipEntity.ts:8](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/src/features/tipManagement/types/TipEntity.ts#L8)
+[src/features/tipManagement/types/TipEntity.ts:8](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/src/features/tipManagement/types/TipEntity.ts#L8)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/types/TipEntity.ts:9](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/src/features/tipManagement/types/TipEntity.ts#L9)
+[src/features/tipManagement/types/TipEntity.ts:9](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/src/features/tipManagement/types/TipEntity.ts#L9)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/types/TipEntity.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/src/features/tipManagement/types/TipEntity.ts#L4)
+[src/features/tipManagement/types/TipEntity.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/src/features/tipManagement/types/TipEntity.ts#L4)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/types/TipEntity.ts:13](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/src/features/tipManagement/types/TipEntity.ts#L13)
+[src/features/tipManagement/types/TipEntity.ts:13](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/src/features/tipManagement/types/TipEntity.ts#L13)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/types/TipEntity.ts:2](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/src/features/tipManagement/types/TipEntity.ts#L2)
+[src/features/tipManagement/types/TipEntity.ts:2](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/src/features/tipManagement/types/TipEntity.ts#L2)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/types/TipEntity.ts:14](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/src/features/tipManagement/types/TipEntity.ts#L14)
+[src/features/tipManagement/types/TipEntity.ts:14](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/src/features/tipManagement/types/TipEntity.ts#L14)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/types/TipEntity.ts:11](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/src/features/tipManagement/types/TipEntity.ts#L11)
+[src/features/tipManagement/types/TipEntity.ts:11](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/src/features/tipManagement/types/TipEntity.ts#L11)
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/types/TipEntity.ts:16](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/src/features/tipManagement/types/TipEntity.ts#L16)
+[src/features/tipManagement/types/TipEntity.ts:16](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/src/features/tipManagement/types/TipEntity.ts#L16)
 
 ___
 
@@ -114,7 +114,7 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/types/TipEntity.ts:15](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/src/features/tipManagement/types/TipEntity.ts#L15)
+[src/features/tipManagement/types/TipEntity.ts:15](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/src/features/tipManagement/types/TipEntity.ts#L15)
 
 ___
 
@@ -124,7 +124,7 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/types/TipEntity.ts:17](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/src/features/tipManagement/types/TipEntity.ts#L17)
+[src/features/tipManagement/types/TipEntity.ts:17](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/src/features/tipManagement/types/TipEntity.ts#L17)
 
 ___
 
@@ -134,7 +134,7 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/types/TipEntity.ts:3](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/src/features/tipManagement/types/TipEntity.ts#L3)
+[src/features/tipManagement/types/TipEntity.ts:3](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/src/features/tipManagement/types/TipEntity.ts#L3)
 
 ___
 
@@ -144,7 +144,7 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/types/TipEntity.ts:12](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/src/features/tipManagement/types/TipEntity.ts#L12)
+[src/features/tipManagement/types/TipEntity.ts:12](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/src/features/tipManagement/types/TipEntity.ts#L12)
 
 ___
 
@@ -154,4 +154,4 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/types/TipEntity.ts:10](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/src/features/tipManagement/types/TipEntity.ts#L10)
+[src/features/tipManagement/types/TipEntity.ts:10](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/src/features/tipManagement/types/TipEntity.ts#L10)

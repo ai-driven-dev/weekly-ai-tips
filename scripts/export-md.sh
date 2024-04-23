@@ -1,5 +1,6 @@
 #!/bin/bash
 
+FILE_NAME='all-in-one.md'
 VERSION=`node -p "require('./package.json').version"`
 DATE=`date +%Y-%m-%d-%H:%M:%S`
 
@@ -9,12 +10,16 @@ typedoc --options typedoc.json --plugin typedoc-plugin-markdown --out documentat
 
 cd documentation/
 
-find . -name '*.md' ! -name 'all-in-one.md' -exec cat {} \; > all-in-one.md
+find . -name '*.md' ! -name "${FILE_NAME}" -exec cat {} \; > "${FILE_NAME}"
 
 # Write the version and date to the top of the file
 
-sed -i '' '1s/^/---\n\n/' all-in-one.md
-sed -i '' '1s/^/date: '$DATE'\n/' all-in-one.md
+sed -i '' '1s/^/---\n\n/' "${FILE_NAME}"
+sed -i '' '1s/^/date: '$DATE'\n/' "${FILE_NAME}"
 sed -i '' '1s/^/version: '$VERSION'\
-/' all-in-one.md
-sed -i '' '1s/^/---\n/' all-in-one.md
+/' "${FILE_NAME}"
+sed -i '' '1s/^/---\n/' "${FILE_NAME}"
+
+cd ..
+git add documentation
+git commit -m "docs: update project documentation for version $VERSION"
