@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[components/ui/card.tsx:4](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/components/ui/card.tsx#L4)
+[components/ui/card.tsx:4](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/card.tsx#L4)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[components/ui/card.tsx:58](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/components/ui/card.tsx#L58)
+[components/ui/card.tsx:58](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/card.tsx#L58)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 #### Defined in
 
-[components/ui/card.tsx:46](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/components/ui/card.tsx#L46)
+[components/ui/card.tsx:46](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/card.tsx#L46)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 #### Defined in
 
-[components/ui/card.tsx:66](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/components/ui/card.tsx#L66)
+[components/ui/card.tsx:66](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/card.tsx#L66)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-[components/ui/card.tsx:19](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/components/ui/card.tsx#L19)
+[components/ui/card.tsx:19](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/card.tsx#L19)
 
 ___
 
@@ -131,4 +131,4 @@ ___
 
 #### Defined in
 
-[components/ui/card.tsx:31](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/components/ui/card.tsx#L31)
+[components/ui/card.tsx:31](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/card.tsx#L31)

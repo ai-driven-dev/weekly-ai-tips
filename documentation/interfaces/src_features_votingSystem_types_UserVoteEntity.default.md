@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[src/features/votingSystem/types/UserVoteEntity.ts:6](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/src/features/votingSystem/types/UserVoteEntity.ts#L6)
+[src/features/votingSystem/types/UserVoteEntity.ts:6](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/votingSystem/types/UserVoteEntity.ts#L6)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[src/features/votingSystem/types/UserVoteEntity.ts:2](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/src/features/votingSystem/types/UserVoteEntity.ts#L2)
+[src/features/votingSystem/types/UserVoteEntity.ts:2](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/votingSystem/types/UserVoteEntity.ts#L2)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[src/features/votingSystem/types/UserVoteEntity.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/src/features/votingSystem/types/UserVoteEntity.ts#L4)
+[src/features/votingSystem/types/UserVoteEntity.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/votingSystem/types/UserVoteEntity.ts#L4)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[src/features/votingSystem/types/UserVoteEntity.ts:7](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/src/features/votingSystem/types/UserVoteEntity.ts#L7)
+[src/features/votingSystem/types/UserVoteEntity.ts:7](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/votingSystem/types/UserVoteEntity.ts#L7)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[src/features/votingSystem/types/UserVoteEntity.ts:3](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/src/features/votingSystem/types/UserVoteEntity.ts#L3)
+[src/features/votingSystem/types/UserVoteEntity.ts:3](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/votingSystem/types/UserVoteEntity.ts#L3)
 
 ___
 
@@ -73,4 +73,4 @@ ___
 
 #### Defined in
 
-[src/features/votingSystem/types/UserVoteEntity.ts:5](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/src/features/votingSystem/types/UserVoteEntity.ts#L5)
+[src/features/votingSystem/types/UserVoteEntity.ts:5](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/votingSystem/types/UserVoteEntity.ts#L5)

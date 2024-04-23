@@ -28,7 +28,7 @@ TagEntity is an interface that defines the structure of a tag entity.
 
 #### Defined in
 
-[src/features/tagManagement/types/TagEntity.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/src/features/tagManagement/types/TagEntity.ts#L4)
+[src/features/tagManagement/types/TagEntity.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tagManagement/types/TagEntity.ts#L4)
 
 ___
 
@@ -42,4 +42,4 @@ create a TagFormType interface
 
 #### Defined in
 
-[src/features/tagManagement/types/TagEntity.ts:17](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/src/features/tagManagement/types/TagEntity.ts#L17)
+[src/features/tagManagement/types/TagEntity.ts:17](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tagManagement/types/TagEntity.ts#L17)

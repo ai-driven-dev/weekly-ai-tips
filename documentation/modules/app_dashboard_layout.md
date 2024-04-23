@@ -26,7 +26,7 @@
 
 #### Defined in
 
-[app/dashboard/layout.tsx:7](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/app/dashboard/layout.tsx#L7)
+[app/dashboard/layout.tsx:7](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/app/dashboard/layout.tsx#L7)
 
 ## Functions
 
@@ -46,4 +46,4 @@
 
 #### Defined in
 
-[app/dashboard/layout.tsx:17](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/app/dashboard/layout.tsx#L17)
+[app/dashboard/layout.tsx:17](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/app/dashboard/layout.tsx#L17)

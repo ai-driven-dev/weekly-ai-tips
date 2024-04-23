@@ -33,7 +33,7 @@
 
 #### Defined in
 
-[components/ui/use-toast.ts:32](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/components/ui/use-toast.ts#L32)
+[components/ui/use-toast.ts:32](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/use-toast.ts#L32)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[components/ui/use-toast.ts:30](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/components/ui/use-toast.ts#L30)
+[components/ui/use-toast.ts:30](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/use-toast.ts#L30)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[components/ui/use-toast.ts:138](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/components/ui/use-toast.ts#L138)
+[components/ui/use-toast.ts:138](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/use-toast.ts#L138)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[components/ui/use-toast.ts:9](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/components/ui/use-toast.ts#L9)
+[components/ui/use-toast.ts:9](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/use-toast.ts#L9)
 
 ## Variables
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-[components/ui/use-toast.ts:16](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/components/ui/use-toast.ts#L16)
+[components/ui/use-toast.ts:16](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/use-toast.ts#L16)
 
 ## Functions
 
@@ -103,7 +103,7 @@ ___
 
 #### Defined in
 
-[components/ui/use-toast.ts:72](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/components/ui/use-toast.ts#L72)
+[components/ui/use-toast.ts:72](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/use-toast.ts#L72)
 
 ___
 
@@ -129,7 +129,7 @@ ___
 
 #### Defined in
 
-[components/ui/use-toast.ts:140](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/components/ui/use-toast.ts#L140)
+[components/ui/use-toast.ts:140](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/use-toast.ts#L140)
 
 ___
 
@@ -149,4 +149,4 @@ ___
 
 #### Defined in
 
-[components/ui/use-toast.ts:169](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/components/ui/use-toast.ts#L169)
+[components/ui/use-toast.ts:169](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/use-toast.ts#L169)

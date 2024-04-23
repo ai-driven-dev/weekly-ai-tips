@@ -27,7 +27,7 @@
 
 #### Defined in
 
-[components/ui/toast.tsx:114](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/components/ui/toast.tsx#L114)
+[components/ui/toast.tsx:114](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/toast.tsx#L114)
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 #### Defined in
 
-[components/ui/toast.tsx:112](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/components/ui/toast.tsx#L112)
+[components/ui/toast.tsx:112](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/toast.tsx#L112)
 
 ## Functions
 
@@ -57,7 +57,7 @@ ___
 
 #### Defined in
 
-[components/ui/toast.tsx:40](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/components/ui/toast.tsx#L40)
+[components/ui/toast.tsx:40](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/toast.tsx#L40)
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 #### Defined in
 
-[components/ui/toast.tsx:55](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/components/ui/toast.tsx#L55)
+[components/ui/toast.tsx:55](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/toast.tsx#L55)
 
 ___
 
@@ -97,7 +97,7 @@ ___
 
 #### Defined in
 
-[components/ui/toast.tsx:70](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/components/ui/toast.tsx#L70)
+[components/ui/toast.tsx:70](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/toast.tsx#L70)
 
 ___
 
@@ -117,7 +117,7 @@ ___
 
 #### Defined in
 
-[components/ui/toast.tsx:100](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/components/ui/toast.tsx#L100)
+[components/ui/toast.tsx:100](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/toast.tsx#L100)
 
 ___
 
@@ -138,7 +138,7 @@ ___
 
 #### Defined in
 
-[components/ui/toast.tsx:7](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/components/ui/toast.tsx#L7)
+[components/ui/toast.tsx:7](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/toast.tsx#L7)
 
 ___
 
@@ -158,7 +158,7 @@ ___
 
 #### Defined in
 
-[components/ui/toast.tsx:88](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/components/ui/toast.tsx#L88)
+[components/ui/toast.tsx:88](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/toast.tsx#L88)
 
 ___
 
@@ -178,4 +178,4 @@ ___
 
 #### Defined in
 
-[components/ui/toast.tsx:9](https://github.com/alexsoyes/weekly-ai-tips/blob/b3fea4afd71b68632685f2d382621a10bad6affa/components/ui/toast.tsx#L9)
+[components/ui/toast.tsx:9](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/toast.tsx#L9)
