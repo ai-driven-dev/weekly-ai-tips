@@ -33,7 +33,7 @@
 
 #### Defined in
 
-[components/ui/table.tsx:5](https://github.com/alexsoyes/weekly-ai-tips/blob/8e6b4ae946047053b809d45f37efccbb35947373/components/ui/table.tsx#L5)
+[components/ui/table.tsx:5](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/components/ui/table.tsx#L5)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[components/ui/table.tsx:27](https://github.com/alexsoyes/weekly-ai-tips/blob/8e6b4ae946047053b809d45f37efccbb35947373/components/ui/table.tsx#L27)
+[components/ui/table.tsx:27](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/components/ui/table.tsx#L27)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[components/ui/table.tsx:96](https://github.com/alexsoyes/weekly-ai-tips/blob/8e6b4ae946047053b809d45f37efccbb35947373/components/ui/table.tsx#L96)
+[components/ui/table.tsx:96](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/components/ui/table.tsx#L96)
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 #### Defined in
 
-[components/ui/table.tsx:84](https://github.com/alexsoyes/weekly-ai-tips/blob/8e6b4ae946047053b809d45f37efccbb35947373/components/ui/table.tsx#L84)
+[components/ui/table.tsx:84](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/components/ui/table.tsx#L84)
 
 ___
 
@@ -113,7 +113,7 @@ ___
 
 #### Defined in
 
-[components/ui/table.tsx:39](https://github.com/alexsoyes/weekly-ai-tips/blob/8e6b4ae946047053b809d45f37efccbb35947373/components/ui/table.tsx#L39)
+[components/ui/table.tsx:39](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/components/ui/table.tsx#L39)
 
 ___
 
@@ -133,7 +133,7 @@ ___
 
 #### Defined in
 
-[components/ui/table.tsx:69](https://github.com/alexsoyes/weekly-ai-tips/blob/8e6b4ae946047053b809d45f37efccbb35947373/components/ui/table.tsx#L69)
+[components/ui/table.tsx:69](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/components/ui/table.tsx#L69)
 
 ___
 
@@ -153,7 +153,7 @@ ___
 
 #### Defined in
 
-[components/ui/table.tsx:19](https://github.com/alexsoyes/weekly-ai-tips/blob/8e6b4ae946047053b809d45f37efccbb35947373/components/ui/table.tsx#L19)
+[components/ui/table.tsx:19](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/components/ui/table.tsx#L19)
 
 ___
 
@@ -173,4 +173,4 @@ ___
 
 #### Defined in
 
-[components/ui/table.tsx:54](https://github.com/alexsoyes/weekly-ai-tips/blob/8e6b4ae946047053b809d45f37efccbb35947373/components/ui/table.tsx#L54)
+[components/ui/table.tsx:54](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/components/ui/table.tsx#L54)

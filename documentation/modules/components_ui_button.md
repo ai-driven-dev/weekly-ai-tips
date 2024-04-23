@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[components/ui/button.tsx:45](https://github.com/alexsoyes/weekly-ai-tips/blob/8e6b4ae946047053b809d45f37efccbb35947373/components/ui/button.tsx#L45)
+[components/ui/button.tsx:45](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/components/ui/button.tsx#L45)
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-[components/ui/button.tsx:10](https://github.com/alexsoyes/weekly-ai-tips/blob/8e6b4ae946047053b809d45f37efccbb35947373/components/ui/button.tsx#L10)
+[components/ui/button.tsx:10](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/components/ui/button.tsx#L10)

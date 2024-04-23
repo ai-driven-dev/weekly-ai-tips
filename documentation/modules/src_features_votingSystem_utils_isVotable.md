@@ -26,4 +26,4 @@
 
 #### Defined in
 
-[src/features/votingSystem/utils/isVotable.ts:3](https://github.com/alexsoyes/weekly-ai-tips/blob/8e6b4ae946047053b809d45f37efccbb35947373/src/features/votingSystem/utils/isVotable.ts#L3)
+[src/features/votingSystem/utils/isVotable.ts:3](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/src/features/votingSystem/utils/isVotable.ts#L3)

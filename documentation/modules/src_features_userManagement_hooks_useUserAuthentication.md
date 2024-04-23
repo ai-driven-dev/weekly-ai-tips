@@ -27,4 +27,4 @@
 
 #### Defined in
 
-[src/features/userManagement/hooks/useUserAuthentication.ts:12](https://github.com/alexsoyes/weekly-ai-tips/blob/8e6b4ae946047053b809d45f37efccbb35947373/src/features/userManagement/hooks/useUserAuthentication.ts#L12)
+[src/features/userManagement/hooks/useUserAuthentication.ts:12](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/src/features/userManagement/hooks/useUserAuthentication.ts#L12)

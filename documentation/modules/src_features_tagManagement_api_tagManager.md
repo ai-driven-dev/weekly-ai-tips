@@ -33,7 +33,7 @@ A Promise that resolves to the created tag.
 
 #### Defined in
 
-[src/features/tagManagement/api/tagManager.ts:28](https://github.com/alexsoyes/weekly-ai-tips/blob/8e6b4ae946047053b809d45f37efccbb35947373/src/features/tagManagement/api/tagManager.ts#L28)
+[src/features/tagManagement/api/tagManager.ts:28](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/src/features/tagManagement/api/tagManager.ts#L28)
 
 ___
 
@@ -57,7 +57,7 @@ A Promise that resolves when the tag is deleted.
 
 #### Defined in
 
-[src/features/tagManagement/api/tagManager.ts:42](https://github.com/alexsoyes/weekly-ai-tips/blob/8e6b4ae946047053b809d45f37efccbb35947373/src/features/tagManagement/api/tagManager.ts#L42)
+[src/features/tagManagement/api/tagManager.ts:42](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/src/features/tagManagement/api/tagManager.ts#L42)
 
 ___
 
@@ -75,7 +75,7 @@ A Promise that resolves to an array of tags.
 
 #### Defined in
 
-[src/features/tagManagement/api/tagManager.ts:75](https://github.com/alexsoyes/weekly-ai-tips/blob/8e6b4ae946047053b809d45f37efccbb35947373/src/features/tagManagement/api/tagManager.ts#L75)
+[src/features/tagManagement/api/tagManager.ts:75](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/src/features/tagManagement/api/tagManager.ts#L75)
 
 ___
 
@@ -100,4 +100,4 @@ A Promise that resolves to the updated tag.
 
 #### Defined in
 
-[src/features/tagManagement/api/tagManager.ts:61](https://github.com/alexsoyes/weekly-ai-tips/blob/8e6b4ae946047053b809d45f37efccbb35947373/src/features/tagManagement/api/tagManager.ts#L61)
+[src/features/tagManagement/api/tagManager.ts:61](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/src/features/tagManagement/api/tagManager.ts#L61)

@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[components/ui/button.tsx:42](https://github.com/alexsoyes/weekly-ai-tips/blob/8e6b4ae946047053b809d45f37efccbb35947373/components/ui/button.tsx#L42)
+[components/ui/button.tsx:42](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/components/ui/button.tsx#L42)
 
 ___
 
@@ -42,7 +42,7 @@ VariantProps.size
 
 #### Defined in
 
-[components/ui/button.tsx:25](https://github.com/alexsoyes/weekly-ai-tips/blob/8e6b4ae946047053b809d45f37efccbb35947373/components/ui/button.tsx#L25)
+[components/ui/button.tsx:25](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/components/ui/button.tsx#L25)
 
 ___
 
@@ -56,4 +56,4 @@ VariantProps.variant
 
 #### Defined in
 
-[components/ui/button.tsx:14](https://github.com/alexsoyes/weekly-ai-tips/blob/8e6b4ae946047053b809d45f37efccbb35947373/components/ui/button.tsx#L14)
+[components/ui/button.tsx:14](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/components/ui/button.tsx#L14)

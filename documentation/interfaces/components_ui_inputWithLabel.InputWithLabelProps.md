@@ -25,7 +25,7 @@
 
 #### Defined in
 
-[components/ui/inputWithLabel.tsx:8](https://github.com/alexsoyes/weekly-ai-tips/blob/8e6b4ae946047053b809d45f37efccbb35947373/components/ui/inputWithLabel.tsx#L8)
+[components/ui/inputWithLabel.tsx:8](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/components/ui/inputWithLabel.tsx#L8)
 
 ___
 
@@ -39,4 +39,4 @@ React.InputHTMLAttributes.name
 
 #### Defined in
 
-[components/ui/inputWithLabel.tsx:7](https://github.com/alexsoyes/weekly-ai-tips/blob/8e6b4ae946047053b809d45f37efccbb35947373/components/ui/inputWithLabel.tsx#L7)
+[components/ui/inputWithLabel.tsx:7](https://github.com/alexsoyes/weekly-ai-tips/blob/a5c5a395ae8c55cfba018def4dd85212d123191c/components/ui/inputWithLabel.tsx#L7)
