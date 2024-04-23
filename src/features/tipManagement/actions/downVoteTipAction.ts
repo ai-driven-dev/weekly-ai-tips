@@ -8,8 +8,8 @@ import { fetchTip } from "../api/fetchTip";
 /**
  * Downvote a tip from a user.
  *
- * @param _: boolean | string | null
- * @param formData: FormData
+ * @param {_} _ - Parameter not used.
+ * @param {FormData} formData - The form data.
  * @returns A boolean indicating success.
  * @throws {Error} If the user has already down-voted the tip.
  */

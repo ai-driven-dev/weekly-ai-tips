@@ -6,7 +6,7 @@
   "scripts": {
     "doc": "typedoc --options typedoc.json --commentStyle block",
     "doc:watch": "nodemon",
-    "doc:exportMd": "typedoc --options typedoc.json --plugin typedoc-plugin-markdown --out docs && cd docs/ && find . -name '*.md' ! -name 'documentation.md' -exec cat {} \\; > documentation.md",
+    "doc:exportMd": "typedoc --options typedoc.json --plugin typedoc-plugin-markdown --out documentation && cd documentation/ && find . -name '*.md' ! -name 'all-in-one.md' -exec cat {} \\; > all-in-one.md",
     "doc:export": "typedoc --options typedoc.json --json docs/documentation.json --emit docs && jq 'del(.. | .kind?, .flags?, .line?, .id?, .groups?, .target?, .characters?, .url?, .character?, .symbolIdMap?, .qualifiedName?)' docs/documentation.json > docs/documentation.min.json",
     "doc:structure": "echo \"# Project structure in project-structure.txt file:\n\" | tee 'docs/project-structure.txt' && tree -I \"node_modules|docs\" >> docs/project-structure.txt",
     "dev": "source .env.local && next dev",

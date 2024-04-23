@@ -5,7 +5,7 @@ type Props = {
   userId: string;
 } & React.ComponentProps<typeof Button>;
 
-export default function UserDeleteButton({ userId, ...buttonProps }: Props) {
+export default function UserDeleteButton({ userId }: Props) {
   return (
     <form action={deleteUserAction}>
       <input type="hidden" name="id" value={userId} />
