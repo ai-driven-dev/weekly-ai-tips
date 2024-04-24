@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[firebaseClient.ts:17](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/firebaseClient.ts#L17)
+[firebaseClient.ts:17](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/firebaseClient.ts#L17)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-[firebaseClient.ts:15](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/firebaseClient.ts#L15)
+[firebaseClient.ts:15](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/firebaseClient.ts#L15)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-[firebaseClient.ts:31](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/firebaseClient.ts#L31)
+[firebaseClient.ts:31](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/firebaseClient.ts#L31)

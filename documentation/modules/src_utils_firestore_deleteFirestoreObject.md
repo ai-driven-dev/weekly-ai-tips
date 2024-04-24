@@ -27,4 +27,4 @@
 
 #### Defined in
 
-[src/utils/firestore/deleteFirestoreObject.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/utils/firestore/deleteFirestoreObject.ts#L4)
+[src/utils/firestore/deleteFirestoreObject.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/utils/firestore/deleteFirestoreObject.ts#L4)

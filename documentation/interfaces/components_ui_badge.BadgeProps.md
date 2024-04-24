@@ -30,4 +30,4 @@ VariantProps.variant
 
 #### Defined in
 
-[components/ui/badge.tsx:9](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/badge.tsx#L9)
+[components/ui/badge.tsx:9](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/badge.tsx#L9)

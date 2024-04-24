@@ -20,4 +20,4 @@
 
 #### Defined in
 
-[app/dashboard/tips/page.tsx:5](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/app/dashboard/tips/page.tsx#L5)
+[app/dashboard/tips/page.tsx:5](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/app/dashboard/tips/page.tsx#L5)

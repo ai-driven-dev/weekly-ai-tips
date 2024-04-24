@@ -26,7 +26,7 @@
 
 #### Defined in
 
-[middleware.ts:21](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/middleware.ts#L21)
+[middleware.ts:21](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/middleware.ts#L21)
 
 ## Functions
 
@@ -46,4 +46,4 @@
 
 #### Defined in
 
-[middleware.ts:25](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/middleware.ts#L25)
+[middleware.ts:25](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/middleware.ts#L25)

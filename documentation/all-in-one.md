@@ -1,6 +1,6 @@
 ---
 version: 0.1.0
-date: 2024-04-23-20:14:59
+date: 2024-04-24-08:49:19
 ---
 
 [Weekly AI Tips](README.md) / Modules
@@ -235,7 +235,7 @@ This project is licensed under the [LICENSE_NAME](LICENSE.md) License - see the 
 
 #### Defined in
 
-[src/features/tipManagement/api/editTip.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/api/editTip.ts#L4)
+[src/features/tipManagement/api/editTip.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/api/editTip.ts#L4)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/tagManagement/api/tagManager
 
 # Module: src/features/tagManagement/api/tagManager
@@ -271,7 +271,7 @@ A Promise that resolves to the created tag.
 
 #### Defined in
 
-[src/features/tagManagement/api/tagManager.ts:28](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tagManagement/api/tagManager.ts#L28)
+[src/features/tagManagement/api/tagManager.ts:28](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tagManagement/api/tagManager.ts#L28)
 
 ___
 
@@ -295,7 +295,7 @@ A Promise that resolves when the tag is deleted.
 
 #### Defined in
 
-[src/features/tagManagement/api/tagManager.ts:42](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tagManagement/api/tagManager.ts#L42)
+[src/features/tagManagement/api/tagManager.ts:42](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tagManagement/api/tagManager.ts#L42)
 
 ___
 
@@ -313,7 +313,7 @@ A Promise that resolves to an array of tags.
 
 #### Defined in
 
-[src/features/tagManagement/api/tagManager.ts:75](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tagManagement/api/tagManager.ts#L75)
+[src/features/tagManagement/api/tagManager.ts:75](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tagManagement/api/tagManager.ts#L75)
 
 ___
 
@@ -338,7 +338,7 @@ A Promise that resolves to the updated tag.
 
 #### Defined in
 
-[src/features/tagManagement/api/tagManager.ts:61](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tagManagement/api/tagManager.ts#L61)
+[src/features/tagManagement/api/tagManager.ts:61](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tagManagement/api/tagManager.ts#L61)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / components/ui/table
 
 # Module: components/ui/table
@@ -374,7 +374,7 @@ A Promise that resolves to the updated tag.
 
 #### Defined in
 
-[components/ui/table.tsx:5](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/table.tsx#L5)
+[components/ui/table.tsx:5](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/table.tsx#L5)
 
 ___
 
@@ -394,7 +394,7 @@ ___
 
 #### Defined in
 
-[components/ui/table.tsx:27](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/table.tsx#L27)
+[components/ui/table.tsx:27](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/table.tsx#L27)
 
 ___
 
@@ -414,7 +414,7 @@ ___
 
 #### Defined in
 
-[components/ui/table.tsx:96](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/table.tsx#L96)
+[components/ui/table.tsx:96](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/table.tsx#L96)
 
 ___
 
@@ -434,7 +434,7 @@ ___
 
 #### Defined in
 
-[components/ui/table.tsx:84](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/table.tsx#L84)
+[components/ui/table.tsx:84](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/table.tsx#L84)
 
 ___
 
@@ -454,7 +454,7 @@ ___
 
 #### Defined in
 
-[components/ui/table.tsx:39](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/table.tsx#L39)
+[components/ui/table.tsx:39](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/table.tsx#L39)
 
 ___
 
@@ -474,7 +474,7 @@ ___
 
 #### Defined in
 
-[components/ui/table.tsx:69](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/table.tsx#L69)
+[components/ui/table.tsx:69](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/table.tsx#L69)
 
 ___
 
@@ -494,7 +494,7 @@ ___
 
 #### Defined in
 
-[components/ui/table.tsx:19](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/table.tsx#L19)
+[components/ui/table.tsx:19](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/table.tsx#L19)
 
 ___
 
@@ -514,7 +514,7 @@ ___
 
 #### Defined in
 
-[components/ui/table.tsx:54](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/table.tsx#L54)
+[components/ui/table.tsx:54](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/table.tsx#L54)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / components/ui/checkbox
 
 # Module: components/ui/checkbox
@@ -543,7 +543,7 @@ ___
 
 #### Defined in
 
-[components/ui/checkbox.tsx:6](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/checkbox.tsx#L6)
+[components/ui/checkbox.tsx:6](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/checkbox.tsx#L6)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/tagManagement/actions/editTagAction
 
 # Module: src/features/tagManagement/actions/editTagAction
@@ -573,7 +573,7 @@ ___
 
 #### Defined in
 
-[src/features/tagManagement/actions/editTagAction.ts:7](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tagManagement/actions/editTagAction.ts#L7)
+[src/features/tagManagement/actions/editTagAction.ts:7](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tagManagement/actions/editTagAction.ts#L7)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/tipManagement/hooks/useTipData
 
 # Module: src/features/tipManagement/hooks/useTipData
@@ -608,7 +608,7 @@ ___
 
 #### Defined in
 
-[src/features/userManagement/components/UsersList.tsx:17](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/userManagement/components/UsersList.tsx#L17)
+[src/features/userManagement/components/UsersList.tsx:17](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/userManagement/components/UsersList.tsx#L17)
 
 ## Functions
 
@@ -628,7 +628,7 @@ ___
 
 #### Defined in
 
-[src/features/userManagement/components/UsersList.tsx:21](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/userManagement/components/UsersList.tsx#L21)
+[src/features/userManagement/components/UsersList.tsx:21](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/userManagement/components/UsersList.tsx#L21)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/tipManagement/actions/publishTipAction
 
 # Module: src/features/tipManagement/actions/publishTipAction
@@ -658,7 +658,7 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/actions/publishTipAction.ts:6](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/actions/publishTipAction.ts#L6)
+[src/features/tipManagement/actions/publishTipAction.ts:6](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/actions/publishTipAction.ts#L6)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/tagManagement/components/TagsList
 
 # Module: src/features/tagManagement/components/TagsList
@@ -688,7 +688,7 @@ ___
 
 #### Defined in
 
-[src/features/tagManagement/components/TagsList.tsx:25](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tagManagement/components/TagsList.tsx#L25)
+[src/features/tagManagement/components/TagsList.tsx:25](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tagManagement/components/TagsList.tsx#L25)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / app/tag/[slug]
 
 # Module: app/tag/[slug]
@@ -714,7 +714,7 @@ ___
 
 #### Defined in
 
-[app/dashboard/tips/page.tsx:5](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/app/dashboard/tips/page.tsx#L5)
+[app/dashboard/tips/page.tsx:5](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/app/dashboard/tips/page.tsx#L5)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / components/ui/toaster
 
 # Module: components/ui/toaster
@@ -737,7 +737,7 @@ ___
 
 #### Defined in
 
-[components/ui/toaster.tsx:11](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/toaster.tsx#L11)
+[components/ui/toaster.tsx:11](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/toaster.tsx#L11)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/tagManagement/actions/deleteTagAction
 
 # Module: src/features/tagManagement/actions/deleteTagAction
@@ -766,7 +766,7 @@ ___
 
 #### Defined in
 
-[src/features/tagManagement/actions/deleteTagAction.ts:6](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tagManagement/actions/deleteTagAction.ts#L6)
+[src/features/tagManagement/actions/deleteTagAction.ts:6](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tagManagement/actions/deleteTagAction.ts#L6)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/components/dashboard/Header
 
 # Module: src/components/dashboard/Header
@@ -796,7 +796,7 @@ ___
 
 #### Defined in
 
-[src/components/dashboard/Header.tsx:7](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/components/dashboard/Header.tsx#L7)
+[src/components/dashboard/Header.tsx:7](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/components/dashboard/Header.tsx#L7)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/tipManagement/actions/upVoteTipAction
 
 # Module: src/features/tipManagement/actions/upVoteTipAction
@@ -834,7 +834,7 @@ If the user has already upvoted the tip.
 
 #### Defined in
 
-[src/features/tipManagement/actions/upVoteTipAction.ts:16](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/actions/upVoteTipAction.ts#L16)
+[src/features/tipManagement/actions/upVoteTipAction.ts:16](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/actions/upVoteTipAction.ts#L16)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / components/ui/title
 
 # Module: components/ui/title
@@ -864,7 +864,7 @@ If the user has already upvoted the tip.
 
 #### Defined in
 
-[components/ui/title.tsx:9](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/title.tsx#L9)
+[components/ui/title.tsx:9](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/title.tsx#L9)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / components/ui/card
 
 # Module: components/ui/card
@@ -898,7 +898,7 @@ If the user has already upvoted the tip.
 
 #### Defined in
 
-[components/ui/card.tsx:4](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/card.tsx#L4)
+[components/ui/card.tsx:4](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/card.tsx#L4)
 
 ___
 
@@ -918,7 +918,7 @@ ___
 
 #### Defined in
 
-[components/ui/card.tsx:58](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/card.tsx#L58)
+[components/ui/card.tsx:58](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/card.tsx#L58)
 
 ___
 
@@ -938,7 +938,7 @@ ___
 
 #### Defined in
 
-[components/ui/card.tsx:46](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/card.tsx#L46)
+[components/ui/card.tsx:46](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/card.tsx#L46)
 
 ___
 
@@ -958,7 +958,7 @@ ___
 
 #### Defined in
 
-[components/ui/card.tsx:66](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/card.tsx#L66)
+[components/ui/card.tsx:66](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/card.tsx#L66)
 
 ___
 
@@ -978,7 +978,7 @@ ___
 
 #### Defined in
 
-[components/ui/card.tsx:19](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/card.tsx#L19)
+[components/ui/card.tsx:19](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/card.tsx#L19)
 
 ___
 
@@ -998,7 +998,7 @@ ___
 
 #### Defined in
 
-[components/ui/card.tsx:31](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/card.tsx#L31)
+[components/ui/card.tsx:31](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/card.tsx#L31)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / app/layout
 
 # Module: app/layout
@@ -1021,7 +1021,7 @@ ___
 
 #### Defined in
 
-[app/layout.tsx:19](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/app/layout.tsx#L19)
+[app/layout.tsx:19](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/app/layout.tsx#L19)
 
 ## Functions
 
@@ -1042,7 +1042,7 @@ ___
 
 #### Defined in
 
-[app/layout.tsx:24](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/app/layout.tsx#L24)
+[app/layout.tsx:24](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/app/layout.tsx#L24)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/tagManagement/actions/createTagAction
 
 # Module: src/features/tagManagement/actions/createTagAction
@@ -1072,7 +1072,7 @@ ___
 
 #### Defined in
 
-[src/features/tagManagement/actions/createTagAction.ts:7](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tagManagement/actions/createTagAction.ts#L7)
+[src/features/tagManagement/actions/createTagAction.ts:7](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tagManagement/actions/createTagAction.ts#L7)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/tipManagement/types/TipEntity
 
 # Module: src/features/tipManagement/types/TipEntity
@@ -1095,7 +1095,7 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/types/TipEntity.ts:23](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/types/TipEntity.ts#L23)
+[src/features/tipManagement/types/TipEntity.ts:23](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/types/TipEntity.ts#L23)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/tagManagement/types/TagEntity
 
 # Module: src/features/tagManagement/types/TagEntity
@@ -1126,7 +1126,7 @@ TagEntity is an interface that defines the structure of a tag entity.
 
 #### Defined in
 
-[src/features/tagManagement/types/TagEntity.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tagManagement/types/TagEntity.ts#L4)
+[src/features/tagManagement/types/TagEntity.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tagManagement/types/TagEntity.ts#L4)
 
 ___
 
@@ -1140,7 +1140,7 @@ create a TagFormType interface
 
 #### Defined in
 
-[src/features/tagManagement/types/TagEntity.ts:17](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tagManagement/types/TagEntity.ts#L17)
+[src/features/tagManagement/types/TagEntity.ts:17](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tagManagement/types/TagEntity.ts#L17)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/userManagement/types/UserEntity
 
 # Module: src/features/userManagement/types/UserEntity
@@ -1178,7 +1178,7 @@ create a TagFormType interface
 
 #### Defined in
 
-[src/features/tipManagement/components/TipList.tsx:21](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/components/TipList.tsx#L21)
+[src/features/tipManagement/components/TipList.tsx:21](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/components/TipList.tsx#L21)
 
 ## Functions
 
@@ -1198,7 +1198,7 @@ create a TagFormType interface
 
 #### Defined in
 
-[src/features/tipManagement/components/TipList.tsx:25](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/components/TipList.tsx#L25)
+[src/features/tipManagement/components/TipList.tsx:25](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/components/TipList.tsx#L25)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / app/api/entities/tags/[id]/route
 
 # Module: app/api/entities/tags/[id]/route
@@ -1230,7 +1230,7 @@ create a TagFormType interface
 
 #### Defined in
 
-[app/api/entities/tags/[id]/route.ts:3](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/app/api/entities/tags/[id]/route.ts#L3)
+[app/api/entities/tags/[id]/route.ts:3](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/app/api/entities/tags/[id]/route.ts#L3)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/userManagement/components/GoogleSignInButton
 
 # Module: src/features/userManagement/components/GoogleSignInButton
@@ -1253,7 +1253,7 @@ create a TagFormType interface
 
 #### Defined in
 
-[src/features/userManagement/components/GoogleSignInButton.tsx:5](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/userManagement/components/GoogleSignInButton.tsx#L5)
+[src/features/userManagement/components/GoogleSignInButton.tsx:5](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/userManagement/components/GoogleSignInButton.tsx#L5)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/votingSystem/utils/setPublished
 
 # Module: src/features/votingSystem/utils/setPublished
@@ -1282,7 +1282,7 @@ create a TagFormType interface
 
 #### Defined in
 
-[src/features/votingSystem/utils/setPublished.ts:3](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/votingSystem/utils/setPublished.ts#L3)
+[src/features/votingSystem/utils/setPublished.ts:3](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/votingSystem/utils/setPublished.ts#L3)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / app/dashboard/users/page
 
 # Module: app/dashboard/users/page
@@ -1305,7 +1305,7 @@ create a TagFormType interface
 
 #### Defined in
 
-[app/dashboard/users/page.tsx:5](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/app/dashboard/users/page.tsx#L5)
+[app/dashboard/users/page.tsx:5](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/app/dashboard/users/page.tsx#L5)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/tipManagement/components/TipPublishButton
 
 # Module: src/features/tipManagement/components/TipPublishButton
@@ -1334,7 +1334,7 @@ create a TagFormType interface
 
 #### Defined in
 
-[src/features/tipManagement/components/TipPublishButton.tsx:11](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/components/TipPublishButton.tsx#L11)
+[src/features/tipManagement/components/TipPublishButton.tsx:11](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/components/TipPublishButton.tsx#L11)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / components/ui/button
 
 # Module: components/ui/button
@@ -1368,7 +1368,7 @@ create a TagFormType interface
 
 #### Defined in
 
-[components/ui/button.tsx:45](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/button.tsx#L45)
+[components/ui/button.tsx:45](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/button.tsx#L45)
 
 ___
 
@@ -1388,7 +1388,7 @@ ___
 
 #### Defined in
 
-[components/ui/button.tsx:10](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/button.tsx#L10)
+[components/ui/button.tsx:10](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/button.tsx#L10)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / app/dashboard/tips/create/page
 
 # Module: app/dashboard/tips/create/page
@@ -1411,7 +1411,7 @@ ___
 
 #### Defined in
 
-[app/dashboard/tips/create/page.tsx:4](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/app/dashboard/tips/create/page.tsx#L4)
+[app/dashboard/tips/create/page.tsx:4](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/app/dashboard/tips/create/page.tsx#L4)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/votingSystem/types/UserVoteEntity
 
 # Module: src/features/votingSystem/types/UserVoteEntity
@@ -1450,7 +1450,7 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/utils/tipUtils.ts:3](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/utils/tipUtils.ts#L3)
+[src/features/tipManagement/utils/tipUtils.ts:3](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/utils/tipUtils.ts#L3)
 
 ___
 
@@ -1470,7 +1470,7 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/utils/tipUtils.ts:13](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/utils/tipUtils.ts#L13)
+[src/features/tipManagement/utils/tipUtils.ts:13](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/utils/tipUtils.ts#L13)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / middleware
 
 # Module: middleware
@@ -1499,7 +1499,7 @@ ___
 
 #### Defined in
 
-[middleware.ts:21](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/middleware.ts#L21)
+[middleware.ts:21](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/middleware.ts#L21)
 
 ## Functions
 
@@ -1519,7 +1519,7 @@ ___
 
 #### Defined in
 
-[middleware.ts:25](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/middleware.ts#L25)
+[middleware.ts:25](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/middleware.ts#L25)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/tipManagement/components/TipDeleteButton
 
 # Module: src/features/tipManagement/components/TipDeleteButton
@@ -1548,7 +1548,7 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/components/TipDeleteButton.tsx:11](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/components/TipDeleteButton.tsx#L11)
+[src/features/tipManagement/components/TipDeleteButton.tsx:11](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/components/TipDeleteButton.tsx#L11)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / firebaseAdmin
 
 # Module: firebaseAdmin
@@ -1582,7 +1582,7 @@ import { admin } from "@/firebaseAdmin";
 
 #### Defined in
 
-[firebaseAdmin.ts:48](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/firebaseAdmin.ts#L48)
+[firebaseAdmin.ts:48](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/firebaseAdmin.ts#L48)
 
 ___
 
@@ -1604,7 +1604,7 @@ const docRef = db.collection("users").doc("alex");
 
 #### Defined in
 
-[firebaseAdmin.ts:36](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/firebaseAdmin.ts#L36)
+[firebaseAdmin.ts:36](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/firebaseAdmin.ts#L36)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/tipManagement/api/editTipVoteCounts
 
 # Module: src/features/tipManagement/api/editTipVoteCounts
@@ -1633,7 +1633,7 @@ const docRef = db.collection("users").doc("alex");
 
 #### Defined in
 
-[src/features/tipManagement/api/editTipVoteCounts.ts:7](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/api/editTipVoteCounts.ts#L7)
+[src/features/tipManagement/api/editTipVoteCounts.ts:7](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/api/editTipVoteCounts.ts#L7)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / components/ui/toast
 
 # Module: components/ui/toast
@@ -1663,7 +1663,7 @@ const docRef = db.collection("users").doc("alex");
 
 #### Defined in
 
-[components/ui/toast.tsx:114](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/toast.tsx#L114)
+[components/ui/toast.tsx:114](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/toast.tsx#L114)
 
 ___
 
@@ -1673,7 +1673,7 @@ ___
 
 #### Defined in
 
-[components/ui/toast.tsx:112](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/toast.tsx#L112)
+[components/ui/toast.tsx:112](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/toast.tsx#L112)
 
 ## Functions
 
@@ -1693,7 +1693,7 @@ ___
 
 #### Defined in
 
-[components/ui/toast.tsx:40](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/toast.tsx#L40)
+[components/ui/toast.tsx:40](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/toast.tsx#L40)
 
 ___
 
@@ -1713,7 +1713,7 @@ ___
 
 #### Defined in
 
-[components/ui/toast.tsx:55](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/toast.tsx#L55)
+[components/ui/toast.tsx:55](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/toast.tsx#L55)
 
 ___
 
@@ -1733,7 +1733,7 @@ ___
 
 #### Defined in
 
-[components/ui/toast.tsx:70](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/toast.tsx#L70)
+[components/ui/toast.tsx:70](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/toast.tsx#L70)
 
 ___
 
@@ -1753,7 +1753,7 @@ ___
 
 #### Defined in
 
-[components/ui/toast.tsx:100](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/toast.tsx#L100)
+[components/ui/toast.tsx:100](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/toast.tsx#L100)
 
 ___
 
@@ -1774,7 +1774,7 @@ ___
 
 #### Defined in
 
-[components/ui/toast.tsx:7](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/toast.tsx#L7)
+[components/ui/toast.tsx:7](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/toast.tsx#L7)
 
 ___
 
@@ -1794,7 +1794,7 @@ ___
 
 #### Defined in
 
-[components/ui/toast.tsx:88](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/toast.tsx#L88)
+[components/ui/toast.tsx:88](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/toast.tsx#L88)
 
 ___
 
@@ -1814,7 +1814,7 @@ ___
 
 #### Defined in
 
-[components/ui/toast.tsx:9](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/toast.tsx#L9)
+[components/ui/toast.tsx:9](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/toast.tsx#L9)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/votingSystem/api/getUserVotes
 
 # Module: src/features/votingSystem/api/getUserVotes
@@ -1844,7 +1844,7 @@ ___
 
 #### Defined in
 
-[src/features/votingSystem/api/getUserVotes.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/votingSystem/api/getUserVotes.ts#L4)
+[src/features/votingSystem/api/getUserVotes.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/votingSystem/api/getUserVotes.ts#L4)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/tipManagement/components/TipListCards
 
 # Module: src/features/tipManagement/components/TipListCards
@@ -1874,7 +1874,7 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/components/TipListCards.tsx:21](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/components/TipListCards.tsx#L21)
+[src/features/tipManagement/components/TipListCards.tsx:21](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/components/TipListCards.tsx#L21)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/tipManagement/actions/downVoteTipAction
 
 # Module: src/features/tipManagement/actions/downVoteTipAction
@@ -1912,7 +1912,7 @@ If the user has already down-voted the tip.
 
 #### Defined in
 
-[src/features/tipManagement/actions/downVoteTipAction.ts:16](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/actions/downVoteTipAction.ts#L16)
+[src/features/tipManagement/actions/downVoteTipAction.ts:16](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/actions/downVoteTipAction.ts#L16)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/tipManagement/utils/getNextScheduledDate
 
 # Module: src/features/tipManagement/utils/getNextScheduledDate
@@ -1946,7 +1946,7 @@ This function is used to get the next Monday's date from the given date.
 
 #### Defined in
 
-[src/features/tipManagement/utils/getNextScheduledDate.ts:55](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/utils/getNextScheduledDate.ts#L55)
+[src/features/tipManagement/utils/getNextScheduledDate.ts:55](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/utils/getNextScheduledDate.ts#L55)
 
 ___
 
@@ -1969,7 +1969,7 @@ Only one tip can be scheduled per week.
 
 #### Defined in
 
-[src/features/tipManagement/utils/getNextScheduledDate.ts:13](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/utils/getNextScheduledDate.ts#L13)
+[src/features/tipManagement/utils/getNextScheduledDate.ts:13](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/utils/getNextScheduledDate.ts#L13)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/tipManagement/components/TipUpVoteButton
 
 # Module: src/features/tipManagement/components/TipUpVoteButton
@@ -1998,7 +1998,7 @@ Only one tip can be scheduled per week.
 
 #### Defined in
 
-[src/features/tipManagement/components/TipUpVoteButton.tsx:12](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/components/TipUpVoteButton.tsx#L12)
+[src/features/tipManagement/components/TipUpVoteButton.tsx:12](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/components/TipUpVoteButton.tsx#L12)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/votingSystem/api/getNumberOfVotes
 
 # Module: src/features/votingSystem/api/getNumberOfVotes
@@ -2027,7 +2027,7 @@ Only one tip can be scheduled per week.
 
 #### Defined in
 
-[src/features/votingSystem/api/getNumberOfVotes.ts:3](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/votingSystem/api/getNumberOfVotes.ts#L3)
+[src/features/votingSystem/api/getNumberOfVotes.ts:3](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/votingSystem/api/getNumberOfVotes.ts#L3)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / app/dashboard/tags/page
 
 # Module: app/dashboard/tags/page
@@ -2050,7 +2050,7 @@ Only one tip can be scheduled per week.
 
 #### Defined in
 
-[app/dashboard/tags/page.tsx:8](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/app/dashboard/tags/page.tsx#L8)
+[app/dashboard/tags/page.tsx:8](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/app/dashboard/tags/page.tsx#L8)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / components/ui/input
 
 # Module: components/ui/input
@@ -2083,7 +2083,7 @@ Only one tip can be scheduled per week.
 
 #### Defined in
 
-[components/ui/input.tsx:8](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/input.tsx#L8)
+[components/ui/input.tsx:8](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/input.tsx#L8)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / components/ui/label
 
 # Module: components/ui/label
@@ -2112,7 +2112,7 @@ Only one tip can be scheduled per week.
 
 #### Defined in
 
-[components/ui/label.tsx:11](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/label.tsx#L11)
+[components/ui/label.tsx:11](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/label.tsx#L11)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / app/api/entities/users/route
 
 # Module: app/api/entities/users/route
@@ -2141,7 +2141,7 @@ Only one tip can be scheduled per week.
 
 #### Defined in
 
-[app/api/entities/users/route.ts:7](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/app/api/entities/users/route.ts#L7)
+[app/api/entities/users/route.ts:7](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/app/api/entities/users/route.ts#L7)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / app/dashboard/layout
 
 # Module: app/dashboard/layout
@@ -2170,7 +2170,7 @@ Only one tip can be scheduled per week.
 
 #### Defined in
 
-[app/dashboard/layout.tsx:7](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/app/dashboard/layout.tsx#L7)
+[app/dashboard/layout.tsx:7](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/app/dashboard/layout.tsx#L7)
 
 ## Functions
 
@@ -2190,7 +2190,7 @@ Only one tip can be scheduled per week.
 
 #### Defined in
 
-[app/dashboard/layout.tsx:17](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/app/dashboard/layout.tsx#L17)
+[app/dashboard/layout.tsx:17](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/app/dashboard/layout.tsx#L17)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / components/lib/utils
 
 # Module: components/lib/utils
@@ -2219,7 +2219,7 @@ Only one tip can be scheduled per week.
 
 #### Defined in
 
-[components/lib/utils.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/lib/utils.ts#L4)
+[components/lib/utils.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/lib/utils.ts#L4)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/votingSystem/tests/votingSystem.spec
 
 # Module: src/features/votingSystem/tests/votingSystem.spec
@@ -2251,7 +2251,7 @@ Only one tip can be scheduled per week.
 
 #### Defined in
 
-[src/features/tipManagement/components/TipForm.tsx:16](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/components/TipForm.tsx#L16)
+[src/features/tipManagement/components/TipForm.tsx:16](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/components/TipForm.tsx#L16)
 
 ## Functions
 
@@ -2271,7 +2271,7 @@ Only one tip can be scheduled per week.
 
 #### Defined in
 
-[src/features/tipManagement/components/TipForm.tsx:20](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/components/TipForm.tsx#L20)
+[src/features/tipManagement/components/TipForm.tsx:20](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/components/TipForm.tsx#L20)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/votingSystem/tests/isVotable.test
 
 # Module: src/features/votingSystem/tests/isVotable.test
@@ -2297,7 +2297,7 @@ Only one tip can be scheduled per week.
 
 #### Defined in
 
-[app/page.tsx:4](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/app/page.tsx#L4)
+[app/page.tsx:4](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/app/page.tsx#L4)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/votingSystem/api/fetchVotes
 
 # Module: src/features/votingSystem/api/fetchVotes
@@ -2326,7 +2326,7 @@ Only one tip can be scheduled per week.
 
 #### Defined in
 
-[src/features/votingSystem/api/fetchVotes.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/votingSystem/api/fetchVotes.ts#L4)
+[src/features/votingSystem/api/fetchVotes.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/votingSystem/api/fetchVotes.ts#L4)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / app/dashboard/page
 
 # Module: app/dashboard/page
@@ -2349,7 +2349,7 @@ Only one tip can be scheduled per week.
 
 #### Defined in
 
-[app/dashboard/page.tsx:5](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/app/dashboard/page.tsx#L5)
+[app/dashboard/page.tsx:5](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/app/dashboard/page.tsx#L5)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/components/dashboard/Navigation
 
 # Module: src/components/dashboard/Navigation
@@ -2372,7 +2372,7 @@ Only one tip can be scheduled per week.
 
 #### Defined in
 
-[src/components/dashboard/Navigation.tsx:4](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/components/dashboard/Navigation.tsx#L4)
+[src/components/dashboard/Navigation.tsx:4](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/components/dashboard/Navigation.tsx#L4)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/tipManagement/api/fetchTip
 
 # Module: src/features/tipManagement/api/fetchTip
@@ -2401,7 +2401,7 @@ Only one tip can be scheduled per week.
 
 #### Defined in
 
-[src/features/tipManagement/api/fetchTip.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/api/fetchTip.ts#L4)
+[src/features/tipManagement/api/fetchTip.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/api/fetchTip.ts#L4)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/userManagement/api/fetchUsers
 
 # Module: src/features/userManagement/api/fetchUsers
@@ -2424,7 +2424,7 @@ Only one tip can be scheduled per week.
 
 #### Defined in
 
-[src/features/userManagement/api/fetchUsers.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/userManagement/api/fetchUsers.ts#L4)
+[src/features/userManagement/api/fetchUsers.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/userManagement/api/fetchUsers.ts#L4)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / components/ui/badge
 
 # Module: components/ui/badge
@@ -2458,7 +2458,7 @@ Only one tip can be scheduled per week.
 
 #### Defined in
 
-[components/ui/badge.tsx:29](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/badge.tsx#L29)
+[components/ui/badge.tsx:29](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/badge.tsx#L29)
 
 ___
 
@@ -2478,7 +2478,7 @@ ___
 
 #### Defined in
 
-[components/ui/badge.tsx:5](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/badge.tsx#L5)
+[components/ui/badge.tsx:5](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/badge.tsx#L5)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / firebaseClient
 
 # Module: firebaseClient
@@ -2499,7 +2499,7 @@ ___
 
 #### Defined in
 
-[firebaseClient.ts:17](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/firebaseClient.ts#L17)
+[firebaseClient.ts:17](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/firebaseClient.ts#L17)
 
 ___
 
@@ -2509,7 +2509,7 @@ ___
 
 #### Defined in
 
-[firebaseClient.ts:15](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/firebaseClient.ts#L15)
+[firebaseClient.ts:15](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/firebaseClient.ts#L15)
 
 ___
 
@@ -2519,7 +2519,7 @@ ___
 
 #### Defined in
 
-[firebaseClient.ts:31](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/firebaseClient.ts#L31)
+[firebaseClient.ts:31](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/firebaseClient.ts#L31)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/utils/firestore/deleteFirestoreObject
 
 # Module: src/utils/firestore/deleteFirestoreObject
@@ -2549,7 +2549,7 @@ ___
 
 #### Defined in
 
-[src/utils/firestore/deleteFirestoreObject.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/utils/firestore/deleteFirestoreObject.ts#L4)
+[src/utils/firestore/deleteFirestoreObject.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/utils/firestore/deleteFirestoreObject.ts#L4)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/votingSystem/utils/isVotable
 
 # Module: src/features/votingSystem/utils/isVotable
@@ -2578,7 +2578,7 @@ ___
 
 #### Defined in
 
-[src/features/votingSystem/utils/isVotable.ts:3](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/votingSystem/utils/isVotable.ts#L3)
+[src/features/votingSystem/utils/isVotable.ts:3](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/votingSystem/utils/isVotable.ts#L3)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/userManagement/actions/userActions
 
 # Module: src/features/userManagement/actions/userActions
@@ -2607,7 +2607,7 @@ ___
 
 #### Defined in
 
-[src/features/userManagement/actions/userActions.ts:6](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/userManagement/actions/userActions.ts#L6)
+[src/features/userManagement/actions/userActions.ts:6](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/userManagement/actions/userActions.ts#L6)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/tipManagement/components/TipDownVoteButton
 
 # Module: src/features/tipManagement/components/TipDownVoteButton
@@ -2636,7 +2636,7 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/components/TipDownVoteButton.tsx:12](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/components/TipDownVoteButton.tsx#L12)
+[src/features/tipManagement/components/TipDownVoteButton.tsx:12](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/components/TipDownVoteButton.tsx#L12)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/votingSystem/api/vote
 
 # Module: src/features/votingSystem/api/vote
@@ -2667,7 +2667,7 @@ ___
 
 #### Defined in
 
-[src/features/votingSystem/api/vote.ts:8](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/votingSystem/api/vote.ts#L8)
+[src/features/votingSystem/api/vote.ts:8](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/votingSystem/api/vote.ts#L8)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/userManagement/components/UsersList.spec
 
 # Module: src/features/userManagement/components/UsersList.spec
@@ -2702,7 +2702,7 @@ ___
 
 #### Defined in
 
-[app/api/entities/tags/route.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/app/api/entities/tags/route.ts#L4)
+[app/api/entities/tags/route.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/app/api/entities/tags/route.ts#L4)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/tipManagement/api/fetchTips
 
 # Module: src/features/tipManagement/api/fetchTips
@@ -2731,7 +2731,7 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/api/fetchTips.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/api/fetchTips.ts#L4)
+[src/features/tipManagement/api/fetchTips.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/api/fetchTips.ts#L4)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/tipManagement/utils/getNextMondaysDateFromDate.test
 
 # Module: src/features/tipManagement/utils/getNextMondaysDateFromDate.test
@@ -2763,7 +2763,7 @@ ___
 
 #### Defined in
 
-[src/features/tagManagement/components/TagForm.tsx:13](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tagManagement/components/TagForm.tsx#L13)
+[src/features/tagManagement/components/TagForm.tsx:13](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tagManagement/components/TagForm.tsx#L13)
 
 ## Functions
 
@@ -2783,7 +2783,7 @@ ___
 
 #### Defined in
 
-[src/features/tagManagement/components/TagForm.tsx:17](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tagManagement/components/TagForm.tsx#L17)
+[src/features/tagManagement/components/TagForm.tsx:17](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tagManagement/components/TagForm.tsx#L17)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/tipManagement/api/createTip
 
 # Module: src/features/tipManagement/api/createTip
@@ -2812,7 +2812,7 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/api/createTip.ts:5](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/api/createTip.ts#L5)
+[src/features/tipManagement/api/createTip.ts:5](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/api/createTip.ts#L5)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/userManagement/api/fetchUser
 
 # Module: src/features/userManagement/api/fetchUser
@@ -2841,7 +2841,7 @@ ___
 
 #### Defined in
 
-[src/features/userManagement/api/fetchUser.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/userManagement/api/fetchUser.ts#L4)
+[src/features/userManagement/api/fetchUser.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/userManagement/api/fetchUser.ts#L4)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/tipManagement/actions/editTipAction
 
 # Module: src/features/tipManagement/actions/editTipAction
@@ -2871,7 +2871,7 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/actions/editTipAction.ts:8](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/actions/editTipAction.ts#L8)
+[src/features/tipManagement/actions/editTipAction.ts:8](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/actions/editTipAction.ts#L8)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/userManagement/hooks/useUserAuthentication
 
 # Module: src/features/userManagement/hooks/useUserAuthentication
@@ -2901,7 +2901,7 @@ ___
 
 #### Defined in
 
-[src/features/userManagement/hooks/useUserAuthentication.ts:12](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/userManagement/hooks/useUserAuthentication.ts#L12)
+[src/features/userManagement/hooks/useUserAuthentication.ts:12](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/userManagement/hooks/useUserAuthentication.ts#L12)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / app/404
 
 # Module: app/404
@@ -2934,7 +2934,7 @@ ___
 
 #### Defined in
 
-[app/dashboard/tips/edit/[id]/page.tsx:7](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/app/dashboard/tips/edit/[id]/page.tsx#L7)
+[app/dashboard/tips/edit/[id]/page.tsx:7](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/app/dashboard/tips/edit/[id]/page.tsx#L7)
 
 ## Functions
 
@@ -2954,7 +2954,7 @@ ___
 
 #### Defined in
 
-[app/dashboard/tips/edit/[id]/page.tsx:13](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/app/dashboard/tips/edit/[id]/page.tsx#L13)
+[app/dashboard/tips/edit/[id]/page.tsx:13](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/app/dashboard/tips/edit/[id]/page.tsx#L13)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/tipManagement/actions/createTipAction
 
 # Module: src/features/tipManagement/actions/createTipAction
@@ -2984,7 +2984,7 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/actions/createTipAction.ts:9](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/actions/createTipAction.ts#L9)
+[src/features/tipManagement/actions/createTipAction.ts:9](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/actions/createTipAction.ts#L9)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / components/ui/use-toast
 
 # Module: components/ui/use-toast
@@ -3020,7 +3020,7 @@ ___
 
 #### Defined in
 
-[components/ui/use-toast.ts:32](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/use-toast.ts#L32)
+[components/ui/use-toast.ts:32](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/use-toast.ts#L32)
 
 ___
 
@@ -3030,7 +3030,7 @@ ___
 
 #### Defined in
 
-[components/ui/use-toast.ts:30](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/use-toast.ts#L30)
+[components/ui/use-toast.ts:30](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/use-toast.ts#L30)
 
 ___
 
@@ -3040,7 +3040,7 @@ ___
 
 #### Defined in
 
-[components/ui/use-toast.ts:138](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/use-toast.ts#L138)
+[components/ui/use-toast.ts:138](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/use-toast.ts#L138)
 
 ___
 
@@ -3050,7 +3050,7 @@ ___
 
 #### Defined in
 
-[components/ui/use-toast.ts:9](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/use-toast.ts#L9)
+[components/ui/use-toast.ts:9](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/use-toast.ts#L9)
 
 ## Variables
 
@@ -3069,7 +3069,7 @@ ___
 
 #### Defined in
 
-[components/ui/use-toast.ts:16](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/use-toast.ts#L16)
+[components/ui/use-toast.ts:16](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/use-toast.ts#L16)
 
 ## Functions
 
@@ -3090,7 +3090,7 @@ ___
 
 #### Defined in
 
-[components/ui/use-toast.ts:72](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/use-toast.ts#L72)
+[components/ui/use-toast.ts:72](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/use-toast.ts#L72)
 
 ___
 
@@ -3116,7 +3116,7 @@ ___
 
 #### Defined in
 
-[components/ui/use-toast.ts:140](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/use-toast.ts#L140)
+[components/ui/use-toast.ts:140](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/use-toast.ts#L140)
 
 ___
 
@@ -3136,7 +3136,7 @@ ___
 
 #### Defined in
 
-[components/ui/use-toast.ts:169](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/use-toast.ts#L169)
+[components/ui/use-toast.ts:169](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/use-toast.ts#L169)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / components/ui/inputWithLabel
 
 # Module: components/ui/inputWithLabel
@@ -3169,7 +3169,7 @@ ___
 
 #### Defined in
 
-[components/ui/inputWithLabel.tsx:11](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/inputWithLabel.tsx#L11)
+[components/ui/inputWithLabel.tsx:11](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/inputWithLabel.tsx#L11)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/userManagement/components/UserDeleteButton
 
 # Module: src/features/userManagement/components/UserDeleteButton
@@ -3198,7 +3198,7 @@ ___
 
 #### Defined in
 
-[src/features/userManagement/components/UserDeleteButton.tsx:8](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/userManagement/components/UserDeleteButton.tsx#L8)
+[src/features/userManagement/components/UserDeleteButton.tsx:8](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/userManagement/components/UserDeleteButton.tsx#L8)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / src/features/tipManagement/actions/deleteTipAction
 
 # Module: src/features/tipManagement/actions/deleteTipAction
@@ -3230,7 +3230,7 @@ Experimental feature of React Canary, no documentation available in GitHub Copil
 
 #### Defined in
 
-[src/features/tipManagement/actions/deleteTipAction.ts:9](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/actions/deleteTipAction.ts#L9)
+[src/features/tipManagement/actions/deleteTipAction.ts:9](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/actions/deleteTipAction.ts#L9)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / app/about
 
 # Module: app/about
@@ -3259,7 +3259,7 @@ Experimental feature of React Canary, no documentation available in GitHub Copil
 
 #### Defined in
 
-[src/features/votingSystem/types/UserVoteEntity.ts:6](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/votingSystem/types/UserVoteEntity.ts#L6)
+[src/features/votingSystem/types/UserVoteEntity.ts:6](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/votingSystem/types/UserVoteEntity.ts#L6)
 
 ___
 
@@ -3269,7 +3269,7 @@ ___
 
 #### Defined in
 
-[src/features/votingSystem/types/UserVoteEntity.ts:2](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/votingSystem/types/UserVoteEntity.ts#L2)
+[src/features/votingSystem/types/UserVoteEntity.ts:2](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/votingSystem/types/UserVoteEntity.ts#L2)
 
 ___
 
@@ -3279,7 +3279,7 @@ ___
 
 #### Defined in
 
-[src/features/votingSystem/types/UserVoteEntity.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/votingSystem/types/UserVoteEntity.ts#L4)
+[src/features/votingSystem/types/UserVoteEntity.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/votingSystem/types/UserVoteEntity.ts#L4)
 
 ___
 
@@ -3289,7 +3289,7 @@ ___
 
 #### Defined in
 
-[src/features/votingSystem/types/UserVoteEntity.ts:7](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/votingSystem/types/UserVoteEntity.ts#L7)
+[src/features/votingSystem/types/UserVoteEntity.ts:7](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/votingSystem/types/UserVoteEntity.ts#L7)
 
 ___
 
@@ -3299,7 +3299,7 @@ ___
 
 #### Defined in
 
-[src/features/votingSystem/types/UserVoteEntity.ts:3](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/votingSystem/types/UserVoteEntity.ts#L3)
+[src/features/votingSystem/types/UserVoteEntity.ts:3](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/votingSystem/types/UserVoteEntity.ts#L3)
 
 ___
 
@@ -3309,7 +3309,7 @@ ___
 
 #### Defined in
 
-[src/features/votingSystem/types/UserVoteEntity.ts:5](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/votingSystem/types/UserVoteEntity.ts#L5)
+[src/features/votingSystem/types/UserVoteEntity.ts:5](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/votingSystem/types/UserVoteEntity.ts#L5)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / [components/ui/badge](../modules/components_ui_badge.md) / BadgeProps
 
 # Interface: BadgeProps
@@ -3342,7 +3342,7 @@ VariantProps.variant
 
 #### Defined in
 
-[components/ui/badge.tsx:9](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/badge.tsx#L9)
+[components/ui/badge.tsx:9](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/badge.tsx#L9)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / [components/ui/input](../modules/components_ui_input.md) / InputProps
 
 # Interface: InputProps
@@ -3390,7 +3390,7 @@ Add slug property based on title
 
 #### Defined in
 
-[src/features/tipManagement/types/TipEntity.ts:8](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/types/TipEntity.ts#L8)
+[src/features/tipManagement/types/TipEntity.ts:8](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/types/TipEntity.ts#L8)
 
 ___
 
@@ -3400,7 +3400,7 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/types/TipEntity.ts:9](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/types/TipEntity.ts#L9)
+[src/features/tipManagement/types/TipEntity.ts:9](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/types/TipEntity.ts#L9)
 
 ___
 
@@ -3410,7 +3410,7 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/types/TipEntity.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/types/TipEntity.ts#L4)
+[src/features/tipManagement/types/TipEntity.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/types/TipEntity.ts#L4)
 
 ___
 
@@ -3420,7 +3420,7 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/types/TipEntity.ts:13](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/types/TipEntity.ts#L13)
+[src/features/tipManagement/types/TipEntity.ts:13](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/types/TipEntity.ts#L13)
 
 ___
 
@@ -3430,7 +3430,7 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/types/TipEntity.ts:2](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/types/TipEntity.ts#L2)
+[src/features/tipManagement/types/TipEntity.ts:2](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/types/TipEntity.ts#L2)
 
 ___
 
@@ -3440,7 +3440,7 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/types/TipEntity.ts:14](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/types/TipEntity.ts#L14)
+[src/features/tipManagement/types/TipEntity.ts:14](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/types/TipEntity.ts#L14)
 
 ___
 
@@ -3450,7 +3450,7 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/types/TipEntity.ts:11](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/types/TipEntity.ts#L11)
+[src/features/tipManagement/types/TipEntity.ts:11](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/types/TipEntity.ts#L11)
 
 ___
 
@@ -3460,7 +3460,7 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/types/TipEntity.ts:16](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/types/TipEntity.ts#L16)
+[src/features/tipManagement/types/TipEntity.ts:16](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/types/TipEntity.ts#L16)
 
 ___
 
@@ -3470,7 +3470,7 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/types/TipEntity.ts:15](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/types/TipEntity.ts#L15)
+[src/features/tipManagement/types/TipEntity.ts:15](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/types/TipEntity.ts#L15)
 
 ___
 
@@ -3480,7 +3480,7 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/types/TipEntity.ts:17](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/types/TipEntity.ts#L17)
+[src/features/tipManagement/types/TipEntity.ts:17](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/types/TipEntity.ts#L17)
 
 ___
 
@@ -3490,7 +3490,7 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/types/TipEntity.ts:3](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/types/TipEntity.ts#L3)
+[src/features/tipManagement/types/TipEntity.ts:3](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/types/TipEntity.ts#L3)
 
 ___
 
@@ -3500,7 +3500,7 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/types/TipEntity.ts:12](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/types/TipEntity.ts#L12)
+[src/features/tipManagement/types/TipEntity.ts:12](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/types/TipEntity.ts#L12)
 
 ___
 
@@ -3510,7 +3510,7 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/types/TipEntity.ts:10](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/types/TipEntity.ts#L10)
+[src/features/tipManagement/types/TipEntity.ts:10](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/types/TipEntity.ts#L10)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / [src/features/userManagement/types/UserEntity](../modules/src_features_userManagement_types_UserEntity.md) / default
 
 # Interface: default
@@ -3537,7 +3537,7 @@ ___
 
 #### Defined in
 
-[src/features/userManagement/types/UserEntity.ts:7](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/userManagement/types/UserEntity.ts#L7)
+[src/features/userManagement/types/UserEntity.ts:7](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/userManagement/types/UserEntity.ts#L7)
 
 ___
 
@@ -3547,7 +3547,7 @@ ___
 
 #### Defined in
 
-[src/features/userManagement/types/UserEntity.ts:5](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/userManagement/types/UserEntity.ts#L5)
+[src/features/userManagement/types/UserEntity.ts:5](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/userManagement/types/UserEntity.ts#L5)
 
 ___
 
@@ -3557,7 +3557,7 @@ ___
 
 #### Defined in
 
-[src/features/userManagement/types/UserEntity.ts:2](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/userManagement/types/UserEntity.ts#L2)
+[src/features/userManagement/types/UserEntity.ts:2](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/userManagement/types/UserEntity.ts#L2)
 
 ___
 
@@ -3567,7 +3567,7 @@ ___
 
 #### Defined in
 
-[src/features/userManagement/types/UserEntity.ts:3](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/userManagement/types/UserEntity.ts#L3)
+[src/features/userManagement/types/UserEntity.ts:3](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/userManagement/types/UserEntity.ts#L3)
 
 ___
 
@@ -3577,7 +3577,7 @@ ___
 
 #### Defined in
 
-[src/features/userManagement/types/UserEntity.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/userManagement/types/UserEntity.ts#L4)
+[src/features/userManagement/types/UserEntity.ts:4](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/userManagement/types/UserEntity.ts#L4)
 
 ___
 
@@ -3587,7 +3587,7 @@ ___
 
 #### Defined in
 
-[src/features/userManagement/types/UserEntity.ts:6](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/userManagement/types/UserEntity.ts#L6)
+[src/features/userManagement/types/UserEntity.ts:6](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/userManagement/types/UserEntity.ts#L6)
 
 ___
 
@@ -3597,7 +3597,7 @@ ___
 
 #### Defined in
 
-[src/features/userManagement/types/UserEntity.ts:8](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/userManagement/types/UserEntity.ts#L8)
+[src/features/userManagement/types/UserEntity.ts:8](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/userManagement/types/UserEntity.ts#L8)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / [components/ui/button](../modules/components_ui_button.md) / ButtonProps
 
 # Interface: ButtonProps
@@ -3628,7 +3628,7 @@ ___
 
 #### Defined in
 
-[components/ui/button.tsx:42](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/button.tsx#L42)
+[components/ui/button.tsx:42](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/button.tsx#L42)
 
 ___
 
@@ -3642,7 +3642,7 @@ VariantProps.size
 
 #### Defined in
 
-[components/ui/button.tsx:25](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/button.tsx#L25)
+[components/ui/button.tsx:25](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/button.tsx#L25)
 
 ___
 
@@ -3656,7 +3656,7 @@ VariantProps.variant
 
 #### Defined in
 
-[components/ui/button.tsx:14](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/button.tsx#L14)
+[components/ui/button.tsx:14](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/button.tsx#L14)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / [components/ui/use-toast](../modules/components_ui_use_toast.md) / State
 
 # Interface: State
@@ -3677,7 +3677,7 @@ VariantProps.variant
 
 #### Defined in
 
-[components/ui/use-toast.ts:51](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/use-toast.ts#L51)
+[components/ui/use-toast.ts:51](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/use-toast.ts#L51)
 [Weekly AI Tips](../README.md) / [Modules](../modules.md) / [components/ui/inputWithLabel](../modules/components_ui_inputWithLabel.md) / InputWithLabelProps
 
 # Interface: InputWithLabelProps
@@ -3705,7 +3705,7 @@ VariantProps.variant
 
 #### Defined in
 
-[components/ui/inputWithLabel.tsx:8](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/inputWithLabel.tsx#L8)
+[components/ui/inputWithLabel.tsx:8](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/inputWithLabel.tsx#L8)
 
 ___
 
@@ -3719,4 +3719,4 @@ React.InputHTMLAttributes.name
 
 #### Defined in
 
-[components/ui/inputWithLabel.tsx:7](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/components/ui/inputWithLabel.tsx#L7)
+[components/ui/inputWithLabel.tsx:7](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/components/ui/inputWithLabel.tsx#L7)

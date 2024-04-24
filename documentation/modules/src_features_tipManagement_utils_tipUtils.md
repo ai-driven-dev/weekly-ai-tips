@@ -27,7 +27,7 @@
 
 #### Defined in
 
-[src/features/tipManagement/utils/tipUtils.ts:3](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/utils/tipUtils.ts#L3)
+[src/features/tipManagement/utils/tipUtils.ts:3](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/utils/tipUtils.ts#L3)
 
 ___
 
@@ -47,4 +47,4 @@ ___
 
 #### Defined in
 
-[src/features/tipManagement/utils/tipUtils.ts:13](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/utils/tipUtils.ts#L13)
+[src/features/tipManagement/utils/tipUtils.ts:13](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/utils/tipUtils.ts#L13)

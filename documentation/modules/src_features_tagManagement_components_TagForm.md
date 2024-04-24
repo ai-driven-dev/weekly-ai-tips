@@ -26,7 +26,7 @@
 
 #### Defined in
 
-[src/features/tagManagement/components/TagForm.tsx:13](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tagManagement/components/TagForm.tsx#L13)
+[src/features/tagManagement/components/TagForm.tsx:13](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tagManagement/components/TagForm.tsx#L13)
 
 ## Functions
 
@@ -46,4 +46,4 @@
 
 #### Defined in
 
-[src/features/tagManagement/components/TagForm.tsx:17](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tagManagement/components/TagForm.tsx#L17)
+[src/features/tagManagement/components/TagForm.tsx:17](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tagManagement/components/TagForm.tsx#L17)

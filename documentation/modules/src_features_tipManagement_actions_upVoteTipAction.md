@@ -35,4 +35,4 @@ If the user has already upvoted the tip.
 
 #### Defined in
 
-[src/features/tipManagement/actions/upVoteTipAction.ts:16](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/src/features/tipManagement/actions/upVoteTipAction.ts#L16)
+[src/features/tipManagement/actions/upVoteTipAction.ts:16](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/src/features/tipManagement/actions/upVoteTipAction.ts#L16)

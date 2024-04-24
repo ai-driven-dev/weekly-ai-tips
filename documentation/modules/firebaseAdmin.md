@@ -31,7 +31,7 @@ import { admin } from "@/firebaseAdmin";
 
 #### Defined in
 
-[firebaseAdmin.ts:48](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/firebaseAdmin.ts#L48)
+[firebaseAdmin.ts:48](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/firebaseAdmin.ts#L48)
 
 ___
 
@@ -53,4 +53,4 @@ const docRef = db.collection("users").doc("alex");
 
 #### Defined in
 
-[firebaseAdmin.ts:36](https://github.com/alexsoyes/weekly-ai-tips/blob/82d80f9c03fb9b1eb480331758fae01e00b39731/firebaseAdmin.ts#L36)
+[firebaseAdmin.ts:36](https://github.com/alexsoyes/weekly-ai-tips/blob/b51216ee36bb903ccd72a472afbc8e01da2cc631/firebaseAdmin.ts#L36)
