@@ -14,6 +14,8 @@ describe("setPublished", () => {
       upVotes: 0,
       downVotes: 0,
       status: "draft",
+      slug: "tip-1",
+      tagIDs: ["tag1"],
     };
 
     // Act

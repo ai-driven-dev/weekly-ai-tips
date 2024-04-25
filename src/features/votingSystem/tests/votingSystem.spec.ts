@@ -31,6 +31,8 @@ describe("Voting for Tips", () => {
       upVotes: 0,
       downVotes: 0,
       status: "ready",
+      slug: "tip-1",
+      tagIDs: ["tag1"],
     };
     const fromUser: UserEntity = {
       id: "user1",
@@ -62,6 +64,8 @@ describe("Voting for Tips", () => {
       upVotes: 0,
       downVotes: 0,
       status: "ready",
+      slug: "tip-1",
+      tagIDs: ["tag1"],
     };
     const fromUser: UserEntity = {
       id: "user1",
@@ -93,6 +97,8 @@ describe("Voting for Tips", () => {
       upVotes: 0,
       downVotes: 0,
       status: "draft",
+      slug: "tip-1",
+      tagIDs: ["tag1"],
     };
     const fromUser: UserEntity = {
       id: "user1",
@@ -124,6 +130,8 @@ describe("Voting for Tips", () => {
       upVotes: 0,
       downVotes: 0,
       status: "ready",
+      slug: "tip-1",
+      tagIDs: ["tag1"],
     };
     const fromUser: UserEntity = {
       id: "user1",

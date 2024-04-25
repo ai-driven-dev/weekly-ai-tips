@@ -13,6 +13,8 @@ describe("isVotable", () => {
       upVotes: 0,
       downVotes: 0,
       status: "ready",
+      slug: "tip-1",
+      tagIDs: ["tag1"],
     };
 
     const result = isVotable(tip);
@@ -31,6 +33,8 @@ describe("isVotable", () => {
       upVotes: 0,
       downVotes: 0,
       status: "draft",
+      slug: "tip-1",
+      tagIDs: ["tag1"],
     };
 
     const result = isVotable(tip);
@@ -49,6 +53,8 @@ describe("isVotable", () => {
       upVotes: 2,
       downVotes: -2,
       status: "ready",
+      slug: "tip-1",
+      tagIDs: ["tag1"],
     };
 
     const result = isVotable(tip);
@@ -67,6 +73,8 @@ describe("isVotable", () => {
       upVotes: 2,
       downVotes: -4,
       status: "ready",
+      slug: "tip-1",
+      tagIDs: ["tag1"],
     };
 
     const result = isVotable(tip);
