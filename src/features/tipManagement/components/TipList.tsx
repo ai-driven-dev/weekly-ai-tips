@@ -12,6 +12,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import Link from "next/link";
+import { TagEntity } from "../../tagManagement/types/TagEntity";
 import TipEntity from "../types/TipEntity";
 import TipDeleteButton from "./TipDeleteButton";
 import TipDownVoteButton from "./TipDownVoteButton";
@@ -20,9 +21,10 @@ import TipUpVoteButton from "./TipUpVoteButton";
 
 export type Props = {
   tips: Array<TipEntity>;
+  tags: Array<TagEntity>;
 };
 
-export default function TipList({ tips }: Props): React.ReactElement {
+export default function TipList({ tips, tags }: Props): React.ReactElement {
   return (
     <Table>
       <TableCaption>Tips list.</TableCaption>
@@ -33,6 +35,7 @@ export default function TipList({ tips }: Props): React.ReactElement {
           <TableHead>Description</TableHead>
           <TableHead>Votes</TableHead>
           <TableHead>Status</TableHead>
+          <TableHead>Tags</TableHead>
           <TableHead>Actions</TableHead>
           {/* Add tags column */}
         </TableRow>
@@ -63,7 +66,18 @@ export default function TipList({ tips }: Props): React.ReactElement {
                 )}
               </div>
             </TableCell>
-            {/* Add tags column */}
+            <TableCell>
+              <div className="flex gap-1">
+                {tip.tagIDs.map((tagID) => {
+                  const tag = tags.find((tag) => tag.id === tagID);
+                  return tag ? (
+                    <Badge key={tag.id} variant={"secondary"}>
+                      {tag.name}
+                    </Badge>
+                  ) : null;
+                })}
+              </div>
+            </TableCell>
             <TableCell>
               {tip.id && (
                 <div className="flex gap-2">

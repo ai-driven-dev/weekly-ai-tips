@@ -2,9 +2,7 @@ interface TipEntity {
   id?: string;
   title: string;
   description: string;
-  /**
-   * @TODO Add slug property based on title
-   */
+  slug: string;
   content: string;
   createdAt: Date;
   updatedAt: Date;
@@ -18,11 +16,18 @@ interface TipEntity {
   /**
    * @TODO Add tagIDs property to TipEntity
    */
+  tagIDs: string[];
 }
 
 export type TipFormType = Pick<
   TipEntity,
-  "title" | "description" | "content" | "status" | "scheduledDate"
+  | "title"
+  | "description"
+  | "content"
+  | "status"
+  | "scheduledDate"
+  | "slug"
+  | "tagIDs"
 > & {
   id?: string;
 };

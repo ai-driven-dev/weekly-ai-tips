@@ -16,6 +16,9 @@ export async function createTipAction(
     content: formData.get("content") as string,
     ownerID: formData.get("ownerID") as string,
     status: formData.get("status") === "on" ? "ready" : "draft",
+    tagIDs: (formData.get("tagIDs") as string)
+      .split(",")
+      .map((id) => id.trim()),
   };
 
   const persistedData = await createTip({
@@ -29,6 +32,7 @@ export async function createTipAction(
     createdAt: new Date(),
     updatedAt: new Date(),
     mediaURL: null, // TODO: create it
+    tagIDs: data.tagIDs,
   });
 
   revalidatePath("/dashboard/tips");

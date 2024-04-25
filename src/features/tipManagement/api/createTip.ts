@@ -11,6 +11,7 @@ export default async function createTip(
 
   return {
     id: doc.id,
+    slug: doc.data()?.slug,
     title: doc.data()?.title,
     content: doc.data()?.content,
     description: doc.data()?.description,
@@ -21,5 +22,6 @@ export default async function createTip(
     upVotes: doc.data()?.upVotes,
     mediaURL: doc.data()?.mediaURL,
     updatedAt: doc.data()?.updatedAt,
+    tagIDs: doc.data()?.tagIDs,
   };
 }

@@ -25,6 +25,7 @@ let tipsCollection = db.collection("tips").orderBy("createdAt", "desc");
 
     tips.push({
       id: doc.id,
+      slug: tip.slug,
       title: tip.title,
       description: tip.description,
       content: tip.content,
@@ -37,9 +38,7 @@ let tipsCollection = db.collection("tips").orderBy("createdAt", "desc");
       status: tip.status,
       scheduledDate: tip.scheduledDate?.toDate(),
       publishedDate: tip.publishedDate?.toDate(),
-      /**
-       * TODO: add Tags
-       */
+      tagIDs: tip.tagIDs || [],
     });
   }
 
