@@ -13,6 +13,7 @@ export async function fetchTip(id: string): Promise<TipEntity | null> {
 
   return {
     id: doc.id,
+    slug: tip?.slug,
     title: tip?.title,
     content: tip?.content,
     description: tip?.description,
@@ -25,9 +26,6 @@ export async function fetchTip(id: string): Promise<TipEntity | null> {
     status: tip?.status,
     scheduledDate: tip?.scheduledDate,
     publishedDate: tip?.publishedDate,
-
-    /**
-     * @TODO Add tags
-     */
+    tagIDs: tip?.tagIDs,
   };
 }

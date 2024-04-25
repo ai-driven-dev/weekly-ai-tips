@@ -12,6 +12,7 @@ export async function createTipAction(
 ): Promise<TipFormType> {
   const data: Partial<TipEntity> = {
     title: formData.get("title") as string,
+    slug: formData.get("slug") as string,
     description: formData.get("description") as string,
     content: formData.get("content") as string,
     ownerID: formData.get("ownerID") as string,
@@ -23,6 +24,7 @@ export async function createTipAction(
 
   const persistedData = await createTip({
     title: data.title,
+    slug: data.slug,
     description: data.description,
     content: data.content,
     ownerID: data.ownerID,

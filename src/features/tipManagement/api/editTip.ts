@@ -30,5 +30,7 @@ export default async function editTip(
     title: doc.data()?.title,
     updatedAt: doc.data()?.updatedAt,
     upVotes: doc.data()?.upVotes,
+    slug: doc.data()?.slug,
+    tagIDs: doc.data()?.tagIDs,
   };
 }

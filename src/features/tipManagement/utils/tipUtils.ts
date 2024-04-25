@@ -7,6 +7,8 @@ export function convertTipEntityToForm(tip: TipEntity): TipFormType {
     description: tip.description,
     content: tip.content,
     status: tip.status,
+    slug: tip.slug,
+    tagIDs: tip.tagIDs,
   };
 }
 

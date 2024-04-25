@@ -17,12 +17,14 @@ export async function editTipVoteCounts(tipData: TipEntity): Promise<void> {
 
   const tipToUpdate: TipEntity = {
     id: tipData.id,
+    slug: tipData.slug,
     title: tipData.title,
     description: tipData.description,
     content: tipData.content,
     ownerID: tipData.ownerID,
     createdAt: tipData.createdAt,
     updatedAt: new Date(),
+    tagIDs: tipData.tagIDs,
     upVotes,
     downVotes,
     status,

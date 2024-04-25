@@ -29,6 +29,7 @@ export default function TipDetail({ tip, tags }: Props) {
     tip
   );
 
+  const [slug, setSlug] = useState<string>(state.slug);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
   const handleTagChange = (value: string[]) => {
@@ -52,33 +53,20 @@ export default function TipDetail({ tip, tags }: Props) {
     }
   }, [push, state, tip.id, toast]);
 
-  const slug = state.slug
-    ? state.slug
-    : state.title.toLowerCase().replace(/\s+/g, "-");
-
-  const ref = useRef<HTMLFormElement>(null);
-
-  // get title value from form
-
-  const title = ref.current?.querySelector<HTMLInputElement>(
-    'input[name="title"]'
-  )?.value;
-
-  useEffect(() => {
-    console.log("title", title);
-  }, [title]);
-
   return (
-    <form ref={ref} action={formAction} className="flex flex-col gap-4">
+    <form action={formAction} className="flex flex-col gap-4">
       {tip.id && <input type="hidden" name="id" value={tip.id} />}
 
-      <InputWithLabel label="Title" name="title" defaultValue={state.title} />
       <InputWithLabel
-        label="Slug"
-        name="slug"
-        readOnly={true}
-        defaultValue={slug}
+        label="Title"
+        name="title"
+        defaultValue={state.title}
+        onChange={(e) => {
+          if (state.id) return;
+          setSlug(e.target.value.toLowerCase().replace(/\s+/g, "-"));
+        }}
       />
+      <InputWithLabel label="Slug" name="slug" readOnly={true} value={slug} />
       <InputWithLabel
         label="Description"
         name="description"

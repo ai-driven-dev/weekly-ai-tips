@@ -14,10 +14,14 @@ export async function editTipAction(
    */
   const data: Omit<TipFormType, "scheduledDate"> = {
     id: formData.get("id") as string,
+    slug: formData.get("slug") as string,
     title: formData.get("title") as string,
     description: formData.get("description") as string,
     content: formData.get("content") as string,
     status: formData.get("status") === "on" ? "ready" : "draft",
+    tagIDs: (formData.get("tagIDs") as string)
+      .split(",")
+      .map((id) => id.trim()),
   };
 
   if (!data.id) throw new Error("ID is required");
