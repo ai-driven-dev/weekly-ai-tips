@@ -1,8 +1,8 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
+import { uploadFirestoreImage } from "../../../utils/firestore/uploadFirestoreImage";
 import createTip from "../api/createTip";
-import { createTipImage } from "../api/createTipImage";
 import TipEntity, { TipFormType } from "../types/TipEntity";
 import { convertTipEntityToForm } from "../utils/tipUtils";
 
@@ -29,7 +29,7 @@ export async function createTipAction(
   let mediaURL = "";
 
   if (data.mediaFile !== "undefined") {
-    mediaURL = await createTipImage(data.slug, data.mediaFile);
+    mediaURL = await uploadFirestoreImage(data.slug, data.mediaFile);
   }
 
   const persistedData = await createTip({

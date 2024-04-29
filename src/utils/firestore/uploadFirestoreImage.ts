@@ -1,5 +1,7 @@
-import { storage } from "@/firebaseAdmin";
+import { storage } from "@/firebaseClient";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
+
+export const RELATIVE_PATH = "images";
 
 /**
  * Upload an image to Firebase Storage and return the URL.
@@ -7,21 +9,21 @@ import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
  * Make the file public after uploading.
  *
  * @param {string} slug
- * @param {File} mediaFile
+ * @param {File} file
  *
  * @returns {Promise<string>} The URL of the uploaded image.
  */
-export async function createTipImage(
+export async function uploadFirestoreImage(
   slug: string,
-  mediaFile: File
+  file: File
 ): Promise<string> {
-  const extension = mediaFile.name.split(".").pop();
+  const extension = file.name.split(".").pop();
 
   // Create a reference to the Firebase storage bucket location
-  const storageRef = ref(storage, `images/${slug}.${extension}`);
+  const storageRef = ref(storage, `${RELATIVE_PATH}/${slug}.${extension}`);
 
   // Upload the file to Firebase Storage
-  const snapshot = await uploadBytes(storageRef, mediaFile);
+  const snapshot = await uploadBytes(storageRef, file);
 
   // Get the URL to access the file
   const publicUrl = await getDownloadURL(snapshot.ref);

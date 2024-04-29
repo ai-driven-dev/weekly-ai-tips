@@ -1,6 +1,7 @@
 import { getAnalytics, isSupported } from "firebase/analytics";
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -28,6 +29,15 @@ isSupported()
     console.error("Error checking Firebase Analytics support:", error);
   });
 
+/**
+ * The Firebase Auth instance.
+ */
 const auth = getAuth(app);
+
+/**
+ * The Firebase Storage instance.
+ *
+ */
+export const storage = getStorage(app);
 
 export { analytics, app, auth };
