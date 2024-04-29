@@ -20,7 +20,7 @@ export async function createTipAction(
       formData.get("status") === "on"
         ? "ready"
         : ("draft" as TipEntity["status"]),
-    mediaFile: formData.get("mediaFile") as File | string,
+    mediaFile: formData.get("mediaFile") as File | "undefined",
     tagIDs: (formData.get("tagIDs") as string)
       .split(",")
       .map((id) => id.trim()),
@@ -28,9 +28,7 @@ export async function createTipAction(
 
   let mediaURL = "";
 
-  if (typeof data.mediaFile === "string") {
-    console.log("data.mediaFile", data.mediaFile, typeof data.mediaFile);
-
+  if (data.mediaFile !== "undefined") {
     mediaURL = await createTipImage(data.slug, data.mediaFile);
   }
 
