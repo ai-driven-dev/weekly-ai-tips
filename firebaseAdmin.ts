@@ -10,6 +10,8 @@
 
 import * as admin from "firebase-admin";
 import { getAuth } from "firebase-admin/auth";
+import { getStorage } from "firebase/storage";
+import { app } from "./firebaseClient";
 
 if (admin.apps.length === 0) {
   admin.initializeApp({
@@ -39,12 +41,18 @@ export const db = admin.firestore();
  * The Firebase Admin SDK instance.
  *
  * This is used to interact with Firebase services from the server side.
- * 
+ *
  * @example
  * ```typescript
  * import { admin } from "@/firebaseAdmin";
  * ```
  */
 export const adminAuth = getAuth();
+
+/**
+ * The Firebase Storage instance.
+ *
+ */
+export const storage = getStorage(app);
 
 export { admin };

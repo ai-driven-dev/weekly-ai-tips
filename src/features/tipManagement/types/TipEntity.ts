@@ -28,6 +28,7 @@ export type TipFormType = Pick<
   | "scheduledDate"
   | "slug"
   | "tagIDs"
+  | "mediaURL"
 > & {
   id?: string;
 };

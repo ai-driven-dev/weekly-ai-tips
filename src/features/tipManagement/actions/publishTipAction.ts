@@ -1,6 +1,8 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
+import { setPublished } from "../../votingSystem/utils/setPublished";
+import editTip from "../api/editTip";
 import { fetchTip } from "../api/fetchTip";
 
 export async function publishTipAction(
@@ -19,7 +21,7 @@ export async function publishTipAction(
     throw new Error("Tip not found");
   }
 
-  // TODO Call edit on published tip
+  editTip(setPublished(tip));
 
   revalidatePath("/dashboard/tips");
 

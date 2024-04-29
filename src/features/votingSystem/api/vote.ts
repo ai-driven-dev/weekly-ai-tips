@@ -3,6 +3,7 @@ import { editTipVoteCounts } from "../../tipManagement/api/editTipVoteCounts";
 import TipEntity from "../../tipManagement/types/TipEntity";
 import UserEntity from "../../userManagement/types/UserEntity";
 import UserVoteEntity from "../types/UserVoteEntity";
+import isVotable from "../utils/isVotable";
 import { getUserVotes } from "./getUserVotes";
 
 export async function vote(
@@ -18,16 +19,15 @@ export async function vote(
     throw new Error("Tip not found");
   }
 
-  if (tipData.status !== "ready") {
+  if (!isVotable(tipData)) {
     throw new Error("Tip is not votable!");
-  }
-
-  if (fromUser.id === tipData.ownerID) {
-    throw new Error("User cannot vote on their own tip");
   }
 
   // Only if the user is not an admin
   if (!fromUser.roles.includes("ADMIN")) {
+    if (fromUser.id === tipData.ownerID) {
+      throw new Error("User cannot vote on their own tip");
+    }
     const userVotes = await getUserVotes(fromUser.id, tipData.id);
 
     if (userVotes.length > 0) {

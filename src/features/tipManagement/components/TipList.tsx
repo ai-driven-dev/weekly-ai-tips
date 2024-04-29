@@ -11,6 +11,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import Image from "next/image";
 import Link from "next/link";
 import { TagEntity } from "../../tagManagement/types/TagEntity";
 import TipEntity from "../types/TipEntity";
@@ -36,6 +37,7 @@ export default function TipList({ tips, tags }: Props): React.ReactElement {
           <TableHead>Votes</TableHead>
           <TableHead>Status</TableHead>
           <TableHead>Tags</TableHead>
+          <TableHead>Image</TableHead>
           <TableHead>Actions</TableHead>
           {/* Add tags column */}
         </TableRow>
@@ -77,6 +79,16 @@ export default function TipList({ tips, tags }: Props): React.ReactElement {
                   ) : null;
                 })}
               </div>
+            </TableCell>
+            <TableCell>
+              {tip.mediaURL && (
+                <Image
+                  src={tip.mediaURL}
+                  alt={tip.title}
+                  width={50}
+                  height={50}
+                />
+              )}
             </TableCell>
             <TableCell>
               {tip.id && (

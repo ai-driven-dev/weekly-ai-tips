@@ -6,6 +6,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import InputWithLabel from "@/components/ui/inputWithLabel";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { useToast } from "@/components/ui/use-toast";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { useFormState } from "react-dom";
@@ -30,7 +31,7 @@ export default function TipDetail({ tip, tags }: Props) {
   );
 
   const [slug, setSlug] = useState<string>(state.slug);
-  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [selectedTags, setSelectedTags] = useState<string[]>(state.tagIDs);
 
   const handleTagChange = (value: string[]) => {
     setSelectedTags(value);
@@ -98,11 +99,22 @@ export default function TipDetail({ tip, tags }: Props) {
         onValueChange={handleTagChange}
       >
         {tags.map((tag, index) => (
-          <ToggleGroupItem key={index} value={tag.id}>
+          <ToggleGroupItem
+            key={index}
+            value={tag.id}
+            defaultChecked={selectedTags.includes(tag.id)}
+            data-state={selectedTags.includes(tag.id) ? "on" : "off"}
+          >
             {tag.name}
           </ToggleGroupItem>
         ))}
       </ToggleGroup>
+
+      {state.mediaURL ? (
+        <Image src={state.mediaURL} alt="Media" />
+      ) : (
+        <input type="file" name="mediaFile" />
+      )}
 
       <input type="hidden" name="tagIDs" value={selectedTags.join(",")} />
 
