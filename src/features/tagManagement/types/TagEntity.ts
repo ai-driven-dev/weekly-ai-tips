@@ -6,14 +6,9 @@ export type TagEntity = {
   name: string;
   description: string;
   slug: string;
-  /**
-   * @TODO Add tipIDs property to TagEntity
-   */
+  usageCount: number;
 };
 
-/** 
- * @TODO create a TagFormType interface
- */
 export type TagFormType = {
   id?: string;
-} & Omit<TagEntity, "id">;
+} & Omit<TagEntity, "id" | "usageCount">;

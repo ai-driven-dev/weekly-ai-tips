@@ -94,9 +94,11 @@ export default function TipDetail({ tip, tags }: Props) {
       </div>
 
       <ToggleGroup
+        label="Tags"
         type="multiple"
         variant="outline"
         onValueChange={handleTagChange}
+        className="align-start"
       >
         {tags.map((tag, index) => (
           <ToggleGroupItem
@@ -122,7 +124,9 @@ export default function TipDetail({ tip, tags }: Props) {
 
       <input type="hidden" name="ownerID" value={user?.uid} />
 
-      <Button type="submit">Save</Button>
+      {(tip.status === "ready" || tip.status === "draft") && (
+        <Button type="submit">Save</Button>
+      )}
     </form>
   );
 }

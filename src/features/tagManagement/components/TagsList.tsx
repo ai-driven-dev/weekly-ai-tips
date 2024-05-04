@@ -29,6 +29,7 @@ export default function TagsList({ tags }: { tags: TagEntity[] }) {
         <TableRow>
           <TableCell>Name</TableCell>
           <TableCell>Description</TableCell>
+          <TableCell>Used</TableCell>
           <TableCell>Action</TableCell>
         </TableRow>
       </TableHeader>
@@ -37,6 +38,7 @@ export default function TagsList({ tags }: { tags: TagEntity[] }) {
           <TableRow key={tag.id}>
             <TableCell>{tag.name}</TableCell>
             <TableCell>{tag.description}</TableCell>
+            <TableCell>{tag.usageCount}</TableCell>
             <TableCell>
               {/* @TODO Add a form to edit a tag */}
               <form action={deleteTagAction}>

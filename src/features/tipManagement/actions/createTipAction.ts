@@ -26,7 +26,7 @@ export async function createTipAction(
       .map((id) => id.trim()),
   };
 
-  let mediaURL = "";
+  let mediaURL = undefined;
 
   if (data.mediaFile !== "undefined") {
     mediaURL = await uploadFirestoreImage(data.slug, data.mediaFile);

@@ -28,7 +28,7 @@ import { TagEntity, TagFormType } from "../types/TagEntity";
 export async function createTag(tagData: TagFormType): Promise<TagEntity> {
   const tagRef = db.collection("tags").doc();
   const tagId = tagRef.id;
-  const newTag = { ...tagData, id: tagId };
+  const newTag = { ...tagData, id: tagId, usageCount: 0 };
   await tagRef.set(newTag);
   return newTag;
 }
@@ -40,6 +40,23 @@ export async function createTag(tagData: TagFormType): Promise<TagEntity> {
  * @returns A Promise that resolves when the tag is deleted.
  */
 export async function deleteTag(tagId: string): Promise<boolean> {
+  // for every tip that uses the tag, remove the tag from the tip
+  const tipsSnapshot = await db
+    .collection("tips")
+    .where("tagIDs", "array-contains", tagId)
+    .get();
+
+  const batch = db.batch();
+  tipsSnapshot.forEach((doc) => {
+    const tipRef = db.collection("tips").doc(doc.id);
+    batch.update(tipRef, {
+      tagIDs: doc.data().tagIDs.filter((id: string) => id !== tagId),
+    });
+  });
+
+  await batch.commit();
+
+  // delete the tag
   await db.collection("tags").doc(tagId).delete();
 
   // check if the tag has been deleted
@@ -60,8 +77,8 @@ export async function deleteTag(tagId: string): Promise<boolean> {
  */
 export async function updateTag(
   tagId: string,
-  tagData: TagEntity
-): Promise<TagEntity> {
+  tagData: TagFormType
+): Promise<TagFormType> {
   const updatedTag = { ...tagData, id: tagId };
   await db.collection("tags").doc(tagId).set(updatedTag);
   return updatedTag;
@@ -75,13 +92,20 @@ export async function updateTag(
 export async function fetchTags(): Promise<TagEntity[]> {
   const tagsSnapshot = await db.collection("tags").get();
   const tags: TagEntity[] = [];
-  
+
   for (const doc of tagsSnapshot.docs) {
+    // count number of tags used from collection tips
+    const usageCountSnapshot = await db
+      .collection("tips")
+      .where("tagIDs", "array-contains", doc.id)
+      .get();
+
     const tagData = doc.data() as TagEntity;
     const tagId = doc.id;
     const tagWithId: TagEntity = {
       ...tagData,
       id: tagId,
+      usageCount: usageCountSnapshot.size,
     };
     tags.push(tagWithId);
   }

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import InputWithLabel from "@/components/ui/inputWithLabel";
 import { useToast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useFormState } from "react-dom";
 import { createTagAction } from "../actions/createTagAction";
 import { editTagAction } from "../actions/editTagAction";
@@ -21,6 +21,8 @@ export default function TagForm({ tag }: Props) {
     tag.id ? editTagAction : createTagAction,
     tag
   );
+
+  const [slug, setSlug] = useState<string>(state.slug);
 
   const initialState = useRef(state);
 
@@ -41,15 +43,23 @@ export default function TagForm({ tag }: Props) {
     <form action={formAction} className="flex flex-col gap-4">
       {tag.id && <input type="hidden" name="id" value={tag.id} />}
 
-      <InputWithLabel label="Name" name="name" defaultValue={state.name} />
+      <InputWithLabel
+        label="Name"
+        name="name"
+        defaultValue={state.name}
+        onChange={(e) => {
+          if (state.id) return;
+          setSlug(e.target.value.toLowerCase().replace(/\s+/g, "-"));
+        }}
+      />
+
       <InputWithLabel
         label="Description"
         name="description"
         defaultValue={state.description}
       />
 
-      {/* @TODO Create readonly input for slug on the fly - only if state.id is missing (no slug edition allowed) */}
-      <InputWithLabel label="Slug" name="slug" defaultValue={state.slug} />
+      <InputWithLabel label="Slug" name="slug" readOnly={true} value={slug} />
 
       <Button type="submit">Save</Button>
     </form>

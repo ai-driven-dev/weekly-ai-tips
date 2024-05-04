@@ -1,3 +1,5 @@
+import { Label } from "@/components/ui/label";
+
 import * as ToggleGroupPrimitive from "@radix-ui/react-toggle-group";
 import { VariantProps } from "class-variance-authority";
 import * as React from "react";
@@ -15,17 +17,22 @@ const ToggleGroupContext = React.createContext<
 const ToggleGroup = React.forwardRef<
   React.ElementRef<typeof ToggleGroupPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Root> &
-    VariantProps<typeof toggleVariants>
->(({ className, variant, size, children, ...props }, ref) => (
-  <ToggleGroupPrimitive.Root
-    ref={ref}
-    className={cn("flex items-center justify-center gap-1", className)}
-    {...props}
-  >
-    <ToggleGroupContext.Provider value={{ variant, size }}>
-      {children}
-    </ToggleGroupContext.Provider>
-  </ToggleGroupPrimitive.Root>
+    VariantProps<typeof toggleVariants> & {
+      label: string;
+    }
+>(({ className, variant, size, children, label, ...props }, ref) => (
+  <div className="grid w-full max-w-sm items-center gap-1.5">
+    <Label htmlFor={props.id || undefined}>{label}</Label>
+    <ToggleGroupPrimitive.Root
+      ref={ref}
+      className={cn("flex items-center justify-start gap-1", className)}
+      {...props}
+    >
+      <ToggleGroupContext.Provider value={{ variant, size }}>
+        {children}
+      </ToggleGroupContext.Provider>
+    </ToggleGroupPrimitive.Root>
+  </div>
 ));
 
 ToggleGroup.displayName = ToggleGroupPrimitive.Root.displayName;
