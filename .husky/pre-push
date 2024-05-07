@@ -5,6 +5,15 @@ npm run build
 
 npm outdated | grep -v Package | awk '{print $1}' | grep -v "@typescript-eslint/eslint-plugin" | grep -vw 'eslint' | xargs -I {} npm install {}@latest --legacy-peer-deps
 
+# Check if tests are still passing
+if ! npm run test; then
+  echo "Tests are failing, please fix them before committing."
+
+  # Revert the changes to package.json and package-lock.json
+  git checkout package.json package-lock.json
+  exit 1
+fi
+
 # Check if package.json or package-lock.json has changed
 if git diff --name-only | grep -qE '^(package.json|package-lock.json)$'; then
   git add package.json package-lock.json
