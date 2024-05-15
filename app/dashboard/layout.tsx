@@ -10,8 +10,8 @@ export type LayoutProps = {
 
 import { cn } from "@/components/lib/utils";
 import { Toaster } from "@/components/ui/toaster";
-import Header from "@/src/components/dashboard/Header";
-import Navigation from "@/src/components/dashboard/Navigation";
+import Header from "@/src/features/dashboard/components/Header";
+import Navigation from "@/src/features/dashboard/components/Navigation";
 import { ReloadIcon } from "@radix-ui/react-icons";
 
 const Layout = ({ children }: LayoutProps) => {
