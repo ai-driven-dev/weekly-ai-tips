@@ -24,7 +24,7 @@ export async function upVoteTipAction(
 
   try {
     const isUpvoted = await vote(
-      await fetchTip(data.tipId),
+      await fetchTip("id", data.tipId),
       await fetchUser(data.fromUserId),
       "upvote"
     );

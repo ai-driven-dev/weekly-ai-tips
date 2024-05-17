@@ -24,7 +24,7 @@ export async function downVoteTipAction(
 
   try {
     const isDownVoted = await vote(
-      await fetchTip(data.tipId),
+      await fetchTip("id", data.tipId),
       await fetchUser(data.fromUserId),
       "downvote"
     );

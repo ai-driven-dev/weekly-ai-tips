@@ -18,7 +18,7 @@ export async function deleteTipAction(
     throw new Error("Tip ID is required.");
   }
 
-  const tip = await fetchTip(id);
+  const tip = await fetchTip("id", id);
 
   if (tip?.mediaURL) {
     const isImageDeleted = await deleteFirestoreImage(tip.mediaURL);

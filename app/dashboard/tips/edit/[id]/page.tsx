@@ -12,7 +12,7 @@ export type Props = {
 };
 
 export default async function TipEdit({ params: { id } }: Props) {
-  const tip = await fetchTip(id);
+  const tip = await fetchTip("id", id);
   const tags = await fetchTags();
 
   if (!tip) {

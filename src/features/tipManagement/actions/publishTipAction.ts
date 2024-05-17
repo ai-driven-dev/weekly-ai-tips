@@ -15,7 +15,7 @@ export async function publishTipAction(
     throw new Error("Tip ID is required");
   }
 
-  const tip = await fetchTip(tipId);
+  const tip = await fetchTip("id", tipId);
 
   if (!tip) {
     throw new Error("Tip not found");
