@@ -1,3 +1,5 @@
+"use server";
+
 /**
  * This file contains the action for creating a new tip in the application.
  * It handles the extraction of data from the form, uploading of media files,
