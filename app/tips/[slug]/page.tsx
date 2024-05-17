@@ -1,13 +1,12 @@
 import { fetchTip } from "@/src/features/tipManagement/api/fetchTip";
 import { Slug } from "@/src/types/Slug";
-import { GetStaticPropsContext } from "next";
 import Link from "next/link";
 
-export default async function TipPage({ params }: GetStaticPropsContext<Slug>) {
-  if (!params) {
-    return null;
-  }
+type Props = {
+  params: Slug;
+};
 
+export default async function TipPage({ params }: Props) {
   const tip = await fetchTip("slug", params.slug);
 
   if (!tip) {
