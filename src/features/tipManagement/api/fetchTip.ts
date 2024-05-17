@@ -1,16 +1,18 @@
 import { db } from "@/firebaseAdmin";
 import TipEntity from "../types/TipEntity";
 
-export async function fetchTip(id: string): Promise<TipEntity | null> {
+export async function fetchTip<T extends keyof TipEntity>(
+  field: T,
+  value: TipEntity[T]
+): Promise<TipEntity | null> {
   const tipsCollection = db.collection("tips");
-  const doc = await tipsCollection.doc(id).get();
-
-  if (!doc.exists) {
+  const query = tipsCollection.where(field, "==", value).limit(1);
+  const snapshot = await query.get();
+  if (snapshot.empty) {
     return null;
   }
-
+  const doc = snapshot.docs[0];
   const tip = doc.data();
-
   return {
     id: doc.id,
     slug: tip?.slug,

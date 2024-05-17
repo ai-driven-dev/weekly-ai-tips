@@ -1,16 +1,13 @@
-import Link from "next/link";
 import React from "react";
+import PublicHeader from "./header";
 
 export default async function Page(): Promise<React.ReactElement> {
   return (
-    <main>
-      <nav>
-        <ul>
-          <li>
-            <Link href="/dashboard">Dashboard</Link>
-          </li>
-        </ul>
-      </nav>
-    </main>
+    <>
+      <PublicHeader />
+      <main>
+        <h1>Homepage</h1>
+      </main>
+    </>
   );
 }

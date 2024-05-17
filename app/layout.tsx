@@ -1,4 +1,3 @@
-import "@/firebaseAdmin";
 import type { Metadata } from "next";
 import { Noto_Sans, Rokkitt } from "next/font/google";
 import React from "react";
