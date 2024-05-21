@@ -13,9 +13,6 @@ interface TipEntity {
   scheduledDate?: Date | null;
   publishedDate?: Date | null;
   status: "draft" | "ready" | "published" | "rejected" | "scheduled";
-  /**
-   * @TODO Add tagIDs property to TipEntity
-   */
   tagIDs: string[];
 }
 
