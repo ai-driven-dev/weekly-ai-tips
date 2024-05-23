@@ -1,4 +1,5 @@
 import { fetchTips } from "@/src/features/tipManagement/api/fetchTips";
+import TipSearchForm from "@/src/features/tipManagement/components/TipSearchForm";
 import TipSearchedList from "@/src/features/tipManagement/components/TipSearchedList";
 
 export default async function TipsPage() {
@@ -6,6 +7,7 @@ export default async function TipsPage() {
 
   return (
     <>
+      <TipSearchForm />
       <TipSearchedList tipsFromPage={tips} />
     </>
   );

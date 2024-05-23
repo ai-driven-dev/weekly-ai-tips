@@ -1,13 +1,30 @@
 "use client";
 
 import Link from "next/link";
+import { useQueryState } from "nuqs";
+import { useEffect, useState } from "react";
 import TipEntity from "../types/TipEntity";
 
 type Props = {
   tipsFromPage: TipEntity[];
 };
 
-export default function TipSearchedList({ tipsFromPage: tips }: Props) {
+export default function TipSearchedList({ tipsFromPage }: Props) {
+  const [name] = useQueryState("name");
+  const [tips, setTips] = useState(tipsFromPage);
+
+  useEffect(() => {
+    const fetchTips = async () => {
+      if (name) {
+        const response = await fetch(`/api/entities/tips?name=${name}`);
+        const data = await response.json();
+        setTips(data);
+      }
+    };
+
+    fetchTips();
+  }, [name]);
+
   return (
     <div className="grid grid-cols-3 gap-4">
       {tips.map((tip) => (

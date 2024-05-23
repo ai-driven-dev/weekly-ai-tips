@@ -17,7 +17,7 @@ export async function fetchTips(
     tipsCollection = tipsCollection.where("status", "==", status);
   }
 
-  // Demonstration purposes only. This is not a recommended way to query Firestore (see https://firebase.google.com/docs/firestore/query-data/queries#query_limitations)
+  // TODO: Demonstration purposes only. This is not a recommended way to query Firestore (see https://firebase.google.com/docs/firestore/query-data/queries#query_limitations)
   if (name) {
     const nameEnd = name.replace(/.$/, (c) =>
       String.fromCharCode(c.charCodeAt(0) + 1)
