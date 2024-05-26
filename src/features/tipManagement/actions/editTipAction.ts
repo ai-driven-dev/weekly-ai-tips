@@ -2,7 +2,7 @@
 
 import { Toast } from '@/components/ui/use-toast';
 import { revalidatePath } from 'next/cache';
-import editTip from '../api/editTip';
+import updateTip from '../api/updateTip';
 import { TipFormType } from '../types/TipEntity';
 
 export async function editTipAction(
@@ -26,7 +26,7 @@ export async function editTipAction(
 
   if (!data.id) throw new Error('ID is required');
 
-  const persistedData = await editTip(data);
+  const persistedData = await updateTip(data);
   if (persistedData) {
     revalidatePath('/dashboard/tips');
 

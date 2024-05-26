@@ -1,4 +1,6 @@
-// app/api/cron/route.ts
+import { getNextTipToPublish } from '@/src/features/tipManagement/api/getTipNextToPublish';
+import updateTip from '@/src/features/tipManagement/api/updateTip';
+import { setPublished } from '@/src/features/votingSystem/utils/setPublished';
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(request: NextRequest) {
@@ -13,7 +15,23 @@ export async function GET(request: NextRequest) {
     });
   }
 
+  // Your cron job logic here
+  const nextTipToPublish = await getNextTipToPublish();
+
+  if (!nextTipToPublish) {
+    return NextResponse.json({
+      message: 'No tip to publish',
+    });
+  }
+
+  // Publish the tip
+  const publishedTip = setPublished(nextTipToPublish);
+
+  const updatedTip = await updateTip(publishedTip);
+
   return NextResponse.json({
     message: 'Cron job executed',
+    updatedTup: updatedTip,
+    nextTipToPublish,
   });
 }

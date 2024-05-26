@@ -2,7 +2,7 @@
 
 import { revalidatePath } from 'next/cache';
 import { setPublished } from '../../votingSystem/utils/setPublished';
-import editTip from '../api/editTip';
+import updateTip from '../api/updateTip';
 import { fetchTip } from '../api/fetchTip';
 
 export async function publishTipAction(
@@ -21,7 +21,7 @@ export async function publishTipAction(
     throw new Error('Tip not found');
   }
 
-  editTip(setPublished(tip));
+  updateTip(setPublished(tip));
 
   revalidatePath('/dashboard/tips');
 

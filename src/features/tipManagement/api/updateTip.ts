@@ -1,7 +1,7 @@
 import { db } from '@/firebaseAdmin';
 import TipEntity, { TipFormType } from '../types/TipEntity';
 
-export default async function editTip(
+export default async function updateTip(
   data: TipFormType | TipEntity,
 ): Promise<TipEntity> {
   const tipsCollection = db.collection('tips');
