@@ -1,5 +1,5 @@
-import React from "react";
-import PublicHeader from "./header";
+import React from 'react';
+import PublicHeader from './header';
 
 export default async function Page(): Promise<React.ReactElement> {
   return (

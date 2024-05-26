@@ -1,8 +1,8 @@
-import { Button } from "@/components/ui/button";
-import { toast } from "@/components/ui/use-toast";
-import { useEffect, useRef } from "react";
-import { useFormState } from "react-dom";
-import { deleteTipAction } from "../actions/deleteTipAction";
+import { Button } from '@/components/ui/button';
+import { toast } from '@/components/ui/use-toast';
+import { useEffect, useRef } from 'react';
+import { useFormState } from 'react-dom';
+import { deleteTipAction } from '../actions/deleteTipAction';
 
 type Props = {
   tipId: string;
@@ -11,7 +11,7 @@ type Props = {
 export default function TipDeleteButton({ tipId, ...buttonProps }: Props) {
   const [state, formActionDelete] = useFormState<boolean | null, FormData>(
     deleteTipAction,
-    null
+    null,
   );
 
   const initialState = useRef(state);
@@ -19,8 +19,8 @@ export default function TipDeleteButton({ tipId, ...buttonProps }: Props) {
   useEffect(() => {
     if (initialState.current !== state) {
       toast({
-        title: "Success",
-        description: state ? "Tip deleted!" : "Error deleting tip",
+        title: 'Success',
+        description: state ? 'Tip deleted!' : 'Error deleting tip',
       });
 
       initialState.current = state;

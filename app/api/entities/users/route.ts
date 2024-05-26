@@ -1,14 +1,14 @@
-import { db } from "@/firebaseAdmin";
-import UserEntity from "@/src/features/userManagement/types/UserEntity";
-import { Timestamp } from "firebase-admin/firestore";
-import { User } from "firebase/auth";
-import { NextRequest, NextResponse } from "next/server";
+import { db } from '@/firebaseAdmin';
+import UserEntity from '@/src/features/userManagement/types/UserEntity';
+import { Timestamp } from 'firebase-admin/firestore';
+import { User } from 'firebase/auth';
+import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(req: NextRequest) {
   try {
     const { user } = (await req.json()) as { user: User };
 
-    const userRef = db.collection("users").doc(user.uid);
+    const userRef = db.collection('users').doc(user.uid);
     const userSnap = await userRef.get();
 
     if (!userSnap.exists) {
@@ -34,7 +34,7 @@ export async function POST(req: NextRequest) {
     return new NextResponse(JSON.stringify({ success: true }), {
       status: 200,
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
     });
   } catch (error) {
@@ -43,7 +43,7 @@ export async function POST(req: NextRequest) {
     return new NextResponse(JSON.stringify({ error }), {
       status: 500,
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
     });
   }

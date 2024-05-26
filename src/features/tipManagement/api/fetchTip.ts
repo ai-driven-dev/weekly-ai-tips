@@ -1,12 +1,12 @@
-import { db } from "@/firebaseAdmin";
-import TipEntity from "../types/TipEntity";
+import { db } from '@/firebaseAdmin';
+import TipEntity from '../types/TipEntity';
 
 export async function fetchTip<T extends keyof TipEntity>(
   field: T,
-  value: TipEntity[T]
+  value: TipEntity[T],
 ): Promise<TipEntity | null> {
-  const tipsCollection = db.collection("tips");
-  const query = tipsCollection.where(field, "==", value).limit(1);
+  const tipsCollection = db.collection('tips');
+  const query = tipsCollection.where(field, '==', value).limit(1);
   const snapshot = await query.get();
   if (snapshot.empty) {
     return null;

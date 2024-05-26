@@ -1,7 +1,7 @@
-import { storage } from "@/firebaseClient";
-import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
+import { storage } from '@/firebaseClient';
+import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
 
-export const RELATIVE_PATH = "images";
+export const RELATIVE_PATH = 'images';
 
 /**
  * Upload an image to Firebase Storage and return the URL.
@@ -15,9 +15,9 @@ export const RELATIVE_PATH = "images";
  */
 export async function uploadFirestoreImage(
   slug: string,
-  file: File
+  file: File,
 ): Promise<string> {
-  const extension = file.name.split(".").pop();
+  const extension = file.name.split('.').pop();
 
   // Create a reference to the Firebase storage bucket location
   const storageRef = ref(storage, `${RELATIVE_PATH}/${slug}.${extension}`);

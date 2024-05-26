@@ -3,9 +3,9 @@ interface UserEntity {
   name: string;
   picture?: string;
   email: string;
-  roles: Array<"ADMIN" | "COMMUNITY" | "MEMBER" | "ANON">;
+  roles: Array<'ADMIN' | 'COMMUNITY' | 'MEMBER' | 'ANON'>;
   createdAt: Date;
   updatedAt: Date;
 }
 
-export default UserEntity
+export default UserEntity;

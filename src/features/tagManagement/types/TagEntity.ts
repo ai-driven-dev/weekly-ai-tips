@@ -11,4 +11,4 @@ export type TagEntity = {
 
 export type TagFormType = {
   id?: string;
-} & Omit<TagEntity, "id" | "usageCount">;
+} & Omit<TagEntity, 'id' | 'usageCount'>;

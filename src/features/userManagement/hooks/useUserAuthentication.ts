@@ -1,4 +1,4 @@
-import { auth } from "@/firebaseClient";
+import { auth } from '@/firebaseClient';
 import {
   GoogleAuthProvider,
   User,
@@ -6,19 +6,23 @@ import {
   onIdTokenChanged,
   signInWithPopup,
   signOut,
-} from "firebase/auth";
-import { useEffect, useState } from "react";
+} from 'firebase/auth';
+import { useEffect, useState } from 'react';
 
 export const useUserAuthentication = () => {
+  // TODO: Use EntityUser instead of User from Firebase
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
 
+  /**
+   * @param {User | null} firebaseUser - The authenticated user object from Firebase
+   */
   const handleIdTokenChanged = async (firebaseUser: User | null) => {
     if (firebaseUser) {
       const idTokenResult = await firebaseUser.getIdTokenResult();
 
-      // Sets authenticated user cookies
-      await fetch("/api/login", {
+      // Send a request to the server to set authenticated user cookies
+      await fetch('/api/login', {
         headers: {
           Authorization: `Bearer ${idTokenResult.token}`,
         },
@@ -29,13 +33,16 @@ export const useUserAuthentication = () => {
       return;
     }
 
-    // Removes authenticated user cookies
-    await fetch("/api/logout");
+    // Send a request to the server to remove authenticated user cookies
+    await fetch('/api/logout');
 
     setUser(null);
     setLoading(false);
   };
 
+  /**
+   * Log in the user using GoogleAuthProvider
+   */
   const login = async (): Promise<void> => {
     const provider = new GoogleAuthProvider();
 
@@ -44,27 +51,33 @@ export const useUserAuthentication = () => {
     setLoading(false);
   };
 
+  /**
+   * Log out the user
+   */
   const logout = async (): Promise<void> => {
     await signOut(auth);
   };
 
   /**
-   * Sync user data with the server.
+   * Sync user data with the server if the user is not null.
    */
   useEffect(() => {
     if (!user) {
       return;
     }
 
-    fetch("/api/entities/users", {
-      method: "POST",
+    fetch('/api/entities/users', {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({ user }),
     });
   }, [user]);
 
+  /**
+   * Subscribe to the ID token changes
+   */
   useEffect(() => {
     const subscription = onIdTokenChanged(getAuth(), handleIdTokenChanged);
 

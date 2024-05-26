@@ -1,5 +1,5 @@
-import { db } from "@/firebaseAdmin";
-import { TagEntity, TagFormType } from "../types/TagEntity";
+import { db } from '@/firebaseAdmin';
+import { TagEntity, TagFormType } from '../types/TagEntity';
 
 /**
  * Manage all the tags from Firebase.
@@ -26,7 +26,7 @@ import { TagEntity, TagFormType } from "../types/TagEntity";
  * @returns A Promise that resolves to the created tag.
  */
 export async function createTag(tagData: TagFormType): Promise<TagEntity> {
-  const tagRef = db.collection("tags").doc();
+  const tagRef = db.collection('tags').doc();
   const tagId = tagRef.id;
   const newTag = { ...tagData, id: tagId, usageCount: 0 };
   await tagRef.set(newTag);
@@ -42,13 +42,13 @@ export async function createTag(tagData: TagFormType): Promise<TagEntity> {
 export async function deleteTag(tagId: string): Promise<boolean> {
   // for every tip that uses the tag, remove the tag from the tip
   const tipsSnapshot = await db
-    .collection("tips")
-    .where("tagIDs", "array-contains", tagId)
+    .collection('tips')
+    .where('tagIDs', 'array-contains', tagId)
     .get();
 
   const batch = db.batch();
   tipsSnapshot.forEach((doc) => {
-    const tipRef = db.collection("tips").doc(doc.id);
+    const tipRef = db.collection('tips').doc(doc.id);
     batch.update(tipRef, {
       tagIDs: doc.data().tagIDs.filter((id: string) => id !== tagId),
     });
@@ -57,10 +57,10 @@ export async function deleteTag(tagId: string): Promise<boolean> {
   await batch.commit();
 
   // delete the tag
-  await db.collection("tags").doc(tagId).delete();
+  await db.collection('tags').doc(tagId).delete();
 
   // check if the tag has been deleted
-  const tagSnapshot = await db.collection("tags").doc(tagId).get();
+  const tagSnapshot = await db.collection('tags').doc(tagId).get();
   if (tagSnapshot.exists) {
     throw new Error(`Tag ${tagId} was not deleted`);
   }
@@ -77,10 +77,10 @@ export async function deleteTag(tagId: string): Promise<boolean> {
  */
 export async function updateTag(
   tagId: string,
-  tagData: TagFormType
+  tagData: TagFormType,
 ): Promise<TagFormType> {
   const updatedTag = { ...tagData, id: tagId };
-  await db.collection("tags").doc(tagId).set(updatedTag);
+  await db.collection('tags').doc(tagId).set(updatedTag);
   return updatedTag;
 }
 
@@ -90,14 +90,14 @@ export async function updateTag(
  * @returns A Promise that resolves to an array of tags.
  */
 export async function fetchTags(): Promise<TagEntity[]> {
-  const tagsSnapshot = await db.collection("tags").get();
+  const tagsSnapshot = await db.collection('tags').get();
   const tags: TagEntity[] = [];
 
   for (const doc of tagsSnapshot.docs) {
     // count number of tags used from collection tips
     const usageCountSnapshot = await db
-      .collection("tips")
-      .where("tagIDs", "array-contains", doc.id)
+      .collection('tips')
+      .where('tagIDs', 'array-contains', doc.id)
       .get();
 
     const tagData = doc.data() as TagEntity;

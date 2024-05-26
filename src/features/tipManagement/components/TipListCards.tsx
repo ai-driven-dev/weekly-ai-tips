@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { Badge } from "@/components/ui/badge";
+import { Badge } from '@/components/ui/badge';
 import {
   Card,
   CardContent,
@@ -8,10 +8,10 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import TipEntity from "@/src/features/tipManagement/types/TipEntity";
-import Link from "next/link";
-import React from "react";
+} from '@/components/ui/card';
+import TipEntity from '@/src/features/tipManagement/types/TipEntity';
+import Link from 'next/link';
+import React from 'react';
 
 type Props = {
   tips: Array<TipEntity>;
@@ -30,8 +30,8 @@ const TipListCards: React.FC<Props> = ({ tips }) => {
               <CardTitle className="mb-2">{tip.title}</CardTitle>
               {tip.scheduledDate && (
                 <div>
-                  <Badge variant={"secondary"}>
-                    {new Date(tip.scheduledDate).toLocaleString("fr-FR")}
+                  <Badge variant={'secondary'}>
+                    {new Date(tip.scheduledDate).toLocaleString('fr-FR')}
                   </Badge>
                 </div>
               )}

@@ -1,26 +1,26 @@
-import React from "react";
+import React from 'react';
 
 interface TitleProps {
   children: React.ReactNode;
-  size?: "small" | "medium" | "large";
+  size?: 'small' | 'medium' | 'large';
   level?: 1 | 2 | 3 | 4 | 5 | 6;
 }
 
 const Title: React.FC<TitleProps> = ({
   children,
-  size = "medium",
+  size = 'medium',
   level = 1,
 }) => {
-  let sizeClasses = "";
+  let sizeClasses = '';
   switch (size) {
-    case "small":
-      sizeClasses = "text-xl";
+    case 'small':
+      sizeClasses = 'text-xl';
       break;
-    case "medium":
-      sizeClasses = "text-4xl";
+    case 'medium':
+      sizeClasses = 'text-4xl';
       break;
-    case "large":
-      sizeClasses = "text-6xl";
+    case 'large':
+      sizeClasses = 'text-6xl';
       break;
   }
 

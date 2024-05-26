@@ -1,8 +1,8 @@
-import { Button } from "@/components/ui/button";
-import { useUserAuthentication } from "@/src/features/userManagement/hooks/useUserAuthentication";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
-import React from "react";
+import { Button } from '@/components/ui/button';
+import { useUserAuthentication } from '@/src/features/userManagement/hooks/useUserAuthentication';
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import React from 'react';
 
 const HeaderComponent: React.FC = () => {
   const { user, logout } = useUserAuthentication();
@@ -10,11 +10,11 @@ const HeaderComponent: React.FC = () => {
 
   const handleLogout = async () => {
     await logout();
-    router.push("/");
+    router.push('/');
   };
 
   const handleCreateNewTip = () => {
-    router.push("/dashboard/tips/create");
+    router.push('/dashboard/tips/create');
   };
 
   return (
@@ -22,7 +22,7 @@ const HeaderComponent: React.FC = () => {
       <div className="container mx-auto flex justify-between items-center">
         <div>
           <p className="text-2xl font-bold font-serif text-gray-800">
-            Good morning, {user?.displayName || "Alex"}
+            Good morning, {user?.displayName || 'Alex'}
           </p>
           <p className="text-sm text-gray-500">
             Manage the AI weekly tips of the team!
@@ -32,16 +32,16 @@ const HeaderComponent: React.FC = () => {
           <Button onClick={handleCreateNewTip}>Create a new tip</Button>
           <Button
             onClick={handleLogout}
-            variant={"link"}
+            variant={'link'}
             className="inline-flex gap-2"
           >
             Logout
             <Image
-              src={user?.photoURL || "/avatar-placeholder.png"}
+              src={user?.photoURL || '/avatar-placeholder.png'}
               width={32}
               height={32}
               className="rounded-full"
-              alt={user?.displayName || "User avatar"}
+              alt={user?.displayName || 'User avatar'}
             />
           </Button>
         </div>

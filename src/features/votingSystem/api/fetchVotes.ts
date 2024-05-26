@@ -1,10 +1,10 @@
-import { db } from "@/firebaseAdmin";
-import UserVoteEntity from "../types/UserVoteEntity";
+import { db } from '@/firebaseAdmin';
+import UserVoteEntity from '../types/UserVoteEntity';
 
 export async function fetchVotes(tipId: string): Promise<UserVoteEntity[]> {
   const votesSnapshot = await db
-    .collection("votes")
-    .where("tipID", "==", tipId)
+    .collection('votes')
+    .where('tipID', '==', tipId)
     .get();
 
   if (votesSnapshot.empty) {

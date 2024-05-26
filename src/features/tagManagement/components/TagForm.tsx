@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { Button } from "@/components/ui/button";
-import InputWithLabel from "@/components/ui/inputWithLabel";
-import { useToast } from "@/components/ui/use-toast";
-import { useRouter } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
-import { useFormState } from "react-dom";
-import { createTagAction } from "../actions/createTagAction";
-import { editTagAction } from "../actions/editTagAction";
-import { TagFormType } from "../types/TagEntity";
+import { Button } from '@/components/ui/button';
+import InputWithLabel from '@/components/ui/inputWithLabel';
+import { useToast } from '@/components/ui/use-toast';
+import { useRouter } from 'next/navigation';
+import { useEffect, useRef, useState } from 'react';
+import { useFormState } from 'react-dom';
+import { createTagAction } from '../actions/createTagAction';
+import { editTagAction } from '../actions/editTagAction';
+import { TagFormType } from '../types/TagEntity';
 
 export type Props = {
   tag: TagFormType;
@@ -19,7 +19,7 @@ export default function TagForm({ tag }: Props) {
   const { push } = useRouter();
   const [state, formAction] = useFormState(
     tag.id ? editTagAction : createTagAction,
-    tag
+    tag,
   );
 
   const [slug, setSlug] = useState<string>(state.slug);
@@ -29,8 +29,8 @@ export default function TagForm({ tag }: Props) {
   useEffect(() => {
     if (initialState.current !== state) {
       toast({
-        title: "Success ✅",
-        description: tag.id ? "Tag edited!" : "Tag created successfully",
+        title: 'Success ✅',
+        description: tag.id ? 'Tag edited!' : 'Tag created successfully',
       });
 
       return () => {
@@ -49,7 +49,7 @@ export default function TagForm({ tag }: Props) {
         defaultValue={state.name}
         onChange={(e) => {
           if (state.id) return;
-          setSlug(e.target.value.toLowerCase().replace(/\s+/g, "-"));
+          setSlug(e.target.value.toLowerCase().replace(/\s+/g, '-'));
         }}
       />
 

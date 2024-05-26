@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   Table,
@@ -8,11 +8,11 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
-import Image from "next/image";
-import React from "react";
-import UserEntity from "../types/UserEntity";
-import UserDeleteButton from "./UserDeleteButton";
+} from '@/components/ui/table';
+import Image from 'next/image';
+import React from 'react';
+import UserEntity from '../types/UserEntity';
+import UserDeleteButton from './UserDeleteButton';
 
 export type Props = {
   users: UserEntity[];
@@ -54,7 +54,7 @@ export default function UserList({ users }: Props): React.ReactElement {
                   {user.email}
                 </a>
               </TableCell>
-              <TableCell>{user.roles.join(", ")}</TableCell>
+              <TableCell>{user.roles.join(', ')}</TableCell>
               <TableCell>{user.createdAt.toLocaleString()}</TableCell>
               <TableCell>{user.updatedAt.toLocaleString()}</TableCell>
               <TableCell>

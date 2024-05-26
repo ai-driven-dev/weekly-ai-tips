@@ -1,6 +1,6 @@
-import PublicHeader from "../header";
+import PublicHeader from '../header';
 
-export default function TipsLayou({
+export default function TipsLayout({
   children,
 }: {
   children: React.ReactNode;

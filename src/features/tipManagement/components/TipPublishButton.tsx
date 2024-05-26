@@ -1,8 +1,8 @@
-import { Button } from "@/components/ui/button";
-import { toast } from "@/components/ui/use-toast";
-import { useEffect, useRef } from "react";
-import { useFormState } from "react-dom";
-import { publishTipAction } from "../actions/publishTipAction";
+import { Button } from '@/components/ui/button';
+import { toast } from '@/components/ui/use-toast';
+import { useEffect, useRef } from 'react';
+import { useFormState } from 'react-dom';
+import { publishTipAction } from '../actions/publishTipAction';
 
 type Props = {
   tipId: string;
@@ -19,8 +19,8 @@ export default function TipPublishButton({ tipId, ...buttonProps }: Props) {
   useEffect(() => {
     if (initialState.current !== state) {
       toast({
-        title: "Success",
-        description: state ? "Tip published!" : "Error publishing tip",
+        title: 'Success',
+        description: state ? 'Tip published!' : 'Error publishing tip',
       });
 
       initialState.current = state;
@@ -30,7 +30,7 @@ export default function TipPublishButton({ tipId, ...buttonProps }: Props) {
   return (
     <form action={formActionPublish}>
       <input type="hidden" name="id" value={tipId} />
-      <Button {...buttonProps} variant="outline" size={"icon"} type="submit">
+      <Button {...buttonProps} variant="outline" size={'icon'} type="submit">
         🚀
       </Button>
     </form>

@@ -1,4 +1,4 @@
-import TipEntity, { TipFormType } from "../types/TipEntity";
+import TipEntity, { TipFormType } from '../types/TipEntity';
 
 export function convertTipEntityToForm(tip: TipEntity): TipFormType {
   return {
@@ -13,15 +13,15 @@ export function convertTipEntityToForm(tip: TipEntity): TipFormType {
 }
 
 export function getStatus(
-  tip: Pick<TipEntity, "upVotes" | "downVotes" | "status">
-): TipEntity["status"] {
+  tip: Pick<TipEntity, 'upVotes' | 'downVotes' | 'status'>,
+): TipEntity['status'] {
   if (tip.upVotes >= 3) {
-    return "scheduled";
+    return 'scheduled';
   } else if (tip.downVotes >= 3) {
-    return "rejected";
-  } else if (tip.status === "ready") {
-    return "ready";
+    return 'rejected';
+  } else if (tip.status === 'ready') {
+    return 'ready';
   } else {
-    return "draft";
+    return 'draft';
   }
 }

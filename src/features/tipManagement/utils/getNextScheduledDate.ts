@@ -1,4 +1,4 @@
-import { db } from "@/firebaseAdmin";
+import { db } from '@/firebaseAdmin';
 
 /**
  * This function is used to get the next scheduled date for the tip.
@@ -6,16 +6,16 @@ import { db } from "@/firebaseAdmin";
  * Every Monday at 9:00 AM, a new tip is scheduled.
  *
  * Only one tip can be scheduled per week.
- * *
+ *
  * @returns {Date} - The next scheduled date for the tip which is a Monday at 9:00 AM.
  *
  */
 export async function getNextScheduledDate(): Promise<Date> {
   const now = new Date();
-  const tipsRef = db.collection("tips");
+  const tipsRef = db.collection('tips');
   const snapshot = await tipsRef
-    .where("scheduledDate", ">", now)
-    .orderBy("scheduledDate")
+    .where('scheduledDate', '>', now)
+    .orderBy('scheduledDate')
     .limit(1)
     .get();
 
@@ -29,7 +29,7 @@ export async function getNextScheduledDate(): Promise<Date> {
 
     if (nextTip?.scheduledDate) {
       nextTipScheduledDate = getNextMondaysDateFromDate(
-        nextTip.scheduledDate.toDate()
+        nextTip.scheduledDate.toDate(),
       );
     }
   }
@@ -48,12 +48,12 @@ export async function getNextScheduledDate(): Promise<Date> {
 /**
  * This function is used to get the next Monday's date from the given date.
  *
- * @param {Date} latestDate - The latest date from which the next Monday's date is to be calculated.
+ * @param {Date} latestDate - The date from which the next Monday's date is to be calculated.
  *
  * @returns {Date} - The next Monday's date from the given date.
  */
 export function getNextMondaysDateFromDate(
-  latestDate: Date = new Date()
+  latestDate: Date = new Date(),
 ): Date {
   return new Date(
     latestDate.getFullYear(),
@@ -62,6 +62,6 @@ export function getNextMondaysDateFromDate(
     9,
     0,
     0,
-    0
+    0,
   );
 }

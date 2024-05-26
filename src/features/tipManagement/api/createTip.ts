@@ -1,11 +1,11 @@
-import TipEntity from "../types/TipEntity";
+import TipEntity from '../types/TipEntity';
 
-import { db } from "@/firebaseAdmin";
+import { db } from '@/firebaseAdmin';
 
 export default async function createTip(
-  data: Partial<TipEntity>
+  data: Partial<TipEntity>,
 ): Promise<TipEntity> {
-  const tipsCollection = db.collection("tips");
+  const tipsCollection = db.collection('tips');
   const docRef = await tipsCollection.add(data);
   const doc = await docRef.get();
 

@@ -1,20 +1,19 @@
-"use client";
+'use client';
 
-
-import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
-import InputWithLabel from "@/components/ui/inputWithLabel";
-import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
-import { useToast } from "@/components/ui/use-toast";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
-import { useFormState } from "react-dom";
-import { TagEntity } from "../../tagManagement/types/TagEntity";
-import { useUserAuthentication } from "../../userManagement/hooks/useUserAuthentication";
-import { createTipAction } from "../actions/createTipAction";
-import { editTipAction } from "../actions/editTipAction";
-import { TipFormType } from "../types/TipEntity";
+import { Button } from '@/components/ui/button';
+import { Checkbox } from '@/components/ui/checkbox';
+import InputWithLabel from '@/components/ui/inputWithLabel';
+import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
+import { useToast } from '@/components/ui/use-toast';
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import { useEffect, useRef, useState } from 'react';
+import { useFormState } from 'react-dom';
+import { TagEntity } from '../../tagManagement/types/TagEntity';
+import { useUserAuthentication } from '../../userManagement/hooks/useUserAuthentication';
+import { createTipAction } from '../actions/createTipAction';
+import { editTipAction } from '../actions/editTipAction';
+import { TipFormType } from '../types/TipEntity';
 
 export type Props = {
   tip: TipFormType;
@@ -27,7 +26,7 @@ export default function TipDetail({ tip, tags }: Props) {
   const { user } = useUserAuthentication();
   const [state, formAction] = useFormState(
     tip.id ? editTipAction : createTipAction,
-    tip
+    tip,
   );
 
   const [slug, setSlug] = useState<string>(state.slug);
@@ -42,11 +41,11 @@ export default function TipDetail({ tip, tags }: Props) {
   useEffect(() => {
     if (initialState.current !== state) {
       toast({
-        title: "Success ✅",
-        description: tip.id ? "Tip edited!" : "Tip created successfully",
+        title: 'Success ✅',
+        description: tip.id ? 'Tip edited!' : 'Tip created successfully',
       });
 
-      push("/dashboard/tips");
+      push('/dashboard/tips');
 
       return () => {
         initialState.current = state;
@@ -64,7 +63,7 @@ export default function TipDetail({ tip, tags }: Props) {
         defaultValue={state.title}
         onChange={(e) => {
           if (state.id) return;
-          setSlug(e.target.value.toLowerCase().replace(/\s+/g, "-"));
+          setSlug(e.target.value.toLowerCase().replace(/\s+/g, '-'));
         }}
       />
       <InputWithLabel label="Slug" name="slug" readOnly={true} value={slug} />
@@ -83,7 +82,7 @@ export default function TipDetail({ tip, tags }: Props) {
         <Checkbox
           id="status"
           name="status"
-          defaultChecked={state.status === "ready"}
+          defaultChecked={state.status === 'ready'}
         />
         <label
           htmlFor="status"
@@ -105,7 +104,7 @@ export default function TipDetail({ tip, tags }: Props) {
             key={index}
             value={tag.id}
             defaultChecked={selectedTags.includes(tag.id)}
-            data-state={selectedTags.includes(tag.id) ? "on" : "off"}
+            data-state={selectedTags.includes(tag.id) ? 'on' : 'off'}
           >
             {tag.name}
           </ToggleGroupItem>
@@ -118,13 +117,13 @@ export default function TipDetail({ tip, tags }: Props) {
         <input type="file" name="mediaFile" />
       )}
 
-      <input type="hidden" name="tagIDs" value={selectedTags.join(",")} />
+      <input type="hidden" name="tagIDs" value={selectedTags.join(',')} />
 
       {/* @TODO Add image upload */}
 
       <input type="hidden" name="ownerID" value={user?.uid} />
 
-      {(tip.status === "ready" || tip.status === "draft") && (
+      {(tip.status === 'ready' || tip.status === 'draft') && (
         <Button type="submit">Save</Button>
       )}
     </form>

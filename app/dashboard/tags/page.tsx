@@ -1,9 +1,9 @@
-"use server";
+'use server';
 
-import Title from "@/components/ui/title";
-import { fetchTags } from "@/src/features/tagManagement/api/tagManager";
-import TagForm from "@/src/features/tagManagement/components/TagForm";
-import TagsList from "@/src/features/tagManagement/components/TagsList";
+import Title from '@/components/ui/title';
+import { fetchTags } from '@/src/features/tagManagement/api/tagManager';
+import TagForm from '@/src/features/tagManagement/components/TagForm';
+import TagsList from '@/src/features/tagManagement/components/TagsList';
 
 export default async function Page() {
   const tags = await fetchTags();
@@ -20,9 +20,9 @@ export default async function Page() {
         <div className="w-1/2">
           <TagForm
             tag={{
-              name: "",
-              description: "",
-              slug: "",
+              name: '',
+              description: '',
+              slug: '',
             }}
           />
         </div>

@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { deleteUserAction } from "../actions/userActions";
+import { Button } from '@/components/ui/button';
+import { deleteUserAction } from '../actions/userActions';
 
 type Props = {
   userId: string;

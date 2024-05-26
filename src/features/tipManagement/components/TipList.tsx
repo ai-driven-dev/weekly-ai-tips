@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import {
   Table,
   TableBody,
@@ -10,15 +10,15 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
-import Image from "next/image";
-import Link from "next/link";
-import { TagEntity } from "../../tagManagement/types/TagEntity";
-import TipEntity from "../types/TipEntity";
-import TipDeleteButton from "./TipDeleteButton";
-import TipDownVoteButton from "./TipDownVoteButton";
-import TipPublishButton from "./TipPublishButton";
-import TipUpVoteButton from "./TipUpVoteButton";
+} from '@/components/ui/table';
+import Image from 'next/image';
+import Link from 'next/link';
+import { TagEntity } from '../../tagManagement/types/TagEntity';
+import TipEntity from '../types/TipEntity';
+import TipDeleteButton from './TipDeleteButton';
+import TipDownVoteButton from './TipDownVoteButton';
+import TipPublishButton from './TipPublishButton';
+import TipUpVoteButton from './TipUpVoteButton';
 
 export type Props = {
   tips: Array<TipEntity>;
@@ -39,7 +39,6 @@ export default function TipList({ tips, tags }: Props): React.ReactElement {
           <TableHead>Tags</TableHead>
           <TableHead>Image</TableHead>
           <TableHead>Actions</TableHead>
-          {/* Add tags column */}
         </TableRow>
       </TableHeader>
       <TableBody>
@@ -56,14 +55,14 @@ export default function TipList({ tips, tags }: Props): React.ReactElement {
               <div className="flex gap-2">
                 <Badge>{tip.status}</Badge>
                 {tip.publishedDate && (
-                  <Badge variant={"destructive"}>
-                    {new Date(tip.publishedDate).toLocaleString("fr-FR")}
+                  <Badge variant={'destructive'}>
+                    {new Date(tip.publishedDate).toLocaleString('fr-FR')}
                   </Badge>
                 )}
 
                 {tip.scheduledDate && (
-                  <Badge variant={"secondary"}>
-                    {new Date(tip.scheduledDate).toLocaleString("fr-FR")}
+                  <Badge variant={'secondary'}>
+                    {new Date(tip.scheduledDate).toLocaleString('fr-FR')}
                   </Badge>
                 )}
               </div>
@@ -73,7 +72,7 @@ export default function TipList({ tips, tags }: Props): React.ReactElement {
                 {tip.tagIDs.map((tagID) => {
                   const tag = tags.find((tag) => tag.id === tagID);
                   return tag ? (
-                    <Badge key={tag.id} variant={"secondary"}>
+                    <Badge key={tag.id} variant={'secondary'}>
                       {tag.name}
                     </Badge>
                   ) : null;
@@ -94,25 +93,25 @@ export default function TipList({ tips, tags }: Props): React.ReactElement {
               {tip.id && (
                 <div className="flex gap-2">
                   <TipPublishButton
-                    disabled={tip.status === "published"}
+                    disabled={tip.status === 'published'}
                     tipId={tip.id}
                   />
                   <TipUpVoteButton
-                    disabled={tip.status !== "ready"}
+                    disabled={tip.status !== 'ready'}
                     tipId={tip.id}
                   />
                   <TipDownVoteButton
                     tipId={tip.id}
-                    disabled={tip.status !== "ready"}
+                    disabled={tip.status !== 'ready'}
                   />
                   <Button asChild>
                     <Link href={`/dashboard/tips/edit/${tip.id}`}>
-                      {tip.status !== "draft" ? "View" : "Edit"}
+                      {tip.status !== 'draft' ? 'View' : 'Edit'}
                     </Link>
                   </Button>
                   <TipDeleteButton
                     tipId={tip.id}
-                    disabled={tip.status !== "draft"}
+                    disabled={tip.status !== 'draft'}
                   />
                 </div>
               )}

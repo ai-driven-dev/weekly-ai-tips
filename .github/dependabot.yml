@@ -1,6 +1,0 @@
-version: 2
-updates:
-  - package-ecosystem: "npm" # Assurez-vous que cette valeur est une chaîne de caractères valide.
-    directory: "/" # Ceci spécifie le répertoire racine, assurez-vous qu'il correspond à l'emplacement de votre fichier package.json.
-    schedule:
-      interval: "weekly" # Cette valeur est correcte ; vérifiez simplement l'indentation.

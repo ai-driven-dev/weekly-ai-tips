@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 import {
   Table,
   TableBody,
   TableCell,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
-import { TagEntity } from "@/src/features/tagManagement/types/TagEntity";
-import { deleteTagAction } from "../actions/deleteTagAction";
+} from '@/components/ui/table';
+import { TagEntity } from '@/src/features/tagManagement/types/TagEntity';
+import { deleteTagAction } from '../actions/deleteTagAction';
 
 /**
  * This page is a React Component listing all tags from API.

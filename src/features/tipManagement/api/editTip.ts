@@ -1,13 +1,13 @@
-import { db } from "@/firebaseAdmin";
-import TipEntity, { TipFormType } from "../types/TipEntity";
+import { db } from '@/firebaseAdmin';
+import TipEntity, { TipFormType } from '../types/TipEntity';
 
 export default async function editTip(
-  data: TipFormType | TipEntity
+  data: TipFormType | TipEntity,
 ): Promise<TipEntity> {
-  const tipsCollection = db.collection("tips");
+  const tipsCollection = db.collection('tips');
 
-  if (!data.id || typeof data.id !== "string") {
-    throw new Error("Invalid document ID");
+  if (!data.id || typeof data.id !== 'string') {
+    throw new Error('Invalid document ID');
   }
 
   const docRef = tipsCollection.doc(data.id);

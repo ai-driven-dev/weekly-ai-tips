@@ -1,9 +1,9 @@
-import Title from "@/components/ui/title";
-import { fetchTags } from "@/src/features/tagManagement/api/tagManager";
-import { fetchTip } from "@/src/features/tipManagement/api/fetchTip";
-import TipDetail from "@/src/features/tipManagement/components/TipForm";
-import { convertTipEntityToForm } from "@/src/features/tipManagement/utils/tipUtils";
-import Link from "next/link";
+import Title from '@/components/ui/title';
+import { fetchTags } from '@/src/features/tagManagement/api/tagManager';
+import { fetchTip } from '@/src/features/tipManagement/api/fetchTip';
+import TipDetail from '@/src/features/tipManagement/components/TipForm';
+import { convertTipEntityToForm } from '@/src/features/tipManagement/utils/tipUtils';
+import Link from 'next/link';
 
 export type Props = {
   params: {
@@ -12,7 +12,7 @@ export type Props = {
 };
 
 export default async function TipEdit({ params: { id } }: Props) {
-  const tip = await fetchTip("id", id);
+  const tip = await fetchTip('id', id);
   const tags = await fetchTags();
 
   if (!tip) {

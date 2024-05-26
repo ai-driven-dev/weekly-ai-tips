@@ -1,8 +1,8 @@
-import { db } from "@/firebaseAdmin";
-import UserEntity from "@/src/features/userManagement/types/UserEntity";
+import { db } from '@/firebaseAdmin';
+import UserEntity from '@/src/features/userManagement/types/UserEntity';
 
 export async function fetchUser(id: string): Promise<UserEntity | null> {
-  const userDoc = await db.collection("users").doc(id).get();
+  const userDoc = await db.collection('users').doc(id).get();
 
   if (!userDoc.exists) {
     return null;

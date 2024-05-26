@@ -1,37 +1,37 @@
-import { db } from "@/firebaseAdmin";
-import TipEntity from "../types/TipEntity";
+import { db } from '@/firebaseAdmin';
+import TipEntity from '../types/TipEntity';
 
 export async function fetchTips(
-  status?: TipEntity["status"],
-  name?: string
+  status?: TipEntity['status'],
+  name?: string,
 ): Promise<Array<TipEntity>> {
-  let tipsCollection = db.collection("tips").orderBy("createdAt", "desc");
+  let tipsCollection = db.collection('tips').orderBy('createdAt', 'desc');
 
   if (!tipsCollection) {
-    throw new Error("Failed to fetch tips collection from database");
+    throw new Error('Failed to fetch tips collection from database');
   }
 
   let snapshot = null;
 
   if (status) {
-    tipsCollection = tipsCollection.where("status", "==", status);
+    tipsCollection = tipsCollection.where('status', '==', status);
   }
 
   // TODO: Demonstration purposes only. This is not a recommended way to query Firestore (see https://firebase.google.com/docs/firestore/query-data/queries#query_limitations)
   if (name) {
     const nameEnd = name.replace(/.$/, (c) =>
-      String.fromCharCode(c.charCodeAt(0) + 1)
+      String.fromCharCode(c.charCodeAt(0) + 1),
     );
     tipsCollection = tipsCollection
-      .where("title", ">=", name)
-      .where("title", "<=", nameEnd);
+      .where('title', '>=', name)
+      .where('title', '<=', nameEnd);
   }
 
   snapshot = await tipsCollection.get();
 
   const tips: Array<TipEntity> = [];
 
-  for (let doc of snapshot.docs) {
+  for (const doc of snapshot.docs) {
     const tip = doc.data();
 
     tips.push({

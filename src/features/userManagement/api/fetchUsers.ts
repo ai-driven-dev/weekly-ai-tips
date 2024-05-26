@@ -1,8 +1,8 @@
-import { db } from "@/firebaseAdmin";
-import UserEntity from "@/src/features/userManagement/types/UserEntity";
+import { db } from '@/firebaseAdmin';
+import UserEntity from '@/src/features/userManagement/types/UserEntity';
 
 export async function fetchUsers(): Promise<UserEntity[]> {
-  const usersCollection = db.collection("users");
+  const usersCollection = db.collection('users');
   const snapshot = await usersCollection.get();
   const users: UserEntity[] = [];
 

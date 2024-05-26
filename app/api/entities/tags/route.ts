@@ -1,14 +1,14 @@
-import { fetchTags } from "@/src/features/tagManagement/api/tagManager";
-import { NextRequest, NextResponse } from "next/server";
+import { fetchTags } from '@/src/features/tagManagement/api/tagManager';
+import { NextResponse } from 'next/server';
 
-export async function GET(req: NextRequest) {
+export async function GET() {
   try {
     const tags = await fetchTags();
 
     return new NextResponse(JSON.stringify(tags), {
       status: 200,
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
     });
   } catch (error) {
@@ -17,7 +17,7 @@ export async function GET(req: NextRequest) {
     return new NextResponse(JSON.stringify({ error }), {
       status: 500,
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
     });
   }

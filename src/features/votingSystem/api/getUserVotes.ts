@@ -1,14 +1,14 @@
-import { db } from "@/firebaseAdmin";
-import UserVoteEntity from "../types/UserVoteEntity";
+import { db } from '@/firebaseAdmin';
+import UserVoteEntity from '../types/UserVoteEntity';
 
 export async function getUserVotes(
   userId: string,
-  tipId: string
+  tipId: string,
 ): Promise<UserVoteEntity[]> {
   const userVotesSnapshot = await db
-    .collection("votes")
-    .where("userID", "==", userId)
-    .where("tipID", "==", tipId)
+    .collection('votes')
+    .where('userID', '==', userId)
+    .where('tipID', '==', tipId)
     .get();
 
   if (userVotesSnapshot.empty) {

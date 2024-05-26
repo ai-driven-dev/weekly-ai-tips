@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { useUserAuthentication } from "../hooks/useUserAuthentication";
+import { useUserAuthentication } from '../hooks/useUserAuthentication';
 
 const GoogleSignInButton = () => {
   const { login } = useUserAuthentication();

@@ -1,6 +1,6 @@
-import { storage } from "@/firebaseClient";
-import { deleteObject, ref } from "firebase/storage";
-import { RELATIVE_PATH } from "./uploadFirestoreImage";
+import { storage } from '@/firebaseClient';
+import { deleteObject, ref } from 'firebase/storage';
+import { RELATIVE_PATH } from './uploadFirestoreImage';
 
 /**
  * Deletes an image from Firebase Storage.
@@ -15,18 +15,18 @@ import { RELATIVE_PATH } from "./uploadFirestoreImage";
  *
  */
 export async function deleteFirestoreImage(
-  imagePath: string
+  imagePath: string,
 ): Promise<boolean> {
   const relativePath = decodeURIComponent(
-    imagePath.split(RELATIVE_PATH)[1].split("?")[0]
+    imagePath.split(RELATIVE_PATH)[1].split('?')[0],
   );
   const imageRef = ref(storage, `${RELATIVE_PATH}/${relativePath}`);
 
   try {
     await deleteObject(imageRef);
-    console.log("File deleted successfully");
+    console.log('File deleted successfully');
   } catch (error) {
-    console.error("Error removing file: ", error);
+    console.error('Error removing file: ', error);
 
     return false;
   }

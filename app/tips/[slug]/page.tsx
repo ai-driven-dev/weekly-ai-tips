@@ -1,13 +1,13 @@
-import { fetchTip } from "@/src/features/tipManagement/api/fetchTip";
-import { Slug } from "@/src/types/Slug";
-import Link from "next/link";
+import { fetchTip } from '@/src/features/tipManagement/api/fetchTip';
+import { Slug } from '@/src/types/Slug';
+import Link from 'next/link';
 
 type Props = {
   params: Slug;
 };
 
 export default async function TipPage({ params }: Props) {
-  const tip = await fetchTip("slug", params.slug);
+  const tip = await fetchTip('slug', params.slug);
 
   if (!tip) {
     return null;

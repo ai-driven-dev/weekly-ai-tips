@@ -1,45 +1,42 @@
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
   },
   extends: [
-    "plugin:react-hooks/recommended",
+    'eslint:recommended',
     'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
     'next',
     'next/core-web-vitals',
   ],
-  "rules": {
-    "@typescript-eslint/quotes": ["error", "single", { "avoidEscape": true }],
-    "@typescript-eslint/comma-dangle": ["error", "never"],
-    "@typescript-eslint/semi": ["error", "never"],
-    "@typescript-eslint/space-before-function-paren": ["error", {"anonymous": "always", "named": "never", "asyncArrow": "always"}],
-    "@typescript-eslint/member-delimiter-style": ["error", {
-      "multiline": {
-        "delimiter": "none",
-        "requireLast": false
+  plugins: ['react', '@typescript-eslint', 'prettier'],
+  rules: {
+    'prettier/prettier': 'error',
+    'react/react-in-jsx-scope': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/quotes': ['error', 'single'],
+    '@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
+    '@typescript-eslint/semi': ['error', 'always'],
+    '@typescript-eslint/member-delimiter-style': [
+      'error',
+      {
+        multiline: {
+          delimiter: 'semi',
+          requireLast: true,
+        },
+        singleline: {
+          delimiter: 'semi',
+          requireLast: false,
+        },
       },
-      "singleline": {
-        "delimiter": "semi",
-        "requireLast": false
-      }
-    }]
+    ],
   },
-  overrides: [
-    {
-      env: {
-        node: true,
-      },
-      files: ['.eslintrc.{js,cjs}'],
-      parserOptions: {
-        sourceType: 'script',
-      },
+  settings: {
+    react: {
+      version: 'detect',
     },
-  ],
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
   },
-  plugins: ['react'],
-  rules: {},
-}
+};

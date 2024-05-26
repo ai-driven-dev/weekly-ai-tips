@@ -1,16 +1,16 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { useQueryState } from "nuqs";
-import { useEffect, useState } from "react";
-import TipEntity from "../types/TipEntity";
+import Link from 'next/link';
+import { useQueryState } from 'nuqs';
+import { useEffect, useState } from 'react';
+import TipEntity from '../types/TipEntity';
 
 type Props = {
   tipsFromPage: TipEntity[];
 };
 
 export default function TipSearchedList({ tipsFromPage }: Props) {
-  const [name] = useQueryState("name");
+  const [name] = useQueryState('name');
   const [tips, setTips] = useState(tipsFromPage);
 
   useEffect(() => {
