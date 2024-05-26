@@ -18,7 +18,7 @@ export default async function updateTip(
 
   const doc = await docRef.get();
 
-  return {
+  const tip: TipEntity = {
     id: doc.id,
     content: doc.data()?.content,
     createdAt: doc.data()?.createdAt,
@@ -33,4 +33,6 @@ export default async function updateTip(
     slug: doc.data()?.slug,
     tagIDs: doc.data()?.tagIDs,
   };
+
+  return tip;
 }

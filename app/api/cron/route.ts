@@ -25,13 +25,17 @@ export async function GET(request: NextRequest) {
   }
 
   // Publish the tip
-  const publishedTip = setPublished(nextTipToPublish);
-
-  const updatedTip = await updateTip(publishedTip);
+  const publishedTip = await updateTip(setPublished(nextTipToPublish));
 
   return NextResponse.json({
     message: 'Cron job executed',
-    updatedTup: updatedTip,
-    nextTipToPublish,
+    tips: {
+      from: {
+        nextTipToPublish,
+      },
+      to: {
+        publishedTip,
+      },
+    },
   });
 }
