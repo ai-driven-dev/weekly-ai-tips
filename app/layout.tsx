@@ -1,3 +1,6 @@
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+
 import type { Metadata } from 'next';
 import { Noto_Sans, Rokkitt } from 'next/font/google';
 import React from 'react';
@@ -27,6 +30,8 @@ export default function RootLayout({
 }): React.JSX.Element {
   return (
     <html lang="en">
+      <SpeedInsights />
+      <Analytics />
       <body className={`${sans.variable} ${serif.variable} ${sans.className}`}>
         {children}
       </body>
