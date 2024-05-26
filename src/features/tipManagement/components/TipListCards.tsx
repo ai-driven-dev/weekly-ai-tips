@@ -25,32 +25,32 @@ const TipListCards: React.FC<Props> = ({ tips }) => {
           key={`TipListCards-${index}-${tip.id}`}
           href={`/dashboard/tips/edit/${tip.id}`}
         >
-          <Card>
+          <Card className="transition-all hover:bg-gray-100 cursor-pointer">
             <CardHeader>
               <CardTitle className="mb-2">{tip.title}</CardTitle>
               {tip.scheduledDate && (
-                <div>
+                <span>
                   <Badge variant={'secondary'}>
                     {new Date(tip.scheduledDate).toLocaleString('fr-FR')}
                   </Badge>
-                </div>
+                </span>
               )}
             </CardHeader>
             <CardContent>
               <CardDescription>
-                <div className="flex justify-between">{tip.description}</div>
+                <span className="flex justify-between">{tip.description}</span>
               </CardDescription>
             </CardContent>
             <CardFooter>
               <ul className="flex gap-1">
                 <li>
-                  <Badge>👍 {tip.upVotes}</Badge>
+                  <Badge variant={'outline'}>👍 {tip.upVotes}</Badge>
                 </li>
                 <li>
-                  <Badge>👎 {tip.downVotes}</Badge>
+                  <Badge variant={'outline'}>👎 {tip.downVotes}</Badge>
                 </li>
                 <li>
-                  <Badge>{tip.status}</Badge>
+                  <Badge variant={'outline'}>{tip.status}</Badge>
                 </li>
               </ul>
             </CardFooter>

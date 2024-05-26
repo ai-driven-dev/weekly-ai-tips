@@ -1,8 +1,8 @@
 import { getNumberOfVotes } from '../../votingSystem/api/getNumberOfVotes';
 import TipEntity from '../types/TipEntity';
-import { getNextScheduledDate } from '../utils/getNextScheduledDate';
 import { getStatus } from '../utils/tipUtils';
 import editTip from './editTip';
+import { getNextScheduledDate } from './getTipNextScheduledDate';
 
 export async function editTipVoteCounts(tipData: TipEntity): Promise<void> {
   if (!tipData.id) {

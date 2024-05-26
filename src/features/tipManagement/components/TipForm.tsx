@@ -95,7 +95,6 @@ export default function TipDetail({ tip, tags }: Props) {
       <ToggleGroup
         label="Tags"
         type="multiple"
-        variant="outline"
         onValueChange={handleTagChange}
         className="align-start"
       >
@@ -118,8 +117,6 @@ export default function TipDetail({ tip, tags }: Props) {
       )}
 
       <input type="hidden" name="tagIDs" value={selectedTags.join(',')} />
-
-      {/* @TODO Add image upload */}
 
       <input type="hidden" name="ownerID" value={user?.uid} />
 

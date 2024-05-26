@@ -1,4 +1,4 @@
-import { getNextMondaysDateFromDate } from './getNextScheduledDate';
+import { getNextMondaysDateFromDate } from './getNextMondaysDateFromDate';
 
 jest.mock('@/firebaseAdmin', () => ({
   db: jest.fn().mockImplementation(() => ({})),
