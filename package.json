@@ -14,7 +14,8 @@
     "test": "jest --passWithNoTests --coverage --runInBand --detectOpenHandles",
     "test:watch": "jest --watch --watchAll",
     "test:coverage": "jest --coverage",
-    "lint": "next lint && npx eslint . --ext .ts,.tsx --fix && tsc --noEmit",
+    "lint": "next lint && npx eslint . --ext .ts,.tsx && tsc --noEmit",
+    "lint-fix": "npx eslint . --ext .ts,.tsx --fix",
     "release": "standard-version"
   },
   "lint-staged": {
