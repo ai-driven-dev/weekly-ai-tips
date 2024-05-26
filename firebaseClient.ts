@@ -21,8 +21,6 @@ isSupported()
   .then((supported) => {
     if (supported) {
       analytics = getAnalytics(app);
-    } else {
-      console.warn('Firebase Analytics is not supported in this environment.');
     }
   })
   .catch((error) => {
