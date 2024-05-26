@@ -3,6 +3,7 @@ import { fetchTags } from '@/src/features/tagManagement/api/tagManager';
 import { fetchTip } from '@/src/features/tipManagement/api/fetchTip';
 import TipDetail from '@/src/features/tipManagement/components/TipForm';
 import { convertTipEntityToForm } from '@/src/features/tipManagement/utils/tipUtils';
+import { isSubmittable } from '@/src/features/votingSystem/utils/isSubmittable';
 import Link from 'next/link';
 
 export type Props = {
@@ -27,7 +28,10 @@ export default async function TipEdit({ params: { id } }: Props) {
 
   return (
     <>
-      <Title>Editing Tips {id}</Title>
+      <Title>
+        {isSubmittable(tip.status) ? 'Editing' : 'Viewing only'} tip{' '}
+        <code>{id}</code>
+      </Title>
 
       <TipDetail tags={tags} tip={convertTipEntityToForm(tip)} />
     </>

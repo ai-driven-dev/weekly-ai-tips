@@ -14,6 +14,7 @@ import {
 import Image from 'next/image';
 import Link from 'next/link';
 import { TagEntity } from '../../tagManagement/types/TagEntity';
+import { isSubmittable } from '../../votingSystem/utils/isSubmittable';
 import TipEntity from '../types/TipEntity';
 import TipDeleteButton from './TipDeleteButton';
 import TipDownVoteButton from './TipDownVoteButton';
@@ -80,6 +81,7 @@ export default function TipList({ tips, tags }: Props): React.ReactElement {
               </div>
             </TableCell>
             <TableCell>
+              {tip.mediaURL}
               {tip.mediaURL && (
                 <Image
                   src={tip.mediaURL}
@@ -104,14 +106,19 @@ export default function TipList({ tips, tags }: Props): React.ReactElement {
                     tipId={tip.id}
                     disabled={tip.status !== 'ready'}
                   />
-                  <Button asChild>
+                  <Button
+                    asChild
+                    variant={
+                      isSubmittable(tip.status) ? 'default' : 'secondary'
+                    }
+                  >
                     <Link href={`/dashboard/tips/edit/${tip.id}`}>
-                      {tip.status !== 'draft' ? 'View' : 'Edit'}
+                      {isSubmittable(tip.status) ? 'Edit' : 'View'}
                     </Link>
                   </Button>
                   <TipDeleteButton
                     tipId={tip.id}
-                    disabled={tip.status !== 'draft'}
+                    disabled={!isSubmittable(tip.status)}
                   />
                 </div>
               )}

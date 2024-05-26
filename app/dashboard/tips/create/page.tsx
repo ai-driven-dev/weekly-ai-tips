@@ -6,7 +6,7 @@ export default async function Page() {
   const tags = await fetchTags();
   return (
     <>
-      <Title>Create Tips</Title>
+      <Title>Creating Tip</Title>
 
       <TipDetail
         tags={tags}

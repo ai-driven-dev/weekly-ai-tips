@@ -1,16 +1,16 @@
 'use server';
 
+import { Toast } from '@/components/ui/use-toast';
 import { revalidatePath } from 'next/cache';
 import editTip from '../api/editTip';
 import { TipFormType } from '../types/TipEntity';
-import { convertTipEntityToForm } from '../utils/tipUtils';
 
 export async function editTipAction(
-  _: TipFormType | null,
+  _: Toast | null,
   formData: FormData,
-): Promise<TipFormType> {
+): Promise<Toast | null> {
   /**
-   * @TODO Add status, image, tags...
+   * @TODO Add image
    */
   const data: Omit<TipFormType, 'scheduledDate'> = {
     id: formData.get('id') as string,
@@ -27,8 +27,17 @@ export async function editTipAction(
   if (!data.id) throw new Error('ID is required');
 
   const persistedData = await editTip(data);
+  if (persistedData) {
+    revalidatePath('/dashboard/tips');
 
-  revalidatePath('/dashboard/tips');
-
-  return convertTipEntityToForm(persistedData);
+    return {
+      title: 'Success ✅',
+      description: 'Tip edited!',
+    };
+  } else {
+    return {
+      title: 'Error ❌',
+      description: 'Failed to edit tip',
+    };
+  }
 }

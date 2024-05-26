@@ -6,6 +6,14 @@ export default async function createTip(
   data: Partial<TipEntity>,
 ): Promise<TipEntity> {
   const tipsCollection = db.collection('tips');
+
+  // check if the slug is already taken
+  const slugExists = await tipsCollection.where('slug', '==', data.slug).get();
+  if (!slugExists.empty) {
+    throw new Error('Slug already exists');
+  }
+
+  // create the tip
   const docRef = await tipsCollection.add(data);
   const doc = await docRef.get();
 

@@ -6,11 +6,11 @@
  * persisting the tip data to the database, and revalidating the path to reflect the changes.
  */
 
+import { Toast } from '@/components/ui/use-toast';
 import { revalidatePath } from 'next/cache';
 import { uploadFirestoreImage } from '../../../utils/firestore/uploadFirestoreImage';
 import createTip from '../api/createTip';
-import TipEntity, { TipFormType } from '../types/TipEntity';
-import { convertTipEntityToForm } from '../utils/tipUtils';
+import TipEntity from '../types/TipEntity';
 
 /**
  * This function creates a new tip.
@@ -22,9 +22,9 @@ import { convertTipEntityToForm } from '../utils/tipUtils';
  * @returns A promise that resolves to the form type of the created tip
  */
 export async function createTipAction(
-  _: TipFormType | null,
+  _: Toast | null,
   formData: FormData,
-): Promise<TipFormType> {
+): Promise<Toast | null> {
   // Extract the necessary fields from the form data
   const data = {
     title: formData.get('title') as string,
@@ -36,7 +36,7 @@ export async function createTipAction(
       formData.get('status') === 'on'
         ? 'ready'
         : ('draft' as TipEntity['status']),
-    mediaFile: formData.get('mediaFile') as File | 'undefined',
+    mediaFile: formData.get('mediaFile') as File | 'undefined' | undefined,
     tagIDs: (formData.get('tagIDs') as string)
       .split(',')
       .map((id) => id.trim()),
@@ -45,29 +45,51 @@ export async function createTipAction(
   let mediaURL = undefined;
 
   // If a media file is provided, upload it
-  if (data.mediaFile !== 'undefined') {
-    mediaURL = await uploadFirestoreImage(data.slug, data.mediaFile);
+  if (
+    data.mediaFile !== 'undefined' &&
+    data.mediaFile !== null &&
+    (data.mediaFile as File).size > 0
+  ) {
+    console.log('Creating tip...', data.mediaFile);
+    mediaURL = await uploadFirestoreImage(data.slug, data.mediaFile as File);
   }
+  try {
+    // Persist the tip data to the database
+    const persistedData = await createTip({
+      title: data.title,
+      slug: data.slug,
+      description: data.description,
+      content: data.content,
+      ownerID: data.ownerID,
+      status: data.status,
+      downVotes: 0,
+      upVotes: 0,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+      tagIDs: data.tagIDs,
+      mediaURL,
+    });
 
-  // Persist the tip data to the database
-  const persistedData = await createTip({
-    title: data.title,
-    slug: data.slug,
-    description: data.description,
-    content: data.content,
-    ownerID: data.ownerID,
-    status: data.status,
-    downVotes: 0,
-    upVotes: 0,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-    tagIDs: data.tagIDs,
-    mediaURL,
-  });
+    // Revalidate the path to reflect the changes
+    revalidatePath('/dashboard/tips');
 
-  // Revalidate the path to reflect the changes
-  revalidatePath('/dashboard/tips');
+    if (persistedData) {
+      return {
+        title: 'Success ✅',
+        description: 'Tip created successfully',
+      };
+    } else {
+      return {
+        title: 'Error ❌',
+        description: 'Failed to create tip',
+      };
+    }
+  } catch (error: unknown) {
+    const { message } = error as Error;
 
-  // Convert the persisted data to form type and return it
-  return convertTipEntityToForm(persistedData);
+    return {
+      title: 'Error ❌',
+      description: message,
+    };
+  }
 }

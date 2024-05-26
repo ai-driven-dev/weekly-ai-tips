@@ -11,6 +11,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useFormState } from 'react-dom';
 import { TagEntity } from '../../tagManagement/types/TagEntity';
 import { useUserAuthentication } from '../../userManagement/hooks/useUserAuthentication';
+import { isSubmittable } from '../../votingSystem/utils/isSubmittable';
 import { createTipAction } from '../actions/createTipAction';
 import { editTipAction } from '../actions/editTipAction';
 import { TipFormType } from '../types/TipEntity';
@@ -26,11 +27,11 @@ export default function TipDetail({ tip, tags }: Props) {
   const { user } = useUserAuthentication();
   const [state, formAction] = useFormState(
     tip.id ? editTipAction : createTipAction,
-    tip,
+    null,
   );
 
-  const [slug, setSlug] = useState<string>(state.slug);
-  const [selectedTags, setSelectedTags] = useState<string[]>(state.tagIDs);
+  const [slug, setSlug] = useState<string>(tip.slug);
+  const [selectedTags, setSelectedTags] = useState<string[]>(tip.tagIDs);
 
   const handleTagChange = (value: string[]) => {
     setSelectedTags(value);
@@ -39,13 +40,12 @@ export default function TipDetail({ tip, tags }: Props) {
   const initialState = useRef(state);
 
   useEffect(() => {
-    if (initialState.current !== state) {
-      toast({
-        title: 'Success ✅',
-        description: tip.id ? 'Tip edited!' : 'Tip created successfully',
-      });
+    if (initialState.current !== state && state) {
+      toast(state);
 
-      push('/dashboard/tips');
+      if (state.title === 'Success ✅') {
+        push('/dashboard/tips');
+      }
 
       return () => {
         initialState.current = state;
@@ -60,29 +60,39 @@ export default function TipDetail({ tip, tags }: Props) {
       <InputWithLabel
         label="Title"
         name="title"
-        defaultValue={state.title}
+        defaultValue={tip.title}
         onChange={(e) => {
-          if (state.id) return;
+          if (tip.id) return;
           setSlug(e.target.value.toLowerCase().replace(/\s+/g, '-'));
         }}
+        disabled={!isSubmittable(tip.status)}
       />
-      <InputWithLabel label="Slug" name="slug" readOnly={true} value={slug} />
+      <InputWithLabel
+        label="Slug"
+        name="slug"
+        readOnly={true}
+        value={slug}
+        disabled={!isSubmittable(tip.status)}
+      />
       <InputWithLabel
         label="Description"
         name="description"
-        defaultValue={state.description}
+        defaultValue={tip.description}
+        disabled={!isSubmittable(tip.status)}
       />
       <InputWithLabel
         label="Content"
         name="content"
-        defaultValue={state.content}
+        defaultValue={tip.content}
+        disabled={!isSubmittable(tip.status)}
       />
 
       <div className="flex items-center space-x-2">
         <Checkbox
           id="status"
           name="status"
-          defaultChecked={state.status === 'ready'}
+          defaultChecked={tip.status === 'ready'}
+          disabled={!isSubmittable(tip.status)}
         />
         <label
           htmlFor="status"
@@ -97,6 +107,7 @@ export default function TipDetail({ tip, tags }: Props) {
         type="multiple"
         onValueChange={handleTagChange}
         className="align-start"
+        disabled={!isSubmittable(tip.status)}
       >
         {tags.map((tag, index) => (
           <ToggleGroupItem
@@ -104,25 +115,24 @@ export default function TipDetail({ tip, tags }: Props) {
             value={tag.id}
             defaultChecked={selectedTags.includes(tag.id)}
             data-state={selectedTags.includes(tag.id) ? 'on' : 'off'}
+            disabled={!isSubmittable(tip.status)}
           >
             {tag.name}
           </ToggleGroupItem>
         ))}
       </ToggleGroup>
 
-      {state.mediaURL ? (
-        <Image src={state.mediaURL} alt="Media" />
+      {tip.mediaURL ? (
+        <Image src={tip.mediaURL} alt="Media" />
       ) : (
-        <input type="file" name="mediaFile" />
+        isSubmittable(tip.status) && <input type="file" name="mediaFile" />
       )}
 
       <input type="hidden" name="tagIDs" value={selectedTags.join(',')} />
 
       <input type="hidden" name="ownerID" value={user?.uid} />
 
-      {(tip.status === 'ready' || tip.status === 'draft') && (
-        <Button type="submit">Save</Button>
-      )}
+      {isSubmittable(tip.status) && <Button type="submit">Save</Button>}
     </form>
   );
 }
