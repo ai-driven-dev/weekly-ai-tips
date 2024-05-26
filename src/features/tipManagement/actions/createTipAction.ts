@@ -42,17 +42,21 @@ export async function createTipAction(
       .map((id) => id.trim()),
   };
 
-  let mediaURL = undefined;
+  let mediaURL = null;
+
+  console.log('data.mediaFile', data.mediaFile);
 
   // If a media file is provided, upload it
   if (
     data.mediaFile !== 'undefined' &&
     data.mediaFile !== null &&
-    (data.mediaFile as File).size > 0
+    (data.mediaFile as File).size > 0 &&
+    (data.mediaFile as File).name !== 'undefined'
   ) {
     console.log('Creating tip...', data.mediaFile);
     mediaURL = await uploadFirestoreImage(data.slug, data.mediaFile as File);
   }
+
   try {
     // Persist the tip data to the database
     const persistedData = await createTip({

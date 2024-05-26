@@ -81,7 +81,6 @@ export default function TipList({ tips, tags }: Props): React.ReactElement {
               </div>
             </TableCell>
             <TableCell>
-              {tip.mediaURL}
               {tip.mediaURL && (
                 <Image
                   src={tip.mediaURL}
