@@ -31,18 +31,24 @@ cd weekly-ai-tips/
 Install Dependencies:
 
 ```bash
-npx husky-init && npm install    
+npm install   
+# setup husky git hooks 
+npx husky-init
 ```
 
 ## Environment Configuration
 
 Copy the example environment variable file and prepare yourself to fill it!
 
+> ⚠️ **Subscribers of online courses can access `.env` directly from Discord!**
+
 ```bash
 cp -v .env.example .env.local
 ```
 
 ## Project Configuration
+
+Not needed if you come from the online course.
 
 ### Firebase Console (for Most Credentials)
 
@@ -99,11 +105,12 @@ Downloading the key will give you a JSON file containing `private_key` and `clie
 npm run dev
 ```
 
-The application should now be running on <http://localhost:3000>.
+- Public Area: <http://localhost:3000>.
+- Dashboard: <http://localhost:3000/dashboard>.
 
 ## Authors
 
-- [alex so yes](https://alexsoyes.com) - Initial work - [@alexsoyes](https://twitter.com/alexsoyes)
+- [alex so yes](https://alexsoyes.com) - Initial work - [@alexsoyes](https://beacons.ai/alexsoyes)
 
 ## License
 
