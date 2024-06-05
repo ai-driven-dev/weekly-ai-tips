@@ -1,7 +1,7 @@
 import Title from '@/components/ui/title';
 import { fetchTags } from '@/src/features/tagManagement/api/tagManager';
 import { fetchTip } from '@/src/features/tipManagement/api/fetchTip';
-import TipDetail from '@/src/features/tipManagement/components/TipForm';
+import TipForm from '@/src/features/tipManagement/components/TipForm';
 import { convertTipEntityToForm } from '@/src/features/tipManagement/utils/tipUtils';
 import { isSubmittable } from '@/src/features/votingSystem/utils/isSubmittable';
 import Link from 'next/link';
@@ -33,7 +33,7 @@ export default async function TipEdit({ params: { id } }: Props) {
         <code>{id}</code>
       </Title>
 
-      <TipDetail tags={tags} tip={convertTipEntityToForm(tip)} />
+      <TipForm tags={tags} tip={convertTipEntityToForm(tip)} />
     </>
   );
 }

@@ -1,6 +1,6 @@
 import Title from '@/components/ui/title';
 import { fetchTags } from '@/src/features/tagManagement/api/tagManager';
-import TipDetail from '@/src/features/tipManagement/components/TipForm';
+import TipForm from '@/src/features/tipManagement/components/TipForm';
 
 export default async function Page() {
   const tags = await fetchTags();
@@ -8,7 +8,7 @@ export default async function Page() {
     <>
       <Title>Creating Tip</Title>
 
-      <TipDetail
+      <TipForm
         tags={tags}
         tip={{
           title: 'My title',
