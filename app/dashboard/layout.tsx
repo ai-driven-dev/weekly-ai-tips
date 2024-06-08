@@ -1,6 +1,5 @@
 'use client';
 
-import GoogleSignInButton from '@/src/features/userManagement/components/GoogleSignInButton';
 import { useUserAuthentication } from '@/src/features/userManagement/hooks/useUserAuthentication';
 import { ReactNode } from 'react';
 
@@ -11,6 +10,7 @@ export type LayoutProps = {
 import { cn } from '@/components/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
 import Header from '@/src/features/dashboard/components/Header';
+import Login from '@/src/features/dashboard/components/Login';
 import Navigation from '@/src/features/dashboard/components/Navigation';
 import { ReloadIcon } from '@radix-ui/react-icons';
 
@@ -19,11 +19,7 @@ const Layout = ({ children }: LayoutProps) => {
 
   if (!loading && !user) {
     // Redirect unauthenticated users to the login page
-    return (
-      <div>
-        You are not logged-in, please auth: <GoogleSignInButton />
-      </div>
-    );
+    return <Login />;
   }
 
   if (loading || !user) {

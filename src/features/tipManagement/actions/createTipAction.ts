@@ -44,8 +44,6 @@ export async function createTipAction(
 
   let mediaURL = null;
 
-  console.log('data.mediaFile', data.mediaFile);
-
   // If a media file is provided, upload it
   if (
     data.mediaFile !== 'undefined' &&
