@@ -17,6 +17,10 @@ const HeaderComponent: React.FC = () => {
     router.push('/dashboard/tips/create');
   };
 
+  const handlePublicWebsite = () => {
+    router.push('/tips');
+  };
+
   return (
     <header className="bg-white px-6 py-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
@@ -29,6 +33,9 @@ const HeaderComponent: React.FC = () => {
           </p>
         </div>
         <div className="flex items-center gap-2">
+          <Button onClick={handlePublicWebsite} variant={'outline'}>
+            View public web
+          </Button>
           <Button onClick={handleCreateNewTip}>Create a new tip</Button>
           <Button
             onClick={handleLogout}

@@ -1,15 +1,18 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useQueryState } from 'nuqs';
 import { useEffect, useState } from 'react';
+import { TagEntity } from '../../tagManagement/types/TagEntity';
 import TipEntity from '../types/TipEntity';
 
 type Props = {
   tipsFromPage: TipEntity[];
+  tags: TagEntity[];
 };
 
-export default function TipSearchedList({ tipsFromPage }: Props) {
+export default function TipSearchedList({ tags, tipsFromPage }: Props) {
   const [name] = useQueryState('name');
   const [tips, setTips] = useState(tipsFromPage);
 
@@ -26,12 +29,41 @@ export default function TipSearchedList({ tipsFromPage }: Props) {
   }, [name]);
 
   return (
-    <div className="grid grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
       {tips.map((tip) => (
-        <Link href={`/tips/${tip.slug}`} key={tip.id}>
-          <div className="bg-white rounded-lg shadow-md p-4 hover:bg-gray-200">
-            <h2 className="text-xl font-bold">{tip.title}</h2>
-            <p className="mt-2">{tip.description}</p>
+        <Link
+          href={`/tips/${tip.slug}`}
+          key={tip.id}
+          className="bg-white dark:bg-gray-950 rounded-lg shadow-md overflow-hidden"
+        >
+          {tip.mediaURL && (
+            <Image
+              src={tip.mediaURL}
+              alt={tip.title}
+              width={400}
+              height={250}
+              className="w-full h-48 object-cover"
+            />
+          )}
+          <div className="p-4">
+            <h2 className="text-lg font-semibold mb-2">{tip.title}</h2>
+            <p className="text-gray-500 dark:text-gray-400 mb-4">
+              {tip.description}
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {tags.map((tag, index) => {
+                if (!tip.tagIDs.includes(tag.id)) return null;
+
+                return (
+                  <span
+                    key={index}
+                    className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-2 py-1 rounded-md text-xs"
+                  >
+                    {tag.name}
+                  </span>
+                );
+              })}
+            </div>
           </div>
         </Link>
       ))}
