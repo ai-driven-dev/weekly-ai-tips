@@ -1,5 +1,6 @@
 'use client';
 
+import { Badge } from '@/components/ui/badge';
 import {
   Table,
   TableBody,
@@ -54,7 +55,13 @@ export default function UserList({ users }: Props): React.ReactElement {
                   {user.email}
                 </a>
               </TableCell>
-              <TableCell>{user.roles.join(', ')}</TableCell>
+              <TableCell>
+                {user.roles.map((r) => (
+                  <Badge key={r} variant="outline">
+                    {r}
+                  </Badge>
+                ))}
+              </TableCell>
               <TableCell>{user.createdAt.toLocaleString()}</TableCell>
               <TableCell>{user.updatedAt.toLocaleString()}</TableCell>
               <TableCell>

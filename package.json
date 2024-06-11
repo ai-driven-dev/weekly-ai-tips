@@ -7,7 +7,7 @@
     "doc": "typedoc --options typedoc.json --commentStyle block",
     "doc:watch": "nodemon",
     "doc:export": "curl -s https://raw.githubusercontent.com/alexsoyes/ai-driven-dev-community/main/scripts/project-documentation-typescript.sh | sh",
-    "doc:structure": "curl -s https://raw.githubusercontent.com/alexsoyes/ai-driven-dev-community/main/scripts/project-structure.sh | EXCLUDE='documentation' sh",
+    "doc:structure": "curl -s https://raw.githubusercontent.com/alexsoyes/ai-driven-dev-community/main/scripts/project-structure.sh | EXCLUDE='documentation|.swc|run|.husky' sh",
     "dev": "source .env.local && next dev",
     "build": "next build",
     "start": "next start",

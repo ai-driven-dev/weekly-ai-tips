@@ -11,8 +11,11 @@ type Props = {
   tipsFromPage: TipEntity[];
   tags: TagEntity[];
 };
-
-export default function TipSearchedList({ tags, tipsFromPage }: Props) {
+// Container Component
+export default function TipSearchedListContainer({
+  tags,
+  tipsFromPage,
+}: Props) {
   const [name] = useQueryState('name');
   const [tips, setTips] = useState(tipsFromPage);
 
@@ -28,6 +31,17 @@ export default function TipSearchedList({ tags, tipsFromPage }: Props) {
     fetchTips();
   }, [name]);
 
+  return <TipSearchedListPresenter tags={tags} tips={tips} />;
+}
+
+// Presenter Component
+export function TipSearchedListPresenter({
+  tags,
+  tips,
+}: {
+  tags: TagEntity[];
+  tips: TipEntity[];
+}) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
       {tips.map((tip) => (

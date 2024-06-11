@@ -1,5 +1,6 @@
 import { authMiddleware, redirectToLogin } from 'next-firebase-auth-edge';
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
+import { QUERY_PARAM_NAME } from './src/constants/Query';
 
 const {
   NODE_ENV,
@@ -18,24 +19,44 @@ if (
   throw new Error('One or more environment variables are undefined.');
 }
 
+const COOKIE_NAME = 'AuthToken';
+
 export const config = {
-  matcher: ['/api/login', '/api/logout', '/api/entities/:path*'],
+  matcher: ['/dashboard', '/api/login', '/api/logout', '/api/entities/:path*'],
 };
 
 export async function middleware(request: NextRequest) {
+  const allowedEmails = process.env.ALLOWED_EMAILS?.split(',') || [];
+
   return authMiddleware(request, {
     loginPath: '/api/login',
     logoutPath: '/api/logout',
     apiKey: NEXT_PUBLIC_FIREBASE_API_KEY!,
-    cookieName: 'AuthToken',
+    cookieName: COOKIE_NAME,
     cookieSignatureKeys: ['secret1', 'secret2'],
-    // debug: NODE_ENV !== "production",
+    // debug: NODE_ENV !== 'production',
     cookieSerializeOptions: {
       path: '/',
       httpOnly: true,
       secure: NODE_ENV === 'production', // Set this to true on HTTPS environments
       sameSite: 'lax' as const,
       maxAge: 12 * 60 * 60 * 24, // twelve days
+    },
+    handleValidToken: async ({ decodedToken: { email } }, headers) => {
+      if (!email || !allowedEmails.includes(email)) {
+        console.error('Unauthorized access', { email });
+        return redirectToLogin(request, {
+          path: '/login',
+          publicPaths: ['/login'],
+          redirectParamKeyName: QUERY_PARAM_NAME,
+        });
+      }
+
+      return NextResponse.next({
+        request: {
+          headers,
+        },
+      });
     },
     handleInvalidToken: async (reason) => {
       console.error('Missing or malformed credentials', { reason });

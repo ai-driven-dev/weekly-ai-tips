@@ -1,11 +1,17 @@
 'use client';
 
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
 import Title from '@/components/ui/title';
+import { QUERY_PARAM_NAME } from '@/src/constants/Query';
+import { AlertCircle } from 'lucide-react';
+import { useSearchParams } from 'next/navigation';
 import { useUserAuthentication } from '../../userManagement/hooks/useUserAuthentication';
 
 export default function Login() {
   const { login } = useUserAuthentication();
+  const searchParams = useSearchParams();
+  const isForbidden = !!searchParams.get(QUERY_PARAM_NAME);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-100 dark:bg-gray-900">
@@ -13,19 +19,32 @@ export default function Login() {
         <div className="space-y-6">
           <div className="space-y-2 text-center">
             <Title>Sign in to continue</Title>
-            <p>
-              Sign in to access your dashboard and manage your tips, drafts, and
-              more.
-            </p>
+            {isForbidden ? (
+              <Alert variant="destructive">
+                <AlertCircle className="h-4 w-4" />
+                <AlertTitle>Error</AlertTitle>
+                <AlertDescription>
+                  You are not allowed to access the dashboard, ask for
+                  whitelisting.
+                </AlertDescription>
+              </Alert>
+            ) : (
+              <>
+                <p className="pb-6 text-sm">
+                  Sign in to access your dashboard and manage your tips, drafts,
+                  and more.
+                </p>
+                <Button
+                  onClick={login}
+                  variant="outline"
+                  className="w-full flex items-center justify-center gap-2"
+                >
+                  <ChromeIcon />
+                  Sign in with Google
+                </Button>
+              </>
+            )}
           </div>
-          <Button
-            onClick={login}
-            variant="outline"
-            className="w-full flex items-center justify-center gap-2"
-          >
-            <ChromeIcon />
-            Sign in with Google
-          </Button>
         </div>
       </div>
     </div>
