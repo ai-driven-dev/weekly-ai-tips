@@ -7,12 +7,16 @@ import {
   signInWithPopup,
   signOut,
 } from 'firebase/auth';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 export const useUserAuthentication = () => {
   // TODO: Use EntityUser instead of User from Firebase
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
+  const { push } = useRouter();
+  const searchParams = useSearchParams();
+  const shouldRedirectTo = searchParams.get('redirect');
 
   /**
    * @param {User | null} firebaseUser - The authenticated user object from Firebase
@@ -22,11 +26,15 @@ export const useUserAuthentication = () => {
       const idTokenResult = await firebaseUser.getIdTokenResult();
 
       // Send a request to the server to set authenticated user cookies
-      await fetch('/api/login', {
+      const isLogged = await fetch('/api/login', {
         headers: {
           Authorization: `Bearer ${idTokenResult.token}`,
         },
       });
+
+      if (isLogged.status !== 200 || shouldRedirectTo) {
+        return push('/dashboard');
+      }
 
       setLoading(false);
       setUser(firebaseUser);
@@ -82,6 +90,7 @@ export const useUserAuthentication = () => {
     const subscription = onIdTokenChanged(getAuth(), handleIdTokenChanged);
 
     return () => subscription();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return {
