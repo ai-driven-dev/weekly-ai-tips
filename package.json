@@ -1,5 +1,6 @@
 {
   "name": "weekly-ai-tips",
+  "description": "A webapp that displays weekly posts for developers with AI tips and tricks.",
   "version": "0.1.0",
   "private": true,
   "license": "UNLICENSED",

@@ -62,8 +62,8 @@ export async function middleware(request: NextRequest) {
       console.error('Missing or malformed credentials', { reason });
 
       return redirectToLogin(request, {
-        path: '/',
-        publicPaths: ['/'],
+        path: '/login',
+        publicPaths: ['/login'],
       });
     },
     serviceAccount: {
