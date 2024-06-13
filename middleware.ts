@@ -39,9 +39,7 @@ export const options: GetTokensOptions = {
   serviceAccount: {
     projectId: NEXT_PUBLIC_FIREBASE_PROJECT_ID!,
     clientEmail: FIREBASE_CLIENT_EMAIL!,
-    privateKey: FIREBASE_PRIVATE_KEY
-      ? FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n')
-      : '',
+    privateKey: FIREBASE_PRIVATE_KEY?.replace(/\\n/g, '\n') ?? '',
   },
   cookieSignatureKeys: ['secret1', 'secret2'],
 };
