@@ -33,7 +33,7 @@ if (admin.apps.length === 0) {
  * const docRef = db.collection("users").doc("alex");
  * ```
  */
-export const db = admin.firestore();
+const db = admin.firestore();
 
 /**
  * The Firebase Admin SDK instance.
@@ -45,6 +45,6 @@ export const db = admin.firestore();
  * import { admin } from "@/firebaseAdmin";
  * ```
  */
-export const adminAuth = getAuth();
+const adminAuth = getAuth();
 
-export { admin };
+export { admin, adminAuth, db };

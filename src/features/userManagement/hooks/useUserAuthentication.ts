@@ -32,12 +32,13 @@ export const useUserAuthentication = () => {
         },
       });
 
-      if (isLogged.status !== 200 || shouldRedirectTo) {
-        return push('/dashboard');
-      }
-
       setLoading(false);
       setUser(firebaseUser);
+
+      if (isLogged.status !== 200 || shouldRedirectTo) {
+        return push(shouldRedirectTo || '/dashboard');
+      }
+
       return;
     }
 

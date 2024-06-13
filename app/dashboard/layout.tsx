@@ -12,11 +12,9 @@ import { Toaster } from '@/components/ui/toaster';
 import Header from '@/src/features/dashboard/components/Header';
 import Navigation from '@/src/features/dashboard/components/Navigation';
 import { ReloadIcon } from '@radix-ui/react-icons';
-import { useRouter } from 'next/navigation';
 
 const Layout = ({ children }: LayoutProps) => {
-  const { user, loading } = useUserAuthentication();
-  const { push } = useRouter();
+  const { loading } = useUserAuthentication();
 
   if (loading) {
     // Show loading indicator or any placeholder content during auth loading state
@@ -24,16 +22,6 @@ const Layout = ({ children }: LayoutProps) => {
       <div className="flex items-center justify-center h-screen bg-black text-white">
         <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
         Loading...
-      </div>
-    );
-  }
-
-  if (!loading && !user) {
-    push('/login');
-    // Redirect to login page if the user is not authenticated
-    return (
-      <div className="flex items-center justify-center h-screen bg-black text-white">
-        <p>You are not authenticated. Redirecting to login page...</p>
       </div>
     );
   }

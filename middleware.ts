@@ -1,4 +1,5 @@
 import { authMiddleware, redirectToLogin } from 'next-firebase-auth-edge';
+import { GetTokensOptions } from 'next-firebase-auth-edge/lib/next/tokens';
 import { NextRequest, NextResponse } from 'next/server';
 import { QUERY_PARAM_NAME } from './src/constants/Query';
 
@@ -25,15 +26,26 @@ export const config = {
   matcher: ['/dashboard', '/api/login', '/api/logout', '/api/entities/:path*'],
 };
 
+export const options: GetTokensOptions = {
+  apiKey: NEXT_PUBLIC_FIREBASE_API_KEY!,
+  cookieName: COOKIE_NAME,
+  serviceAccount: {
+    projectId: NEXT_PUBLIC_FIREBASE_PROJECT_ID!,
+    clientEmail: FIREBASE_CLIENT_EMAIL!,
+    privateKey: FIREBASE_PRIVATE_KEY
+      ? FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n')
+      : '',
+  },
+  cookieSignatureKeys: ['secret1', 'secret2'],
+};
+
 export async function middleware(request: NextRequest) {
   const allowedEmails = process.env.ALLOWED_EMAILS?.split(',') || [];
 
   return authMiddleware(request, {
+    ...options,
     loginPath: '/api/login',
     logoutPath: '/api/logout',
-    apiKey: NEXT_PUBLIC_FIREBASE_API_KEY!,
-    cookieName: COOKIE_NAME,
-    cookieSignatureKeys: ['secret1', 'secret2'],
     // debug: NODE_ENV !== 'production',
     cookieSerializeOptions: {
       path: '/',
@@ -65,13 +77,6 @@ export async function middleware(request: NextRequest) {
         path: '/login',
         publicPaths: ['/login'],
       });
-    },
-    serviceAccount: {
-      projectId: NEXT_PUBLIC_FIREBASE_PROJECT_ID!,
-      clientEmail: FIREBASE_CLIENT_EMAIL!,
-      privateKey: FIREBASE_PRIVATE_KEY
-        ? FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n')
-        : '',
     },
   });
 }

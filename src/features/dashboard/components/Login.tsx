@@ -5,18 +5,13 @@ import { Button } from '@/components/ui/button';
 import Title from '@/components/ui/title';
 import { QUERY_PARAM_NAME } from '@/src/constants/Query';
 import { AlertCircle } from 'lucide-react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 import { useUserAuthentication } from '../../userManagement/hooks/useUserAuthentication';
 
 export default function Login() {
-  const { login, user } = useUserAuthentication();
+  const { login } = useUserAuthentication();
   const searchParams = useSearchParams();
   const isForbidden = !!searchParams.get(QUERY_PARAM_NAME);
-  const { push } = useRouter();
-
-  if (user) {
-    push('/dashboard');
-  }
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-100 dark:bg-gray-900">
