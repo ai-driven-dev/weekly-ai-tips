@@ -28,7 +28,7 @@ const Title: React.FC<TitleProps> = ({
 
   return (
     <Heading
-      className={`${sizeClasses} font-bold font-serif leading-snug mt-4 mb-8`}
+      className={`${sizeClasses} font-bold font-serif leading-snug mt-4 mb-6`}
     >
       {children}
     </Heading>

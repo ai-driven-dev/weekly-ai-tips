@@ -22,8 +22,15 @@ if (
 
 const COOKIE_NAME = 'AuthToken';
 
+const PROTECTED_PATHS = [
+  '/dashboard',
+  '/api/login',
+  '/api/logout',
+  '/api/entities',
+];
+
 export const config = {
-  matcher: ['/dashboard', '/api/login', '/api/logout', '/api/entities/:path*'],
+  matcher: ['/:path*'],
 };
 
 export const options: GetTokensOptions = {
@@ -42,6 +49,22 @@ export const options: GetTokensOptions = {
 export async function middleware(request: NextRequest) {
   const allowedEmails = process.env.ALLOWED_EMAILS?.split(',') || [];
 
+  // Store current request url in a custom header, which you can read later
+  const requestHeaders = new Headers(request.headers);
+  const currentURL = request.url;
+  const currentPath = new URL(currentURL).pathname;
+  requestHeaders.set('x-path', currentPath);
+
+  // Public middleware.
+  if (!PROTECTED_PATHS.includes(currentPath)) {
+    return NextResponse.next({
+      request: {
+        headers: requestHeaders,
+      },
+    });
+  }
+
+  // Private middleware.
   return authMiddleware(request, {
     ...options,
     loginPath: '/api/login',

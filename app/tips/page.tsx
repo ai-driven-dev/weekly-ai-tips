@@ -12,8 +12,12 @@ export default async function TipsPage() {
   return (
     <>
       <Suspense>
-        <div className="flex items-center justify-between">
-          <Title>AI tips for developers</Title>
+        <div className="flex flex-col items-center justify-center pb-8 gap-3">
+          <Title>Weekly AI tips (for developers)</Title>
+          <p>
+            Every Monday at 9am, discover a brand new developer tip to better
+            use AI.
+          </p>
           <TipSearchForm />
         </div>
         <TipSearchedList tags={tags} tipsFromPage={tips} />
