@@ -69,7 +69,6 @@ function indexFilesContainingText() {
   addToIndex ${uniqueFiles[@]}
 }
 
-
 #
 # Indexes all files in the given directory.
 #
