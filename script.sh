@@ -1,5 +1,9 @@
 #!/bin/bash
 #
+# Run:
+#   chmod +x script.sh
+#   export OPENAI_API_KEY="" && ./script.sh
+#
 # This script demonstrates how to use an AI to interact with your codebase.
 # It uses the 'aider' CLI to prompt the AI with a message and a list of files.
 #
@@ -7,8 +11,8 @@
 #   addToIndex ./src/features/tagManagement/api/tagManager.ts
 #   prompt "for each function in the file, create a new separate file with that function."
 
-# Global variables
-export OLLAMA_API_BASE=http://127.0.0.1:11434
+# Proxy: Uncomment to use local LLM from Ollama
+#export OLLAMA_API_BASE=http://127.0.0.1:11434
 
 # Arrays
 declare -a filesToIndex 
@@ -129,13 +133,22 @@ function prompt() {
   
   echo -e "🚀 Prompting AI with message:\n---\n$message\n---"
 
-  aider --yes \
-      --no-auto-test \
-      --no-dirty-commits \
-      --no-auto-commits \
-      --model "$model" \
-      --message="$message" \
-      "$(getFilesToIndex)"
+  if [ -n "$OLLAMA_API_BASE" ]; then
+    aider --yes \
+          --no-auto-test \
+          --no-dirty-commits \
+          --no-auto-commits \
+          --model "$model" \
+          --message="$message" \
+          "$(getFilesToIndex)"
+  else
+    aider --yes \
+          --no-auto-test \
+          --no-dirty-commits \
+          --no-auto-commits \
+          --message="$message" \
+          "$(getFilesToIndex)"
+  fi
 }
 
 #
