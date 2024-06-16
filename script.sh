@@ -64,8 +64,6 @@ function indexFilesContainingText() {
   local files=$(eval $cmd)
   local uniqueFiles=$(echo "$files" | sort | uniq)
 
-  echo "Found files $text,$extension: $files"
-
   addToIndex ${uniqueFiles[@]}
 }
 
@@ -128,16 +126,16 @@ function prompt() {
   fi
 
   local message=$1
-
-  # display indexed files that will be prompted to the AI
-  echo "📦 Files to index: $(getFilesToIndex)"
-  echo "🚀 Prompting AI with message: $message"
+  
+  echo -e "🚀 Prompting AI with message:\n---\n$message\n---"
 
   aider --yes \
-        --no-auto-commits \
-        --model "$model" \
-        --message="$message" \
-        "${filesToIndex[@]}"
+      --no-auto-test \
+      --no-dirty-commits \
+      --no-auto-commits \
+      --model "$model" \
+      --message="$message" \
+      "$(getFilesToIndex)"
 }
 
 #
@@ -167,7 +165,7 @@ function getFilesToIndex() {
 function formatOuputPaths() {
   local paths="$1"
 
-  echo $paths | tr ' ' '\n' | sed 's/^/- /'
+  echo $paths | tr ' ' '\n' # | sed 's/^/- /'
 }
 
 #
@@ -180,12 +178,6 @@ param1=$(formatOuputPaths "$filePaths")
 
 indexFilesContainingText "tagManager" "*.ts*"
 param2=$(formatOuputPaths "$(getFilesToIndex)")
-
-# Check that params are not empty
-if [ -z "$param1" ] || [ -z "$param2" ]; then
-  echo "😌 No params here."
-  exit 1
-fi
 
 message=$(cat <<EOF
 The "tagManager" file does not exist anymore and you need to update your imports and references.
