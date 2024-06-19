@@ -166,16 +166,16 @@ function getFilesToIndex() {
 }
 
 #
-# Formats the output paths.
+# Formats the array to string.
 #
 # Parameters:
-#   $1: The paths to format.
+#   $1: The array to format.
 # Example:
-#   formatOuputPaths "file1 file2 file3"
+#   arrayToString "file1 file2 file3"
 # Returns:
 #   A list of formatted paths, like: "file1\nfile2\nfile3"
 #
-function formatOuputPaths() {
+function arrayToString() {
   local paths="$1"
 
   echo $paths | tr ' ' '\n' # | sed 's/^/- /'
@@ -187,10 +187,10 @@ function formatOuputPaths() {
 reset
 
 filePaths=$(listFilePathsInDirectory "./src/features/tagManagement/api" "*.ts")
-param1=$(formatOuputPaths "$filePaths")
+param1=$(arrayToString "$filePaths")
 
 indexFilesContainingText "tagManager" "*.ts*"
-param2=$(formatOuputPaths "$(getFilesToIndex)")
+param2=$(arrayToString "$(getFilesToIndex)")
 
 message=$(cat <<EOF
 The "tagManager" file does not exist anymore and you need to update your imports and references.
