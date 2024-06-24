@@ -36,6 +36,10 @@ export default function TipDownVoteButton({ tipId, ...buttonProps }: Props) {
     }
   }, [state]);
 
+  if (!user?.uid) {
+    return null;
+  }
+
   return (
     <form action={action}>
       <input type="hidden" name="tipId" value={tipId} />
