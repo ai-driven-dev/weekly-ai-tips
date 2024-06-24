@@ -1,7 +1,7 @@
 'use client';
 
 import { useUserAuthentication } from '@/src/features/userManagement/hooks/useUserAuthentication';
-import { ReactNode } from 'react';
+import { ReactNode, Suspense } from 'react';
 
 export type LayoutProps = {
   children: ReactNode;
@@ -42,4 +42,10 @@ const Layout = ({ children }: LayoutProps) => {
   );
 };
 
-export default Layout;
+const LazyLayout = ({ children }: LayoutProps) => (
+  <Suspense fallback={<div>Loading...</div>}>
+    <Layout>{children}</Layout>
+  </Suspense>
+);
+
+export default LazyLayout;
