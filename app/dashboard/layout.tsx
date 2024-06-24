@@ -10,13 +10,19 @@ export type LayoutProps = {
 import { cn } from '@/components/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
 import Header from '@/src/features/dashboard/components/Header';
+import Login from '@/src/features/dashboard/components/Login';
 import Navigation from '@/src/features/dashboard/components/Navigation';
 import { ReloadIcon } from '@radix-ui/react-icons';
 
 const Layout = ({ children }: LayoutProps) => {
-  const { loading } = useUserAuthentication();
+  const { loading, user } = useUserAuthentication();
 
-  if (loading) {
+  if (!loading && !user) {
+    // Redirect unauthenticated users to the login page
+    return <Login />;
+  }
+
+  if (loading || !user) {
     // Show loading indicator or any placeholder content during auth loading state
     return (
       <div className="flex items-center justify-center h-screen bg-black text-white">

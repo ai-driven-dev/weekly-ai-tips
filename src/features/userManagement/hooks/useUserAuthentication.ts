@@ -26,7 +26,7 @@ export const useUserAuthentication = () => {
       const idTokenResult = await firebaseUser.getIdTokenResult();
 
       // Send a request to the server to set authenticated user cookies
-      const isLogged = await fetch('/api/login', {
+      await fetch('/api/login', {
         headers: {
           Authorization: `Bearer ${idTokenResult.token}`,
         },
@@ -35,8 +35,8 @@ export const useUserAuthentication = () => {
       setLoading(false);
       setUser(firebaseUser);
 
-      if (isLogged.status !== 200 || shouldRedirectTo) {
-        return push(shouldRedirectTo || '/dashboard');
+      if (shouldRedirectTo) {
+        return push(shouldRedirectTo);
       }
 
       return;
