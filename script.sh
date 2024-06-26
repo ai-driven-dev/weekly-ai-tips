@@ -12,7 +12,7 @@
 #   prompt "for each function in the file, create a new separate file with that function."
 
 # Proxy: Uncomment to use local LLM from Ollama
-#export OLLAMA_API_BASE=http://127.0.0.1:11434
+export OLLAMA_API_BASE=http://127.0.0.1:11434
 
 # Arrays
 declare -a filesToIndex 
@@ -46,6 +46,14 @@ function reset() {
 #   None
 #
 function addToIndex() {
+
+  for file in "$@"; do
+    if [ ! -f "$file" ]; then
+      echo "Error: File '$file' does not exist."
+      exit 1
+    fi
+  done
+
   filesToIndex+=("$@")
 }
 
@@ -182,16 +190,58 @@ function arrayToString() {
 }
 
 #
+# Pause the interaction with the AI and ask the user if he wants to continue.
+#
+# Parameters:
+#   None
+# Example:
+#   shouldContinue
+# Returns:
+#   None
+#
+function shouldContinue() {
+  echo ">>> 🛑 Review AI changes before next prompt. 🛑"
+  read -p "Do you want to continue? [y/N] " -n 1 -r
+  echo ""
+
+  if [[ $REPLY =~ ^[Yy]$ ]]; then
+    echo "Continuing..."
+  else
+    echo "Aborting..."
+    exit 1
+  fi
+}
+
+
+#
 # Main
+#
+
+#
+# 1) Split "tagManager" into multiple files.
 #
 reset
 
+addToIndex "./src/features/tagManagement/api/tagManager.ts"
+prompt "for each function, create a new separate file for those functions."
+
+# npm run typecheck
+shouldContinue
+
+#
+# 2) Change imports and references in all files.
+#
+reset
+
+# Get paths of newly created files.
 filePaths=$(listFilePathsInDirectory "./src/features/tagManagement/api" "*.ts")
 param1=$(arrayToString "$filePaths")
 
+# List all files containing "tagManager".
 indexFilesContainingText "tagManager" "*.ts*"
 param2=$(arrayToString "$(getFilesToIndex)")
 
+# Prompting
 message=$(cat <<EOF
 The "tagManager" file does not exist anymore and you need to update your imports and references.
 
