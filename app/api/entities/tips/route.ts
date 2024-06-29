@@ -13,7 +13,7 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    const tips = await fetchTips('ready', name);
+    const tips = await fetchTips('published', name);
     return NextResponse.json(tips);
   } catch (error) {
     return NextResponse.json(

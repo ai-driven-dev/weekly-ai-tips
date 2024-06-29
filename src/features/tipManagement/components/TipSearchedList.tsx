@@ -25,11 +25,13 @@ export default function TipSearchedListContainer({
         const response = await fetch(`/api/entities/tips?name=${name}`);
         const data = await response.json();
         setTips(data);
+      } else {
+        setTips(tipsFromPage);
       }
     };
 
     fetchTips();
-  }, [name]);
+  }, [name, tipsFromPage]);
 
   return <TipSearchedListPresenter tags={tags} tips={tips} />;
 }
