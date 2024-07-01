@@ -1,4 +1,4 @@
-import Title from '@/components/ui/title';
+import Title from '@/src/components/ui/title';
 import { fetchUsers } from '@/src/features/userManagement/api/fetchUsers';
 import UserList from '@/src/features/userManagement/components/UsersList';
 

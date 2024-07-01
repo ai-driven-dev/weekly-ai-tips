@@ -6,7 +6,7 @@
  * persisting the tip data to the database, and revalidating the path to reflect the changes.
  */
 
-import { Toast } from '@/components/ui/use-toast';
+import { Toast } from '@/src/components/ui/use-toast';
 import { revalidatePath } from 'next/cache';
 import { uploadFirestoreImage } from '../../../utils/firestore/uploadFirestoreImage';
 import createTip from '../api/createTip';

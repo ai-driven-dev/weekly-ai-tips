@@ -1,10 +1,10 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
-import { Checkbox } from '@/components/ui/checkbox';
-import InputWithLabel from '@/components/ui/inputWithLabel';
-import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
-import { useToast } from '@/components/ui/use-toast';
+import { Button } from '@/src/components/ui/button';
+import { Checkbox } from '@/src/components/ui/checkbox';
+import InputWithLabel from '@/src/components/ui/inputWithLabel';
+import { ToggleGroup, ToggleGroupItem } from '@/src/components/ui/toggle-group';
+import { useToast } from '@/src/components/ui/use-toast';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';

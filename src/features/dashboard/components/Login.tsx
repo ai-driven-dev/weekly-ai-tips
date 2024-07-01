@@ -1,8 +1,8 @@
 'use client';
 
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { Button } from '@/components/ui/button';
-import Title from '@/components/ui/title';
+import { Alert, AlertDescription, AlertTitle } from '@/src/components/ui/alert';
+import { Button } from '@/src/components/ui/button';
+import Title from '@/src/components/ui/title';
 import { QUERY_PARAM_NAME } from '@/src/constants/Query';
 import { AlertCircle } from 'lucide-react';
 import { useSearchParams } from 'next/navigation';

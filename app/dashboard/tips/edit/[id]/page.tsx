@@ -1,4 +1,4 @@
-import Title from '@/components/ui/title';
+import Title from '@/src/components/ui/title';
 import { fetchTags } from '@/src/features/tagManagement/api/tagManager';
 import { fetchTip } from '@/src/features/tipManagement/api/fetchTip';
 import TipForm from '@/src/features/tipManagement/components/TipForm';

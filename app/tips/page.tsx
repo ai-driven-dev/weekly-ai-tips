@@ -1,8 +1,8 @@
-import Title from '@/components/ui/title';
+import Title from '@/src/components/ui/title';
 import { fetchTags } from '@/src/features/tagManagement/api/tagManager';
 import { fetchTips } from '@/src/features/tipManagement/api/fetchTips';
-import TipSearchForm from '@/src/features/tipManagement/components/TipSearchForm';
-import TipSearchedList from '@/src/features/tipManagement/components/TipSearchedList';
+import TipSearchForm from '@/src/features/tipManagement/components/public/TipSearchForm';
+import TipSearchedList from '@/src/features/tipManagement/components/public/TipSearchedList';
 import { Suspense } from 'react';
 
 export default async function TipsPage() {

@@ -7,8 +7,8 @@ export type LayoutProps = {
   children: ReactNode;
 };
 
-import { cn } from '@/components/lib/utils';
-import { Toaster } from '@/components/ui/toaster';
+import { cn } from '@/src/components/lib/utils';
+import { Toaster } from '@/src/components/ui/toaster';
 import Header from '@/src/features/dashboard/components/Header';
 import Login from '@/src/features/dashboard/components/Login';
 import Navigation from '@/src/features/dashboard/components/Navigation';

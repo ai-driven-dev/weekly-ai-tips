@@ -4,8 +4,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useQueryState } from 'nuqs';
 import { useEffect, useState } from 'react';
-import { TagEntity } from '../../tagManagement/types/TagEntity';
-import TipEntity from '../types/TipEntity';
+import { TagEntity } from '../../../tagManagement/types/TagEntity';
+import TipEntity from '../../types/TipEntity';
 
 type Props = {
   tipsFromPage: TipEntity[];

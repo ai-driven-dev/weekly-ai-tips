@@ -1,6 +1,6 @@
 'use server';
 
-import { Toast } from '@/components/ui/use-toast';
+import { Toast } from '@/src/components/ui/use-toast';
 import { revalidatePath } from 'next/cache';
 import updateTip from '../api/updateTip';
 import { TipFormType } from '../types/TipEntity';

@@ -1,13 +1,13 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
+import { Button } from '@/src/components/ui/button';
 import {
   Table,
   TableBody,
   TableCell,
   TableHeader,
   TableRow,
-} from '@/components/ui/table';
+} from '@/src/components/ui/table';
 import { TagEntity } from '@/src/features/tagManagement/types/TagEntity';
 import { deleteTagAction } from '../actions/deleteTagAction';
 

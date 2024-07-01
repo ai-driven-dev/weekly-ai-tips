@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button';
+import { Button } from '@/src/components/ui/button';
 import { useUserAuthentication } from '@/src/features/userManagement/hooks/useUserAuthentication';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';

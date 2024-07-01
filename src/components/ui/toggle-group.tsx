@@ -1,10 +1,10 @@
-import { Label } from '@/components/ui/label';
+import { Label } from '@/src/components/ui/label';
 
 import * as ToggleGroupPrimitive from '@radix-ui/react-toggle-group';
 import { VariantProps } from 'class-variance-authority';
 import * as React from 'react';
 
-import { toggleVariants } from '@/components/ui/toggle';
+import { toggleVariants } from '@/src/components/ui/toggle';
 import { cn } from '../lib/utils';
 
 const ToggleGroupContext = React.createContext<

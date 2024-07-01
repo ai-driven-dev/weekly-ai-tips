@@ -1,8 +1,8 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
-import InputWithLabel from '@/components/ui/inputWithLabel';
-import { useToast } from '@/components/ui/use-toast';
+import { Button } from '@/src/components/ui/button';
+import InputWithLabel from '@/src/components/ui/inputWithLabel';
+import { useToast } from '@/src/components/ui/use-toast';
 import { useRouter } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { useFormState } from 'react-dom';

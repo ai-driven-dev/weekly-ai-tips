@@ -1,6 +1,6 @@
 'use server';
 
-import Title from '@/components/ui/title';
+import Title from '@/src/components/ui/title';
 import { fetchTags } from '@/src/features/tagManagement/api/tagManager';
 import TagForm from '@/src/features/tagManagement/components/TagForm';
 import TagsList from '@/src/features/tagManagement/components/TagsList';
