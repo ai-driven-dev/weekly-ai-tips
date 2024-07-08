@@ -38,7 +38,7 @@
     "@vercel/speed-insights": "^1.0.12",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "firebase": "^10.12.2",
+    "firebase": "^10.12.3",
     "firebase-admin": "^12.2.0",
     "lucide-react": "^0.401.0",
     "next": "^14.2.4",
@@ -46,17 +46,17 @@
     "nuqs": "^1.17.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "tailwind-merge": "^2.3.0",
+    "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
-    "@testing-library/dom": "^10.3.0",
+    "@testing-library/dom": "^10.3.1",
     "@testing-library/jest-dom": "^6.4.6",
     "@testing-library/react": "^16.0.0",
     "@types/jest": "^29.5.12",
-    "@types/node": "^20.14.9",
+    "@types/node": "^20.14.10",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
@@ -81,7 +81,7 @@
     "ts-jest": "^29.1.5",
     "ts-node": "^10.9.2",
     "typedoc": "^0.26.3",
-    "typedoc-plugin-markdown": "^4.1.1",
+    "typedoc-plugin-markdown": "^4.1.2",
     "typescript": "^5.5.3"
   }
 }
