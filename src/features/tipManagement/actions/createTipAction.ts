@@ -38,7 +38,7 @@ export async function createTipAction(
         : ('draft' as TipEntity['status']),
     mediaFile: formData.get('mediaFile') as File | 'undefined' | undefined,
     tagIDs: (formData.get('tagIDs') as string)
-      .split(',')
+      ?.split(',')
       .map((id) => id.trim()),
   };
 
