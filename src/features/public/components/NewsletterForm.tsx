@@ -1,11 +1,12 @@
 'use client';
 
 import { Button } from '@/src/components/ui/button';
-import { Input } from '@/src/components/ui/input';
 import { useToast } from '@/src/components/ui/use-toast';
 import { useEffect, useRef, useState } from 'react';
 import { useFormState } from 'react-dom';
 
+import InputWithLabel from '@/src/components/ui/inputWithLabel';
+import { Toaster } from '@/src/components/ui/toaster';
 import { useRouter } from 'next/navigation';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { createNewsletterAction } from '../actions/NewsletterAction';
@@ -54,14 +55,16 @@ export default function NewsletterForm() {
     <>
       <form className="mt-8 mb-12 rounded-lg bg-card p-6" action={formAction}>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          <Input
+          <InputWithLabel
+            label="Username"
             name="username"
             type="text"
             placeholder="Username"
             className="col-span-1"
             required
           />
-          <Input
+          <InputWithLabel
+            label="Email"
             name="email"
             type="email"
             placeholder="Email"
@@ -81,6 +84,7 @@ export default function NewsletterForm() {
           />
         </div>
       </form>
+      <Toaster />
     </>
   );
 }
