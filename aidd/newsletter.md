@@ -43,22 +43,29 @@
 - [x] Add a form to the homepage that allows users to sign up for the newsletter.
   - [x] The form should include fields for the user's name and email address.
   - [x] The form should include a submit button.
-  - [ ] The form should include a ReCAPTCHA checkbox.
+  - [x] The form should include a ReCAPTCHA checkbox.
 
 #### ReCAPTCHA Integration
 
-- [ ] Add ReCAPTCHA keys to the project from `NEXT_PUBLIC_RECAPTCHA_KEY` (and `RECAPTCHA_SECRET`?).
+- [x] Add ReCAPTCHA keys to the project from `NEXT_PUBLIC_RECAPTCHA_KEY` (and `RECAPTCHA_SECRET`?).
 
 #### Client-Side Validation
 
+We will validate the form in the Action, then change the state of the action to return an error messages array if the validation fails.
+
+- [ ] Create a new "Error" component to display error messages.
+  - [ ] Params are: key: string, messages: ErrorMessage[]
+  - [ ] ErrorMessage is: message: string, type: ErrorType
+  - [ ] ErrorType is: ErrorType.Required | ErrorType.InvalidEmail | ErrorType.ReCAPTCHA
+  - [ ] The component should render the message based on the type and key.
 - [ ] Add client-side validation to the form to ensure that the user's name and email address are provided.
 - [ ] Add client-side validation to the form to ensure that the ReCAPTCHA checkbox is checked.
 
 #### User Experience
 
-- [ ] Add a loading spinner to the form while the submission is in progress and disable the submit button.
-  - [ ] It should use the `useFormStatus` from the latest version of `react-dom`.
-  - [ ] Use existing component named `InputWithLabel`.
+- [x] Add a loading spinner to the form while the submission is in progress and disable the submit button.
+  - [x] It should use the `useFormStatus` from the latest version of `react-dom`.
+  - [x] Use existing component named `InputWithLabel`.
 
 ## Homepage Design, Layout and Copywriting
 
