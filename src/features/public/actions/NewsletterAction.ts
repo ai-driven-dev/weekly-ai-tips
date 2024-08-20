@@ -1,6 +1,6 @@
 'use server';
 
-import { createNewsletterSubscription } from '../api/createNewsletterSubscription';
+import { subscribeUser } from '../api/subscribeUser';
 import { verifyCaptcha } from '../api/verifyCaptcha';
 
 export async function createNewsletterAction(
@@ -20,7 +20,5 @@ export async function createNewsletterAction(
     throw new Error('ReCAPTCHA verification failed');
   }
 
-  const persistedData = await createNewsletterSubscription(data);
-
-  return persistedData;
+  return await subscribeUser(data);
 }

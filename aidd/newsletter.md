@@ -11,7 +11,7 @@
 - [After Form submission : Frontend](#after-form-submission--frontend)
   - [Success Handling](#success-handling)
 - [Form submission : Backend](#form-submission--backend)
-  - [Endpoint Creation](#endpoint-creation)
+  - [User Creation on Firestore](#user-creation-on-firestore)
   - [Email Handling](#email-handling)
 - [Email](#email)
   - [Create the mailer functions](#create-the-mailer-functions)
@@ -19,9 +19,9 @@
   - [Security](#security)
 - [Confirm user subscription](#confirm-user-subscription)
   - [Email Template](#email-template)
-  - [Endpoint Creation](#endpoint-creation-1)
+  - [Endpoint Creation](#endpoint-creation)
   - [Unsubscribe the user](#unsubscribe-the-user)
-    - [Endpoint Creation](#endpoint-creation-2)
+    - [Endpoint Creation](#endpoint-creation-1)
 
 ## Technologies used
 
@@ -108,24 +108,25 @@ Focus on simplicity and strong emphasis on the benefits to encourage sign-ups. T
 
 ## After Form submission : Frontend
 
-- [ ] Display a toast message after form submission, if it fails or if it succeeds.
+- [x] Display a toast message after form submission, if it fails or if it succeeds.
 
 ### Success Handling
 
-- [ ] Redirect the user to the `/tips` page after the form is submitted successfully.
+- [x] Redirect the user to the `/tips` page after the form is submitted successfully.
 
 ## Form submission : Backend
 
-### Endpoint Creation
+### User Creation on Firestore
 
-- [ ] Create a new endpoint that accepts POST requests to `/api/newsletter`.
-- [ ] The endpoint should accept the user's name and email address.
-- [ ] The endpoint should verify the ReCAPTCHA token using the `NEXT_PUBLIC_RECAPTCHA_KEY` and `RECAPTCHA_SECRET`.
-- [ ] The endpoint should store the user's `name` and `email` address in the Firestore database.
-  - [ ] Database structure:
-  - [ ] Collection: `newsletter_subscriptions`
-  - [ ] Document: `user_id`
-  - [ ] Fields: `name`, `email`, `confirmed`,  `confirmed_at`, `unsubscribed`, `unsubscribed_at`, `created_at`, `token`
+- [x] Create a new `subscribeUser` function to create a new user on Firestore.
+- [x] The function should accept the user's name and email address.
+- [x] Collection structure:
+  - [x] Collection: `newsletter_subscriptions`
+  - [x] Document: `user_id`
+  - [x] Fields: `username`, `email`, `confirmed`,  `confirmed_at`, `unsubscribed`, `unsubscribed_at`, `created_at`, `token`
+- [x] Ensure the user is not already subscribed to the newsletter before creating a new user.
+- [x] Return true if the user is successfully created.
+- [x] Return false if the user is already subscribed to the newsletter.
 
 ### Email Handling
 
