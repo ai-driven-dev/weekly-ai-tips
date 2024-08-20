@@ -20,6 +20,9 @@
   - [Global considerations](#global-considerations)
   - [Subscription Confirmation](#subscription-confirmation)
   - [Unsubscribe the user](#unsubscribe-the-user)
+  - [Testing](#testing)
+  - [Rules](#rules)
+  - [Unit testing](#unit-testing)
 
 ## Technologies used
 
@@ -202,3 +205,31 @@ Focus on simplicity and strong emphasis on the benefits to encourage sign-ups. T
   - [x] Fields: `unsubscribed`, `unsubscribed_at`
 - [x] The endpoint should send a confirmation email to the user.
 - [x] The endpoint should return a success message.
+
+### Testing
+
+### Rules
+
+- Based yourself of existing test `votingSystem.spec.ts`
+- Test the `createNewsletterAction` function.
+- Use jest
+- In mocking, if input param is "INVALID", make function fail, success otherwise.
+- Mock the `fetchUser` function.
+- Mock the `verifyCaptcha` function.
+- Mock the `subscribeUser` function.
+- Mock the `sendEmail` function.
+- Mock the `resend` function.
+- Group tests by functions to test.
+
+### Unit testing
+
+- [x] Create a new `newsletter.spec.ts` file in the `src/features/newsletter/tests` directory.
+- [ ] Test against `createNewsletterAction` function:
+  - [x] Test the function with valid data.
+  - [x] Test the function with invalid data.
+  - [ ] Test the function with an existing user.
+  - [ ] Test the function with a valid token.
+  - [ ] Test the function with an invalid token.
+  - [ ] Test the email sending functionality on success.
+  - [ ] Test the email not sending on failure.
+  - [ ] Test the email not sending on error.

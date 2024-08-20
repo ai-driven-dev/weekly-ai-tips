@@ -24,7 +24,6 @@ export async function createNewsletterAction(
   ]);
 
   if (validationErrors.length > 0) {
-    console.error('Validation errors:', validationErrors);
     return validationErrors;
   }
 
