@@ -169,15 +169,19 @@ Focus on simplicity and strong emphasis on the benefits to encourage sign-ups. T
   - [ ] The token should be included in the URL to unsubscribe from the newsletter.
 - [ ] The endpoint redirect user to the homepage.
 - [ ] A toast message should be displayed to the user if the subscription is confirmed / is not confirmed.
+- [ ] Use `env` to construct the URLs:
+  - [ ] Dev: APP_URL=<http://localhost:3000>
+  - [ ] Prod: APP_URL=<https://ai-driven-dev.com>
 
 ### Subscription Confirmation
 
 - [ ] Create a new endpoint that accepts GET requests to `/api/newsletter/confirm`.
-  - [ ] Based yourself on the Next14 app router.
-  - [ ] The endpoint should accept a query parameter `token` that identifies the user.
-  - [ ] The endpoint should update the user's record in the database to confirm the subscription in the `newsletter_subscriptions` collection.
-    - [ ] Fields: `confirmed`, `confirmed_at` to fill.
-    - [ ] Fields: `unsubscribed`, `unsubscribed_at` to "unset".
+  - [ ] Example: `api/newsletter/confirm?token=c796e489-afab-4b97-afbb-3b5f9c4d4689`
+- [ ] Based yourself on the Next14 app router.
+- [ ] The endpoint should accept a query parameter `token` that identifies the user.
+- [ ] The endpoint should update the user's record in the database to confirm the subscription in the `newsletter_subscriptions` collection.
+  - [ ] Fields: `confirmed`, `confirmed_at` to fill.
+  - [ ] Fields: `unsubscribed`, `unsubscribed_at` to "unset".
 
 ### Unsubscribe the user
 

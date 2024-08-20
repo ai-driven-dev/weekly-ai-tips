@@ -19,12 +19,12 @@ export async function subscribeUser({
 
   // User already subscribed
   if (!userSnapshot.empty) {
-    return userSnapshot.docs[0].data() as SubscribedUserType;
+    return userSnapshot.docs[0].data();
   }
 
   const userId = generateUUID();
 
-  const newUser: SubscribedUserType = {
+  const newUser: Omit<SubscribedUserType, 'id'> = {
     username,
     email,
     confirmed: false,
@@ -37,5 +37,5 @@ export async function subscribeUser({
 
   await db.collection('newsletter_subscriptions').doc(userId).set(newUser);
 
-  return newUser;
+  return { ...newUser, id: userId };
 }
