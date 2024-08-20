@@ -1,5 +1,5 @@
 import Title from '@/src/components/ui/title';
-import { fetchTags } from '@/src/features/tagManagement/api/tagManager';
+import { fetchTags } from '@/src/features/tagManagement/api/fetchTags';
 import { fetchTips } from '@/src/features/tipManagement/api/fetchTips';
 import TipList from '@/src/features/tipManagement/components/TipList';
 

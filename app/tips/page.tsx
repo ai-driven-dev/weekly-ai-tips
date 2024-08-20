@@ -1,6 +1,6 @@
 import { Badge } from '@/src/components/ui/badge';
 import Title from '@/src/components/ui/title';
-import { fetchTags } from '@/src/features/tagManagement/api/tagManager';
+import { fetchTags } from '@/src/features/tagManagement/api/fetchTags';
 import { fetchTips } from '@/src/features/tipManagement/api/fetchTips';
 import TipSearchForm from '@/src/features/tipManagement/components/public/TipSearchForm';
 import TipSearchedList from '@/src/features/tipManagement/components/public/TipSearchedList';

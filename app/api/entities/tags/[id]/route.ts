@@ -1,4 +1,4 @@
-import { deleteTag } from '@/src/features/tagManagement/api/tagManager';
+import { deleteTag } from '@/src/features/tagManagement/api/deleteTag';
 
 export async function DELETE(
   request: Request,

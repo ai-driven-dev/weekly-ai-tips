@@ -12,7 +12,7 @@
 #   prompt "for each function in the file, create a new separate file with that function."
 
 # Proxy: Uncomment to use local LLM from Ollama
-export OLLAMA_API_BASE=http://127.0.0.1:11434
+# export OLLAMA_API_BASE=http://127.0.0.1:11434
 
 # Arrays
 declare -a filesToIndex 

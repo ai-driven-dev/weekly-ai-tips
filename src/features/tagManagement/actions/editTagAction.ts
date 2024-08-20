@@ -1,7 +1,7 @@
 'use server';
 
 import { revalidatePath } from 'next/cache';
-import { updateTag } from '../api/tagManager';
+import { updateTag } from '../api/updateTag';
 import { TagFormType } from '../types/TagEntity';
 
 export async function editTagAction(

@@ -1,4 +1,4 @@
-import { fetchTags } from '@/src/features/tagManagement/api/tagManager';
+import { fetchTags } from '@/src/features/tagManagement/api/fetchTags';
 import { NextResponse } from 'next/server';
 
 export async function GET() {

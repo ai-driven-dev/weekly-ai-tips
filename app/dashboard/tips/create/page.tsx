@@ -1,5 +1,5 @@
 import Title from '@/src/components/ui/title';
-import { fetchTags } from '@/src/features/tagManagement/api/tagManager';
+import { fetchTags } from '@/src/features/tagManagement/api/fetchTags';
 import TipForm from '@/src/features/tipManagement/components/TipForm';
 
 export default async function Page() {

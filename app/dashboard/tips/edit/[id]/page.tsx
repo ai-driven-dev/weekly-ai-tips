@@ -1,5 +1,5 @@
 import Title from '@/src/components/ui/title';
-import { fetchTags } from '@/src/features/tagManagement/api/tagManager';
+import { fetchTags } from '@/src/features/tagManagement/api/fetchTags';
 import { fetchTip } from '@/src/features/tipManagement/api/fetchTip';
 import TipForm from '@/src/features/tipManagement/components/TipForm';
 import { convertTipEntityToForm } from '@/src/features/tipManagement/utils/tipUtils';
