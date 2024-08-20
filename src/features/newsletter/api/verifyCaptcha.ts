@@ -9,6 +9,10 @@ export const GOOGLE_RECAPTCHA_URL =
  * @returns {Promise<boolean>} A promise that resolves to a boolean indicating the verification status.
  */
 export async function verifyCaptcha(recaptchaToken: string): Promise<boolean> {
+  if (!recaptchaToken) {
+    throw new Error('ReCAPTCHA token is required');
+  }
+
   // Verify ReCAPTCHA token
   const recaptchaResponse = await fetch(GOOGLE_RECAPTCHA_URL, {
     method: 'POST',

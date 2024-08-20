@@ -22,7 +22,6 @@ export default function InputWithLabel({
         id={name}
         name={name}
         placeholder={label}
-        required
         readOnly={pending}
         {...props}
       />

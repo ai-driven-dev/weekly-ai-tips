@@ -51,13 +51,23 @@
 
 We will validate the form in the Action, then change the state of the action to return an error messages array if the validation fails.
 
-- [ ] Create a new "Error" component to display error messages.
-  - [ ] Params are: key: string, messages: ErrorMessage[]
-  - [ ] ErrorMessage is: message: string, type: ErrorType
-  - [ ] ErrorType is: ErrorType.Required | ErrorType.InvalidEmail | ErrorType.ReCAPTCHA
-  - [ ] The component should render the message based on the type and key.
-- [ ] Add client-side validation to the form to ensure that the user's name and email address are provided.
-- [ ] Add client-side validation to the form to ensure that the ReCAPTCHA checkbox is checked.
+- [x] Create types.
+  - [x] ErrorMessage is: message: string, type: ValidationRule
+  - [x] The validation rule.
+    - [x] Rule is enum: Rule.Required | Rule.Email | Rule.ReCAPTCHA
+    - [x] Rule.Required: The field is required.
+    - [x] Rule.Email: The field is a valid email address.
+    - [x] Rule.ReCAPTCHA: The field is a valid ReCAPTCHA token.
+- [x] Create a validate function that takes in the form data and returns an array of ErrorMessage.
+  - [x] Params are formData: FormData
+    - [x] ValidationRules: ValidationRule[]
+    - [x] Each FormData field should be validated against the ValidationRules.
+  - [x] The function should return an array of ErrorMessage.
+- [x] Create a new "Error" component to display error messages.
+  - [x] Params are: field: string, messages: ErrorMessage[] | null
+  - [x] The component should render the message based on the type and field.
+- [x] Add client-side validation to the form to ensure that the user's name and email address are provided.
+- [x] Add client-side validation to the form to ensure that the ReCAPTCHA checkbox is checked.
 
 #### User Experience
 
