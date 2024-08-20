@@ -1,8 +1,6 @@
 import Title from '@/src/components/ui/title';
-import {
-  fetchTag,
-  fetchTags,
-} from '@/src/features/tagManagement/api/tagManager';
+import { fetchTag } from '@/src/features/tagManagement/api/fetchTag';
+import { fetchTags } from '@/src/features/tagManagement/api/fetchTags';
 import { fetchTipsByTag } from '@/src/features/tipManagement/api/fetchTipsByTag';
 import TipSearchedList from '@/src/features/tipManagement/components/public/TipSearchedList';
 import { Slug } from '@/src/types/Slug';
