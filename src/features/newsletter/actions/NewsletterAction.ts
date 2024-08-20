@@ -2,6 +2,7 @@
 
 import { subscribeUser } from '../api/subscribeUser';
 import { verifyCaptcha } from '../api/verifyCaptcha';
+import { generateConfirmationEmail, sendEmail } from '../utils/sendEmail';
 
 export async function createNewsletterAction(
   _: boolean,
@@ -20,5 +21,21 @@ export async function createNewsletterAction(
     throw new Error('ReCAPTCHA verification failed');
   }
 
-  return await subscribeUser(data);
+  // Subscribe the user.
+  const user = await subscribeUser(data);
+
+  if (!user) {
+    throw new Error('User does not exist');
+  }
+
+  // Send confirmation email to the user.
+  const confirmationEmailTemplate = generateConfirmationEmail(
+    user.username,
+    user.token,
+  );
+
+  return await sendEmail({
+    ...confirmationEmailTemplate,
+    to: user.email,
+  });
 }

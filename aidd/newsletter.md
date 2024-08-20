@@ -12,16 +12,14 @@
   - [Success Handling](#success-handling)
 - [Form submission : Backend](#form-submission--backend)
   - [User Creation on Firestore](#user-creation-on-firestore)
-  - [Email Handling](#email-handling)
 - [Email](#email)
   - [Create the mailer functions](#create-the-mailer-functions)
-- [Newsletter Management](#newsletter-management)
-  - [Security](#security)
 - [Confirm user subscription](#confirm-user-subscription)
   - [Email Template](#email-template)
-  - [Endpoint Creation](#endpoint-creation)
+- [Newsletter Management](#newsletter-management)
+  - [Global considerations](#global-considerations)
+  - [Subscription Confirmation](#subscription-confirmation)
   - [Unsubscribe the user](#unsubscribe-the-user)
-    - [Endpoint Creation](#endpoint-creation-1)
 
 ## Technologies used
 
@@ -128,48 +126,60 @@ Focus on simplicity and strong emphasis on the benefits to encourage sign-ups. T
 - [x] Return true if the user is successfully created.
 - [x] Return false if the user is already subscribed to the newsletter.
 
-### Email Handling
-
-- [ ] The endpoint should send a confirmation email to the user.
-- [ ] The endpoint should return a success message.
-
 ## Email
 
 ### Create the mailer functions
 
-- [ ] Create a new function that sends the newsletter email using Resend API.
-  - [ ] The function should accept the user's name and email address.
-  - [ ] The function should send the email to the user.
-  - [ ] The function should return a success message.
-
-## Newsletter Management
-
-### Security
-
-- [ ] Security must be handled using a secret token specific to the user.
-  - [ ] The token should be included in the URL to confirm the subscription.
-  - [ ] The token should be included in the URL to unsubscribe from the newsletter.
+- [x] Use "resend" package to send the email.
+- [x] Create a new generic `sendEmail` function.
+  - [x] Resend API key `RESEND_KEY` from env `process.env.RESEND_KEY`
+  - [x] The function should accept:
+    - [x] Subject: string
+    - [x] Body: HTML
+    - [x] Sender: default is `noreply@ai-driven-dev.com`
+    - [x] Reply-To: default is `noreply@ai-driven-dev.com`
+- [x] The function should send the email to the user.
+- [x] The function should return a success message.
 
 ## Confirm user subscription
 
 ### Email Template
 
-- [ ] Create a new email template for the newsletter confirmation email.
-  - [ ] The email should include a personalized greeting to the user.
-  - [ ] The email should include a link to confirm the subscription.
-  - [ ] The email should include a link to unsubscribe from the newsletter.
+- [x] Create a new email template for the newsletter confirmation email.
+  - [x] The email should include a personalized greeting to the user:
+    - [x]  "Hi [username],".
+    - [x]  "Welcome to the AI Weekly Tips newsletter!"
+    - [x]  "We're excited to have you on board!"
+    - [x]  "Please confirm your subscription by clicking on the link below:"
+    - [x]  "See you soon!"
+  - [x] The email should include a link to confirm the subscription.
+    - [x] The link should include the user's token.
+  - [x] The email should include a link to unsubscribe from the newsletter.
+    - [x] The link should include the user's token.
+- [x] Subject is: `AI Weekly Tips Newsletter Confirmation`
+- [x] Sender is: `noreply@ai-driven-dev.com`
+- [x] Reply-To is: `noreply@ai-driven-dev.com`
 
-### Endpoint Creation
+## Newsletter Management
+
+### Global considerations
+
+- [ ] Security must be handled using a secret token specific to the user.
+  - [ ] The token should be included in the URL to confirm the subscription.
+  - [ ] The token should be included in the URL to unsubscribe from the newsletter.
+- [ ] The endpoint redirect user to the homepage.
+- [ ] A toast message should be displayed to the user if the subscription is confirmed / is not confirmed.
+
+### Subscription Confirmation
 
 - [ ] Create a new endpoint that accepts GET requests to `/api/newsletter/confirm`.
+  - [ ] Based yourself on the Next14 app router.
   - [ ] The endpoint should accept a query parameter `token` that identifies the user.
   - [ ] The endpoint should update the user's record in the database to confirm the subscription in the `newsletter_subscriptions` collection.
     - [ ] Fields: `confirmed`, `confirmed_at` to fill.
     - [ ] Fields: `unsubscribed`, `unsubscribed_at` to "unset".
 
 ### Unsubscribe the user
-
-#### Endpoint Creation
 
 - [ ] Create a new endpoint that accepts GET requests to `/api/newsletter/unsubscribe`.
 - [ ] The endpoint should accept a query parameter `token` that identifies the user.

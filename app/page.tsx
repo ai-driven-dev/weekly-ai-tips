@@ -1,4 +1,4 @@
-import Newsletter from '@/src/features/public/components/Newsletter';
+import Newsletter from '@/src/features/newsletter/components/Newsletter';
 import PublicHeader from './header';
 
 export default async function Page(): Promise<React.ReactElement> {

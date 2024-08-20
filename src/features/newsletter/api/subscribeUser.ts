@@ -10,14 +10,16 @@ interface SubscribeUserParams {
 export async function subscribeUser({
   username,
   email,
-}: SubscribeUserParams): Promise<boolean> {
+}: SubscribeUserParams): Promise<SubscribedUserType | null> {
   const userRef = db
     .collection('newsletter_subscriptions')
-    .where('email', '==', email);
+    .where('email', '==', email)
+    .limit(1);
   const userSnapshot = await userRef.get();
 
+  // User already subscribed
   if (!userSnapshot.empty) {
-    return false; // User already subscribed
+    return userSnapshot.docs[0].data() as SubscribedUserType;
   }
 
   const userId = generateUUID();
@@ -34,5 +36,6 @@ export async function subscribeUser({
   };
 
   await db.collection('newsletter_subscriptions').doc(userId).set(newUser);
-  return true;
+
+  return newUser;
 }
