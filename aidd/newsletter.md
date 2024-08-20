@@ -164,30 +164,31 @@ Focus on simplicity and strong emphasis on the benefits to encourage sign-ups. T
 
 ### Global considerations
 
-- [ ] Security must be handled using a secret token specific to the user.
-  - [ ] The token should be included in the URL to confirm the subscription.
-  - [ ] The token should be included in the URL to unsubscribe from the newsletter.
-- [ ] The endpoint redirect user to the homepage.
-- [ ] A toast message should be displayed to the user if the subscription is confirmed / is not confirmed.
-- [ ] Use `env` to construct the URLs:
-  - [ ] Dev: APP_URL=<http://localhost:3000>
-  - [ ] Prod: APP_URL=<https://ai-driven-dev.com>
+- [x] Security must be handled using a secret token specific to the user.
+  - [x] The token should be included in the URL to confirm the subscription.
+  - [x] The token should be included in the URL to unsubscribe from the newsletter.
+- [x] The endpoint redirects the user to the homepage.
+- [x] A toast message should be displayed to the user if the subscription is confirmed / is not confirmed.
+- [x] Use `env` to construct the URLs:
+  - [x] Dev: APP_URL=<http://localhost:3000>
+  - [x] Prod: APP_URL=<https://ai-driven-dev.com>
 
 ### Subscription Confirmation
 
-- [ ] Create a new endpoint that accepts GET requests to `/api/newsletter/confirm`.
-  - [ ] Example: `api/newsletter/confirm?token=c796e489-afab-4b97-afbb-3b5f9c4d4689`
-- [ ] Based yourself on the Next14 app router.
-- [ ] The endpoint should accept a query parameter `token` that identifies the user.
-- [ ] The endpoint should update the user's record in the database to confirm the subscription in the `newsletter_subscriptions` collection.
-  - [ ] Fields: `confirmed`, `confirmed_at` to fill.
-  - [ ] Fields: `unsubscribed`, `unsubscribed_at` to "unset".
+- [x] Create a new endpoint that accepts GET requests to `/api/newsletter/confirm`.
+  - [x] Example: `/api/newsletter/confirm?token=c796e489-afab-4b97-afbb-3b5f9c4d4689`
+- [x] Based on the Next14 app router.
+- [x] The endpoint should accept a query parameter `token` that identifies the user.
+- [x] The endpoint should update the user's record in the database to confirm the subscription in the `newsletter_subscriptions` collection.
+  - [x] Fields: `confirmed`, `confirmed_at` to fill.
+  - [x] Fields: `unsubscribed`, `unsubscribed_at` to "unset".
 
 ### Unsubscribe the user
 
-- [ ] Create a new endpoint that accepts GET requests to `/api/newsletter/unsubscribe`.
-- [ ] The endpoint should accept a query parameter `token` that identifies the user.
-- [ ] The endpoint should unsubscribe the user from the newsletter in the `newsletter_subscriptions` collection.
-  - [ ] Fields: `unsubscribed`, `unsubscribed_at`
-- [ ] The endpoint should send a confirmation email to the user.
-- [ ] The endpoint should return a success message.
+- [x] Create a new endpoint that accepts GET requests to `/api/newsletter/unsubscribe`.
+  - [x] Example: `/api/newsletter/unsubscribe?token=c796e489-afab-4b97-afbb-3b5f9c4d4689`
+- [x] The endpoint should accept a query parameter `token` that identifies the user.
+- [x] The endpoint should unsubscribe the user from the newsletter in the `newsletter_subscriptions` collection.
+  - [x] Fields: `unsubscribed`, `unsubscribed_at`
+- [x] The endpoint should send a confirmation email to the user.
+- [x] The endpoint should return a success message.

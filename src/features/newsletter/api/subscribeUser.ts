@@ -19,7 +19,19 @@ export async function subscribeUser({
 
   // User already subscribed
   if (!userSnapshot.empty) {
-    return userSnapshot.docs[0].data();
+    const userData = userSnapshot.docs[0].data();
+    const subscribedUser: SubscribedUserType = {
+      id: userData.id,
+      username: userData.username,
+      email: userData.email,
+      confirmed: userData.confirmed,
+      confirmed_at: userData.confirmed_at,
+      unsubscribed: userData.unsubscribed,
+      unsubscribed_at: userData.unsubscribed_at,
+      created_at: userData.created_at,
+      token: userData.token,
+    };
+    return subscribedUser;
   }
 
   const userId = generateUUID();
