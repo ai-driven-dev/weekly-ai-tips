@@ -24,7 +24,6 @@ export async function deleteFirestoreImage(
 
   try {
     await deleteObject(imageRef);
-    console.log('File deleted successfully');
   } catch (error) {
     console.error('Error removing file: ', error);
 

@@ -38,7 +38,7 @@ export async function createTipAction(
         : ('draft' as TipEntity['status']),
     mediaFile: formData.get('mediaFile') as File | 'undefined' | undefined,
     tagIDs: (formData.get('tagIDs') as string)
-      .split(',')
+      ?.split(',')
       .map((id) => id.trim()),
   };
 
@@ -51,7 +51,6 @@ export async function createTipAction(
     (data.mediaFile as File).size > 0 &&
     (data.mediaFile as File).name !== 'undefined'
   ) {
-    console.log('Creating tip...', data.mediaFile);
     mediaURL = await uploadFirestoreImage(data.slug, data.mediaFile as File);
   }
 

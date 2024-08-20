@@ -1,5 +1,7 @@
+import Title from '@/src/components/ui/title';
 import { fetchTip } from '@/src/features/tipManagement/api/fetchTip';
 import { Slug } from '@/src/types/Slug';
+import Image from 'next/image';
 import Link from 'next/link';
 
 type Props = {
@@ -14,11 +16,21 @@ export default async function TipPage({ params }: Props) {
   }
 
   return (
-    <div>
-      <h1>{tip.id}</h1>
-      <p>{tip.content}</p>
+    <div className="flex gap-8 mt-4">
+      {tip?.mediaURL && (
+        <Image src={tip.mediaURL} alt={tip.title} width={800} height={400} />
+      )}
 
-      <Link href="/tips">Back to tips</Link>
+      <div>
+        <Title>
+          <Link href="/tips" className="text-cyan-600">
+            Tips
+          </Link>
+
+          <div>{tip.description}</div>
+        </Title>
+        <p>{tip.content}</p>
+      </div>
     </div>
   );
 }

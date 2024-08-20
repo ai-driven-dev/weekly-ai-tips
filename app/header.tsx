@@ -14,8 +14,6 @@ const CustomLink = ({
   const headersList = headers();
   const pathname = headersList.get('x-path') || '';
 
-  console.log('pathname', pathname);
-
   if (pathname === href) {
     return (
       <span className="text-sm text-gray-700 font-bold border-b border-b-1 dark:text-gray-400">
