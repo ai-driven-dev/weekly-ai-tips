@@ -1,6 +1,7 @@
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_KEY);
+const domain = process.env.APP_URL;
 
 interface EmailContent {
   subject: string;
@@ -23,10 +24,10 @@ export function generateConfirmationEmail(
     <p>Welcome to the AI Weekly Tips newsletter!</p>
     <p>We're excited to have you on board!</p>
     <p>Please confirm your subscription by clicking on the link below:</p>
-    <p><a href="https://yourdomain.com/api/newsletter/confirm?token=${token}">Confirm Subscription</a></p>
+    <p><a href="https://${domain}/api/newsletter/confirm?token=${token}">Confirm Subscription</a></p>
     <p>See you soon!</p>
     <p>If you did not subscribe to this newsletter, you can unsubscribe by clicking the link below:</p>
-    <p><a href="https://yourdomain.com/api/newsletter/unsubscribe?token=${token}">Unsubscribe</a></p>
+    <p><a href="https://${domain}/api/newsletter/unsubscribe?token=${token}">Unsubscribe</a></p>
   `;
   return { subject, body };
 }
