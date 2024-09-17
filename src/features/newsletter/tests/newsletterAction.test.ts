@@ -5,6 +5,7 @@ global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
 import { createNewsletterAction } from '../actions/NewsletterAction';
+import { subscribeUser } from '../api/subscribeUser';
 import { sendEmail } from '../utils/sendEmail';
 
 jest.mock('@/firebaseAdmin', () => ({
@@ -40,6 +41,7 @@ describe('createNewsletterAction', () => {
     const result = await createNewsletterAction(null, data);
     expect(result).toEqual([]);
     expect(sendEmail).toHaveBeenCalled();
+    expect(subscribeUser).toHaveBeenCalled();
   });
 
   test('invalid data', async () => {
@@ -51,5 +53,18 @@ describe('createNewsletterAction', () => {
     const result = await createNewsletterAction(null, data);
     expect(result).toHaveLength(2);
     expect(sendEmail).not.toHaveBeenCalled();
+  });
+
+  test('invalid token', async () => {
+    const data = new FormData();
+    data.append('email', 'test@example.com');
+    data.append('username', 'testuser');
+    data.append('public_token', 'INVALID');
+
+    await expect(createNewsletterAction(null, data)).rejects.toThrow(
+      'ReCAPTCHA verification failed',
+    );
+    expect(sendEmail).not.toHaveBeenCalled();
+    expect(subscribeUser).not.toHaveBeenCalled();
   });
 });
