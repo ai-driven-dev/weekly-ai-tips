@@ -5,10 +5,9 @@ import { ErrorComponent } from '@/src/components/ui/error';
 import InputWithLabel from '@/src/components/ui/inputWithLabel';
 import TextareaWithLabel from '@/src/components/ui/textareaWithLabel';
 import { Toaster } from '@/src/components/ui/toaster';
-import { useFormState, useFormStatus } from 'react-dom';
+import { useFormState } from 'react-dom';
 import { useUserAuthentication } from '../../userManagement/hooks/useUserAuthentication';
 import { createSuggestionAction } from '../actions/SuggestionAction';
-import { useEffect } from 'react';
 
 export default function SuggestionForm() {
   const { user } = useUserAuthentication();
