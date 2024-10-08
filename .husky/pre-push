@@ -4,6 +4,7 @@
 npm run build
 
 npm outdated | grep -v Package | awk '{print $1}' | grep -v "@typescript-eslint/eslint-plugin" | grep -vw 'eslint' | xargs -I {} npm install {}@latest --legacy-peer-deps
+npm install
 
 # Check if tests are still passing
 if ! npm run test; then
