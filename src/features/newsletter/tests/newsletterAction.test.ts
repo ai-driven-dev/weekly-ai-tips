@@ -6,7 +6,7 @@ global.TextDecoder = TextDecoder;
 
 import { createNewsletterAction } from '../actions/NewsletterAction';
 import { subscribeUser } from '../api/subscribeUser';
-import { sendEmail } from '../utils/sendEmail';
+import { generateConfirmationEmail, sendEmail } from '../utils/sendEmail';
 
 jest.mock('@/firebaseAdmin', () => ({
   db: jest.fn(),
@@ -41,6 +41,12 @@ describe('createNewsletterAction', () => {
     const result = await createNewsletterAction(null, data);
     expect(result).toEqual([]);
     expect(sendEmail).toHaveBeenCalled();
+    expect(generateConfirmationEmail).toHaveBeenCalled();
+    expect(generateConfirmationEmail).toHaveBeenCalledWith(
+      'testuser',
+      undefined,
+    );
+
     expect(subscribeUser).toHaveBeenCalled();
   });
 

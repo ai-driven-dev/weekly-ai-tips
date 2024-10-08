@@ -2,6 +2,7 @@ export enum Rule {
   Required = 'required',
   Email = 'email',
   ReCAPTCHA = 'recaptcha',
+  Custom = 'custom',
 }
 
 export type ValidationRule = {

@@ -15,7 +15,13 @@ export function ErrorComponent({ field, messages }: Props) {
       {messages
         .filter((error) => error.type.field === field)
         .map((error, index) => (
-          <p key={index}>{error.message}</p>
+          <div
+            key={`ErrorComponent-${error.type}-${index}`}
+            className="flex flex-col"
+          >
+            <code>{error.type.field}</code>
+            {error.message}
+          </div>
         ))}
     </div>
   );

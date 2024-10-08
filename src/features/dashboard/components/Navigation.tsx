@@ -7,6 +7,13 @@ export default function Navigation() {
     <nav className="bg-gray-100 h-full py-8 px-16">
       <ul className="flex flex-col gap-5">
         <li className="inline">
+          {pathname === '/dashboard/roadmap' ? (
+            <strong>Roadmap</strong>
+          ) : (
+            <Link href="/dashboard/roadmap">Roadmap</Link>
+          )}
+        </li>
+        <li className="inline">
           {pathname === '/dashboard' ? (
             <strong>Dashboard</strong>
           ) : (
