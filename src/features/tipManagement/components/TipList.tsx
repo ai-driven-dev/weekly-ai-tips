@@ -13,10 +13,11 @@ import {
 } from '@/src/components/ui/table';
 import Image from 'next/image';
 import Link from 'next/link';
+import DeleteButton from '../../dashboard/components/DeleteButton';
 import { TagEntity } from '../../tagManagement/types/TagEntity';
 import { isSubmittable } from '../../votingSystem/utils/isSubmittable';
+import { deleteTipAction } from '../actions/deleteTipAction';
 import TipEntity from '../types/TipEntity';
-import TipDeleteButton from './TipDeleteButton';
 import TipDownVoteButton from './TipDownVoteButton';
 import TipPublishButton from './TipPublishButton';
 import TipUpVoteButton from './TipUpVoteButton';
@@ -115,8 +116,9 @@ export default function TipList({ tips, tags }: Props): React.ReactElement {
                       {isSubmittable(tip.status) ? 'Edit' : 'View'}
                     </Link>
                   </Button>
-                  <TipDeleteButton
-                    tipId={tip.id}
+                  <DeleteButton
+                    elementId={tip.id}
+                    action={deleteTipAction}
                     disabled={!isSubmittable(tip.status)}
                   />
                 </div>

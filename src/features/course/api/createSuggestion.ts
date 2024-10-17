@@ -1,7 +1,7 @@
 import { db } from '@/firebaseAdmin';
+import { COLLECTION_COURSE } from '@/src/features/course/api/collection';
 import { SuggestionAlreadyExists } from '../exceptions/SuggestionAlreadyExists';
 import { Suggestion, SuggestionForm } from '../types/Suggestion';
-import { COLLECTION_COURSE } from '@/src/features/course/api/collection';
 
 export async function createSuggestion(
   newSuggestion: SuggestionForm,
@@ -17,9 +17,7 @@ export async function createSuggestion(
     throw new SuggestionAlreadyExists();
   }
 
-  const suggestion = await db
-    .collection('course_suggestions')
-    .add(newSuggestion);
+  const suggestion = await db.collection(COLLECTION_COURSE).add(newSuggestion);
 
   return {
     id: suggestion.id,

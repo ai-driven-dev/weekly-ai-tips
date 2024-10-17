@@ -7,7 +7,7 @@ import TextareaWithLabel from '@/src/components/ui/textareaWithLabel';
 import { Toaster } from '@/src/components/ui/toaster';
 import { useFormState } from 'react-dom';
 import { useUserAuthentication } from '../../userManagement/hooks/useUserAuthentication';
-import { createSuggestionAction } from '../actions/SuggestionAction';
+import { createSuggestionAction } from '../actions/createSuggestionAction';
 
 export default function SuggestionForm() {
   const { user } = useUserAuthentication();

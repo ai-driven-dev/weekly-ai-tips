@@ -21,7 +21,7 @@ export type Props = {
   tags: TagEntity[];
 };
 
-export default function TipDetail({ tip, tags }: Props) {
+export default function TipForm({ tip, tags }: Props) {
   const { toast } = useToast();
   const { push } = useRouter();
   const { user } = useUserAuthentication();

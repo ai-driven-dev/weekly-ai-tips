@@ -32,21 +32,19 @@ As a User, I want to submit new course suggestions so that I can propose courses
 
 ### Group Display
 
-- [ ] A Toggle Group component to display the suggestions in a table with titles per version.
-  - [ ] The title is toggle-able.
-- [ ] In this group there is the table display.
-- [ ] The group is determined by "version" (eg. 1.1, 1.x, 2.0, etc.).
-  - [ ] If version is not defined, display the table with title "Suggestions".
+- [ ] A Toggle Group to display the suggestions in a table with titles per version.
+  - [ ] The title is toggle-able and displays the table.
+  - [ ] Use HTML5 semantic <details> tag.
+- [ ] The group is determined by "version"'s name (eg. 1.1, 1.x, 2.0, etc.).
+  - [ ] If version: 'undefined', display the table with title "Suggestions".
 
-### Table Display
+#### For démo
 
-- [ ] Create a table to display submitted suggestions with the following columns:
-  - `Name`
-  - `Description`
-  - `Status`
-  - Action (contains a "Edit" and a "Delete" button)
-  
-### Table Line
+1. Create plan
+2. 80% Apply from plan
+3. 20% Change component inline using context
+
+### Table Line Edition
 
 - [ ] Toggling Edit button make fields editable.
   - [ ] It becomes a "Save Button"

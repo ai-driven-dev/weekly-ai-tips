@@ -13,10 +13,12 @@ export default async function Roadmap() {
       <Title>Roadmap</Title>
       <SuggestionForm />
       {suggestionGroups.map((group, index) => (
-        <div className="" key={`SuggestionGroup-${group.version}-${index}`}>
-          <Title level={2}>{group.version}</Title>
+        <details key={`SuggestionGroup-${group.version}-${index}`}>
+          <summary>
+            {group.version === 'undefined' ? 'Suggestions' : group.version}
+          </summary>
           <SuggestionsList suggestions={group.suggestions} />
-        </div>
+        </details>
       ))}
     </div>
   );

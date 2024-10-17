@@ -1,16 +1,25 @@
+'use client';
+
 import { Button } from '@/src/components/ui/button';
 import { toast } from '@/src/components/ui/use-toast';
 import { useEffect, useRef } from 'react';
 import { useFormState } from 'react-dom';
-import { deleteTipAction } from '../actions/deleteTipAction';
 
 type Props = {
-  tipId: string;
+  elementId: string;
+  action: (
+    state: boolean | null,
+    payload: FormData,
+  ) => boolean | Promise<boolean | null> | null;
 } & React.ComponentProps<typeof Button>;
 
-export default function TipDeleteButton({ tipId, ...buttonProps }: Props) {
+export default function DeleteButton({
+  elementId,
+  action,
+  ...buttonProps
+}: Props) {
   const [state, formActionDelete] = useFormState<boolean | null, FormData>(
-    deleteTipAction,
+    action,
     null,
   );
 
@@ -20,7 +29,7 @@ export default function TipDeleteButton({ tipId, ...buttonProps }: Props) {
     if (initialState.current !== state) {
       toast({
         title: 'Success',
-        description: state ? 'Tip deleted!' : 'Error deleting tip',
+        description: state ? 'Element deleted!' : 'Error deleting element',
       });
 
       initialState.current = state;
@@ -29,7 +38,7 @@ export default function TipDeleteButton({ tipId, ...buttonProps }: Props) {
 
   return (
     <form action={formActionDelete}>
-      <input type="hidden" name="id" value={tipId} />
+      <input type="hidden" name="id" value={elementId} />
       <Button {...buttonProps} variant="destructive" type="submit">
         Delete
       </Button>

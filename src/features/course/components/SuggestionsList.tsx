@@ -1,12 +1,12 @@
 import {
   Table,
   TableBody,
-  TableCell,
   TableHead,
   TableHeader,
   TableRow,
 } from '@/src/components/ui/table';
 import { Suggestion } from '../types/Suggestion';
+import SuggestionLine from './SuggestionLine';
 
 type Props = {
   suggestions: Suggestion[];
@@ -31,13 +31,10 @@ export default function SuggestionsList(props: Props): React.ReactElement {
         </TableHeader>
         <TableBody>
           {props.suggestions.map((suggestion) => (
-            <TableRow key={suggestion.id}>
-              <TableCell>{suggestion.name}</TableCell>
-              <TableCell>{suggestion.description}</TableCell>
-              <TableCell>{suggestion.version}</TableCell>
-              <TableCell>{suggestion.status}</TableCell>
-              <TableCell></TableCell>
-            </TableRow>
+            <SuggestionLine
+              key={suggestion.id}
+              suggestion={JSON.parse(JSON.stringify(suggestion))}
+            />
           ))}
         </TableBody>
       </Table>
