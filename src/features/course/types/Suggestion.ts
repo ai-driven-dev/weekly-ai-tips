@@ -19,3 +19,8 @@ export interface SuggestionGroup {
   version: Suggestion['version'];
   suggestions: Suggestion[];
 }
+
+export type SuggestionEditForm = Pick<
+  Suggestion,
+  'id' | 'name' | 'description' | 'version'
+>;

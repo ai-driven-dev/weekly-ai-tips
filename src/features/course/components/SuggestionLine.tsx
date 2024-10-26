@@ -1,12 +1,13 @@
 'use client';
 
 import { Button } from '@/src/components/ui/button';
-import { Input } from '@/src/components/ui/input';
+import { Dialog, DialogTrigger } from '@/src/components/ui/dialog';
 import { TableCell, TableRow } from '@/src/components/ui/table';
 import React, { useState } from 'react';
 import DeleteButton from '../../dashboard/components/DeleteButton';
 import { deleteSuggestionAction } from '../actions/deleteSuggestionAction';
 import { Suggestion } from '../types/Suggestion';
+import EditSuggestionForm from './EditSuggestionForm';
 
 type Props = {
   suggestion: Suggestion;
@@ -15,66 +16,25 @@ type Props = {
 export default function SuggestionLine({
   suggestion,
 }: Props): React.ReactElement {
-  const [isEditing, setIsEditing] = useState(false);
-  const [editedSuggestion, setEditedSuggestion] = useState(suggestion);
-
-  const handleEdit = () => {
-    setIsEditing(!isEditing);
-    if (isEditing) {
-      setEditedSuggestion(suggestion); // Reset changes if closing without saving
-    }
-  };
-
-  const handleSave = () => {
-    // TODO: Implement save functionality
-    console.log('Saving:', editedSuggestion);
-    setIsEditing(false);
-  };
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setEditedSuggestion((prev) => ({ ...prev, [name]: value }));
-  };
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   return (
     <TableRow key={suggestion.id}>
-      <TableCell>
-        {isEditing ? (
-          <Input
-            name="name"
-            value={editedSuggestion.name}
-            onChange={handleInputChange}
-          />
-        ) : (
-          suggestion.name
-        )}
-      </TableCell>
-      <TableCell>
-        {isEditing ? (
-          <Input
-            name="description"
-            value={editedSuggestion.description}
-            onChange={handleInputChange}
-          />
-        ) : (
-          suggestion.description
-        )}
-      </TableCell>
-      <TableCell>
-        {isEditing ? (
-          <Input
-            name="version"
-            value={editedSuggestion.version}
-            onChange={handleInputChange}
-          />
-        ) : (
-          suggestion.version
-        )}
-      </TableCell>
+      <TableCell>{suggestion.name}</TableCell>
+      <TableCell>{suggestion.description}</TableCell>
+      <TableCell>{suggestion.version}</TableCell>
       <TableCell>{suggestion.status}</TableCell>
+      <TableCell>{suggestion.upVotes}</TableCell>
       <TableCell>
-        <Button onClick={handleEdit}>{isEditing ? 'Close' : 'Edit'}</Button>
-        {isEditing && <Button onClick={handleSave}>Save</Button>}
+        <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+          <DialogTrigger asChild>
+            <Button>Edit</Button>
+          </DialogTrigger>
+          <EditSuggestionForm
+            suggestion={suggestion}
+            setIsDialogOpen={setIsDialogOpen}
+          />
+        </Dialog>
         <DeleteButton
           elementId={suggestion.id}
           action={deleteSuggestionAction}
