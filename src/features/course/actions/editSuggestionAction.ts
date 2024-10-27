@@ -4,11 +4,27 @@ import { ErrorMessage, Rule, validate } from '@/src/utils/formValidation';
 import { revalidatePath } from 'next/cache';
 import { editSuggestion } from '../api/editSuggestion';
 import { SuggestionEditForm } from '../types/Suggestion';
+import { getCurrentUser } from '@/src/utils/firestore/getCurrentUser';
 
 export async function editSuggestionAction(
   _: ErrorMessage[] | null,
   formData: FormData,
 ): Promise<ErrorMessage[] | null> {
+  const user = await getCurrentUser();
+  const isNotAllowed = !user || !user.roles.includes('ADMIN');
+
+  if (isNotAllowed) {
+    return [
+      {
+        type: {
+          field: 'global',
+          rule: Rule.Custom,
+        },
+        message: 'User is not authorized to edit suggestions',
+      },
+    ];
+  }
+
   // Validate the form data
   const validationErrors = validate(formData, [
     { field: 'id', rule: Rule.Required },

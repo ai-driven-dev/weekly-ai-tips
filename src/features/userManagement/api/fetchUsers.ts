@@ -2,6 +2,26 @@ import { db } from '@/firebaseAdmin';
 import UserEntity from '@/src/features/userManagement/types/UserEntity';
 
 /**
+ * Fetches a user by ID from the Firestore database.
+ *
+ * This function retrieves a user document from the 'users' collection by its ID,
+ * converts the document to a UserEntity object, and returns it.
+ *
+ * @param {string} userId - The ID of the user to fetch.
+ * @returns {Promise<UserEntity | null>} A promise that resolves to a UserEntity object or null if not found.
+ */
+export async function getUserById(userId: string): Promise<UserEntity | null> {
+  const userDoc = await db.collection('users').doc(userId).get();
+
+  const data = userDoc.data();
+  if (!data) {
+    return null;
+  }
+
+  return docToUserEntity(data);
+}
+
+/**
  * Fetches all users from the Firestore database.
  *
  * This function retrieves all user documents from the 'users' collection,
@@ -12,7 +32,7 @@ import UserEntity from '@/src/features/userManagement/types/UserEntity';
 export async function fetchUsers(): Promise<UserEntity[]> {
   const usersCollection = db.collection('users');
   const snapshot = await usersCollection.get();
-  return snapshot.docs.map((doc) => docToUserEntity(doc));
+  return snapshot.docs.map((doc) => docToUserEntity(doc.data()));
 }
 
 /**
@@ -22,15 +42,12 @@ export async function fetchUsers(): Promise<UserEntity[]> {
  * and maps it to a UserEntity object, including converting Firestore Timestamps
  * to JavaScript Date objects for the createdAt and updatedAt fields.
  *
- * @param {FirebaseFirestore.QueryDocumentSnapshot} doc - The Firestore document to convert.
+ * @param {FirebaseFirestore.QueryDocumentSnapshot} data - The Firestore document to convert.
  * @returns {UserEntity} The converted UserEntity object.
  */
-function docToUserEntity(
-  doc: FirebaseFirestore.QueryDocumentSnapshot,
-): UserEntity {
-  const data = doc.data();
+function docToUserEntity(data: FirebaseFirestore.DocumentData): UserEntity {
   return {
-    id: doc.id,
+    id: data.id,
     name: data.name,
     picture: data.picture,
     email: data.email,

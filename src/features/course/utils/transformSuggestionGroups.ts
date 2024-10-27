@@ -26,5 +26,11 @@ export function transformSuggestionGroups(
     }
   });
 
+  suggestionGroups.sort((a, b) => {
+    if (a.version === 'undefined') return -1;
+    if (b.version === 'undefined') return 1;
+    return a.version.localeCompare(b.version);
+  });
+
   return suggestionGroups;
 }
