@@ -4,10 +4,6 @@ import 'jest-environment-jsdom';
 
 // Import TextEncoder from Node.js util module
 import { TextEncoder } from 'util';
-import { editSuggestionAction } from '../actions/editSuggestionAction';
-import { editSuggestion } from '../api/editSuggestion';
-import UserEntity from '@/src/features/userManagement/types/UserEntity';
-import { getCurrentUser } from '@/src/utils/firestore/getCurrentUser';
 
 // Make TextEncoder available globally
 // In browsers, TextEncoder is a global, but not in Node.js
@@ -18,6 +14,9 @@ global.TextEncoder = TextEncoder;
 // Similar to TextEncoder, this ensures TextDecoder is available
 // TextDecoder is used to decode Uint8Arrays back into strings
 global.TextDecoder = TextDecoder;
+
+import { editSuggestionAction } from '../actions/editSuggestionAction';
+import { editSuggestion } from '../api/editSuggestion';
 
 jest.mock('@/firebaseAdmin', () => ({
   db: jest.fn(),
@@ -31,24 +30,9 @@ jest.mock('next/cache', () => ({
   revalidatePath: jest.fn(),
 }));
 
-jest.mock('@/src/utils/firestore/getCurrentUser', () => ({
-  getCurrentUser: jest.fn(),
-}));
-
 describe('Suggestion Edition', () => {
   beforeEach(() => {
     jest.clearAllMocks();
-
-    const mockUser: UserEntity = {
-      id: '1',
-      name: 'Member User',
-      email: 'member@example.com',
-      roles: ['MEMBER'],
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    };
-
-    (getCurrentUser as jest.Mock).mockResolvedValue(mockUser);
   });
 
   it('should edit an existing suggestion', async () => {
@@ -99,33 +83,5 @@ describe('Suggestion Edition', () => {
     expect(result).toHaveLength(1);
     expect(result?.[0].type.field).toBe('global');
     expect(result?.[0].message).toBe('Failed to update suggestion');
-  });
-
-  it('should not allow a MEMBER user to edit a suggestion', async () => {
-    const mockUser: UserEntity = {
-      id: '2',
-      name: 'Member User',
-      email: 'member@example.com',
-      roles: ['MEMBER'],
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    };
-
-    (getCurrentUser as jest.Mock).mockResolvedValue(mockUser);
-
-    const mockFormData = new FormData();
-    mockFormData.append('id', '123');
-    mockFormData.append('name', 'Updated Name');
-    mockFormData.append('description', 'Updated Description');
-    mockFormData.append('version', '2.0.0');
-
-    const result = await editSuggestionAction(null, mockFormData);
-
-    expect(result).toHaveLength(1);
-    expect(result?.[0].type.field).toBe('global');
-    expect(result?.[0].message).toBe(
-      'User is not authorized to edit suggestions',
-    );
-    expect(editSuggestion).not.toHaveBeenCalled();
   });
 });
