@@ -2,8 +2,9 @@ import { deleteTag } from '@/src/features/tagManagement/api/deleteTag';
 
 export async function DELETE(
   request: Request,
-  { params: { id } }: { params: { id: string } },
+  { params }: { params: Promise<{ id: string }> },
 ) {
+  const { id } = await params;
   const isDeleted = await deleteTag(id);
 
   if (isDeleted) {

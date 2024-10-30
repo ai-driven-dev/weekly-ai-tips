@@ -5,11 +5,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 type Props = {
-  params: Slug;
+  params: Promise<Slug>;
 };
 
 export default async function TipPage({ params }: Props) {
-  const tip = await fetchTip('slug', params.slug);
+  const tip = await fetchTip('slug', (await params).slug);
 
   if (!tip) {
     return null;

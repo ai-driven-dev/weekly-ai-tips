@@ -7,12 +7,12 @@ import { Slug } from '@/src/types/Slug';
 import Link from 'next/link';
 
 type Props = {
-  params: Slug;
+  params: Promise<Slug>;
 };
 
 export default async function Tags({ params }: Props) {
   const tags = await fetchTags();
-  const tag = await fetchTag(params.slug);
+  const tag = await fetchTag((await params).slug);
 
   if (!tag) {
     return 'Tag not found';

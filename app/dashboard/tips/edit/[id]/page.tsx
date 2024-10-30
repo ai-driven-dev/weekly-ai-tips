@@ -7,12 +7,13 @@ import { isSubmittable } from '@/src/features/votingSystem/utils/isSubmittable';
 import Link from 'next/link';
 
 export type Props = {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 };
 
-export default async function TipEdit({ params: { id } }: Props) {
+export default async function TipEdit({ params }: Props) {
+  const id = (await params).id;
   const tip = await fetchTip('id', id);
   const tags = await fetchTags();
 

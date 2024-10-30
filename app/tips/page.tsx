@@ -5,6 +5,7 @@ import { fetchTips } from '@/src/features/tipManagement/api/fetchTips';
 import TipSearchForm from '@/src/features/tipManagement/components/public/TipSearchForm';
 import TipSearchedList from '@/src/features/tipManagement/components/public/TipSearchedList';
 import Link from 'next/link';
+import { NuqsAdapter } from 'nuqs/adapters/react';
 import { Suspense } from 'react';
 
 export default async function TipsPage() {
@@ -12,7 +13,7 @@ export default async function TipsPage() {
   const tags = await fetchTags();
 
   return (
-    <>
+    <NuqsAdapter>
       <Suspense fallback={<div>Loading...</div>}>
         <div className="flex flex-col items-center justify-center pb-8 gap-3">
           <Title>Weekly AI tips (for developers)</Title>
@@ -29,6 +30,6 @@ export default async function TipsPage() {
         </div>
         <TipSearchedList tags={tags} tipsFromPage={tips} />
       </Suspense>
-    </>
+    </NuqsAdapter>
   );
 }
