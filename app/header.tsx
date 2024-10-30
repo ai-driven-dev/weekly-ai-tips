@@ -1,4 +1,3 @@
-import { headers } from 'next/headers';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -11,17 +10,6 @@ const CustomLink = ({
   children: React.ReactNode;
   prefetch?: boolean;
 }) => {
-  const headersList = headers();
-  const pathname = headersList.get('x-path') || '';
-
-  if (pathname === href) {
-    return (
-      <span className="text-sm text-gray-700 font-bold border-b border-b-1 dark:text-gray-400">
-        {children}
-      </span>
-    );
-  }
-
   return (
     <Link
       href={href}

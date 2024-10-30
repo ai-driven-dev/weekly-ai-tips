@@ -1,18 +1,13 @@
-import { options } from '@/middleware';
 import Login from '@/src/features/dashboard/components/Login';
-import { getTokens } from 'next-firebase-auth-edge';
-import { cookies, headers } from 'next/headers';
+import { getCurrentUser } from '@/src/utils/firestore/getCurrentUser';
 import { redirect } from 'next/navigation';
 import { Suspense } from 'react';
 
 export default async function Page() {
-  const tokens = await getTokens(cookies(), {
-    ...options,
-    headers: headers(),
-  });
+  const user = await getCurrentUser();
 
   // If the user is authenticated, redirect to the dashboard.
-  if (tokens) {
+  if (user) {
     return redirect('/dashboard');
   }
 
