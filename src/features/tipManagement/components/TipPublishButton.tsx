@@ -1,7 +1,6 @@
 import { Button } from '@/src/components/ui/button';
 import { toast } from '@/src/components/ui/use-toast';
-import { useEffect, useRef } from 'react';
-import { useFormState } from 'react-dom';
+import { useActionState, useEffect, useRef } from 'react';
 import { publishTipAction } from '../actions/publishTipAction';
 
 type Props = {
@@ -9,7 +8,7 @@ type Props = {
 } & React.ComponentProps<typeof Button>;
 
 export default function TipPublishButton({ tipId, ...buttonProps }: Props) {
-  const [state, formActionPublish] = useFormState<
+  const [state, formActionPublish] = useActionState<
     boolean | string | null,
     FormData
   >(publishTipAction, null);

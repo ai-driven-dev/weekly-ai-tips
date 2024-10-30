@@ -2,8 +2,7 @@
 
 import { Button } from '@/src/components/ui/button';
 import { toast } from '@/src/components/ui/use-toast';
-import { useEffect, useRef } from 'react';
-import { useFormState } from 'react-dom';
+import { useActionState, useEffect, useRef } from 'react';
 
 type Props = {
   elementId: string;
@@ -18,7 +17,7 @@ export default function DeleteButton({
   action,
   ...buttonProps
 }: Props) {
-  const [state, formActionDelete] = useFormState<boolean | null, FormData>(
+  const [state, formActionDelete] = useActionState<boolean | null, FormData>(
     action,
     null,
   );

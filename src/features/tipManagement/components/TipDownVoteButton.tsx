@@ -1,7 +1,6 @@
 import { Button } from '@/src/components/ui/button';
 import { toast } from '@/src/components/ui/use-toast';
-import { useEffect, useRef } from 'react';
-import { useFormState } from 'react-dom';
+import { useActionState, useEffect, useRef } from 'react';
 import { useUserAuthentication } from '../../userManagement/hooks/useUserAuthentication';
 import { downVoteTipAction } from '../actions/downVoteTipAction';
 
@@ -12,7 +11,7 @@ type Props = {
 export default function TipDownVoteButton({ tipId, ...buttonProps }: Props) {
   const { user } = useUserAuthentication();
 
-  const [state, action] = useFormState<boolean | string | null, FormData>(
+  const [state, action] = useActionState<boolean | string | null, FormData>(
     downVoteTipAction,
     null,
   );

@@ -4,8 +4,7 @@ import { Button } from '@/src/components/ui/button';
 import InputWithLabel from '@/src/components/ui/inputWithLabel';
 import { useToast } from '@/src/components/ui/use-toast';
 import { useRouter } from 'next/navigation';
-import { useEffect, useRef, useState } from 'react';
-import { useFormState } from 'react-dom';
+import { useActionState, useEffect, useRef, useState } from 'react';
 import { createTagAction } from '../actions/createTagAction';
 import { editTagAction } from '../actions/editTagAction';
 import { TagFormType } from '../types/TagEntity';
@@ -17,7 +16,7 @@ export type Props = {
 export default function TagForm({ tag }: Props) {
   const { toast } = useToast();
   const { push } = useRouter();
-  const [state, formAction] = useFormState(
+  const [state, formAction] = useActionState(
     tag.id ? editTagAction : createTagAction,
     tag,
   );

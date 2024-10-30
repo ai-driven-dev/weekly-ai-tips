@@ -7,8 +7,7 @@ import { ToggleGroup, ToggleGroupItem } from '@/src/components/ui/toggle-group';
 import { useToast } from '@/src/components/ui/use-toast';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { useEffect, useRef, useState } from 'react';
-import { useFormState } from 'react-dom';
+import { useActionState, useEffect, useRef, useState } from 'react';
 import { TagEntity } from '../../tagManagement/types/TagEntity';
 import { useUserAuthentication } from '../../userManagement/hooks/useUserAuthentication';
 import { isSubmittable } from '../../votingSystem/utils/isSubmittable';
@@ -25,7 +24,7 @@ export default function TipForm({ tip, tags }: Props) {
   const { toast } = useToast();
   const { push } = useRouter();
   const { user } = useUserAuthentication();
-  const [state, formAction] = useFormState(
+  const [state, formAction] = useActionState(
     tip.id ? editTipAction : createTipAction,
     null,
   );

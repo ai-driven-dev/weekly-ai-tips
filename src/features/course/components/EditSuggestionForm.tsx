@@ -10,9 +10,9 @@ import {
 import { ErrorComponent } from '@/src/components/ui/error';
 import InputWithLabel from '@/src/components/ui/inputWithLabel';
 import { useToast } from '@/src/components/ui/use-toast';
-import { useFormState } from 'react-dom';
 import { editSuggestionAction } from '../actions/editSuggestionAction';
 import { Suggestion } from '../types/Suggestion';
+import { useActionState } from 'react';
 
 type Props = {
   suggestion: Suggestion;
@@ -24,7 +24,7 @@ export default function EditSuggestionForm({
   setIsDialogOpen,
 }: Props) {
   const { toast } = useToast();
-  const [state] = useFormState(editSuggestionAction, null);
+  const [state] = useActionState(editSuggestionAction, null);
 
   const handleSubmit = async (formData: FormData) => {
     const result = await editSuggestionAction(null, formData);

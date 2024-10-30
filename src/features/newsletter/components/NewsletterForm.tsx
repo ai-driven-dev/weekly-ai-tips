@@ -2,8 +2,7 @@
 
 import { Button } from '@/src/components/ui/button';
 import { useToast } from '@/src/components/ui/use-toast';
-import { useEffect, useRef, useState } from 'react';
-import { useFormState } from 'react-dom';
+import { useActionState, useEffect, useRef, useState } from 'react';
 
 import { ErrorComponent } from '@/src/components/ui/error';
 import InputWithLabel from '@/src/components/ui/inputWithLabel';
@@ -15,7 +14,7 @@ import { createNewsletterAction } from '../actions/NewsletterAction';
 export default function NewsletterForm() {
   const { toast } = useToast();
   const { push } = useRouter();
-  const [state, formAction] = useFormState(createNewsletterAction, null);
+  const [state, formAction] = useActionState(createNewsletterAction, null);
   const [recaptchaToken, setRecaptchaToken] = useState<string>('');
 
   const handleRecaptchaChange = (gResponse: string | null) => {
