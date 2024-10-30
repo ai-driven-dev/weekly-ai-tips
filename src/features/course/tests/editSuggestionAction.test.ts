@@ -15,6 +15,8 @@ global.TextEncoder = TextEncoder;
 // TextDecoder is used to decode Uint8Arrays back into strings
 global.TextDecoder = TextDecoder;
 
+import UserEntity from '@/src/features/userManagement/types/UserEntity';
+import { getCurrentUser } from '@/src/utils/firestore/getCurrentUser';
 import { editSuggestionAction } from '../actions/editSuggestionAction';
 import { editSuggestion } from '../api/editSuggestion';
 
@@ -30,9 +32,24 @@ jest.mock('next/cache', () => ({
   revalidatePath: jest.fn(),
 }));
 
+jest.mock('@/src/utils/firestore/getCurrentUser', () => ({
+  getCurrentUser: jest.fn(),
+}));
+
 describe('Suggestion Edition', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+
+    const mockUser: UserEntity = {
+      id: 'admin-id',
+      name: 'Admin User',
+      email: 'admin@example.com',
+      roles: ['ADMIN'],
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    };
+
+    (getCurrentUser as jest.Mock).mockResolvedValue(mockUser);
   });
 
   it('should edit an existing suggestion', async () => {
@@ -83,5 +100,33 @@ describe('Suggestion Edition', () => {
     expect(result).toHaveLength(1);
     expect(result?.[0].type.field).toBe('global');
     expect(result?.[0].message).toBe('Failed to update suggestion');
+  });
+
+  it('should not allow a MEMBER to edit a suggestion', async () => {
+    const mockUser: UserEntity = {
+      id: 'member-id',
+      name: 'Member User',
+      email: 'member@example.com',
+      roles: ['MEMBER'],
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    };
+
+    (getCurrentUser as jest.Mock).mockResolvedValue(mockUser);
+
+    const mockFormData = new FormData();
+    mockFormData.append('id', '123');
+    mockFormData.append('name', 'Updated Name');
+    mockFormData.append('description', 'Updated Description');
+    mockFormData.append('version', '2.0.0');
+
+    const result = await editSuggestionAction(null, mockFormData);
+
+    expect(result).toHaveLength(1);
+    expect(result?.[0].type.field).toBe('global');
+    expect(result?.[0].message).toBe(
+      'User is not authorized to edit suggestions',
+    );
+    expect(editSuggestion).not.toHaveBeenCalled();
   });
 });
