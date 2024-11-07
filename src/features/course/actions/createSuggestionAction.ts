@@ -1,10 +1,10 @@
 'use server';
 
 import { ErrorMessage, Rule, validate } from '@/src/utils/formValidation';
+import { revalidatePath } from 'next/cache';
 import { createSuggestion } from '../api/createSuggestion';
 import { SuggestionAlreadyExists } from '../exceptions/SuggestionAlreadyExists';
 import { SuggestionForm } from '../types/Suggestion';
-import { revalidatePath } from 'next/cache';
 
 export async function createSuggestionAction(
   _: ErrorMessage[] | null,
@@ -26,7 +26,7 @@ export async function createSuggestionAction(
     description: formData.get('description') as string,
     status: 'Pending',
     version: 'undefined',
-    upVotes: 0,
+    upVotes: [],
     createdBy: formData.get('createdBy') as string,
     createdAt: new Date(),
     updatedAt: new Date(),
