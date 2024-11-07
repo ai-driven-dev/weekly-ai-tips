@@ -4,7 +4,8 @@ export interface Suggestion {
   id: string;
   name: string;
   description: string;
-  upVotes: number;
+  /** user IDs that have voted for this suggestion */
+  upVotes: string[];
   version: string | 'undefined';
   status: 'Pending' | 'In Progress' | 'Approved' | 'Rejected';
   /** User ID who created the suggestion */

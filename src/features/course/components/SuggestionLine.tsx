@@ -25,7 +25,7 @@ export default function SuggestionLine({
       <TableCell>{suggestion.version}</TableCell>
       <TableCell>{suggestion.status}</TableCell>
       <TableCell>{suggestion.upVotes}</TableCell>
-      <TableCell>
+      <TableCell className="flex gap-1">
         <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
           <DialogTrigger asChild>
             <Button>Edit</Button>
