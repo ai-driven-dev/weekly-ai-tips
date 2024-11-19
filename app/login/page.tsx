@@ -4,7 +4,12 @@ import { redirect } from 'next/navigation';
 import { Suspense } from 'react';
 
 export default async function Page() {
-  const user = await getCurrentUser();
+  let user;
+  try {
+    user = await getCurrentUser();
+  } catch (error) {
+    user = null;
+  }
 
   // If the user is authenticated, redirect to the dashboard.
   if (user) {

@@ -5,15 +5,21 @@ import {
   TableHeader,
   TableRow,
 } from '@/src/components/ui/table';
+import UserEntity from '../../userManagement/types/UserEntity';
+import { hasUserVotedForSuggestion } from '../api/hasUserVotedForSuggestion';
 import { Suggestion } from '../types/Suggestion';
 import SuggestionLine from './SuggestionLine';
 
 type Props = {
   suggestions: Suggestion[];
+  user: UserEntity;
 };
 
-export default function SuggestionsList(props: Props): React.ReactElement {
-  if (!props.suggestions.length) {
+export default function SuggestionsList({
+  suggestions,
+  user,
+}: Props): React.ReactElement {
+  if (!suggestions.length) {
     return <p>No suggestions available</p>;
   }
 
@@ -30,14 +36,22 @@ export default function SuggestionsList(props: Props): React.ReactElement {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {props.suggestions.map((suggestion) => (
-            <SuggestionLine
-              key={suggestion.id}
-              suggestion={JSON.parse(JSON.stringify(suggestion))}
-            />
-          ))}
+          {suggestions.map((suggestion) => Line(suggestion))}
         </TableBody>
       </Table>
     </>
   );
+
+  async function Line(suggestion: Suggestion) {
+    const clonedSuggestion = JSON.parse(JSON.stringify(suggestion));
+    const hasVoted = await hasUserVotedForSuggestion(suggestion.id, user.id);
+
+    return (
+      <SuggestionLine
+        key={suggestion.id}
+        suggestion={clonedSuggestion}
+        hasVoted={hasVoted}
+      />
+    );
+  }
 }
