@@ -10,9 +10,9 @@ import {
 import { ErrorComponent } from '@/src/components/ui/error';
 import InputWithLabel from '@/src/components/ui/inputWithLabel';
 import { useToast } from '@/src/components/ui/use-toast';
+import { useActionState } from 'react';
 import { editSuggestionAction } from '../actions/editSuggestionAction';
 import { Suggestion } from '../types/Suggestion';
-import { useActionState } from 'react';
 
 type Props = {
   suggestion: Suggestion;
@@ -42,7 +42,7 @@ export default function EditSuggestionForm({
       <DialogHeader>
         <DialogTitle>Edit Suggestion</DialogTitle>
       </DialogHeader>
-      <form action={handleSubmit}>
+      <form action={handleSubmit} className="flex flex-col gap-4">
         <input type="hidden" name="id" value={suggestion.id} />
         <InputWithLabel
           label="Name"
